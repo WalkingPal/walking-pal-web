@@ -1,5 +1,5 @@
 import { darkTheme, lightTheme } from "./themes";
-import  { Context, createContext, useContext, useState } from "react";
+import { Context, createContext, useContext, useState } from "react";
 import { Theme } from "@mui/material";
 import { FCC } from "types/IReact";
 
@@ -25,7 +25,9 @@ export const WPThemeProvider: FCC = ({ children }) => {
 
 	return (
 		<ThemeContext.Provider value={theme}>
-			<ThemeUpdateContext.Provider value={toggleTheme}>{children}</ThemeUpdateContext.Provider>
+			<ThemeUpdateContext.Provider value={toggleTheme}>
+				{children}
+			</ThemeUpdateContext.Provider>
 		</ThemeContext.Provider>
 	);
 };
