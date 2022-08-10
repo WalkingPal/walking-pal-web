@@ -7,8 +7,8 @@ import {
 	Button,
 } from "@mui/material";
 import { FC, useState, Dispatch, SetStateAction } from "react";
-import FormActions from "./FormActions";
-import InputField from "./InputField";
+import { FormActions } from "./FormActions";
+import { InputField } from "./InputField";
 
 const totalSteps = 4;
 
@@ -24,7 +24,10 @@ interface Props {
 	setStepsCompleted: Dispatch<SetStateAction<number>>;
 }
 
-const RegistrationForm: FC<Props> = ({ stepsCompleted, setStepsCompleted }) => {
+export const RegistrationForm: FC<Props> = ({
+	stepsCompleted,
+	setStepsCompleted,
+}) => {
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [email, setEmail] = useState("");
@@ -110,5 +113,3 @@ const RegistrationForm: FC<Props> = ({ stepsCompleted, setStepsCompleted }) => {
 		</Stack>
 	);
 };
-
-export default RegistrationForm;

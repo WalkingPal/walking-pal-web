@@ -20,7 +20,7 @@ interface Field {
 
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
-const InputField: FC<Field> = ({ label, value, setValue, type }) => {
+export const InputField: FC<Field> = ({ label, value, setValue, type }) => {
 	const [error, setError] = useState("");
 
 	useEffect(() => {
@@ -66,5 +66,3 @@ const InputField: FC<Field> = ({ label, value, setValue, type }) => {
 		</Stack>
 	);
 };
-
-export default InputField;

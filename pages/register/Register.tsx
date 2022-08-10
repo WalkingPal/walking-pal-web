@@ -1,9 +1,6 @@
-import {
-	Stack,
-	Typography,
-} from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { NextPage } from "next";
-import RegistrationForm from "./components/RegistrationForm";
+import { RegistrationForm } from "./components/RegistrationForm";
 import { useState } from "react";
 import { FormProgress } from "./components/FormProgress";
 
@@ -30,7 +27,7 @@ const steps = [
 	},
 ];
 
-const Register: NextPage = () => {
+export const Register: NextPage = () => {
 	const [stepsCompleted, setStepsCompleted] = useState(0);
 
 	return (
@@ -58,5 +55,3 @@ const Register: NextPage = () => {
 		</Stack>
 	);
 };
-
-export { Register };

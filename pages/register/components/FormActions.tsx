@@ -9,7 +9,7 @@ interface Props {
 	handleSubmit: () => void;
 }
 
-const FormActions: FC<Props> = ({
+export const FormActions: FC<Props> = ({
 	goToNext,
 	goToPrevious,
 	stepsCompleted,
@@ -39,5 +39,3 @@ const FormActions: FC<Props> = ({
 		</Stack>
 	);
 };
-
-export default FormActions;
