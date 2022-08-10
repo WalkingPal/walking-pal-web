@@ -1,5 +1,5 @@
 import { Stack, Typography, FormControl, OutlinedInput, InputLabel, Button } from '@mui/material'
-import { FC, useState } from "react";
+import { FC, useState, Dispatch, SetStateAction } from "react";
 import FormActions from './FormActions';
 import InputField from './InputField';
 
@@ -12,12 +12,16 @@ interface User {
     university: string
 }
 
-const RegistrationForm: FC = () => {
+interface Props {
+    stepsCompleted: number
+    setStepsCompleted: Dispatch<SetStateAction<number>>
+}
+
+const RegistrationForm: FC<Props> = ({stepsCompleted, setStepsCompleted}) => {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [university, setUniversity] = useState('')
-    const [stepsCompleted, setStepsCompleted] = useState(0)
 
     const goToPrevious = () => {
         if(stepsCompleted === 0) return
@@ -81,7 +85,7 @@ const RegistrationForm: FC = () => {
                     />}
                 </Stack>
                 <FormActions 
-                    totalSteps={4}
+                    totalSteps={totalSteps}
                     stepsCompleted={stepsCompleted}
                     goToNext={goToNext}
                     goToPrevious={goToPrevious}

@@ -2,8 +2,35 @@ import { Button, FormControl, Input, InputLabel, Stack, Typography, OutlinedInpu
 import { NextPage } from "next";
 import RFThemeProvider from "./theme";
 import RegistrationForm from "./components/RegistrationForm";
+import { useState } from 'react'
+import { FormProgress } from "./components/FormProgress";
+
+const steps = [
+    {
+        id: 1,
+        name: 'firstName'
+    },
+    {
+        id: 2,
+        name: 'lastName'
+    },
+    {
+        id: 3,
+        name: 'email'
+    },
+    {
+        id: 4,
+        name: 'university'
+    },
+    {
+        id: 5,
+        name: 'submit'
+    },
+]
 
 const Register: NextPage = () => {
+    const [stepsCompleted, setStepsCompleted] = useState(0)
+
     return (
         <RFThemeProvider>
             <Stack
@@ -22,7 +49,14 @@ const Register: NextPage = () => {
                 >
                     Early User Registration
                 </Typography>
-                <RegistrationForm />
+                <RegistrationForm 
+                    stepsCompleted={stepsCompleted}
+                    setStepsCompleted={setStepsCompleted}
+                />
+                <FormProgress 
+                    stepsCompleted={stepsCompleted}
+                    steps={steps}
+                />
             </Stack>
         </RFThemeProvider>
     )
