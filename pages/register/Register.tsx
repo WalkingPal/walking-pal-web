@@ -1,14 +1,8 @@
 import {
-	Button,
-	FormControl,
-	Input,
-	InputLabel,
 	Stack,
 	Typography,
-	OutlinedInput,
 } from "@mui/material";
 import { NextPage } from "next";
-import RFThemeProvider from "./theme";
 import RegistrationForm from "./components/RegistrationForm";
 import { useState } from "react";
 import { FormProgress } from "./components/FormProgress";
@@ -40,30 +34,28 @@ const Register: NextPage = () => {
 	const [stepsCompleted, setStepsCompleted] = useState(0);
 
 	return (
-		<RFThemeProvider>
-			<Stack
-				width="100%"
-				minHeight="100vh"
-				bgcolor="#FF5959"
-				padding="32px"
-				justifyContent="center"
-				alignItems="center"
-				gap="80px"
+		<Stack
+			width="100%"
+			minHeight="100vh"
+			bgcolor="#FF5959"
+			padding="32px"
+			justifyContent="center"
+			alignItems="center"
+			gap="80px"
+		>
+			<Typography
+				variant="h3"
+				textAlign="center"
+				// fontSize={50}
 			>
-				<Typography
-					variant="h3"
-					textAlign="center"
-					// fontSize={50}
-				>
-					Early User Registration
-				</Typography>
-				<RegistrationForm
-					stepsCompleted={stepsCompleted}
-					setStepsCompleted={setStepsCompleted}
-				/>
-				<FormProgress stepsCompleted={stepsCompleted} steps={steps} />
-			</Stack>
-		</RFThemeProvider>
+				Early User Registration
+			</Typography>
+			<RegistrationForm
+				stepsCompleted={stepsCompleted}
+				setStepsCompleted={setStepsCompleted}
+			/>
+			<FormProgress stepsCompleted={stepsCompleted} steps={steps} />
+		</Stack>
 	);
 };
 
