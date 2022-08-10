@@ -62,6 +62,27 @@ export const registrationFormTheme: Theme = createTheme({
                     padding: '12px 16px'
                 }
             }
+        },
+        MuiStep: {
+            styleOverrides: {
+                root: {
+                    padding: 0
+                }
+            }
+        },
+        MuiStepConnector: {
+            styleOverrides: {
+                line: {
+                    border: 'none'
+                }
+            }
+        },
+        MuiStepLabel: {
+            styleOverrides: {
+                iconContainer: {
+                    padding: 0
+                }
+            }
         }
     },
     typography: {

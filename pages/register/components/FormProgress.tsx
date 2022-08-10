@@ -1,5 +1,7 @@
 import { Step, StepLabel, Stepper } from "@mui/material";
 import { FC, Dispatch, SetStateAction } from "react";
+import { ProgressConnector } from "./ProgressConnector";
+import { ProgressIcon } from "./ProgressIcon";
 
 interface Props {
     stepsCompleted: number
@@ -17,13 +19,14 @@ export const FormProgress: FC<Props> = ({stepsCompleted, steps}) => {
                 width: '100%',
                 maxWidth: 900
             }}
+            connector={ <ProgressConnector /> }
         >
             { steps.map(step => (
                 <Step
                     key={step.name}
                 >
                     <StepLabel
-
+                        StepIconComponent={ ProgressIcon }
                     ></StepLabel>
                 </Step>
             )) }
