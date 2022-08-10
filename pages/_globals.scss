@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root{
   --header-height: 64px; // subject to change when Header.tsx is created
 }
@@ -25,6 +29,6 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: rgb(255, 255, 255);
   }
 }
