@@ -105,19 +105,19 @@ const commonPalette: ThemeOptions = {
 		fontWeightBold: 700,
 		fontFamily: "Outfit",
 		h1: {
-			fontSize: 72,
-			fontWeight: 400,
-		},
-		h2: {
-			fontSize: 60,
-			fontWeight: 400,
-		},
-		h3: {
-			fontSize: 48,
+			fontSize: 96,
 			fontWeight: 600,
 		},
+		h2: {
+			fontSize: 70,
+			fontWeight: 500,
+		},
+		h3: {
+			fontSize: 64,
+			fontWeight: 400,
+		},
 		h4: {
-			fontSize: 36,
+			fontSize: 50,
 			fontWeight: 600,
 		},
 		h5: {
