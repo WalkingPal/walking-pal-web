@@ -41,7 +41,7 @@ export const Register: NextPage = () => {
 			gap="80px"
 		>
 			<Typography
-				variant="h3"
+				variant="h4"
 				textAlign="center"
 				// fontSize={50}
 			>
