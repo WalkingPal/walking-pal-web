@@ -5,7 +5,7 @@ import { Dispatch, SetStateAction, ChangeEvent } from 'react'
 interface Field {
     label: string
     value: string
-    setValue: Dispatch<SetStateAction<string>>
+    setValue?: Dispatch<SetStateAction<string>>
 }
 
 const InputField: FC<Field> = ({label, value, setValue}) => {
@@ -31,7 +31,7 @@ const InputField: FC<Field> = ({label, value, setValue}) => {
                 <OutlinedInput
                     value={value}
                     onChange={(e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-                        setValue(e.target.value)
+                        { setValue && setValue(e.target.value)}
                     }}
                 />
         </Stack>

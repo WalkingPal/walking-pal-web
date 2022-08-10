@@ -3,6 +3,15 @@ import { FC, useState } from "react";
 import FormActions from './FormActions';
 import InputField from './InputField';
 
+const totalSteps = 4
+
+interface User {
+    firstName: string
+    lastName: string
+    email: string
+    university: string
+}
+
 const RegistrationForm: FC = () => {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -16,8 +25,18 @@ const RegistrationForm: FC = () => {
     }
 
     const goToNext = () => {
-        if(stepsCompleted === 3) return
+        if(stepsCompleted === totalSteps) return
         setStepsCompleted(stepsCompleted+1)
+    }
+
+    const handleSubmit = () => {
+        const user: User = {
+            firstName,
+            lastName,
+            email,
+            university
+        }
+        console.log(user)
     }
 
     return (
@@ -56,11 +75,17 @@ const RegistrationForm: FC = () => {
                         value={university}
                         setValue={setUniversity}
                     />}
+                    {stepsCompleted === 4 && <InputField
+                        label='Follow us on Instagram'
+                        value='@walkingpal.in'
+                    />}
                 </Stack>
                 <FormActions 
+                    totalSteps={4}
                     stepsCompleted={stepsCompleted}
                     goToNext={goToNext}
                     goToPrevious={goToPrevious}
+                    handleSubmit={handleSubmit}
                 />
             </FormControl>
         </Stack>
