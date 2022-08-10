@@ -11,7 +11,10 @@ const Register: NextPage = () => {
                 minHeight='100vh'
                 bgcolor='#FF5959'
                 padding='32px'
+                justifyContent='center'
                 alignItems='center'
+                gap='80px'
+
             >
                 <Typography
                     variant='h3'

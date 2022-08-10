@@ -9,11 +9,6 @@ interface Field {
 }
 
 const InputField: FC<Field> = ({label, value, setValue}) => {
-    const formState = useFormControl()
-
-    useEffect(() => {
-        console.log(formState?.filled)
-    }, [formState])
 
     return (
         <Stack
