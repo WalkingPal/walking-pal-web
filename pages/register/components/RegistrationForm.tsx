@@ -71,6 +71,7 @@ const RegistrationForm: FC<Props> = ({stepsCompleted, setStepsCompleted}) => {
                     />}
                     {stepsCompleted === 2 && <InputField
                         label='Email'
+                        type='email'
                         value={email}
                         setValue={setEmail}
                     />}

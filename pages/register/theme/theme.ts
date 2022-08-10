@@ -83,6 +83,13 @@ export const registrationFormTheme: Theme = createTheme({
                     padding: 0
                 }
             }
+        },
+        MuiAlert: {
+            styleOverrides: {
+                icon: {
+                    alignItems: 'center'
+                }
+            }
         }
     },
     typography: {
@@ -120,19 +127,19 @@ export const registrationFormTheme: Theme = createTheme({
             fontWeight: 400
         },
         textLg: {
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: 400
         },
         textMd: {
-            fontSize: 20,
+            fontSize: 16,
             fontWeight: 400
         },
         textSm: {
-            fontSize: 20,
+            fontSize: 12,
             fontWeight: 400
         },
         textXs: {
-            fontSize: 20,
+            fontSize: 10,
             fontWeight: 400
         },
     } as WPTypographyOptions,
