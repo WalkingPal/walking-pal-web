@@ -1,4 +1,5 @@
 import { Stack, Box, FormHelperText } from "@mui/material";
+import { useWindowSize } from "hooks/useWindowResize";
 import {
 	checkValidity,
 	FieldName,
@@ -14,6 +15,7 @@ import {
 	useRef,
 	ChangeEvent,
 } from "react";
+import ReactConfetti from "react-confetti";
 import { FormActions } from "./FormActions";
 import { InputField } from "./InputField";
 
@@ -35,6 +37,7 @@ export const RegistrationForm: FC<Props> = ({
 	stepsCompleted,
 	setStepsCompleted,
 }) => {
+	const { width, height } = useWindowSize();
 	const [formData, setFormData] = useState<Fields>({
 		firstName: "",
 		lastName: "",
@@ -52,9 +55,11 @@ export const RegistrationForm: FC<Props> = ({
 		setStepsCompleted(stepsCompleted + 1);
 	};
 
+	const [showConfetti, setShowConfetti] = useState(false)
 	const handleSubmit = () => {
 		const user: User = formData;
 		console.log(user);
+		setShowConfetti(true)
 	};
 
 	const boxRef = useRef<HTMLDivElement>(null);
@@ -88,62 +93,65 @@ export const RegistrationForm: FC<Props> = ({
 	};
 
 	return (
-		<Stack
-			maxWidth={700}
-			width="100%"
-			bgcolor="white"
-			boxShadow="10px 20px 50px rgba(0,0,0,0.25)"
-			borderRadius="16px"
-			overflow="hidden"
-		>
-			<div
-				style={{
-					display: "flex",
-					transform: `translateX(-${translateX.current * stepsCompleted}px)`,
-					transition: "1s",
-				}}
+		<>
+			{showConfetti && <ReactConfetti width={width} height={height} />}
+			<Stack
+				maxWidth={700}
+				width="100%"
+				bgcolor="white"
+				boxShadow="10px 20px 50px rgba(0,0,0,0.25)"
+				borderRadius="16px"
+				overflow="hidden"
 			>
-				{(Object.entries(fields) as Array<[FieldName, string]>).map(
-					([fieldName, label], i) => {
-						return (
-							<Box ref={boxRef} key={"field-" + i} sx={{ minWidth: "100%" }}>
-								<InputField
-									label={label}
-									name={fieldName}
-									value={formData[fieldName]}
-									onChange={onFieldChange}
-								>
-									<FormHelperText error>
-										{showErr && errorMessage.current}&nbsp;
-									</FormHelperText>
-								</InputField>
-							</Box>
-						);
-					},
-				)}
-				<Box sx={{ minWidth: "100%" }}>
-					<InputField
-						label="Follow us on Instagram"
-						value="@walkingpal.in"
-						disabled
-						sx={{
-							"& .Mui-disabled": {
-								color: "#000",
-								"-webkit-text-fill-color": "#000",
-							},
-						}}
-					/>
-				</Box>
-			</div>
-			<FormActions
-				totalSteps={totalSteps}
-				stepsCompleted={stepsCompleted}
-				goToNext={goToNext}
-				goToPrevious={goToPrevious}
-				handleSubmit={handleSubmit}
-				isError={isError}
-				setShowErr={runSetShowErr}
-			/>
-		</Stack>
+				<div
+					style={{
+						display: "flex",
+						transform: `translateX(-${translateX.current * stepsCompleted}px)`,
+						transition: "1s",
+					}}
+				>
+					{(Object.entries(fields) as Array<[FieldName, string]>).map(
+						([fieldName, label], i) => {
+							return (
+								<Box ref={boxRef} key={"field-" + i} sx={{ minWidth: "100%" }}>
+									<InputField
+										label={label}
+										name={fieldName}
+										value={formData[fieldName]}
+										onChange={onFieldChange}
+									>
+										<FormHelperText error>
+											{showErr && errorMessage.current}&nbsp;
+										</FormHelperText>
+									</InputField>
+								</Box>
+							);
+						},
+					)}
+					<Box sx={{ minWidth: "100%" }}>
+						<InputField
+							label="Follow us on Instagram"
+							value="@walkingpal.in"
+							disabled
+							sx={{
+								"& .Mui-disabled": {
+									color: "#000",
+									"-webkit-text-fill-color": "#000",
+								},
+							}}
+						/>
+					</Box>
+				</div>
+				<FormActions
+					totalSteps={totalSteps}
+					stepsCompleted={stepsCompleted}
+					goToNext={goToNext}
+					goToPrevious={goToPrevious}
+					handleSubmit={handleSubmit}
+					isError={isError}
+					setShowErr={runSetShowErr}
+				/>
+			</Stack>
+		</>
 	);
 };
