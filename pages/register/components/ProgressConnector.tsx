@@ -1,19 +1,9 @@
-import {
-	Box,
-	StepConnector,
-	styled,
-	StepConnectorProps,
-	Theme,
-} from "@mui/material";
-import { FC } from "react";
+import { StepConnector, styled, StepConnectorProps } from "@mui/material";
 import { StyledComponent } from "@emotion/styled";
-import { MUIStyledCommonProps } from "@mui/system";
 
-export const ProgressConnector: StyledComponent<
-	StepConnectorProps & MUIStyledCommonProps<Theme>,
-	{},
-	{}
-> = styled(StepConnector)({
+export const ProgressConnector: StyledComponent<StepConnectorProps> = styled(
+	StepConnector,
+)({
 	backgroundColor: "#FFFFFF",
 	height: 2,
 });

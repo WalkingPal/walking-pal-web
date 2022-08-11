@@ -1,5 +1,5 @@
-import { FC, useState } from "react";
-import { Stack, Button, Typography, useFormControl } from "@mui/material";
+import { FC } from "react";
+import { Stack, Button, Typography } from "@mui/material";
 
 interface Props {
 	totalSteps: number;
@@ -7,6 +7,8 @@ interface Props {
 	goToPrevious: () => void;
 	goToNext: () => void;
 	handleSubmit: () => void;
+	isError: () => boolean;
+	setShowErr: (state: boolean) => void;
 }
 
 export const FormActions: FC<Props> = ({
@@ -15,9 +17,9 @@ export const FormActions: FC<Props> = ({
 	stepsCompleted,
 	totalSteps,
 	handleSubmit,
+	isError,
+	setShowErr,
 }) => {
-	const formState = useFormControl();
-
 	return (
 		<Stack
 			direction="row"
@@ -29,8 +31,14 @@ export const FormActions: FC<Props> = ({
 				<Typography textTransform="uppercase">previous</Typography>
 			</Button>
 			<Button
-				disabled={!formState?.filled && stepsCompleted !== totalSteps}
-				onClick={stepsCompleted === totalSteps ? handleSubmit : goToNext}
+				onClick={() => {
+					if (stepsCompleted === totalSteps) handleSubmit();
+					else if (isError()) {
+						setShowErr(true);
+					} else {
+						goToNext();
+					}
+				}}
 			>
 				<Typography textTransform="uppercase">
 					{stepsCompleted === totalSteps ? "submit" : "next"}

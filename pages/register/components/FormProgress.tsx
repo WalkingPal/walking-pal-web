@@ -1,5 +1,5 @@
 import { Step, StepLabel, Stepper } from "@mui/material";
-import { FC, Dispatch, SetStateAction } from "react";
+import { FC } from "react";
 import { ProgressConnector } from "./ProgressConnector";
 import { ProgressIcon } from "./ProgressIcon";
 

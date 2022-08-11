@@ -3,66 +3,23 @@ import {
 	Typography,
 	InputLabel,
 	OutlinedInput,
-	useFormControl,
-	FormControlState,
-	Alert,
-	Collapse,
+	InputBaseProps,
 } from "@mui/material";
-import { FC, useEffect, useState } from "react";
-import { Dispatch, SetStateAction, ChangeEvent } from "react";
+import { FCC } from "types/IReact";
 
-interface Field {
+interface IInputField extends InputBaseProps {
 	label: string;
-	value: string;
-	setValue?: Dispatch<SetStateAction<string>>;
-	type?: string;
 }
-
-const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-
-export const InputField: FC<Field> = ({ label, value, setValue, type }) => {
-	const [error, setError] = useState("");
-
-	useEffect(() => {
-		if (type === "email" && value && !emailRegex.test(value)) {
-			setError("Enter a valid email address");
-		} else {
-			setError("");
-		}
-	}, [value]);
-
+export const InputField: FCC<IInputField> = props => {
 	return (
-		<Stack gap="8px">
-			<InputLabel
-				required
-				sx={{
-					fontSize: 30,
-				}}
-			>
+		<Stack gap="8px" sx={{ p: "32px", backgroundColor: "white" }}>
+			<InputLabel required sx={{ fontSize: 30 }}>
 				<Typography variant="h5" component="span" fontWeight="medium">
-					{label}
+					{props.label}
 				</Typography>
 			</InputLabel>
-			<OutlinedInput
-				type={type}
-				value={value}
-				onChange={(e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-					console.log(e.target.value);
-					{
-						setValue && setValue(e.target.value);
-					}
-					if (type === "email" && !emailRegex.test(e.target.value)) {
-						setError("Enter a valid email address");
-					} else {
-						setError("");
-					}
-				}}
-			/>
-			<Collapse in={error ? true : false}>
-				<Alert severity="error">
-					<Typography variant="textMd">{error}</Typography>
-				</Alert>
-			</Collapse>
+			<OutlinedInput {...props} label={undefined} />
+			{props.children}
 		</Stack>
 	);
 };

@@ -43,7 +43,7 @@ export const Register: NextPage = () => {
 			<Typography
 				variant="h4"
 				textAlign="center"
-				// fontSize={50}
+				color="white"
 			>
 				Early User Registration
 			</Typography>

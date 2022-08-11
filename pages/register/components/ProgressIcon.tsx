@@ -1,7 +1,5 @@
-import { Box, styled, Theme } from "@mui/material";
-import { StyledComponent } from "@emotion/styled";
-import { MUIStyledCommonProps } from "@mui/system";
-import { DetailedHTMLProps, FC, HTMLAttributes } from "react";
+import { Box } from "@mui/material";
+import { FC } from "react";
 
 interface Props {
 	active: boolean;
@@ -9,35 +7,16 @@ interface Props {
 }
 
 export const ProgressIcon: FC<Props> = ({ active, completed }) => {
-	if (active)
-		return (
-			<Box
-				sx={{
-					width: 24,
-					height: 24,
-					borderRadius: "50%",
-					border: "2px solid #FFFFFF",
-					backgroundColor: "#F6BF51",
-				}}
-			></Box>
-		);
-
-	return completed ? (
+	return (
 		<Box
 			sx={{
+				transition: "500ms",
+				transform: active ? `scale(2)` : undefined,
 				width: 16,
 				height: 16,
 				borderRadius: "50%",
-				backgroundColor: "#A6C753",
-			}}
-		></Box>
-	) : (
-		<Box
-			sx={{
-				width: 16,
-				height: 16,
-				borderRadius: "50%",
-				backgroundColor: "#D9D9D9",
+				border: "2px solid #FFFFFF",
+				backgroundColor: active ? "#F6BF51" : completed ? "#A6C753" : "#D9D9D9",
 			}}
 		></Box>
 	);
