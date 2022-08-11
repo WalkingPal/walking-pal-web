@@ -177,13 +177,14 @@ const commonPalette: ThemeOptions = {
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		body2: {
-			fontSize: "0.875rem",
+			fontSize: 22,
 			lineHeight: 1.5,
 			letterSpacing: 0,
 			fontFamily:
 				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
 			fontWeight: 400,
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
+			color: "#767676",
 		},
 		caption: {
 			display: "inline-block",

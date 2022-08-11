@@ -4,6 +4,7 @@ import { RegistrationForm } from "./components/RegistrationForm";
 import { useState } from "react";
 import { FormProgress } from "./components/FormProgress";
 import Head from "next/head";
+import { SubmittedAck } from "pages/register/components/SubmittedAck";
 
 const steps = [
 	{
@@ -30,6 +31,7 @@ const steps = [
 
 export const Register: NextPage = () => {
 	const [stepsCompleted, setStepsCompleted] = useState(0);
+	const [isSubmitted, setIsSubmitted] = useState(false);
 
 	return (
 		<>
@@ -53,11 +55,16 @@ export const Register: NextPage = () => {
 				<Typography variant="h4" textAlign="center" color="white">
 					Early User Registration
 				</Typography>
-				<RegistrationForm
-					stepsCompleted={stepsCompleted}
-					setStepsCompleted={setStepsCompleted}
-				/>
-				<FormProgress stepsCompleted={stepsCompleted} steps={steps} />
+				{isSubmitted ? (
+					<SubmittedAck />
+				) : (
+					<>
+						<RegistrationForm
+							{...{ stepsCompleted, setStepsCompleted, setIsSubmitted }}
+						/>
+						<FormProgress stepsCompleted={stepsCompleted} steps={steps} />
+					</>
+				)}
 			</Stack>
 		</>
 	);

@@ -1,5 +1,4 @@
 import { Stack, Box, FormHelperText } from "@mui/material";
-import { useWindowSize } from "hooks/useWindowResize";
 import {
 	checkValidity,
 	FieldName,
@@ -11,12 +10,10 @@ import {
 	useState,
 	Dispatch,
 	SetStateAction,
-	useLayoutEffect,
 	useRef,
 	ChangeEvent,
 	useEffect,
 } from "react";
-import ReactConfetti from "react-confetti";
 import { FormActions } from "./FormActions";
 import { InputField } from "./InputField";
 
@@ -32,13 +29,14 @@ interface User {
 interface Props {
 	stepsCompleted: number;
 	setStepsCompleted: Dispatch<SetStateAction<number>>;
+	setIsSubmitted: Dispatch<SetStateAction<boolean>>;
 }
 
 export const RegistrationForm: FC<Props> = ({
 	stepsCompleted,
 	setStepsCompleted,
+	setIsSubmitted,
 }) => {
-	const { width, height } = useWindowSize();
 	const [formData, setFormData] = useState<Fields>({
 		firstName: "",
 		lastName: "",
@@ -70,11 +68,10 @@ export const RegistrationForm: FC<Props> = ({
 		setStepsCompleted(stepsCompleted + 1);
 	};
 
-	const [showConfetti, setShowConfetti] = useState(false);
 	const handleSubmit = () => {
 		const user: User = formData;
 		console.log(user);
-		setShowConfetti(true);
+		setIsSubmitted(true);
 	};
 
 	const boxRef = useRef<HTMLDivElement>(null);
@@ -106,7 +103,6 @@ export const RegistrationForm: FC<Props> = ({
 
 	return (
 		<>
-			{showConfetti && <ReactConfetti width={width} height={height} />}
 			<Stack
 				maxWidth={700}
 				width="100%"
