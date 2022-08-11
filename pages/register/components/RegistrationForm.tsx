@@ -46,6 +46,10 @@ export const RegistrationForm: FC<Props> = ({
 		university: "",
 	});
 
+	useEffect(() => {
+		console.log(formData);
+	}, [formData]);
+
 	const goToPrevious = async () => {
 		if (stepsCompleted === 0) return;
 
@@ -58,8 +62,10 @@ export const RegistrationForm: FC<Props> = ({
 	const goToNext = async () => {
 		if (stepsCompleted === totalSteps) return;
 
-		const [key, value] = Object.entries(formData)[stepsCompleted + 1];
-		errorMessage.current = await checkValidity(value, key as FieldName);
+		if (stepsCompleted < totalSteps - 1) {
+			const [key, value] = Object.entries(formData)[stepsCompleted + 1];
+			errorMessage.current = await checkValidity(value, key as FieldName);
+		}
 
 		setStepsCompleted(stepsCompleted + 1);
 	};

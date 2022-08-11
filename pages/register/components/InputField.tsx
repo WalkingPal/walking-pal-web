@@ -4,7 +4,12 @@ import {
 	InputLabel,
 	OutlinedInput,
 	InputBaseProps,
+	FormControl,
+	Select,
+	SelectChangeEvent,
+	MenuItem,
 } from "@mui/material";
+import { ReactNode } from "react";
 import { FCC } from "types/IReact";
 
 interface IInputField extends InputBaseProps {
@@ -18,7 +23,46 @@ export const InputField: FCC<IInputField> = props => {
 					{props.label}
 				</Typography>
 			</InputLabel>
-			<OutlinedInput {...props} label={undefined} />
+			{props.label === "University" ? (
+				<FormControl fullWidth>
+					<Select
+						{...props}
+						onChange={
+							props.onChange as (
+								event: SelectChangeEvent<unknown>,
+								child: ReactNode,
+							) => void
+						}
+						label={undefined}
+						sx={{ ...props.sx, lineHeight: "unset" }}
+					>
+						{[
+							"VSSUT",
+							"VIMSAR",
+							"IIM Sambalpur",
+							"Sambalpur University",
+							"SUIIT",
+						].map((univ, i) => {
+							return (
+								<MenuItem
+									value={univ}
+									key={"univ-" + i}
+									sx={{
+										color: "#767676",
+										fontSize: "24px",
+										fontWeight: 500,
+										fontFamily: "Outfit",
+									}}
+								>
+									{univ}
+								</MenuItem>
+							);
+						})}
+					</Select>
+				</FormControl>
+			) : (
+				<OutlinedInput {...props} label={undefined} />
+			)}
 			{props.children}
 		</Stack>
 	);
