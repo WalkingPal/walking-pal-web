@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import { Stack, Button, Typography } from "@mui/material";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 	goToNext: () => void;
 	handleSubmit: () => void;
 	isError: () => boolean;
-	setShowErr: (state: boolean) => void;
+	setShowErr: Dispatch<SetStateAction<boolean>>;
 }
 
 export const FormActions: FC<Props> = ({

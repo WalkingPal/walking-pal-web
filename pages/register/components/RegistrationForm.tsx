@@ -14,6 +14,7 @@ import {
 	useLayoutEffect,
 	useRef,
 	ChangeEvent,
+	useEffect,
 } from "react";
 import ReactConfetti from "react-confetti";
 import { FormActions } from "./FormActions";
@@ -45,33 +46,38 @@ export const RegistrationForm: FC<Props> = ({
 		university: "",
 	});
 
-	const goToPrevious = () => {
+	const goToPrevious = async () => {
 		if (stepsCompleted === 0) return;
+
+		const [key, value] = Object.entries(formData)[stepsCompleted - 1];
+		errorMessage.current = await checkValidity(value, key as FieldName);
+
 		setStepsCompleted(stepsCompleted - 1);
 	};
 
-	const goToNext = () => {
+	const goToNext = async () => {
 		if (stepsCompleted === totalSteps) return;
+
+		const [key, value] = Object.entries(formData)[stepsCompleted + 1];
+		errorMessage.current = await checkValidity(value, key as FieldName);
+
 		setStepsCompleted(stepsCompleted + 1);
 	};
 
-	const [showConfetti, setShowConfetti] = useState(false)
+	const [showConfetti, setShowConfetti] = useState(false);
 	const handleSubmit = () => {
 		const user: User = formData;
 		console.log(user);
-		setShowConfetti(true)
+		setShowConfetti(true);
 	};
 
 	const boxRef = useRef<HTMLDivElement>(null);
 	const translateX = useRef(0);
-	useLayoutEffect(() => {
+	useEffect(() => {
 		translateX.current = boxRef.current?.offsetWidth!;
 	}, []);
 
 	const [showErr, setShowErr] = useState(false);
-	const runSetShowErr = (state: boolean) => {
-		setShowErr(state);
-	};
 	const errorMessage = useRef("");
 	const onFieldChange = async (e: ChangeEvent<HTMLInputElement>) => {
 		setShowErr(false);
@@ -136,7 +142,7 @@ export const RegistrationForm: FC<Props> = ({
 							sx={{
 								"& .Mui-disabled": {
 									color: "#000",
-									"-webkit-text-fill-color": "#000",
+									WebkitTextFillColor: "#000",
 								},
 							}}
 						/>
@@ -149,7 +155,7 @@ export const RegistrationForm: FC<Props> = ({
 					goToPrevious={goToPrevious}
 					handleSubmit={handleSubmit}
 					isError={isError}
-					setShowErr={runSetShowErr}
+					setShowErr={setShowErr}
 				/>
 			</Stack>
 		</>
