@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root{
   --header-height: 64px; // subject to change when Header.tsx is created
 }

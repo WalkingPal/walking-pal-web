@@ -1,7 +1,9 @@
 import { Footer } from "components/Footer";
+import { Hero } from "components/Hero/Hero";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "./index.module.scss";
+
 
 const Home: NextPage = () => {
 	return (
@@ -14,6 +16,7 @@ const Home: NextPage = () => {
 
 			<main className={styles.main}></main>
 
+			<Hero />
 			<Footer />
 		</div>
 	);
