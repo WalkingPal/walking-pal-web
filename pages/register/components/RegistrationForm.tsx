@@ -1,4 +1,13 @@
-import { Stack, Box, FormHelperText } from "@mui/material";
+import {
+	Stack,
+	Box,
+	FormHelperText,
+	Alert,
+	Snackbar,
+	Slide,
+} from "@mui/material";
+import axios from "axios";
+import { useWindowSize } from "hooks/useWindowResize";
 import {
 	checkValidity,
 	FieldName,
@@ -18,13 +27,6 @@ import { FormActions } from "./FormActions";
 import { InputField } from "./InputField";
 
 const totalSteps = 4;
-
-interface User {
-	firstName: string;
-	lastName: string;
-	email: string;
-	university: string;
-}
 
 interface Props {
 	stepsCompleted: number;
@@ -68,17 +70,23 @@ export const RegistrationForm: FC<Props> = ({
 		setStepsCompleted(stepsCompleted + 1);
 	};
 
-	const handleSubmit = () => {
-		const user: User = formData;
-		console.log(user);
-		setIsSubmitted(true);
+	const [alertOpen, setAlertOpen] = useState(false);
+	const handleSubmit = async () => {
+		try {
+			await axios.post("/api/early-user", formData);
+			setIsSubmitted(true);
+		} catch (e) {
+			console.error(e);
+			setAlertOpen(true);
+		}
 	};
 
+	const { width } = useWindowSize();
 	const boxRef = useRef<HTMLDivElement>(null);
 	const translateX = useRef(0);
 	useEffect(() => {
 		translateX.current = boxRef.current?.offsetWidth!;
-	}, []);
+	}, [width]);
 
 	const [showErr, setShowErr] = useState(false);
 	const errorMessage = useRef("");
@@ -101,65 +109,89 @@ export const RegistrationForm: FC<Props> = ({
 		);
 	};
 
+	const handleClose = (
+		event?: React.SyntheticEvent | Event,
+		reason?: string,
+	) => {
+		if (reason === "clickaway") {
+			return;
+		}
+
+		setAlertOpen(false);
+	};
 	return (
-		<>
-			<Stack
-				maxWidth={700}
-				width="100%"
-				bgcolor="white"
-				boxShadow="10px 20px 50px rgba(0,0,0,0.25)"
-				borderRadius="16px"
-				overflow="hidden"
+		<Stack
+			maxWidth={700}
+			width="100%"
+			bgcolor="white"
+			boxShadow="10px 20px 50px rgba(0,0,0,0.25)"
+			borderRadius="16px"
+			overflow="hidden"
+		>
+			<div
+				style={{
+					display: "flex",
+					transform: `translateX(-${translateX.current * stepsCompleted}px)`,
+					transition: "1s",
+				}}
 			>
-				<div
-					style={{
-						display: "flex",
-						transform: `translateX(-${translateX.current * stepsCompleted}px)`,
-						transition: "1s",
-					}}
+				{(Object.entries(fields) as Array<[FieldName, string]>).map(
+					([fieldName, label], i) => {
+						return (
+							<Box ref={boxRef} key={"field-" + i} sx={{ minWidth: "100%" }}>
+								<InputField
+									label={label}
+									name={fieldName}
+									value={formData[fieldName]}
+									onChange={onFieldChange}
+								>
+									<FormHelperText error>
+										{showErr && errorMessage.current}&nbsp;
+									</FormHelperText>
+								</InputField>
+							</Box>
+						);
+					},
+				)}
+				<Box sx={{ minWidth: "100%" }}>
+					<InputField
+						label="Follow us on Instagram"
+						value="@walkingpal.in"
+						disabled
+						sx={{
+							"& .Mui-disabled": {
+								color: "#000",
+								WebkitTextFillColor: "#000",
+							},
+						}}
+					/>
+				</Box>
+			</div>
+			<FormActions
+				totalSteps={totalSteps}
+				stepsCompleted={stepsCompleted}
+				goToNext={goToNext}
+				goToPrevious={goToPrevious}
+				handleSubmit={handleSubmit}
+				isError={isError}
+				setShowErr={setShowErr}
+			/>
+			<Snackbar
+				open={alertOpen}
+				autoHideDuration={4000}
+				onClose={handleClose}
+				TransitionComponent={props => <Slide {...props} direction="up" />}
+			>
+				<Alert
+					onClose={handleClose}
+					severity="error"
+					elevation={6}
+					variant="filled"
+					sx={{ alignItems: "center" }}
 				>
-					{(Object.entries(fields) as Array<[FieldName, string]>).map(
-						([fieldName, label], i) => {
-							return (
-								<Box ref={boxRef} key={"field-" + i} sx={{ minWidth: "100%" }}>
-									<InputField
-										label={label}
-										name={fieldName}
-										value={formData[fieldName]}
-										onChange={onFieldChange}
-									>
-										<FormHelperText error>
-											{showErr && errorMessage.current}&nbsp;
-										</FormHelperText>
-									</InputField>
-								</Box>
-							);
-						},
-					)}
-					<Box sx={{ minWidth: "100%" }}>
-						<InputField
-							label="Follow us on Instagram"
-							value="@walkingpal.in"
-							disabled
-							sx={{
-								"& .Mui-disabled": {
-									color: "#000",
-									WebkitTextFillColor: "#000",
-								},
-							}}
-						/>
-					</Box>
-				</div>
-				<FormActions
-					totalSteps={totalSteps}
-					stepsCompleted={stepsCompleted}
-					goToNext={goToNext}
-					goToPrevious={goToPrevious}
-					handleSubmit={handleSubmit}
-					isError={isError}
-					setShowErr={setShowErr}
-				/>
-			</Stack>
-		</>
+					Some error occured! Please try again later.
+				</Alert>
+			</Snackbar>
+		</Stack>
 	);
 };

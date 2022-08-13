@@ -259,5 +259,6 @@ export const darkTheme = createTheme({
 			default: "#121212",
 			paper: "#121212",
 		},
+		error: { main: "#d32f2f" },
 	},
 });
