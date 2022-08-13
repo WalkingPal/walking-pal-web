@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { FC } from "react";
 import ReactConfetti from "react-confetti";
 
-export const SubmittedAck: FC = ({}) => {
+export const SubmittedAck: FC = () => {
 	const { width, height } = useWindowSize();
 
 	return (
@@ -18,8 +18,8 @@ export const SubmittedAck: FC = ({}) => {
 				borderRadius="16px"
 				overflow="hidden"
 			>
-				<Stack sx={{ p: "32px", alignItems: "center" }}>
-					<Typography variant="h5" fontWeight="medium">
+				<Stack sx={{ p: "32px", pt: "45px", alignItems: "center" }}>
+					<Typography variant="h5" fontWeight="medium" textAlign="center">
 						Congratulations!🥳
 					</Typography>
 					<Typography
@@ -29,9 +29,13 @@ export const SubmittedAck: FC = ({}) => {
 						sx={{ p: 5 }}
 					>
 						You have sucessfully registered as one of the early users of
-						<span style={{ color: "#FF5959" }}> WalkingPal.</span> <br />
+						<span style={{ color: "#FF5959", fontWeight: 500 }}>
+							&nbsp;WalkingPal.
+						</span>
+						<br />
+						<br />
 						Thank you for registering, you will receive the app download link in
-						your mail soon. Untill then happy walking!☺️
+						your mail soon. Untill then happy walking!😊
 					</Typography>
 				</Stack>
 				<Stack
