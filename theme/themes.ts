@@ -1,98 +1,7 @@
 import { ThemeOptions } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
-import { TypographyOptions } from "@mui/material/styles/createTypography";
-import { CSSProperties } from "react";
-
-declare module "@mui/material/Typography" {
-	interface TypographyPropsVariantOverrides {
-		textXl: true;
-		textLg: true;
-		textMd: true;
-		textSm: true;
-		textXs: true;
-	}
-}
-
-interface WPTypographyOptions extends TypographyOptions {
-	textXl: CSSProperties;
-	textLg: CSSProperties;
-	textMd: CSSProperties;
-	textSm: CSSProperties;
-	textXs: CSSProperties;
-}
 
 const commonPalette: ThemeOptions = {
-	components: {
-		MuiInputLabel: {
-			styleOverrides: {
-				root: {
-					position: "static",
-					transform: "none",
-					color: "#000000",
-				},
-				asterisk: {
-					color: "#FF5959",
-				},
-			},
-		},
-		MuiButton: {
-			defaultProps: {
-				disableRipple: true,
-			},
-			styleOverrides: {
-				root: ({ ownerState }) => ({
-					...(ownerState.variant === "text" && {
-						"&:hover": {
-							backgroundColor: "initial",
-						},
-					}),
-					...(ownerState.disabled && {
-						color: "gray",
-					}),
-				}),
-			},
-		},
-		MuiOutlinedInput: {
-			styleOverrides: {
-				root: {
-					borderRadius: "10px",
-				},
-				input: {
-					fontSize: 24,
-					fontWeight: 500,
-					padding: "12px 16px",
-				},
-			},
-		},
-		MuiStep: {
-			styleOverrides: {
-				root: {
-					padding: 0,
-				},
-			},
-		},
-		MuiStepConnector: {
-			styleOverrides: {
-				line: {
-					border: "none",
-				},
-			},
-		},
-		MuiStepLabel: {
-			styleOverrides: {
-				iconContainer: {
-					padding: 0,
-				},
-			},
-		},
-		MuiAlert: {
-			styleOverrides: {
-				icon: {
-					alignItems: "center",
-				},
-			},
-		},
-	},
 	shape: {
 		borderRadius: 10,
 	},
@@ -103,50 +12,60 @@ const commonPalette: ThemeOptions = {
 		fontWeightRegular: 400,
 		fontWeightMedium: 500,
 		fontWeightBold: 700,
-		fontFamily: "Outfit",
+		fontFamily:
+			"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
 		h1: {
-			fontSize: 96,
-			fontWeight: 600,
+			fontFamily:
+				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			fontSize: "clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem)",
+			fontWeight: 800,
+			lineHeight: 1.1142857142857143,
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h2: {
-			fontSize: 70,
-			fontWeight: 500,
+			fontFamily:
+				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			fontSize: "clamp(1.5rem, 0.9643rem + 1.4286vw, 2.25rem)",
+			fontWeight: 800,
+			lineHeight: 1.2222222222222223,
+			color: "#E7EBF0",
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h3: {
-			fontSize: 64,
+			fontFamily:
+				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			fontSize: "2.25rem",
+			lineHeight: 1.2222222222222223,
+			letterSpacing: 0.2,
 			fontWeight: 400,
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h4: {
-			fontSize: 50,
-			fontWeight: 600,
+			fontFamily:
+				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			fontSize: "1.75rem",
+			lineHeight: 1.5,
+			letterSpacing: 0.2,
+			fontWeight: 400,
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h5: {
-			fontSize: 30,
-			fontWeight: 600,
+			fontFamily:
+				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			fontSize: "1.5rem",
+			lineHeight: 1.5,
+			letterSpacing: 0.1,
+			color: "#66B2FF",
+			fontWeight: 400,
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h6: {
-			fontSize: 24,
-			fontWeight: 600,
-		},
-		textXl: {
-			fontSize: 20,
-			fontWeight: 400,
-		},
-		textLg: {
-			fontSize: 18,
-			fontWeight: 400,
-		},
-		textMd: {
-			fontSize: 16,
-			fontWeight: 400,
-		},
-		textSm: {
-			fontSize: 12,
-			fontWeight: 400,
-		},
-		textXs: {
-			fontSize: 10,
-			fontWeight: 400,
+			fontSize: "1.25rem",
+			lineHeight: 1.5,
+			fontFamily:
+				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			fontWeight: 500,
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		button: {
 			textTransform: "initial",
@@ -177,14 +96,13 @@ const commonPalette: ThemeOptions = {
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		body2: {
-			fontSize: 22,
+			fontSize: "0.875rem",
 			lineHeight: 1.5,
 			letterSpacing: 0,
 			fontFamily:
 				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
 			fontWeight: 400,
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
-			color: "#767676",
 		},
 		caption: {
 			display: "inline-block",
@@ -216,7 +134,7 @@ const commonPalette: ThemeOptions = {
 			textTransform: "uppercase",
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
-	} as WPTypographyOptions,
+	},
 };
 export const lightTheme = createTheme({
 	...commonPalette,
