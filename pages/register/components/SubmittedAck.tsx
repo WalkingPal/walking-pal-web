@@ -1,5 +1,6 @@
 import { Button, Stack, Typography } from "@mui/material";
 import { useWindowSize } from "hooks/useWindowResize";
+import Link from "next/link";
 import React, { FC } from "react";
 import ReactConfetti from "react-confetti";
 
@@ -39,11 +40,11 @@ export const SubmittedAck: FC = ({}) => {
 					padding="10px 16px"
 					bgcolor="#F6BF51"
 				>
-					<a href="/">
+					<Link href="/">
 						<Button>
 							<Typography>HOME</Typography>
 						</Button>
-					</a>
+					</Link>
 				</Stack>
 			</Stack>
 		</>
