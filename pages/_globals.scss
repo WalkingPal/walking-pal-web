@@ -1,25 +1,31 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root{
   --header-height: 64px; // subject to change when Header.tsx is created
+=======
+:root {
+	--header-height: 64px; // subject to change when Header.tsx is created
+>>>>>>> fa8c176167ff4f561cfb51d143b186d2a000ff26
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
+<<<<<<< HEAD
   box-sizing: border-box;
 }
 
@@ -31,4 +37,7 @@ a {
     color: white;
     background: rgb(255, 255, 255);
   }
+=======
+	box-sizing: border-box;
+>>>>>>> fa8c176167ff4f561cfb51d143b186d2a000ff26
 }

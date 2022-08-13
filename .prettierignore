@@ -1,0 +1,7 @@
+# Ignore:
+build
+node_modules
+.next
+.gitignore
+.prettierignore
+yarn.lock

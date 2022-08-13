@@ -8,6 +8,7 @@ import { FC } from "react";
 
 function Root(appProps: AppProps) {
 	return (
+<<<<<<< HEAD:pages/_app.tsx
     <React.Fragment>
       <Head>
         <meta
@@ -196,6 +197,20 @@ function Root(appProps: AppProps) {
       </WPThemeProvider>
     </React.Fragment>
   );
+=======
+		<React.Fragment>
+			<Head>
+				<meta
+					name="viewport"
+					content="minimum-scale=1, initial-scale=1, width=device-width"
+				/>
+			</Head>
+			<WPThemeProvider>
+				<App appProps={appProps} />
+			</WPThemeProvider>
+		</React.Fragment>
+	);
+>>>>>>> fa8c176167ff4f561cfb51d143b186d2a000ff26:pages/_app.pg.tsx
 }
 
 interface IApp {

@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.yarn
 
 # testing
 /coverage
@@ -34,3 +35,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#firebase
+walking-pal-firebase-adminsdk-*.json
