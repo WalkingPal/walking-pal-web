@@ -187,7 +187,6 @@ export const RegistrationForm: FC<Props> = ({
 					severity="error"
 					elevation={6}
 					variant="filled"
-					sx={{ alignItems: "center" }}
 				>
 					Some error occured! Please try again later.
 				</Alert>

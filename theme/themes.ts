@@ -5,6 +5,84 @@ const commonPalette: ThemeOptions = {
 	shape: {
 		borderRadius: 10,
 	},
+	components: {
+		MuiInputLabel: {
+			styleOverrides: {
+				root: {
+					position: "static",
+					transform: "none",
+					color: "#000000",
+				},
+				asterisk: {
+					color: "#FF5959",
+				},
+			},
+		},
+		MuiButton: {
+			defaultProps: {
+				disableRipple: true,
+			},
+			styleOverrides: {
+				root: ({ ownerState }) => ({
+					...(ownerState.variant === "text" && {
+						"&:hover": {
+							backgroundColor: "initial",
+						},
+					}),
+					...(ownerState.disabled && {
+						color: "gray",
+					}),
+				}),
+			},
+		},
+		MuiOutlinedInput: {
+			styleOverrides: {
+				root: {
+					borderRadius: "10px",
+				},
+				input: {
+					fontSize: 24,
+					fontWeight: 500,
+					padding: "12px 16px",
+				},
+			},
+		},
+		MuiStep: {
+			styleOverrides: {
+				root: {
+					padding: 0,
+				},
+			},
+		},
+		MuiStepConnector: {
+			styleOverrides: {
+				line: {
+					border: "none",
+				},
+			},
+		},
+		MuiStepLabel: {
+			styleOverrides: {
+				iconContainer: {
+					padding: 0,
+				},
+			},
+		},
+		MuiAlert: {
+			styleOverrides: {
+				icon: {
+					alignItems: "center",
+				},
+			},
+		},
+		MuiSnackbar: {
+			styleOverrides: {
+				root: {
+					alignItems: "center",
+				},
+			},
+		},
+	},
 	typography: {
 		htmlFontSize: 16,
 		fontSize: 14,
@@ -13,125 +91,113 @@ const commonPalette: ThemeOptions = {
 		fontWeightMedium: 500,
 		fontWeightBold: 700,
 		fontFamily:
-			"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
 		h1: {
-			fontFamily:
-				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			fontSize: "clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem)",
-			fontWeight: 800,
+			fontSize: "clamp(5.537109375rem, 2.7120234375rem + 8.92875vw, 8.4375rem)",
+			fontWeight: 500,
 			lineHeight: 1.1142857142857143,
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h2: {
-			fontFamily:
-				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			fontSize: "clamp(1.5rem, 0.9643rem + 1.4286vw, 2.25rem)",
-			fontWeight: 800,
+			fontSize: "clamp(3.9375rem, 1.92855rem + 3.5714vw, 6rem)",
+			fontWeight: 400,
 			lineHeight: 1.2222222222222223,
-			color: "#E7EBF0",
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h3: {
-			fontFamily:
-				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			fontSize: "2.25rem",
+			fontSize: "clamp(3.240234375rem, 1.5870359375rem + 1.78575vw, 4.9375rem)",
+			fontWeight: 400,
 			lineHeight: 1.2222222222222223,
 			letterSpacing: 0.2,
-			fontWeight: 400,
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h4: {
-			fontFamily:
-				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			fontSize: "1.75rem",
+			fontSize: "clamp(2.625rem, 1.2857rem + 1.4286vw, 3.6875rem)",
+			fontWeight: 400,
 			lineHeight: 1.5,
 			letterSpacing: 0.2,
-			fontWeight: 400,
+			fontFamily:
+				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h5: {
-			fontFamily:
-				"'Outfit',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			fontSize: "1.5rem",
+			fontSize: "1.9375rem",
+			fontWeight: 400,
 			lineHeight: 1.5,
 			letterSpacing: 0.1,
-			color: "#66B2FF",
-			fontWeight: 400,
+			fontFamily:
+				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		h6: {
 			fontSize: "1.25rem",
+			fontWeight: 500,
 			lineHeight: 1.5,
 			fontFamily:
 				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
+		},
+		subtitle1: {
+			fontSize: "1.25rem",
+			fontWeight: 400,
+			lineHeight: 1.3333333333333333,
+			letterSpacing: 0,
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
+		},
+		subtitle2: {
+			fontSize: "1rem",
 			fontWeight: 500,
+			lineHeight: 1.57,
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
+		},
+		body1: {
+			color: "#484848",
+			fontSize: "1.125rem",
+			fontWeight: 400,
+			lineHeight: 1.5,
+			letterSpacing: 0,
+			fontFamily:
+				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
+		},
+		body2: {
+			color: "#484848",
+			fontSize: "1rem",
+			fontWeight: 400,
+			lineHeight: 1.5,
+			letterSpacing: 0,
+			fontFamily:
+				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		button: {
 			textTransform: "initial",
-			fontWeight: 700,
-			letterSpacing: 0,
-			fontFamily:
-				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			fontSize: "0.875rem",
-			lineHeight: 1.75,
-			scrollMarginTop: "calc(var(--header-height) + 32px)",
-		},
-		subtitle1: {
 			fontSize: "1.125rem",
-			lineHeight: 1.3333333333333333,
-			letterSpacing: 0,
-			fontWeight: 500,
-			fontFamily:
-				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			scrollMarginTop: "calc(var(--header-height) + 32px)",
-		},
-		body1: {
-			fontSize: "1rem",
-			lineHeight: 1.5,
-			letterSpacing: 0,
-			fontFamily:
-				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
 			fontWeight: 400,
-			scrollMarginTop: "calc(var(--header-height) + 32px)",
-		},
-		body2: {
-			fontSize: "0.875rem",
-			lineHeight: 1.5,
+			lineHeight: 1.75,
 			letterSpacing: 0,
-			fontFamily:
-				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			fontWeight: 400,
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		caption: {
 			display: "inline-block",
 			fontSize: "0.75rem",
+			fontWeight: 400,
 			lineHeight: 1.5,
 			letterSpacing: 0,
-			fontWeight: 700,
+			fontFamily:
+				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+			scrollMarginTop: "calc(var(--header-height) + 32px)",
+		},
+		overline: {
+			textTransform: "uppercase",
+			fontSize: "0.75rem",
+			fontWeight: 400,
+			lineHeight: 2.66,
 			fontFamily:
 				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 		allVariants: {
-			scrollMarginTop: "calc(var(--header-height) + 32px)",
-		},
-		subtitle2: {
-			fontFamily:
-				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			fontWeight: 500,
-			fontSize: "0.875rem",
-			lineHeight: 1.57,
-			scrollMarginTop: "calc(var(--header-height) + 32px)",
-		},
-		overline: {
-			fontFamily:
-				"'Open Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-			fontWeight: 400,
-			fontSize: "0.75rem",
-			lineHeight: 2.66,
-			textTransform: "uppercase",
 			scrollMarginTop: "calc(var(--header-height) + 32px)",
 		},
 	},
