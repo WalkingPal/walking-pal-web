@@ -33,7 +33,7 @@ export const checkValidity = async (
 		await schema.validate(testData);
 		validationMsg = "";
 	} catch (err) {
-		if (err instanceof Error) validationMsg = err.message;
+		validationMsg = (err instanceof Error) ? err.message : "Invalid input"
 	}
 	return validationMsg;
 };
