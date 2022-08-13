@@ -1,6 +1,9 @@
 import admin from "firebase-admin";
-import firebaseAccountCredentials from "./walking-pal-firebase-adminsdk-5wneb-81e9ef3830.json";
 
+// https://dev.to/vvo/how-to-add-firebase-service-account-json-files-to-vercel-ph5
+const firebaseAccountCredentials = JSON.parse(
+	process.env.FIREBASE_SERVICE_ACCOUNT_KEY as string,
+);
 
 const serviceAccount = firebaseAccountCredentials as admin.ServiceAccount;
 
