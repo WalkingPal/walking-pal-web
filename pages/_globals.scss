@@ -1,5 +1,14 @@
+<<<<<<< HEAD
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --header-height: 64px; // subject to change when Header.tsx is created
+=======
 :root {
 	--header-height: 64px; // subject to change when Header.tsx is created
+>>>>>>> fa8c176167ff4f561cfb51d143b186d2a000ff26
 }
 
 html,
@@ -16,5 +25,19 @@ a {
 }
 
 * {
+<<<<<<< HEAD
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: rgb(255, 255, 255);
+  }
+=======
 	box-sizing: border-box;
+>>>>>>> fa8c176167ff4f561cfb51d143b186d2a000ff26
 }
