@@ -5,11 +5,11 @@ import React, { FC } from "react";
 import ReactConfetti from "react-confetti";
 
 export const SubmittedAck: FC = () => {
-	const { width, height } = useWindowSize();
+	const { width, scrollHeight } = useWindowSize();
 
 	return (
 		<>
-			<ReactConfetti width={width} height={height} />
+			<ReactConfetti width={width} height={scrollHeight} />
 			<Stack
 				maxWidth={700}
 				width="100%"
