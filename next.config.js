@@ -2,6 +2,7 @@
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
+	pageExtensions: ["pg.tsx", "pg.ts"], // Ref: https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions#including-non-page-files-in-the-pages-directory
 };
 
 module.exports = nextConfig;
