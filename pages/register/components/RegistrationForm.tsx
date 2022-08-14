@@ -62,7 +62,7 @@ export const RegistrationForm: FC<Props> = ({
 	const goToNext = async () => {
 		if (stepsCompleted === totalSteps) return;
 
-		if (stepsCompleted < totalSteps - 1) {
+		if (stepsCompleted + 1 < totalSteps) {
 			const [key, value] = Object.entries(formData)[stepsCompleted + 1];
 			errorMessage.current = await checkValidity(value, key as FieldName);
 		}
@@ -187,7 +187,6 @@ export const RegistrationForm: FC<Props> = ({
 					severity="error"
 					elevation={6}
 					variant="filled"
-					sx={{ alignItems: "center" }}
 				>
 					Some error occured! Please try again later.
 				</Alert>
