@@ -1,4 +1,5 @@
 import { Footer } from "components/Footer";
+import { Ribbons } from "components/Ribbons";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "./index.module.scss";
@@ -12,7 +13,9 @@ const Home: NextPage = () => {
 				<meta name="keywords" content="home, walking, pal, buddy, walk" />
 			</Head>
 
-			<main className={styles.main}></main>
+			<main className={styles.main}>
+				<Ribbons />
+			</main>
 
 			<Footer />
 		</div>
