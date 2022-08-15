@@ -6,7 +6,9 @@ import { useWindowSize } from "hooks/useWindowResize";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Features } from "pages/home/components/Features";
+import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
+import { Ribbons } from "pages/home/components/Ribbons";
 import ReactPlayer from "react-player";
 import styles from "./home.module.scss";
 
@@ -23,6 +25,7 @@ export const Home: NextPage = () => {
 
 			<Header />
 			<main className={styles.main}>
+				<Hero />
 				<Intro />
 				<Features />
 				<Box display="flex" justifyContent="center" mx="4vw" my={3}>
@@ -36,6 +39,7 @@ export const Home: NextPage = () => {
 						/>
 					)}
 				</Box>
+				<Ribbons />
 			</main>
 
 			<Footer />

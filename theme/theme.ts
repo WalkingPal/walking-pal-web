@@ -58,14 +58,14 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 			fontFamily: ["Open Sans", ...systemFont].join(","),
 			h1: {
 				fontSize:
-					"clamp(5.537109375rem, 2.7120234375rem + 8.92875vw, 8.4375rem)",
+					"clamp(3rem, 2.7120234375rem + 4.5vw, 8.4375rem)",
 				fontWeight: 500,
 				lineHeight: 1.1142857142857143,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
 				fontFamily: ["Outfit", ...systemFont].join(","),
 			},
 			h2: {
-				fontSize: "clamp(3.9375rem, 1.92855rem + 3.5714vw, 6rem)",
+				fontSize: "clamp(2.5rem, 2rem + 3vw, 6rem)",
 				fontWeight: 400,
 				lineHeight: 1.2222222222222223,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
@@ -73,7 +73,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 			},
 			h3: {
 				fontSize:
-					"clamp(3.240234375rem, 1.5870359375rem + 1.78575vw, 4.9375rem)",
+					"clamp(2.25rem, 1.5870359375rem + 1.78575vw, 5rem)",
 				fontWeight: 400,
 				lineHeight: 1.2222222222222223,
 				letterSpacing: 0.2,
@@ -81,7 +81,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				fontFamily: ["Outfit", ...systemFont].join(","),
 			},
 			h4: {
-				fontSize: "clamp(2.625rem, 1.2857rem + 1.4286vw, 3.6875rem)",
+				fontSize: "clamp(2rem, 1.2857rem + 1.4286vw, 3.6875rem)",
 				fontWeight: 400,
 				lineHeight: 1.5,
 				letterSpacing: 0.2,
@@ -89,7 +89,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				fontFamily: ["Outfit", ...systemFont].join(","),
 			},
 			h5: {
-				fontSize: "1.9375rem",
+				fontSize: "1.8rem",
 				fontWeight: 400,
 				lineHeight: 1.5,
 				letterSpacing: 0.1,
