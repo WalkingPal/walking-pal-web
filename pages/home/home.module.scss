@@ -47,6 +47,40 @@
 			grid-area: x2;
 		}
 	}
+
+	.features {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 4vw;
+		gap: 30px;
+		justify-content: space-around;
+		align-items: center;
+
+		.cards {
+			display: grid;
+			grid-template-areas:
+				"a b"
+				"c d";
+			gap: 50px;
+			justify-content: center;
+			& > div {
+				width: 230px;
+				max-width: 400px;
+			}
+			.card1 {
+				grid-area: a;
+			}
+			.card2 {
+				grid-area: b;
+			}
+			.card3 {
+				grid-area: c;
+			}
+			.card4 {
+				grid-area: d;
+			}
+		}
+	}
 }
 
 @media (max-width: 1200px) {
