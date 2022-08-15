@@ -38,3 +38,6 @@ next-env.d.ts
 
 #firebase
 walking-pal-firebase-adminsdk-*.json
+
+#misc
+.dump

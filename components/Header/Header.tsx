@@ -5,9 +5,7 @@ import { useWindowSize } from "hooks/useWindowResize";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
 import { HeaderMobile } from "components/Header/components/HeaderMobile";
 
-export const links = [
-	{ name: "home", route: "/" },
-];
+export const links = [{ name: "home", route: "/" }];
 
 export const Header: FC = () => {
 	const marginTop = 20;
@@ -25,22 +23,25 @@ export const Header: FC = () => {
 	const { width } = useWindowSize();
 
 	return (
-		<header ref={headerRef} className={styles.header} style={{ marginTop }}>
-			<Paper
-				sx={t => ({
-					background: alpha(t.palette.background.paper, 0.8),
-					width: "100%",
-					webkitBackdropFilter: "blur(10px)",
-					backdropFilter: "blur(10px)",
-					borderRadius: "16px",
-					justifyContent: "center",
-					display: "flex",
-					alignItems: "center",
-					padding: "8px 20px",
-				})}
-			>
-				{!width || width < 1260 ? <HeaderMobile /> : <HeaderDesktop />}
-			</Paper>
-		</header>
+		<>
+			<header ref={headerRef} className={styles.header} style={{ marginTop }}>
+				<Paper
+					sx={t => ({
+						background: alpha(t.palette.background.paper, 0.8),
+						width: "100%",
+						webkitBackdropFilter: "blur(10px)",
+						backdropFilter: "blur(10px)",
+						borderRadius: "16px",
+						justifyContent: "center",
+						display: "flex",
+						alignItems: "center",
+						padding: "8px 20px",
+					})}
+				>
+					{!width || width < 1200 ? <HeaderMobile /> : <HeaderDesktop />}
+				</Paper>
+			</header>
+			<div style={{ height: "calc(var(--header-height) + 5px)" }}></div>
+		</>
 	);
 };

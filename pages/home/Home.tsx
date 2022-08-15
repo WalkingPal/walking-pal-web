@@ -2,6 +2,7 @@ import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Intro } from "pages/home/components/Intro";
 import styles from "./home.module.scss";
 
 export const Home: NextPage = () => {
@@ -14,7 +15,9 @@ export const Home: NextPage = () => {
 			</Head>
 
 			<Header />
-			<main className={styles.main}></main>
+			<main className={styles.main}>
+				<Intro />
+			</main>
 
 			<Footer />
 		</>

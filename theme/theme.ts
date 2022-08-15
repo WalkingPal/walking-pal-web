@@ -94,12 +94,14 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				lineHeight: 1.5,
 				letterSpacing: 0.1,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
+				fontFamily: ["Outfit", ...systemFont].join(","),
 			},
 			h6: {
 				fontSize: "1.25rem",
 				fontWeight: 500,
 				lineHeight: 1.5,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
+				fontFamily: ["Outfit", ...systemFont].join(","),
 			},
 			subtitle1: {
 				fontSize: "1.25rem",

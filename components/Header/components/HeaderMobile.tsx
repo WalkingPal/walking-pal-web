@@ -4,7 +4,7 @@ import { List1 } from "components/Header/components/List1";
 import { List2 } from "components/Header/components/List2";
 import { LogoWordmark } from "components/LogoWordmark";
 import React, { FC, useState } from "react";
-import styles from "./../header.module.scss";
+import styles from "../header.module.scss";
 
 export const HeaderMobile: FC = () => {
 	const [isDrawerOpen, toggleDrawer] = useState(false);
