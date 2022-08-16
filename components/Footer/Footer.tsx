@@ -1,13 +1,34 @@
 import { FacebookOutlined } from "@mui/icons-material";
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import { Box, Divider, Link, Stack, Typography } from "@mui/material";
 import { Insta, Linkedin, Twitter, YouTube } from "assets/svg";
 import { LogoWordmark } from "components/LogoWordmark";
-import Link from "next/link";
 import { FC } from "react";
 import { footerLinks } from "./footer-links";
 import styles from "./footer.module.scss";
 import { LinkContainer } from "./LinkContainer";
 
+const socials = [
+	{
+		link: "https://www.facebook.com/walkingpal.in",
+		icon: <FacebookOutlined sx={{ color: "#fff" }} />,
+	},
+	{
+		link: "https://twitter.com/WalkingPal_in",
+		icon: <Twitter color="#fff" />,
+	},
+	{
+		link: "https://www.linkedin.com/company/walkingpal/",
+		icon: <Linkedin color="#fff" />,
+	},
+	{
+		link: "https://www.instagram.com/walkingpal.in/",
+		icon: <Insta color="#fff" />,
+	},
+	{
+		link: "https://youtu.be/L73A9fyyQqw",
+		icon: <YouTube color="#fff" />,
+	},
+];
 export const Footer: FC = ({}) => {
 	return (
 		<Stack
@@ -67,41 +88,17 @@ export const Footer: FC = ({}) => {
 						justifyContent="center"
 						style={{ transform: "scale(1.3)" }}
 					>
-						<Link
-							href="https://www.facebook.com/walkingpal.in"
-							target="_blank"
-							style={{ background: "#252525", cursor: "pointer" }}
-						>
-							<FacebookOutlined sx={{ color: "#fff" }} />
-						</Link>
-						<Link
-							href="https://twitter.com/WalkingPal_in"
-							target="_blank"
-							style={{ background: "#252525", cursor: "pointer" }}
-						>
-							<Twitter color="#fff" />
-						</Link>
-						<Link
-							href="https://www.linkedin.com/company/walkingpal/"
-							target="_blank"
-							style={{ background: "#252525", cursor: "pointer" }}
-						>
-							<Linkedin color="#fff" />
-						</Link>
-						<Link
-							href="https://www.instagram.com/walkingpal.in/"
-							target="_blank"
-							style={{ background: "#252525", cursor: "pointer" }}
-						>
-							<Insta color="#fff" />
-						</Link>
-						<Link
-							href="https://youtu.be/L73A9fyyQqw"
-							target="_blank"
-							style={{ background: "#252525", cursor: "pointer" }}
-						>
-							<YouTube color="#fff" />
-						</Link>
+						{socials.map((social, i) => {
+							return (
+								<Link
+									href={social.link}
+									target="_blank"
+									key={"socail-" + i}
+								>
+									{social.icon}
+								</Link>
+							);
+						})}
 					</Box>
 				</Box>
 				<Typography
