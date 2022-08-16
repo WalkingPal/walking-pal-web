@@ -29,8 +29,8 @@ export const Header: FC = () => {
 					sx={t => ({
 						background: alpha(t.palette.background.paper, 0.8),
 						width: "100%",
-						webkitBackdropFilter: "blur(10px)",
-						backdropFilter: "blur(10px)",
+						webkitBackdropFilter: "blur(40px)",
+						backdropFilter: "blur(40px)",
 						borderRadius: "16px",
 						justifyContent: "center",
 						display: "flex",

@@ -16,7 +16,7 @@ export const Home: NextPage = () => {
 	const { width } = useWindowSize();
 
 	return (
-		<>
+		<div style={{ position: "relative" }}>
 			<Head>
 				<title>WalkingPal</title>
 				<meta name="description" content="WalkingPal ka desc" />
@@ -28,21 +28,23 @@ export const Home: NextPage = () => {
 				<Hero />
 				<Intro />
 				<Features />
-				<Box display="flex" justifyContent="center" mx="4vw" my={3}>
-					{width && (
-						<ReactPlayer
-							width={width < 1200 ? width - 0.08 * width : 1200}
-							height={width < 1200 ? (width - 0.08 * width) * 0.5625 : 675}
-							playIcon={<Play />} // TODO : Doesnt work. ref: https://stackoverflow.com/q/69132970/12872199
-							style={{ borderRadius: 30, overflow: "hidden" }}
-							url="https://www.youtube.com/watch?v=L73A9fyyQqw"
-						/>
-					)}
+				<Box overflow="hidden" borderRadius="0 0 50px 50px">
+					<Box display="flex" justifyContent="center" mx="vw" my={4}>
+						{width && (
+							<ReactPlayer
+								width={width < 1200 ? width - 0.08 * width : 1200}
+								height={width < 1200 ? (width - 0.08 * width) * 0.5625 : 675}
+								playIcon={<Play />} // TODO : Doesnt work. ref: https://stackoverflow.com/q/69132970/12872199
+								style={{ borderRadius: 30, overflow: "hidden", zIndex: 1 }}
+								url="https://www.youtube.com/watch?v=L73A9fyyQqw"
+							/>
+						)}
+					</Box>
+					<Ribbons />
 				</Box>
-				<Ribbons />
 			</main>
 
 			<Footer />
-		</>
+		</div>
 	);
 };
