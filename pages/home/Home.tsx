@@ -20,7 +20,10 @@ export const Home: NextPage = () => {
 		<div style={{ position: "relative" }}>
 			<Head>
 				<title>WalkingPal</title>
-				<meta name="description" content="WalkingPal ka desc" />
+				<meta
+					name="description"
+					content="The world's first walking buddy app of its kind. Get yourself a walking buddy anytime and anywhere in just a few clicks!"
+				/>
 				<meta name="keywords" content="home, walking, pal, buddy, walk" />
 			</Head>
 

@@ -1,10 +1,10 @@
-import { Box, BoxProps } from "@mui/material";
+import { BoxProps } from "@mui/material";
 import { Logo, Wordmark } from "assets/svg";
 import React, { FC } from "react";
 
 interface ILogoWordmark extends BoxProps {
-	dark: true;
 	size: number;
+	dark?: boolean;
 }
 
 export const LogoWordmark: FC<ILogoWordmark> = props => {
