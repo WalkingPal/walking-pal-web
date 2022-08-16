@@ -8,7 +8,7 @@ export const Footer: FC = ({}) => {
 	return (
     <Stack
       gap='24px'
-      padding='24px'
+      padding='120px 24px 100px'
       bgcolor='#000000'
       alignItems='center'
       justifyContent='center'
@@ -43,6 +43,10 @@ export const Footer: FC = ({}) => {
         }}
         justifyContent='space-between'
         width='100%'
+        padding={{
+          xs: '24px',
+          md: '90px'
+        }}
       >
         <Typography
           color='white'

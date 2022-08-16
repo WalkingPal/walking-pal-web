@@ -8,6 +8,7 @@ import Head from "next/head";
 import { Features } from "pages/home/components/Features";
 import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
+import { ReImagineYourDailyCommute } from "pages/home/components/ReImagineYourDailyCommute";
 import { Ribbons } from "pages/home/components/Ribbons";
 import ReactPlayer from "react-player";
 import styles from "./home.module.scss";
@@ -43,7 +44,7 @@ export const Home: NextPage = () => {
 					<Ribbons />
 				</Box>
 			</main>
-
+			<ReImagineYourDailyCommute />
 			<Footer />
 		</div>
 	);

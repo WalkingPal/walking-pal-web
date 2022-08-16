@@ -99,7 +99,7 @@ export const Ribbons: FC = () => {
 	const ribbonLength = width ? width * 1.5 : 0; //150% of screen width
 
 	return (
-		<>
+		<Box pb={8}>
 			{width && (
 				<Box
 					height={ribbonLength * greatestTan + 80}
@@ -121,6 +121,6 @@ export const Ribbons: FC = () => {
 					})}
 				</Box>
 			)}
-		</>
+		</Box>
 	);
 };
