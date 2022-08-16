@@ -1,0 +1,1 @@
+export { LogoWordmark } from "./LogoWordmark";

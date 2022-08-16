@@ -1,12 +1,10 @@
+import React from "react";
 import "./_globals.scss";
 import type { AppProps } from "next/app";
-import React from "react";
 import Head from "next/head";
-import { useTheme, WPThemeProvider } from "theme";
-import { ThemeProvider } from "@emotion/react";
-import { FC } from "react";
+import { WPThemeProvider } from "theme";
 
-function Root(appProps: AppProps) {
+function App({ Component, pageProps }: AppProps) {
 	return (
 		<React.Fragment>
 			<Head>
@@ -16,23 +14,10 @@ function Root(appProps: AppProps) {
 				/>
 			</Head>
 			<WPThemeProvider>
-				<App appProps={appProps} />
+				<Component {...pageProps} />
 			</WPThemeProvider>
 		</React.Fragment>
 	);
 }
 
-interface IApp {
-	appProps: AppProps;
-}
-const App: FC<IApp> = ({ appProps }) => {
-	const { Component, pageProps } = appProps;
-	const theme = useTheme();
-	return (
-		<ThemeProvider theme={theme}>
-			<Component {...pageProps} />
-		</ThemeProvider>
-	);
-};
-
-export default Root;
+export default App;

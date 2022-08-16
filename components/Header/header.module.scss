@@ -1,0 +1,29 @@
+.header {
+	margin: 0px 4vw;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999999;
+	.logo {
+		display: flex;
+		align-items: flex-end;
+	}
+	.left,
+	.right {
+		flex: 1;
+		display: flex;
+	}
+
+	.right {
+		justify-content: flex-end;
+	}
+
+	.mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+}

@@ -1,0 +1,31 @@
+import { Box, BoxProps } from "@mui/material";
+import { Logo, Wordmark } from "assets/svg";
+import React, { FC } from "react";
+
+interface ILogoWordmark extends BoxProps {
+	dark: true;
+	size: number;
+}
+
+export const LogoWordmark: FC<ILogoWordmark> = props => {
+	const fill = props.dark ? "#767676" : "#FFFCFC";
+	const scale = props.size / 100;
+	const width = 311;
+	const height = 73;
+	return (
+		<div style={{ width: width * scale, height: height * scale }}>
+			<span
+				style={{
+					transform: `scale(${scale})`,
+					transformOrigin: "top left",
+					flexWrap: "nowrap",
+					display: "inline-flex",
+					alignItems: "flex-end",
+				}}
+			>
+				<Logo />
+				<Wordmark color={fill} />
+			</span>
+		</div>
+	);
+};
