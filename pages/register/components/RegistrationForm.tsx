@@ -26,7 +26,7 @@ import {
 import { FormActions } from "./FormActions";
 import { InputField } from "./InputField";
 
-const totalSteps = 4;
+const totalSteps = Object.keys(fields).length - 1;
 
 interface Props {
 	stepsCompleted: number;
@@ -153,19 +153,6 @@ export const RegistrationForm: FC<Props> = ({
 						);
 					},
 				)}
-				<Box sx={{ minWidth: "100%" }}>
-					<InputField
-						label="Follow us on Instagram"
-						value="@walkingpal.in"
-						disabled
-						sx={{
-							"& .Mui-disabled": {
-								color: "#000",
-								WebkitTextFillColor: "#000",
-							},
-						}}
-					/>
-				</Box>
 			</div>
 			<FormActions
 				totalSteps={totalSteps}

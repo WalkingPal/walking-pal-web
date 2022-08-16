@@ -1,6 +1,6 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Link, Stack, Typography } from "@mui/material";
+import { Insta } from "assets/svg";
 import { useWindowSize } from "hooks/useWindowResize";
-import Link from "next/link";
 import React, { FC } from "react";
 import ReactConfetti from "react-confetti";
 
@@ -44,9 +44,27 @@ export const SubmittedAck: FC = () => {
 					padding="10px 16px"
 					bgcolor="#F6BF51"
 				>
-					<Link href="/">
-						<Button>
-							<Typography>HOME</Typography>
+					<Link href="https://www.instagram.com/walkingpal.in/" target="_blank" underline="none">
+						<Button
+							style={{
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
+								gap: 10,
+							}}
+						>
+							<Typography>TAKE ME TO</Typography>
+							<div
+								style={{
+									transform: "scale(1.3)",
+									display: "flex",
+									alignItems: "center",
+									justifyContent: "center",
+								}}
+							>
+								<Insta color="#fff" />
+							</div>
+							<Typography>INSTAGRAM</Typography>
 						</Button>
 					</Link>
 				</Stack>
