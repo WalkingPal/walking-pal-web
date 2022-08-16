@@ -23,6 +23,7 @@ export const HeaderMobile: FC = () => {
 
 			<Drawer
 				anchor="right"
+				style={{zIndex: 999999999}}
 				open={isDrawerOpen}
 				onClose={() => toggleDrawer(false)}
 			>

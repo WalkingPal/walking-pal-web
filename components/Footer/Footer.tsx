@@ -69,30 +69,35 @@ export const Footer: FC = ({}) => {
 					>
 						<Link
 							href="https://www.facebook.com/walkingpal.in"
+							target="_blank"
 							style={{ background: "#252525", cursor: "pointer" }}
 						>
 							<FacebookOutlined sx={{ color: "#fff" }} />
 						</Link>
 						<Link
 							href="https://twitter.com/WalkingPal_in"
+							target="_blank"
 							style={{ background: "#252525", cursor: "pointer" }}
 						>
 							<Twitter color="#fff" />
 						</Link>
 						<Link
 							href="https://www.linkedin.com/company/walkingpal/"
+							target="_blank"
 							style={{ background: "#252525", cursor: "pointer" }}
 						>
 							<Linkedin color="#fff" />
 						</Link>
 						<Link
 							href="https://www.instagram.com/walkingpal.in/"
+							target="_blank"
 							style={{ background: "#252525", cursor: "pointer" }}
 						>
 							<Insta color="#fff" />
 						</Link>
 						<Link
 							href="https://youtu.be/L73A9fyyQqw"
+							target="_blank"
 							style={{ background: "#252525", cursor: "pointer" }}
 						>
 							<YouTube color="#fff" />

@@ -3,7 +3,7 @@ import { memojis } from "assets/png";
 import { useWindowSize } from "hooks/useWindowResize";
 import { FC, ReactNode } from "react";
 
-const getTag = (i: number) => (
+const getTag = (key: string) => (
 	<Typography
 		variant="subtitle1"
 		color="#fff"
@@ -11,23 +11,23 @@ const getTag = (i: number) => (
 		p="10px 25px"
 		borderRadius="30px"
 		width="185px"
-		key={"deco" + i}
+		key={"deco" + key}
 	>
 		Walking Buddy
 	</Typography>
 );
-const getLabel = (i: number, label: string) => (
-	<Typography variant="h5" width="100px" textAlign="center" key={"deco" + i}>
+const getLabel = (key: string, label: string) => (
+	<Typography variant="h5" width="100px" textAlign="center" key={"deco" + key}>
 		{label}
 	</Typography>
 );
-const getMemoji = (i: number) => {
+const getMemoji = (key: string) => {
 	const index = Math.ceil(Math.random() * (memojis.length - 1));
 	return (
 		<Avatar
 			src={memojis[index].src}
 			sx={{ width: "70px", height: "70px" }}
-			key={"deco" + i}
+			key={"deco" + key}
 		/>
 	);
 };
@@ -37,6 +37,7 @@ interface IRibbon {
 	color: string;
 	elevation: number;
 	ribbonLength: number;
+	k: number;
 }
 const Ribbon: FC<IRibbon> = ({
 	color,
@@ -44,6 +45,7 @@ const Ribbon: FC<IRibbon> = ({
 	label,
 	elevation,
 	ribbonLength,
+	k,
 }) => {
 	const getDecoration = () => {
 		let decoWidth = 0;
@@ -51,16 +53,17 @@ const Ribbon: FC<IRibbon> = ({
 		let j = 0;
 		const decorations: ReactNode[] = [];
 		do {
-			decorations.push(getLabel(j, label));
+			decorations.push(getLabel(`-${k}-${j}-a`, label));
 			if (i % 2 === 0) {
-				decorations.push(getTag(j));
+				decorations.push(getTag(`-${k}-${j}-b`));
 				decoWidth += 285;
 			} else {
-				decorations.push(getMemoji(j));
+				decorations.push(getMemoji(`-${k}-${j}-b`));
 				decoWidth += 170;
 			}
 			console.log(decoWidth, 0);
 			i++;
+			j++;
 		} while (decoWidth <= ribbonLength);
 		return decorations;
 	};
@@ -115,6 +118,7 @@ export const Ribbons: FC = () => {
 									{...ribbonProps}
 									elevation={i * 3 + 1}
 									ribbonLength={ribbonLength}
+									k={i}
 								/>
 							</Box>
 						);
