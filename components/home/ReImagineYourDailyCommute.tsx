@@ -53,6 +53,11 @@ export const ReImagineYourDailyCommute: FC = () => {
       padding='160px 24px 54px'
       bgcolor='#FFFFFF'
       gap='120px'
+      borderRadius='50px'
+      sx={{
+        position: 'relative',
+        top: '50px'
+      }}
     >
       <Typography
         variant='h3'
