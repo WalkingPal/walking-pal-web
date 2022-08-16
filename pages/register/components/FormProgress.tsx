@@ -10,7 +10,6 @@ interface Props {
 
 export const FormProgress: FC<Props> = ({ stepsCompleted }) => {
 	const steps = Object.keys(fields);
-	steps.push("submit");
 
 	return (
 		<Stepper

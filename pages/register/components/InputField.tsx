@@ -17,7 +17,6 @@ interface IInputField extends InputBaseProps {
 	label: string;
 }
 export const InputField: FCC<IInputField> = props => {
-	console.log(props.label);
 	return (
 		<Stack gap="8px" sx={{ p: "32px", backgroundColor: "white" }}>
 			<InputLabel required sx={{ fontSize: 30 }}>
@@ -64,23 +63,7 @@ export const InputField: FCC<IInputField> = props => {
 					</Select>
 				</FormControl>
 			) : (
-				<>
-					{props.label === "Follow us on Instagram" ? (
-						<Link
-							href="https://www.instagram.com/walkingpal.in/"
-							target="_blank"
-							style={{ cursor: "pointer" }}
-						>
-							<OutlinedInput
-								{...props}
-								style={{ ...props.style, display: "flex" }}
-								label={undefined}
-							/>
-						</Link>
-					) : (
-						<OutlinedInput {...props} label={undefined} />
-					)}
-				</>
+				<OutlinedInput {...props} label={undefined} />
 			)}
 			{props.children}
 		</Stack>
