@@ -15,7 +15,7 @@ const Img: FC<IImg> = props => {
 			className={props.className}
 			style={{ minWidth: props.width, display: props.display }}
 		>
-			<Image {...props} />
+			<Image alt="" {...props} />
 		</span>
 	);
 };

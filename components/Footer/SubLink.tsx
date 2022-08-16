@@ -16,7 +16,7 @@ export const SubLink: FC<Props> = ({link}) => {
       passHref
     >
       <Typography
-        variant='textMd'
+        variant='body2'
         color='white'
       >
         {link.name}
