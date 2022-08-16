@@ -52,6 +52,7 @@ export const ReImagineYourDailyCommute: FC = () => {
     <Stack
       padding='160px 24px 54px'
       bgcolor='#FFFFFF'
+      gap='120px'
     >
       <Typography
         variant='h3'
@@ -78,9 +79,9 @@ export const ReImagineYourDailyCommute: FC = () => {
             xs={6}
             md={3}
             // maxWidth={256}
-            // display='flex'
-            // justifyContent='center'
-            // alignItems='center'
+            display='flex'
+            justifyContent='center'
+            alignItems='center'
           >
             <CommuteCard
               cc={cc}
