@@ -1,5 +1,5 @@
 .main {
-	.root {
+	.intro {
 		padding: 4vw;
 		gap: 30px;
 		display: grid;
@@ -85,7 +85,7 @@
 
 @media (max-width: 1200px) {
 	.main {
-		.root {
+		.intro {
 			grid-template-areas:
 				"x1 a"
 				"c a"
@@ -120,7 +120,7 @@
 
 @media (max-width: 750px) {
 	.main {
-		.root {
+		.intro {
 			grid-template-areas:
 				"a"
 				"a"

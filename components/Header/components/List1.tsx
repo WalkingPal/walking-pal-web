@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { links } from "components/Header/Header";
+import { links } from "components/Header";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { FC } from "react";

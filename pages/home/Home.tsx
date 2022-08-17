@@ -1,7 +1,5 @@
 import { Box } from "@mui/material";
 import { Play } from "assets/svg";
-import { Footer } from "components/Footer";
-import { Header } from "components/Header";
 import { useWindowSize } from "hooks/useWindowResize";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -27,7 +25,6 @@ export const Home: NextPage = () => {
 				<meta name="keywords" content="home, walking, pal, buddy, walk" />
 			</Head>
 
-			<Header />
 			<main className={styles.main}>
 				<Hero />
 				<Intro />
@@ -48,7 +45,6 @@ export const Home: NextPage = () => {
 				</Box>
 			</main>
 			<ReImagineYourDailyCommute />
-			<Footer />
 		</div>
 	);
 };

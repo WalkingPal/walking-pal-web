@@ -22,7 +22,7 @@ const Img: FC<IImg> = props => {
 
 export const Intro: FC = ({}) => {
 	return (
-		<div className={styles.root}>
+		<div className={styles.intro}>
 			<Img className={styles.mockup} src={mockup} />
 			<Img className={styles.credit} src={credit} width="327px" />
 			<Img className={styles.screens2} src={screens2} width="327px" />

@@ -106,6 +106,7 @@ export const Footer: FC = ({}) => {
 						md: "right",
 					}}
 					flexGrow={1}
+					maxWidth={650}
 				>
 					Our
 					<Typography component="span" variant="h5" color="#FF5959">

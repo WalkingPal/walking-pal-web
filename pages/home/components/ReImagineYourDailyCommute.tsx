@@ -73,7 +73,6 @@ export const ReImagineYourDailyCommute: FC = () => {
 						item
 						xs={6}
 						md={3}
-						// maxWidth={256}
 						display="flex"
 						justifyContent="center"
 						alignItems="center"
