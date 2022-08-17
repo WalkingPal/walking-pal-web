@@ -4,6 +4,7 @@ If you want to learn from animations and illustrations, [follow this link to off
 ![type-system](./assets/material-type-face.png)
 
 There are total 13 font variants which is shown below in decreasing order of emphasis:
+
 - h1
 - h2
 - h3
@@ -25,7 +26,7 @@ There are total 13 font variants which is shown below in decreasing order of emp
 **Caption and overline**: used sparingly to annotate imagery
 **overline**: Sparingly used. Mainly Used over headlines to introduce the headline.
 
-*For UI examples refer the link given above*
+_For UI examples refer the link given above_
 
 ### Key Takeaways
 

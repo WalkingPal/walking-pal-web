@@ -90,11 +90,7 @@ export const Footer: FC = ({}) => {
 					>
 						{socials.map((social, i) => {
 							return (
-								<Link
-									href={social.link}
-									target="_blank"
-									key={"socail-" + i}
-								>
+								<Link href={social.link} target="_blank" key={"socail-" + i}>
 									{social.icon}
 								</Link>
 							);
