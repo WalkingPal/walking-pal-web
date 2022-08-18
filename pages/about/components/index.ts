@@ -1,0 +1,1 @@
+export { Gallary } from "./gallary";
