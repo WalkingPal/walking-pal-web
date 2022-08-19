@@ -1,0 +1,67 @@
+.main {
+	.intro {
+		padding: 4vw;
+		gap: 30px;
+		display: grid;
+		grid-template-areas:
+			"x1 a a x2"
+			"c a a o"
+			"c a a o"
+			"t a a o"
+			"t a a g"
+			"w w w g"
+			"w w w g";
+
+		.mockup {
+			grid-area: a;
+			justify-self: center;
+		}
+		.credit {
+			grid-area: c;
+			align-self: center;
+			justify-self: flex-end;
+		}
+		.screens2 {
+			grid-area: t;
+			justify-self: flex-end;
+		}
+		.screens1 {
+			grid-area: o;
+			align-self: flex-end;
+		}
+		}
+	}
+
+@media (max-width: 1200px) {
+	.main {
+		.intro {
+			grid-template-areas:
+				"x1 a"
+				"c a"
+				"c a"
+				"t a"
+				"t a"
+				"w w"
+				"w w"
+				"o g";
+
+			
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	.main {
+		.intro {
+			grid-template-areas:
+				"a"
+				"a"
+				"c"
+				"o"
+				"g";
+
+			
+			
+		}
+	}
+}
