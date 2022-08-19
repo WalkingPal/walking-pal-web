@@ -1,2 +1,63 @@
-.main {
+.main{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.gallery {
+		padding: 4vw;
+		gap: 30px;
+		display: grid;
+		grid-template-areas:
+			"a a b b d d"
+			"a a b b d d"
+			"c c c c d d"
+			"c c c c d d"
+			"e e e e e e";
+
+		.pic1 {
+			grid-area: a;
+			
+		}
+		.pic2 {
+			grid-area: b;
+		}
+		.pic4 {
+			grid-area: d;
+		}
+		.pic3 {
+			grid-area: c;
+		}
+		.typo {
+			grid-area: e;
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 31px;
+			line-height: 42px;
+			text-align: center;
+			color: #000000;
+		}
+		}
+	
+	}
+
+
+@media (max-width: 750px) {
+	.main {
+		.gallery {
+			grid-template-areas:
+				"a a d d"
+				"a a d d"
+				"b b d d"
+				"b b d d"
+				"c c c c"
+				"c c c c"
+				"e e e e";
+
+			
+			
+		}
+	}
 }
