@@ -10,11 +10,9 @@
 		gap: 30px;
 		display: grid;
 		grid-template-areas:
-			"a a b b d d"
-			"a a b b d d"
-			"c c c c d d"
-			"c c c c d d"
-			"e e e e e e";
+			"a b d"
+			"c c d"
+			"e e e";
 
 		.pic1 {
 			grid-area: a;
@@ -25,11 +23,17 @@
 		}
 		.pic4 {
 			grid-area: d;
+			width:100%;
+            height:100%;
+            object-fit:cover;
 		}
 		.pic3 {
 			grid-area: c;
 		}
 		.typo {
+			display: flex;
+			justify-self: center;
+			max-width: 1026px;
 			grid-area: e;
 			font-family: 'Open Sans';
 			font-style: normal;
@@ -48,13 +52,10 @@
 	.main {
 		.gallery {
 			grid-template-areas:
-				"a a d d"
-				"a a d d"
-				"b b d d"
-				"b b d d"
-				"c c c c"
-				"c c c c"
-				"e e e e";
+				"a d"
+				"b d"
+				"c c"
+				"e e";
 
 			
 			

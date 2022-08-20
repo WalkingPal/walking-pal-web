@@ -29,12 +29,10 @@ export const Gallery: FC = ({}) => {
 				<Img className={styles.pic3} src={pic3} />
 				<span className={styles.typo}>
 					Every groundbreaking App begins with a series of small ideas that are{" "}
-					<br /> combined into an all inclusive one. At WalkingPal, we wanted to
-					change <br /> how consumers see the concept of Walking to commute
-					daily, by <br />
-					offering a simple and user-friendly platform they can trust. Now
-					having <br /> a Walking Buddy anytime and anywhere is easier than
-					ever!
+					combined into an all inclusive one. At WalkingPal, we wanted to change
+					how consumers see the concept of Walking to commute daily, by offering
+					a simple and user-friendly platform they can trust. Now having a
+					Walking Buddy anytime and anywhere is easier than ever!
 				</span>
 			</div>
 		</div>
