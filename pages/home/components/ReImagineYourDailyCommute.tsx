@@ -1,5 +1,5 @@
 import { Grid, Stack, Typography } from "@mui/material";
-import { Accent } from "components/Accent/Accent";
+import { Accent } from "components/Accent";
 import { FC } from "react";
 import Community from "./reimagine/Community";
 import { CommuteCard } from "./reimagine/CommuteCard";

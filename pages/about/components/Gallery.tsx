@@ -1,30 +1,17 @@
 import { Typography } from "@mui/material";
 import { about1, about2, about3, about4 } from "assets/png";
-import Image, { ImageProps } from "next/image";
-import React, { CSSProperties, FC, useRef } from "react";
+import { Image } from "components/Image";
+import React, { FC } from "react";
 import styles from "../about.module.scss";
-
-interface IImg extends ImageProps {
-	className?: string;
-	wrapStyle?: CSSProperties;
-}
-
-const Img: FC<IImg> = props => {
-	return (
-		<span className={props.className} style={props.wrapStyle}>
-			<Image alt="" {...props} />
-		</span>
-	);
-};
 
 export const Gallery: FC = ({}) => {
 	return (
 		<div className={styles.main}>
 			<div className={styles.gallery}>
-				<Img className={styles.about1} src={about1} />
-				<Img className={styles.about2} src={about2} />
-				<Img className={styles.about3} src={about3} />
-				<Img className={styles.about4} src={about4} />
+				<Image className={styles.about1} src={about1} />
+				<Image className={styles.about2} src={about2} />
+				<Image className={styles.about3} src={about3} />
+				<Image className={styles.about4} src={about4} />
 			</div>
 			<Typography variant="h6" minWidth="300px" width="70%" textAlign="center">
 				Every groundbreaking App begins with a series of small ideas that are
