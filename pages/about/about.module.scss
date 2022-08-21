@@ -1,2 +1,49 @@
-.main {
+.OurStory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
 }
+
+.story1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: 30px;
+    
+}
+
+.story2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    gap: 30px;
+}
+
+.story3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+
+.typo1 {
+    max-width: 620px;
+}
+
+.typo2 {
+    max-width: 523px;
+}
+
+.typo3 {
+    max-width: 592px;
+}
+
+

@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import { Accent } from "components/Accent/Accent";
+import { Accent1 } from "components/Accent/Accent";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -10,7 +10,7 @@ export const Hero: FC<IHero> = ({}) => {
 		<Box display="grid" justifyContent="center" textAlign="center">
 			<Typography variant="h3" mt={7}>
 				We believe in a more <br /> sustainable and{" "}
-				<Accent>conscientious</Accent>
+				<Accent1>conscientious</Accent1>
 				<br /> way of living.
 			</Typography>
 			<Typography variant="body1" mt={7}>
