@@ -1,4 +1,5 @@
 import { Grid, Stack, Typography } from "@mui/material";
+import { Accent } from "components/Accent/Accent";
 import { FC } from "react";
 import Community from "./reimagine/Community";
 import { CommuteCard } from "./reimagine/CommuteCard";
@@ -61,10 +62,7 @@ export const ReImagineYourDailyCommute: FC = () => {
 		>
 			<Typography variant="h3" textAlign="center">
 				Reimagine your daily
-				<Typography component="p" variant="h3" color="#FF5959">
-					{" "}
-					commute
-				</Typography>
+				<br /> <Accent>commute</Accent>
 			</Typography>
 			<Grid container spacing="16px" justifyContent="space-between">
 				{commuteCards.map(cc => (
