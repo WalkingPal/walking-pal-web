@@ -1,2 +1,64 @@
-.main {
+.main{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.gallery {
+		padding: 4vw;
+		gap: 30px;
+		display: grid;
+		grid-template-areas:
+			"a b d"
+			"c c d"
+			"e e e";
+
+		.pic1 {
+			grid-area: a;
+			
+		}
+		.pic2 {
+			grid-area: b;
+		}
+		.pic4 {
+			grid-area: d;
+			width:100%;
+            height:100%;
+            object-fit:cover;
+		}
+		.pic3 {
+			grid-area: c;
+		}
+		.typo {
+			display: flex;
+			justify-self: center;
+			max-width: 1026px;
+			grid-area: e;
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 31px;
+			line-height: 42px;
+			text-align: center;
+			color: #000000;
+		}
+		}
+	
+	}
+
+
+@media (max-width: 750px) {
+	.main {
+		.gallery {
+			grid-template-areas:
+				"a d"
+				"b d"
+				"c c"
+				"e e";
+
+			
+			
+		}
+	}
 }

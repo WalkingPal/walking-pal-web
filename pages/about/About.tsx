@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Hero } from "pages/about/components/Hero";
 import styles from "./about.module.scss";
+import { Gallery } from "pages/about/components/Gallery";
 
 export const About: NextPage = () => {
 	return (
@@ -19,7 +20,8 @@ export const About: NextPage = () => {
 			</Head>
 
 			<main className={styles.main}>
-				<Hero />
+        <Hero />
+				<Gallery />	
 			</main>
 		</div>
 	);
