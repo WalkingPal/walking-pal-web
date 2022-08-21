@@ -5,7 +5,10 @@ import { useWindowSize } from "hooks/useWindowResize";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
 import { HeaderMobile } from "components/Header/components/HeaderMobile";
 
-export const links = [{ name: "home", route: "/" }];
+export const links = [
+	{ name: "home", route: "/" },
+	{ name: "about", route: "/about" },
+];
 
 export const Header: FC = () => {
 	const marginTop = 20;
@@ -29,8 +32,8 @@ export const Header: FC = () => {
 					sx={t => ({
 						background: alpha(t.palette.background.paper, 0.8),
 						width: "100%",
-						webkitBackdropFilter: "blur(40px)",
-						backdropFilter: "blur(40px)",
+						webkitBackdropFilter: "blur(20px)",
+						backdropFilter: "blur(20px)",
 						borderRadius: "16px",
 						justifyContent: "center",
 						display: "flex",

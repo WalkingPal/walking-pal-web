@@ -1,20 +1,17 @@
 import { Box, Paper, Typography } from "@mui/material";
 import { credit, group, mockup, screens1, screens2, walker } from "assets/png";
 import Image, { ImageProps } from "next/image";
-import React, { FC } from "react";
+import React, { CSSProperties, FC } from "react";
 import styles from "../home.module.scss";
 
 interface IImg extends ImageProps {
 	className?: string;
-	display?: "flex" | "grid";
+	wrapStyle?: CSSProperties;
 }
 
 const Img: FC<IImg> = props => {
 	return (
-		<span
-			className={props.className}
-			style={{ minWidth: props.width, display: props.display }}
-		>
+		<span className={props.className} style={props.wrapStyle}>
 			<Image alt="" {...props} />
 		</span>
 	);
@@ -41,7 +38,11 @@ export const Intro: FC = ({}) => {
 					<Typography variant="h6" p={5} textAlign="center">
 						This app will change the way you commute.
 					</Typography>
-					<Img src={screens1} style={{ width: "100%" }} display="flex" />
+					<Img
+						src={screens1}
+						style={{ width: "100%" }}
+						wrapStyle={{ display: "flex" }}
+					/>
 				</Paper>
 			</span>
 			<span className={styles.group}>

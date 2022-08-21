@@ -5,7 +5,7 @@ import Head from "next/head";
 import { WPThemeProvider } from "theme";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
