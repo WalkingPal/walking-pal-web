@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Hero } from "pages/about/components/Hero";
 import styles from "./about.module.scss";
 import { Gallery } from "pages/about/components/Gallery";
 
@@ -19,7 +20,8 @@ export const About: NextPage = () => {
 			</Head>
 
 			<main className={styles.main}>
-				<Gallery />
+        <Hero />
+				<Gallery />	
 			</main>
 		</div>
 	);
