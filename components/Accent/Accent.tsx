@@ -3,8 +3,18 @@ import { FCC } from "types/IReact";
 
 export const Accent1: FCC = ({ children }) => {
 	return (
-		<Typography variant="h3" component="span" sx={{ color: "primary.main" }}>
-			{children}
+		<Typography
+			component="span"
+			sx={{
+				color: "primary.main",
+				fontSize: "inherit",
+				fontWeight: "inherit",
+				lineHeight: "inherit",
+				letterSpacing: "inherit",
+				fontFamily: "inherit",
+			}}
+		>
+			&nbsp;{children}&nbsp;
 		</Typography>
 	);
 };

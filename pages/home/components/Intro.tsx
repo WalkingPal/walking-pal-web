@@ -1,29 +1,16 @@
 import { Box, Paper, Typography } from "@mui/material";
 import { credit, group, mockup, screens1, screens2, walker } from "assets/png";
-import Image, { ImageProps } from "next/image";
-import React, { CSSProperties, FC } from "react";
+import { Image } from "components/Image";
+import React, { FC } from "react";
 import styles from "../home.module.scss";
-
-interface IImg extends ImageProps {
-	className?: string;
-	wrapStyle?: CSSProperties;
-}
-
-const Img: FC<IImg> = props => {
-	return (
-		<span className={props.className} style={props.wrapStyle}>
-			<Image alt="" {...props} />
-		</span>
-	);
-};
 
 export const Intro: FC = ({}) => {
 	return (
 		<div className={styles.intro}>
-			<Img className={styles.mockup} src={mockup} />
-			<Img className={styles.credit} src={credit} width="327px" />
-			<Img className={styles.screens2} src={screens2} width="327px" />
-			<Img className={`${styles.walker} ${styles.noSm}`} src={walker} />
+			<Image className={styles.mockup} src={mockup} />
+			<Image className={styles.credit} src={credit} width="327px" />
+			<Image className={styles.screens2} src={screens2} width="327px" />
+			<Image className={`${styles.walker} ${styles.noSm}`} src={walker} />
 			<span className={styles.screens1}>
 				<Paper
 					sx={{
@@ -38,7 +25,7 @@ export const Intro: FC = ({}) => {
 					<Typography variant="h6" p={5} textAlign="center">
 						This app will change the way you commute.
 					</Typography>
-					<Img
+					<Image
 						src={screens1}
 						style={{ width: "100%" }}
 						wrapStyle={{ display: "flex" }}
@@ -55,7 +42,7 @@ export const Intro: FC = ({}) => {
 						py: 9,
 					}}
 				>
-					<Img src={group} style={{ width: "100%" }} />
+					<Image src={group} style={{ width: "100%" }} />
 					<Box sx={{ padding: 3, textAlign: "center" }}>
 						<Typography variant="h6">Create Groups</Typography>
 						<Typography variant="body1">
