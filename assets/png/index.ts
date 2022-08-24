@@ -11,6 +11,7 @@ export { default as about4 } from "assets/png/about4.png";
 export { default as story1 } from "assets/png/story1.png";
 export { default as story2 } from "assets/png/story2.png";
 export { default as story3 } from "assets/png/story3.png";
+export { default as EL } from "assets/png/EL.png";
 import memoji1 from "assets/png/memoji1.png";
 import memoji2 from "assets/png/memoji2.png";
 import memoji3 from "assets/png/memoji3.png";

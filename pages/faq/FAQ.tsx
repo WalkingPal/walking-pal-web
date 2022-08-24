@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "./faq.module.scss";
+import { Form } from "components/Form";
 
 export const FAQ: NextPage = () => {
 	return (
@@ -17,7 +18,9 @@ export const FAQ: NextPage = () => {
 				/>
 			</Head>
 
-			<main className={styles.main}></main>
+			<main className={styles.main}>
+				<Form />
+			</main>
 		</div>
 	);
 };
