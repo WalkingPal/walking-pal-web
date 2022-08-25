@@ -44,7 +44,11 @@ export const SubmittedAck: FC = () => {
 					padding="10px 16px"
 					bgcolor="#F6BF51"
 				>
-					<Link href="https://www.instagram.com/walkingpal.in/" target="_blank" underline="none">
+					<Link
+						href="https://www.instagram.com/walkingpal.in/"
+						target="_blank"
+						underline="none"
+					>
 						<Button
 							style={{
 								display: "flex",

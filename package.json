@@ -8,12 +8,8 @@
 		"start": "next start",
 		"lint": "next lint",
 		"prettycheck": "prettier --check .",
-		"prettify": "prettier --write ."
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "yarn prettify && git add -A ."
-		}
+		"prettify": "prettier --write .",
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.10.0",
@@ -41,7 +37,12 @@
 		"eslint": "8.21.0",
 		"eslint-config-next": "12.2.4",
 		"husky": "^8.0.1",
+		"lint-staged": ">=10",
 		"prettier": "2.7.1",
 		"typescript": "4.7.4"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+		"*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write"
 	}
 }

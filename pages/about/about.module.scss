@@ -1,0 +1,56 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.gallery {
+		padding: 4vw;
+		display: grid;
+		gap: 30px;
+		grid-template-columns: 1fr 1fr 1.5fr;
+		grid-template-areas:
+			"a b d"
+			"c c d";
+
+		.about1 {
+			grid-area: a;
+		}
+		.about2 {
+			grid-area: b;
+			align-self: flex-end;
+			display: flex;
+		}
+		.about3 {
+			grid-area: c;
+		}
+		.about4 {
+			grid-area: d;
+			& > span {
+				height: 100% !important;
+			}
+		}
+	}
+
+	.ourstory {
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 50px;
+	}
+}
+
+@media (max-width: 750px) {
+	.main {
+		.gallery {
+			grid-template-columns: 1fr 1.5fr;
+			grid-template-areas:
+				"a d"
+				"b d"
+				"c c";
+		}
+	}
+}
