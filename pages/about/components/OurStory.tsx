@@ -30,11 +30,12 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 				sx={{ width: { xs: "80%", md: "30%" } }}
 			>
 				<Image
-					wrapStyle={{ display: "flex", justifyContent: "center" }}
+					wrapstyle={{ display: "flex", justifyContent: "center" }}
 					src={imgSrc}
+					alt=""
 				/>
 				<Image
-					wrapStyle={{
+					wrapstyle={{
 						position: "absolute",
 						bottom: "-50px",
 						width: "100px",
@@ -42,6 +43,7 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 						right: rowReverse ? 0 : undefined,
 					}}
 					src={icon}
+					alt=""
 				/>
 			</Box>
 

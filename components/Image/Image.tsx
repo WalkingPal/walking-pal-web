@@ -4,12 +4,12 @@ import { FC } from "react";
 
 interface IImage extends ImageProps {
 	className?: string;
-	wrapStyle?: SxProps<Theme>;
+	wrapstyle?: SxProps<Theme>;
 }
 
 export const Image: FC<IImage> = props => {
 	return (
-		<Box className={props.className} sx={props.wrapStyle} component="span">
+		<Box className={props.className} sx={props.wrapstyle} component="span">
 			<NextImage alt="" {...props} />
 		</Box>
 	);
