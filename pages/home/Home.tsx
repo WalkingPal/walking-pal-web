@@ -3,6 +3,7 @@ import { Play } from "assets/svg";
 import { useWindowSize } from "hooks/useWindowResize";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { EasySteps } from "pages/home/components/EasySteps";
 import { Features } from "pages/home/components/Features";
 import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
@@ -26,12 +27,18 @@ export const Home: NextPage = () => {
 				<meta name="keywords" content="home, walking, pal, buddy, walk" />
 			</Head>
 
-			<main className={styles.main} style={{ marginBottom: 80 }}>
+			<main style={{ marginBottom: 80 }}>
 				<Hero />
 				<Intro />
 				<Features />
-				<Box overflow="hidden" borderRadius="0 0 50px 50px">
-					<Box display="flex" justifyContent="center" mx="vw" my={4}>
+				<Box
+					borderRadius="0 0 50px 50px"
+					position="relative"
+					zIndex={1}
+					bgcolor="#fff"
+					overflow="hidden"
+				>
+					<Box display="flex" justifyContent="center" mx="4vw" my={4}>
 						{width && (
 							<ReactPlayer
 								width={width < 1200 ? width - 0.08 * width : 1200}
@@ -43,6 +50,17 @@ export const Home: NextPage = () => {
 						)}
 					</Box>
 					<Ribbons />
+				</Box>
+				<Box
+					position="relative"
+					top={-50}
+					pb={5}
+					px="4vw"
+					pt={10}
+					bgcolor="#0D0D0D"
+					borderRadius="0 0 50px 50px"
+				>
+					<EasySteps />
 				</Box>
 				<ReImagineYourDailyCommute />
 				{/* <CommunityForm /> */}

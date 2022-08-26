@@ -19,6 +19,11 @@ export { default as community } from "assets/png/community.png";
 export { default as bagpack } from "assets/png/bagpack.png";
 export { default as promotion } from "assets/png/promotion.png";
 export { default as shopping } from "assets/png/shopping.png";
+export { default as step1 } from "assets/png/step1.png";
+export { default as step2 } from "assets/png/step2.png";
+export { default as step3 } from "assets/png/step3.png";
+export { default as step4 } from "assets/png/step4.png";
+
 import memoji1 from "assets/png/memoji1.png";
 import memoji2 from "assets/png/memoji2.png";
 import memoji3 from "assets/png/memoji3.png";
