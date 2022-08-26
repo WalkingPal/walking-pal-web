@@ -3,13 +3,12 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { step1, step2, step3, step4 } from "assets/png";
 import { Accent } from "components/Accent";
-// import { Image } from "components/Image";
 import styles from "../home.module.scss";
 import Image from "next/image";
 
 const steps = [
 	{
-		imgSrc: step1.src,
+		imgSrc: step1,
 		txt: (
 			<>
 				Open the
@@ -22,7 +21,7 @@ const steps = [
 		color: "#FF5959",
 	},
 	{
-		imgSrc: step2.src,
+		imgSrc: step2,
 		txt: (
 			<>
 				Set your
@@ -35,7 +34,7 @@ const steps = [
 		color: "#67CBC9",
 	},
 	{
-		imgSrc: step3.src,
+		imgSrc: step3,
 		txt: (
 			<>
 				Click on the
@@ -48,7 +47,7 @@ const steps = [
 		color: "#F6BF51",
 	},
 	{
-		imgSrc: step4.src,
+		imgSrc: step4,
 		txt: (
 			<>
 				Browse & send

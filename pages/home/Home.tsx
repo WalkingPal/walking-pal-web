@@ -4,6 +4,7 @@ import { useWindowSize } from "hooks/useWindowResize";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { EasySteps } from "pages/home/components/EasySteps";
+import { EasyStepsFooter } from "pages/home/components/EasyStepsFooter";
 import { Features } from "pages/home/components/Features";
 import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
@@ -61,6 +62,7 @@ export const Home: NextPage = () => {
 					borderRadius="0 0 50px 50px"
 				>
 					<EasySteps />
+					<EasyStepsFooter />
 				</Box>
 				<ReImagineYourDailyCommute />
 				{/* <CommunityForm /> */}
