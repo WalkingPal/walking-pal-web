@@ -1,6 +1,7 @@
 import { FacebookOutlined } from "@mui/icons-material";
 import { Box, Divider, Link, Stack, Typography } from "@mui/material";
 import { Insta, Linkedin, Twitter, YouTube } from "assets/svg";
+import { Accent } from "components/Accent";
 import { LogoWordmark } from "components/LogoWordmark";
 import { FC } from "react";
 import { footerLinks } from "./footer-links";
@@ -62,24 +63,14 @@ export const Footer: FC = ({}) => {
         color="grey"
       /> */}
 			<Stack
-				direction={{
-					xs: "column",
-					md: "row",
-				}}
+				direction={{ xs: "column", md: "row" }}
 				justifyContent="space-between"
+				alignItems="center"
 				width="100%"
-				padding={{
-					xs: "24px",
-					md: "90px",
-				}}
+				padding={{ xs: "24px", md: "90px" }}
 				gap="30px"
 			>
-				<Box
-					display="grid"
-					alignItems="center"
-					justifyContent="center"
-					gap="30px"
-				>
+				<Box display="grid" alignItems="center" justifyContent="center" gap={3}>
 					<LogoWordmark size={100} />
 					<Box
 						display="flex"
@@ -101,26 +92,13 @@ export const Footer: FC = ({}) => {
 					color="white"
 					variant="h5"
 					px={3}
-					textAlign={{
-						xs: "center",
-						md: "right",
-					}}
+					textAlign={{ xs: "center", md: "right" }}
 					flexGrow={1}
 					maxWidth={650}
 				>
-					Our
-					<Typography component="span" variant="h5" color="#FF5959">
-						&nbsp;mission&nbsp;
-					</Typography>
-					is to change the people cover their
-					<Typography component="span" variant="h5" color="#FF5959">
-						&nbsp;last-mile&nbsp;
-					</Typography>
-					by making walking more fun and the
-					<Typography component="span" variant="h5" color="#FF5959">
-						&nbsp;preferred&nbsp;
-					</Typography>
-					way to commute.
+					Our<Accent>mission</Accent>is to change the people cover their
+					<Accent>last-mile</Accent>by making walking more fun and the
+					<Accent>preferred</Accent>way to commute.
 				</Typography>
 			</Stack>
 		</Stack>

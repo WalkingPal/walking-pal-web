@@ -6,6 +6,7 @@ import Head from "next/head";
 import { Features } from "pages/home/components/Features";
 import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
+import CommunityForm from "pages/home/components/JoinTheCommunityForm";
 import { ReImagineYourDailyCommute } from "pages/home/components/ReImagineYourDailyCommute";
 import { Ribbons } from "pages/home/components/Ribbons";
 import ReactPlayer from "react-player";
@@ -25,7 +26,7 @@ export const Home: NextPage = () => {
 				<meta name="keywords" content="home, walking, pal, buddy, walk" />
 			</Head>
 
-			<main className={styles.main}>
+			<main className={styles.main} style={{ marginBottom: 80 }}>
 				<Hero />
 				<Intro />
 				<Features />
@@ -43,8 +44,9 @@ export const Home: NextPage = () => {
 					</Box>
 					<Ribbons />
 				</Box>
+				<ReImagineYourDailyCommute />
+				{/* <CommunityForm /> */}
 			</main>
-			<ReImagineYourDailyCommute />
 		</div>
 	);
 };

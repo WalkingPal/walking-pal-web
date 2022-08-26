@@ -46,10 +46,6 @@ export const RegistrationForm: FC<Props> = ({
 		university: "",
 	});
 
-	useEffect(() => {
-		console.log(formData);
-	}, [formData]);
-
 	const goToPrevious = async () => {
 		if (stepsCompleted === 0) return;
 
