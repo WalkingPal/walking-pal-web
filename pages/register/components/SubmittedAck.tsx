@@ -1,5 +1,6 @@
 import { Button, Link, Stack, Typography } from "@mui/material";
 import { Insta } from "assets/svg";
+import { Accent } from "components/Accent";
 import { useWindowSize } from "hooks/useWindowResize";
 import React, { FC } from "react";
 import ReactConfetti from "react-confetti";
@@ -29,9 +30,7 @@ export const SubmittedAck: FC = () => {
 						sx={{ p: 5 }}
 					>
 						You have sucessfully registered as one of the early users of
-						<span style={{ color: "#FF5959", fontWeight: 500 }}>
-							&nbsp;WalkingPal.
-						</span>
+						<Accent sx={{ fontWeight: 500 }}>WalkingPal.</Accent>
 						<br />
 						<br />
 						Thank you for registering, you will receive the app download link in

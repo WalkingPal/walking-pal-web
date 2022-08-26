@@ -6,7 +6,7 @@ import styles from "../about.module.scss";
 
 export const Gallery: FC = ({}) => {
 	return (
-		<div className={styles.main}>
+		<>
 			<div className={styles.gallery}>
 				<Image className={styles.about1} src={about1} alt="" />
 				<Image className={styles.about2} src={about2} alt="" />
@@ -20,6 +20,6 @@ export const Gallery: FC = ({}) => {
 				simple and user-friendly platform they can trust. Now having a Walking
 				Buddy anytime and anywhere is easier than ever!
 			</Typography>
-		</div>
+		</>
 	);
 };

@@ -20,7 +20,14 @@ export const About: NextPage = () => {
 				/>
 			</Head>
 
-			<main className={styles.main}>
+			<main
+				style={{
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "center",
+					alignItems: "center",
+				}}
+			>
 				<Hero />
 				<Gallery />
 				<OurStory />
