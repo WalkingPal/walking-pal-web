@@ -1,4 +1,5 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
+import { bagpack, footstep2, promotion, shopping } from "assets/png";
 import { Accent } from "components/Accent";
 import { FC } from "react";
 export interface ICommuteCard {
@@ -15,7 +16,7 @@ const commuteCards: ICommuteCard[] = [
 		id: 0,
 		text: "For",
 		highlight: "shopping",
-		img: "/images/wp_shopping.png",
+		img: shopping.src,
 		bgcolor: "#8DD8D7",
 		textColor: "#67CBC9",
 	},
@@ -23,7 +24,7 @@ const commuteCards: ICommuteCard[] = [
 		id: 1,
 		text: "For",
 		highlight: "work",
-		img: "/images/wp_promotion.png",
+		img: promotion.src,
 		bgcolor: "#FFE3E3",
 		textColor: "#FFACAC",
 	},
@@ -31,7 +32,7 @@ const commuteCards: ICommuteCard[] = [
 		id: 2,
 		text: "For",
 		highlight: "traveling",
-		img: "/images/wp_bagpack.png",
+		img: bagpack.src,
 		bgcolor: "#F8CF7D",
 		textColor: "#F6BF51",
 	},
@@ -39,7 +40,7 @@ const commuteCards: ICommuteCard[] = [
 		id: 3,
 		text: "Or just a",
 		highlight: "walk!",
-		img: "/images/wp_footsteps.png",
+		img: footstep2.src,
 		bgcolor: "#FF8282",
 		textColor: "#FF5959",
 	},

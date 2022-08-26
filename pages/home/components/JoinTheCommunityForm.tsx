@@ -1,4 +1,5 @@
 import { Button, Card, Input, Stack, Typography, Box } from "@mui/material";
+import { community } from "assets/png";
 import { FC } from "react";
 
 const CommunityForm: FC = () => {
@@ -16,7 +17,7 @@ const CommunityForm: FC = () => {
 		>
 			<Box
 				sx={{
-					backgroundImage: "url(/images/wp_community.png)",
+					backgroundImage: `url(${community.src})`,
 					backgroundPosition: "center",
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
