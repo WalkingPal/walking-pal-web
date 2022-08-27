@@ -42,3 +42,4 @@ walking-pal-firebase-adminsdk-*.json
 #misc
 .dump
 .eslintcache
+pages/api/test/

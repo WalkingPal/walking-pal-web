@@ -32,10 +32,10 @@ export const FormActions: FC<Props> = ({
 			</Button>
 			<Button
 				onClick={() => {
-					if (stepsCompleted === totalSteps) handleSubmit();
-					else if (isError()) {
+					if (isError()) {
 						setShowErr(true);
 					} else {
+						if (stepsCompleted === totalSteps) handleSubmit();
 						goToNext();
 					}
 				}}
