@@ -6,12 +6,15 @@ import {
 	useRef,
 	useState,
 } from "react";
-import { Box, Button, TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 import styles from "./form.module.scss";
 import { FormHeader } from "components/Form/FormHeader";
 import { checkValidity } from "components/Form/formValidation";
 import _ from "lodash";
 import { Popup } from "components/Popup";
+import { LoadingButton } from "@mui/lab";
+import { Send } from "@mui/icons-material";
+import axios from "axios";
 
 export interface IFormData {
 	name: string | null;
@@ -61,7 +64,10 @@ export const Form: FC = ({}) => {
 		setShowSuccess(false);
 	};
 
+	const [loading, setLoading] = useState(false);
 	async function onSubmit(e: FormEvent<HTMLFormElement>) {
+		e.preventDefault();
+
 		const nullProp = _.findKey(formData, prop => prop === null);
 		if (!nullProp) {
 			errorMsg.current = await checkValidity(formData);
@@ -72,10 +78,17 @@ export const Form: FC = ({}) => {
 		if (errorMsg.current.length > 0) {
 			setShowError(true);
 		} else {
-			setShowSuccess(true);
+			setLoading(true);
+			try {
+				await axios.post("/api/feedback", formData);
+				setShowSuccess(true);
+			} catch (e) {
+				errorMsg.current = "Some error occured! Please try again later.";
+				setShowError(true);
+				console.error(e);
+			}
+			setLoading(false);
 		}
-
-		e.preventDefault();
 	}
 
 	return (
@@ -129,9 +142,16 @@ export const Form: FC = ({}) => {
 					/>
 				</Box>
 				<Box display="flex" justifyContent="center">
-					<Button type="submit" variant="contained" sx={{ mt: 2, px: 10 }}>
+					<LoadingButton
+						loading={loading}
+						loadingPosition="end"
+						endIcon={<Send />}
+						type="submit"
+						variant="contained"
+						sx={{ mt: 2, px: 5 }}
+					>
 						Submit
-					</Button>
+					</LoadingButton>
 				</Box>
 			</Box>
 			<Popup

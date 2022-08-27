@@ -4,16 +4,12 @@ import db from "utils/db";
 interface ResponseData {
 	id: string;
 }
-const registerEarlyUser = async (
+const registerFeedback = async (
 	req: NextApiRequest,
 	res: NextApiResponse<ResponseData>,
 ) => {
 	try {
-		// const entries = await db.collection("early-users").get();
-		// const entriesData = entries.docs.map(entry => entry.data());
-		// console.log(entriesData);
-
-		const { id } = await db.collection("early-users").add({
+		const { id } = await db.collection("feedbacks").add({
 			...req.body,
 			created: new Date().toISOString(),
 		});
@@ -23,4 +19,4 @@ const registerEarlyUser = async (
 		res.status(400).end();
 	}
 };
-export default registerEarlyUser;
+export default registerFeedback;
