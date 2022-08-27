@@ -15,6 +15,7 @@
 		"jsx": "preserve",
 		"incremental": true,
 		"baseUrl": ".",
+		// "noUnusedLocals": true,
 		"paths": {
 			// "components": ["/path/to/folder/components/"] // this mapping is relative to "baseUrl"
 		}

@@ -12,7 +12,6 @@ import CommunityForm from "pages/home/components/JoinTheCommunityForm";
 import { ReImagineYourDailyCommute } from "pages/home/components/ReImagineYourDailyCommute";
 import { Ribbons } from "pages/home/components/Ribbons";
 import ReactPlayer from "react-player";
-import styles from "./home.module.scss";
 
 export const Home: NextPage = () => {
 	const { width } = useWindowSize();

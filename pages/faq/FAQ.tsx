@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { FAQsection } from "pages/faq/components/FAQsection";
 import { Hero } from "pages/faq/components/Hero";
-import styles from "./faq.module.scss";
 import { Form } from "components/Form";
 
 const generalFAQs = [
@@ -22,7 +21,7 @@ const generalFAQs = [
 
 export const FAQ: NextPage = () => {
 	return (
-		<div className={styles.container}>
+		<>
 			<Head>
 				<title>FAQs</title>
 				<meta
@@ -41,6 +40,6 @@ export const FAQ: NextPage = () => {
 				{/* <FAQsection title="Security" /> */}
 				<Form />
 			</main>
-		</div>
+		</>
 	);
 };
