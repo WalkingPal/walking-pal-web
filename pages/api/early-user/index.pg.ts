@@ -9,10 +9,6 @@ const registerEarlyUser = async (
 	res: NextApiResponse<ResponseData>,
 ) => {
 	try {
-		// const entries = await db.collection("early-users").get();
-		// const entriesData = entries.docs.map(entry => entry.data());
-		// console.log(entriesData);
-
 		const { id } = await db.collection("early-users").add({
 			...req.body,
 			created: new Date().toISOString(),

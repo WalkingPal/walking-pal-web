@@ -42,7 +42,13 @@ export const InputField: FCC<IInputField> = props => {
 							) => void
 						}
 						label={undefined}
-						sx={{ ...props.sx, lineHeight: "unset" }}
+						sx={{
+							...props.sx,
+							lineHeight: "unset",
+							fontSize: 24,
+							fontWeight: 500,
+							fontFamily: "Outfit",
+						}}
 					>
 						{[
 							"VSSUT",
@@ -58,7 +64,7 @@ export const InputField: FCC<IInputField> = props => {
 									key={"univ-" + i}
 									sx={{
 										color: "#767676",
-										fontSize: "24px",
+										fontSize: 24,
 										fontWeight: 500,
 										fontFamily: "Outfit",
 									}}
