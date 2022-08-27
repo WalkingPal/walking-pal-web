@@ -7,10 +7,14 @@ import styles from "../home.module.scss";
 export const Intro: FC = ({}) => {
 	return (
 		<div className={styles.intro}>
-			<Image className={styles.mockup} src={mockup} />
-			<Image className={styles.credit} src={credit} width="327px" />
-			<Image className={styles.screens2} src={screens2} width="327px" />
-			<Image className={`${styles.walker} ${styles.noSm}`} src={walker} />
+			<Image className={styles.mockup} src={mockup} alt="" />
+			<Image className={styles.credit} src={credit} width="327px" alt="" />
+			<Image className={styles.screens2} src={screens2} width="327px" alt="" />
+			<Image
+				className={`${styles.walker} ${styles.noSm}`}
+				src={walker}
+				alt=""
+			/>
 			<span className={styles.screens1}>
 				<Paper
 					sx={{
@@ -28,7 +32,8 @@ export const Intro: FC = ({}) => {
 					<Image
 						src={screens1}
 						style={{ width: "100%" }}
-						wrapStyle={{ display: "flex" }}
+						wrapstyle={{ display: "flex" }}
+						alt=""
 					/>
 				</Paper>
 			</span>
@@ -42,7 +47,7 @@ export const Intro: FC = ({}) => {
 						py: 9,
 					}}
 				>
-					<Image src={group} style={{ width: "100%" }} />
+					<Image src={group} style={{ width: "100%" }} alt="" />
 					<Box sx={{ padding: 3, textAlign: "center" }}>
 						<Typography variant="h6">Create Groups</Typography>
 						<Typography variant="body1">

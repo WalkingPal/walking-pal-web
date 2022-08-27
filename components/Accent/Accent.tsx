@@ -1,7 +1,10 @@
-import { Typography } from "@mui/material";
+import { SxProps, Theme, Typography } from "@mui/material";
 import { FCC } from "types/IReact";
 
-export const Accent: FCC = ({ children }) => {
+interface IAccent {
+	sx?: SxProps<Theme>;
+}
+export const Accent: FCC<IAccent> = ({ children, sx }) => {
 	return (
 		<Typography
 			component="span"
@@ -12,6 +15,7 @@ export const Accent: FCC = ({ children }) => {
 				lineHeight: "inherit",
 				letterSpacing: "inherit",
 				fontFamily: "inherit",
+				...sx,
 			}}
 		>
 			&nbsp;{children}&nbsp;

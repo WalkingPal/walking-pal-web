@@ -1,4 +1,4 @@
-.main {
+main {
 	.intro {
 		padding: 4vw;
 		gap: 30px;
@@ -81,10 +81,32 @@
 			}
 		}
 	}
+
+	.easysteps {
+		background: #fff;
+		border-radius: 30px;
+		display: grid;
+		padding: 4vw;
+
+		.content {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			align-items: center;
+			justify-content: space-around;
+			gap: 50px;
+
+			.stepcard {
+				display: grid;
+				align-content: center;
+				justify-content: space-around;
+				gap: 10px;
+			}
+		}
+	}
 }
 
 @media (max-width: 1200px) {
-	.main {
+	main {
 		.intro {
 			grid-template-areas:
 				"x1 a"
@@ -115,11 +137,16 @@
 				display: none;
 			}
 		}
+		.easysteps {
+			.content {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
 	}
 }
 
 @media (max-width: 750px) {
-	.main {
+	main {
 		.intro {
 			grid-template-areas:
 				"a"
@@ -137,6 +164,20 @@
 			.x1,
 			.x2 {
 				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	main {
+		.easysteps {
+			.content {
+				grid-template-columns: 1fr;
+				.stepcard {
+					display: flex;
+					flex-wrap: nowrap;
+				}
 			}
 		}
 	}

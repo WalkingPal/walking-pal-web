@@ -1,9 +1,4 @@
-.main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
+main {
 	.gallery {
 		padding: 4vw;
 		display: grid;
@@ -34,6 +29,7 @@
 
 	.ourstory {
 		margin-top: 4rem;
+		margin-bottom: 4rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -43,7 +39,7 @@
 }
 
 @media (max-width: 750px) {
-	.main {
+	main {
 		.gallery {
 			grid-template-columns: 1fr 1.5fr;
 			grid-template-areas:

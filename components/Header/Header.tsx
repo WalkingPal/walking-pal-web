@@ -8,6 +8,7 @@ import { HeaderMobile } from "components/Header/components/HeaderMobile";
 export const links = [
 	{ name: "home", route: "/" },
 	{ name: "about", route: "/about" },
+	{ name: "FAQ", route: "/faq" },
 ];
 
 export const Header: FC = () => {

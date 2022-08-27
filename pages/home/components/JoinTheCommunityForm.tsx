@@ -1,7 +1,8 @@
 import { Button, Card, Input, Stack, Typography, Box } from "@mui/material";
+import { community } from "assets/png";
 import { FC } from "react";
 
-const Community: FC = () => {
+const CommunityForm: FC = () => {
 	return (
 		<Card
 			elevation={0}
@@ -10,19 +11,19 @@ const Community: FC = () => {
 				flexDirection: { xs: "column", sm: "row" },
 				borderRadius: "50px",
 				overflow: "hidden",
+				py: 9,
+				mx: 3,
 			}}
 		>
 			<Box
 				sx={{
-					backgroundImage: "url(/images/wp_community.png)",
+					backgroundImage: `url(${community.src})`,
 					backgroundPosition: "center",
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
 					maxWidth: "800px",
-					width: {
-						xs: "100%",
-						md: "calc(100% - 480px)",
-					},
+					width: { xs: "100%", md: "calc(100% - 480px)" },
+					borderRadius: "50px 0 0 50px",
 				}}
 			/>
 			<Stack padding="32px" flexGrow={1} gap="32px">
@@ -37,7 +38,9 @@ const Community: FC = () => {
 					disableUnderline
 					placeholder="Email"
 					type="email"
-					endAdornment={<Button sx={{ color: "#FF5959" }}>Subscribe</Button>}
+					endAdornment={
+						<Button sx={{ color: "primary.main" }}>Subscribe</Button>
+					}
 					sx={{ border: "none" }}
 				/>
 			</Stack>
@@ -45,4 +48,4 @@ const Community: FC = () => {
 	);
 };
 
-export default Community;
+export default CommunityForm;

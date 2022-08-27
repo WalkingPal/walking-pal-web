@@ -1,0 +1,66 @@
+import { ExpandLess, ExpandMore, Quiz } from "@mui/icons-material";
+import {
+	Accordion,
+	AccordionDetails,
+	AccordionSummary,
+	Box,
+	Collapse,
+	Divider,
+	List,
+	ListItemButton,
+	ListItemIcon,
+	ListItemText,
+	Paper,
+	Typography,
+} from "@mui/material";
+import { FC, useState } from "react";
+
+interface IFAQsection {
+	title: string;
+	faqs: {
+		faq: string;
+		desc: string;
+	}[];
+}
+
+export const FAQsection: FC<IFAQsection> = ({ title, faqs }) => {
+	const [open, setOpen] = useState(true);
+
+	const handleClick = () => {
+		setOpen(!open);
+	};
+	return (
+		<Paper sx={{ mx: "4vw", mt: 6 }}>
+			<List sx={{ width: "100%" }}>
+				<ListItemButton onClick={handleClick}>
+					<ListItemIcon>
+						<Quiz />
+					</ListItemIcon>
+					<ListItemText>
+						<Typography variant="h5">{title}</Typography>
+					</ListItemText>
+					{open ? <ExpandLess /> : <ExpandMore />}
+				</ListItemButton>
+				<Collapse in={open} timeout="auto" unmountOnExit>
+					<List component="div" disablePadding>
+						{faqs.map(({ faq, desc }, i) => (
+							<Box key={`${title}-faq-${i}`}>
+								<Divider />
+								<Accordion sx={{ px: 4, py: 1 }} elevation={0}>
+									<AccordionSummary expandIcon={<ExpandMore color="primary" />}>
+										<Typography variant="subtitle1" color="text.secondary">
+											{faq}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails>
+										<Typography variant="body1">{desc}</Typography>
+									</AccordionDetails>
+								</Accordion>
+							</Box>
+						))}
+					</List>
+				</Collapse>
+			</List>
+		</Paper>
+	);
+};

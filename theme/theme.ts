@@ -14,6 +14,9 @@ const systemFont = [
 	'"Segoe UI Symbol"',
 ];
 
+export const OutfitFont = ["Outfit", ...systemFont].join(",");
+export const OpenSansFont = ["Open Sans", ...systemFont].join(",");
+
 export const getDesignTokens = (mode: "light" | "dark") =>
 	({
 		palette: {
@@ -55,20 +58,20 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 			fontWeightRegular: 400,
 			fontWeightMedium: 500,
 			fontWeightBold: 700,
-			fontFamily: ["Open Sans", ...systemFont].join(","),
+			fontFamily: OpenSansFont,
 			h1: {
 				fontSize: "clamp(3rem, 2.7120234375rem + 4.5vw, 8.4375rem)",
 				fontWeight: 500,
 				lineHeight: 1.1142857142857143,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
-				fontFamily: ["Outfit", ...systemFont].join(","),
+				fontFamily: OutfitFont,
 			},
 			h2: {
 				fontSize: "clamp(2.5rem, 2rem + 3vw, 6rem)",
 				fontWeight: 400,
 				lineHeight: 1.2222222222222223,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
-				fontFamily: ["Outfit", ...systemFont].join(","),
+				fontFamily: OutfitFont,
 			},
 			h3: {
 				fontSize: "clamp(2.25rem, 1.5870359375rem + 1.78575vw, 5rem)",
@@ -76,7 +79,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				lineHeight: 1.2222222222222223,
 				letterSpacing: 0.2,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
-				fontFamily: ["Outfit", ...systemFont].join(","),
+				fontFamily: OutfitFont,
 			},
 			h4: {
 				fontSize: "clamp(2rem, 1.2857rem + 1.4286vw, 3.6875rem)",
@@ -84,7 +87,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				lineHeight: 1.5,
 				letterSpacing: 0.2,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
-				fontFamily: ["Outfit", ...systemFont].join(","),
+				fontFamily: OutfitFont,
 			},
 			h5: {
 				fontSize: "1.8rem",
@@ -92,14 +95,14 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				lineHeight: 1.5,
 				letterSpacing: 0.1,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
-				fontFamily: ["Outfit", ...systemFont].join(","),
+				fontFamily: OutfitFont,
 			},
 			h6: {
 				fontSize: "1.25rem",
 				fontWeight: 500,
 				lineHeight: 1.5,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
-				fontFamily: ["Outfit", ...systemFont].join(","),
+				fontFamily: OutfitFont,
 			},
 			subtitle1: {
 				fontSize: "1.25rem",
@@ -107,14 +110,14 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				lineHeight: 1.3333333333333333,
 				letterSpacing: 0,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
-				fontFamily: ["Outfit", ...systemFont].join(","),
+				fontFamily: OutfitFont,
 			},
 			subtitle2: {
 				fontSize: "1rem",
 				fontWeight: 500,
 				lineHeight: 1.57,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
-				fontFamily: ["Outfit", ...systemFont].join(","),
+				fontFamily: OutfitFont,
 			},
 			body1: {
 				color: "#484848",
@@ -139,7 +142,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				lineHeight: "normal",
 				letterSpacing: 0,
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
-				fontFamily: ["Outfit", ...systemFont].join(","),
+				fontFamily: OutfitFont,
 			},
 			caption: {
 				display: "inline-block",
