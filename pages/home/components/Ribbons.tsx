@@ -1,77 +1,61 @@
-import { Avatar, Box, Paper, Typography } from "@mui/material";
-import { memojis } from "assets/png";
+import { Box, Paper } from "@mui/material";
 import { useWindowSize } from "hooks/useWindowResize";
+import { getRibbonDecoration } from "pages/home/components/RibbonDecoration";
 import { FC, ReactNode } from "react";
 
-const getTag = (key: string) => (
-	<Typography
-		variant="subtitle1"
-		color="#fff"
-		bgcolor="#000"
-		p="10px 25px"
-		borderRadius="30px"
-		width="185px"
-		key={"deco" + key}
-	>
-		Walking Buddy
-	</Typography>
-);
-const getLabel = (key: string, label: string) => (
-	<Typography variant="h5" width="100px" textAlign="center" key={"deco" + key}>
-		{label}
-	</Typography>
-);
-const getMemoji = (key: string) => {
-	const index = Math.ceil(Math.random() * (memojis.length - 1));
+const RIBBON_HEIGHT = 80;
+const ribbons = [
+	{ label: "Eat", color: "#FF8282" },
+	{ label: "Chill", color: "#F8CF7D" },
+	{ label: "Walk", color: "#8DD8D7" },
+	{ label: "Repeat", color: "#FFE3E3" },
+];
+export const RibbonsSection: FC = () => {
+	const { width } = useWindowSize();
+	if (!width) return null;
+
+	const elevAngle = Math.asin((2 * RIBBON_HEIGHT) / width);
+	const ribbonBoxHeight = RIBBON_HEIGHT / Math.cos(elevAngle);
+	const sectionHeight = ribbonBoxHeight * (ribbons.length + 2);
 	return (
-		<Avatar
-			src={memojis[index].src}
-			sx={{ width: "70px", height: "70px" }}
-			key={"deco" + key}
-		/>
+		<Box
+			height={sectionHeight}
+			display="grid"
+			alignContent="center"
+			justifyContent="center"
+		>
+			{ribbons.map(({ label, color }, i) => {
+				const rotateZ = i % 2 ? elevAngle : elevAngle * -1;
+				return (
+					<Box
+						zIndex={ribbons.length - i}
+						height={ribbonBoxHeight}
+						key={"ribbon-" + i}
+						sx={{ transform: `rotateZ(${rotateZ}rad)` }}
+					>
+						<Ribbon
+							{...{ rotateZ: elevAngle, color }}
+							elevation={(ribbons.length - i) * 3}
+							decorations={getRibbonDecoration(label, width * 1, i)}
+						/>
+					</Box>
+				);
+			})}
+		</Box>
 	);
 };
+
 interface IRibbon {
-	label: string;
-	rotateZ: number;
 	color: string;
 	elevation: number;
-	ribbonLength: number;
-	k: number;
+	decorations: ReactNode[];
 }
-const Ribbon: FC<IRibbon> = ({
-	color,
-	rotateZ,
-	label,
-	elevation,
-	ribbonLength,
-	k,
-}) => {
-	const getDecoration = () => {
-		let decoWidth = 0;
-		let i = 0;
-		let j = 0;
-		const decorations: ReactNode[] = [];
-		do {
-			decorations.push(getLabel(`-${k}-${j}-a`, label));
-			if (i % 2 === 0) {
-				decorations.push(getTag(`-${k}-${j}-b`));
-				decoWidth += 285;
-			} else {
-				decorations.push(getMemoji(`-${k}-${j}-b`));
-				decoWidth += 170;
-			}
-			i++;
-			j++;
-		} while (decoWidth <= ribbonLength);
-		return decorations;
-	};
+
+const Ribbon: FC<IRibbon> = ({ color, elevation, decorations }) => {
 	return (
 		<Paper
 			sx={{
-				transform: `rotateZ(${rotateZ}deg) translateX(-25%)`,
-				height: 80,
-				width: "150%",
+				height: RIBBON_HEIGHT,
 				bgcolor: color,
 				border: "3.25255px solid #000000",
 				overflow: "hidden",
@@ -82,47 +66,7 @@ const Ribbon: FC<IRibbon> = ({
 			}}
 			{...{ elevation }}
 		>
-			{getDecoration()}
+			{decorations}
 		</Paper>
-	);
-};
-
-export const Ribbons: FC = () => {
-	const ribbons = [
-		{ label: "Eat", rotateZ: -7.66, color: "#FF8282" },
-		{ label: "Chill", rotateZ: 1.21, color: "#F8CF7D" },
-		{ label: "Walk", rotateZ: -12.09, color: "#8DD8D7" },
-		{ label: "Repeat", rotateZ: 2.2, color: "#FFE3E3" },
-	];
-
-	const greatestTan = Math.tan((12.09 * Math.PI) / 180);
-	const { width } = useWindowSize();
-
-	const ribbonLength = width ? width * 1.5 : 0; //150% of screen width
-
-	return (
-		<Box pb={8}>
-			{width && (
-				<Box
-					height={ribbonLength * greatestTan + 80}
-					display="grid"
-					alignContent="center"
-					justifyContent="center"
-				>
-					{ribbons.map((ribbonProps, i) => {
-						return (
-							<Box key={"ribbon-" + i}>
-								<Ribbon
-									{...ribbonProps}
-									elevation={i * 3 + 1}
-									ribbonLength={ribbonLength}
-									k={i}
-								/>
-							</Box>
-						);
-					})}
-				</Box>
-			)}
-		</Box>
 	);
 };

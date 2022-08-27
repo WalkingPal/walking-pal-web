@@ -10,7 +10,7 @@ import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
 import CommunityForm from "pages/home/components/JoinTheCommunityForm";
 import { ReImagineYourDailyCommute } from "pages/home/components/ReImagineYourDailyCommute";
-import { Ribbons } from "pages/home/components/Ribbons";
+import { RibbonsSection } from "pages/home/components/Ribbons";
 import ReactPlayer from "react-player";
 
 export const Home: NextPage = () => {
@@ -49,7 +49,7 @@ export const Home: NextPage = () => {
 							/>
 						)}
 					</Box>
-					<Ribbons />
+					<RibbonsSection />
 				</Box>
 				<Box
 					position="relative"
