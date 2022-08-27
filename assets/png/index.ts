@@ -24,7 +24,7 @@ export { default as step2 } from "./step2.png";
 export { default as step3 } from "./step3.png";
 export { default as step4 } from "./step4.png";
 export { default as foundersHub } from "./founders-hub.png";
-export { default as EL } from "./EL.png";
+export { default as ELcenter } from "./ELcenter.png";
 
 import memoji1 from "./memoji1.png";
 import memoji2 from "./memoji2.png";

@@ -1,123 +1,151 @@
-import React, { FC, useState } from "react";
-import FormControl, { useFormControl } from "@mui/material/FormControl";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import { Box, Typography } from "@mui/material";
-import FormHelperText from "@mui/material/FormHelperText";
+import {
+	ChangeEvent,
+	FC,
+	FormEvent,
+	SyntheticEvent,
+	useRef,
+	useState,
+} from "react";
+import { Box, Button, TextField } from "@mui/material";
 import styles from "./form.module.scss";
-import { EL } from "assets/png";
-import { Image } from "components/Image";
+import { FormHeader } from "components/Form/FormHeader";
+import { checkValidity } from "components/Form/formValidation";
+import _ from "lodash";
+import { Popup } from "components/Popup";
 
-function MyFormHelperText() {
-	const { focused } = useFormControl() || {};
-
-	const helperText = React.useMemo(() => {
-		if (focused) {
-			return "This field is being focused";
-		}
-
-		return "";
-	}, [focused]);
-
-	return <FormHelperText>{helperText}</FormHelperText>;
-}
-
-interface IFormData {
+export interface IFormData {
 	name: string | null;
 	email: string | null;
-	contact: string | null;
+	phone: string;
+	message: string | null;
 }
 
 export const Form: FC = ({}) => {
+	const errorMsg = useRef("");
+
 	const [formData, setFormData] = useState<IFormData>({
 		name: null,
 		email: null,
-		contact: null,
+		phone: "",
+		message: null,
 	});
 
 	function updateFormData(
-		e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
+		e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
 	) {
+		setShowError(false);
 		setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+	}
+
+	const [showError, setShowError] = useState(false);
+	const handleErrorClose = (
+		event?: SyntheticEvent | Event,
+		reason?: string,
+	) => {
+		if (reason === "clickaway") {
+			return;
+		}
+
+		setShowError(false);
+	};
+
+	const [showSuccess, setShowSuccess] = useState(false);
+	const handleSuccessClose = (
+		event?: SyntheticEvent | Event,
+		reason?: string,
+	) => {
+		if (reason === "clickaway") {
+			return;
+		}
+
+		setShowSuccess(false);
+	};
+
+	async function onSubmit(e: FormEvent<HTMLFormElement>) {
+		const nullProp = _.findKey(formData, prop => prop === null);
+		if (!nullProp) {
+			errorMsg.current = await checkValidity(formData);
+		} else {
+			errorMsg.current = "Please fill all the required fields.";
+		}
+
+		if (errorMsg.current.length > 0) {
+			setShowError(true);
+		} else {
+			setShowSuccess(true);
+		}
+
+		e.preventDefault();
 	}
 
 	return (
 		<div className={styles.main}>
-			<Box
-				display="flex"
-				justifyContent="center"
-				alignItems="center"
-				flexDirection="column"
-				gap="62px"
-			>
-				<Image
-					className={styles.el}
-					src={EL}
-					style={{ width: "1294px", height: "655px", marginBottom: "62px" }}
-				/>
-
-				<Typography variant="h3">Let us know who you are</Typography>
-			</Box>
-			<Typography fontSize="18px">
-				Drop down your query or message and we will get back to you as soon as
-				possible.
-			</Typography>
-
+			<FormHeader />
 			<Box
 				component="form"
-				noValidate
-				autoComplete="off"
-				display="flex"
-				gap="38px"
-				marginTop="99px"
+				mt={10}
+				width="100%"
+				display="grid"
+				onSubmit={onSubmit}
 			>
-				<Box
-					component="form"
-					noValidate
-					autoComplete="off"
-					display="flex"
-					flexDirection="column"
-					gap="53px"
-				>
-					<FormControl sx={{ width: "682px" }}>
-						<OutlinedInput
-							style={{ height: "70px" }}
+				<Box width="100%" flexWrap="wrap" display="flex" gap={3}>
+					<Box
+						display="grid"
+						alignContent="space-between"
+						width="100%"
+						flex="1"
+						gap={3}
+						minWidth={280}
+					>
+						<TextField
 							name="name"
 							onChange={updateFormData}
-							placeholder="Name"
+							label="Name"
+							type="text"
+							required
 						/>
-						<MyFormHelperText />
-					</FormControl>
-					<FormControl sx={{ width: "682px" }}>
-						<OutlinedInput
-							style={{ height: "70px" }}
+						<TextField
 							name="email"
 							onChange={updateFormData}
-							placeholder="Email"
+							label="Email"
+							type="email"
+							required
 						/>
-						<MyFormHelperText />
-					</FormControl>
-					<FormControl sx={{ width: "682px" }}>
-						<OutlinedInput
-							style={{ height: "70px" }}
+						<TextField
 							name="phone"
 							onChange={updateFormData}
-							placeholder="Phone"
+							label="Phone"
+							type="tel"
 						/>
-						<MyFormHelperText />
-					</FormControl>
-				</Box>
-
-				<FormControl sx={{ width: "602px" }}>
-					<OutlinedInput
-						style={{ height: "330px" }}
+					</Box>
+					<TextField
+						style={{ height: "100%", flex: 1, minWidth: 280 }}
 						name="message"
+						label="Message"
 						onChange={updateFormData}
-						placeholder="Messsage"
 						multiline
+						rows={9}
+						required
 					/>
-					<MyFormHelperText />
-				</FormControl>
+				</Box>
+				<Box display="flex" justifyContent="center">
+					<Button type="submit" variant="contained" sx={{ mt: 2, px: 10 }}>
+						Submit
+					</Button>
+				</Box>
 			</Box>
+			<Popup
+				message={errorMsg.current}
+				onClose={handleErrorClose}
+				open={showError}
+				severity="error"
+			/>
+			<Popup
+				message="Submitted successfully!"
+				onClose={handleSuccessClose}
+				open={showSuccess}
+				severity="success"
+			/>
 		</div>
 	);
 };

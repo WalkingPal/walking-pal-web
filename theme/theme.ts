@@ -30,7 +30,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 			text: {
 				primary: "#210B0B",
 				secondary: "#767676",
-				disabled: "#A3A3A3",
+				disabled: "#ABABAB",
 				...(mode === "dark" && {
 					primary: "#FFFFFF",
 					secondary: "#808080",
@@ -176,9 +176,9 @@ export function getThemedComponents(theme: Theme): {
 			MuiInputLabel: {
 				styleOverrides: {
 					root: {
-						position: "static",
-						transform: "none",
-						color: "#000000",
+						fontWeight: 500,
+						fontFamily: OutfitFont,
+						color: "#ABABAB",
 					},
 					asterisk: {
 						color: primary.main,
@@ -203,12 +203,19 @@ export function getThemedComponents(theme: Theme): {
 			MuiOutlinedInput: {
 				styleOverrides: {
 					root: {
+						color: "#484848",
 						borderRadius: "10px",
+						"&:hover fieldset": {
+							border: "solid 3px #E7E7E7 !important",
+						},
+						"&.Mui-focused fieldset": {
+							border: "solid 3px #c4c4c4 !important",
+						},
 					},
 					input: {
-						fontSize: 24,
 						fontWeight: 500,
-						padding: "12px 16px",
+						fontFamily: OutfitFont,
+						background: "background.default",
 					},
 				},
 			},
