@@ -23,7 +23,7 @@ export const Register: NextPage = () => {
 			<Stack
 				width="100%"
 				minHeight="100vh"
-				bgcolor="#FF5959"
+				bgcolor="primary.main"
 				padding="32px"
 				justifyContent="center"
 				alignItems="center"

@@ -2,12 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Hero } from "pages/about/components/Hero";
 import { OurStory } from "pages/about/components/OurStory";
-import styles from "./about.module.scss";
 import { Gallery } from "pages/about/components/Gallery";
 
 export const About: NextPage = () => {
 	return (
-		<div className={styles.container}>
+		<>
 			<Head>
 				<title>About us</title>
 				<meta
@@ -20,11 +19,18 @@ export const About: NextPage = () => {
 				/>
 			</Head>
 
-			<main className={styles.main}>
+			<main
+				style={{
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "center",
+					alignItems: "center",
+				}}
+			>
 				<Hero />
 				<Gallery />
 				<OurStory />
 			</main>
-		</div>
+		</>
 	);
 };

@@ -1,12 +1,6 @@
-import {
-	Stack,
-	Box,
-	FormHelperText,
-	Alert,
-	Snackbar,
-	Slide,
-} from "@mui/material";
+import { Stack, Box, FormHelperText } from "@mui/material";
 import axios from "axios";
+import { Popup } from "components/Popup";
 import { useWindowSize } from "hooks/useWindowResize";
 import {
 	checkValidity,
@@ -45,10 +39,6 @@ export const RegistrationForm: FC<Props> = ({
 		email: "",
 		university: "",
 	});
-
-	useEffect(() => {
-		console.log(formData);
-	}, [formData]);
 
 	const goToPrevious = async () => {
 		if (stepsCompleted === 0) return;
@@ -163,21 +153,12 @@ export const RegistrationForm: FC<Props> = ({
 				isError={isError}
 				setShowErr={setShowErr}
 			/>
-			<Snackbar
+			<Popup
 				open={alertOpen}
-				autoHideDuration={4000}
 				onClose={handleClose}
-				TransitionComponent={props => <Slide {...props} direction="up" />}
-			>
-				<Alert
-					onClose={handleClose}
-					severity="error"
-					elevation={6}
-					variant="filled"
-				>
-					Some error occured! Please try again later.
-				</Alert>
-			</Snackbar>
+				severity="error"
+				message="Some error occured! Please try again later."
+			/>
 		</Stack>
 	);
 };

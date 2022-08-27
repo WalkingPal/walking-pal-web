@@ -8,7 +8,6 @@ import {
 	Select,
 	SelectChangeEvent,
 	MenuItem,
-	Link,
 } from "@mui/material";
 import { ReactNode } from "react";
 import { FCC } from "types/IReact";
@@ -19,7 +18,15 @@ interface IInputField extends InputBaseProps {
 export const InputField: FCC<IInputField> = props => {
 	return (
 		<Stack gap="8px" sx={{ p: "32px", backgroundColor: "white" }}>
-			<InputLabel required sx={{ fontSize: 30 }}>
+			<InputLabel
+				required
+				sx={{
+					fontSize: 30,
+					position: "static",
+					transform: "none",
+					color: "#000",
+				}}
+			>
 				<Typography variant="h6" component="span" fontWeight="medium">
 					{props.label}
 				</Typography>
@@ -63,7 +70,15 @@ export const InputField: FCC<IInputField> = props => {
 					</Select>
 				</FormControl>
 			) : (
-				<OutlinedInput {...props} label={undefined} />
+				<OutlinedInput
+					{...props}
+					label={undefined}
+					sx={{
+						fontSize: 24,
+						fontWeight: 500,
+						fontFamily: "Outfit",
+					}}
+				/>
 			)}
 			{props.children}
 		</Stack>

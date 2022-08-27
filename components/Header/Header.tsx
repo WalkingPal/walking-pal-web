@@ -8,6 +8,7 @@ import { HeaderMobile } from "components/Header/components/HeaderMobile";
 export const links = [
 	{ name: "home", route: "/" },
 	{ name: "about", route: "/about" },
+	{ name: "FAQ", route: "/faq" },
 ];
 
 export const Header: FC = () => {
@@ -32,8 +33,8 @@ export const Header: FC = () => {
 					sx={t => ({
 						background: alpha(t.palette.background.paper, 0.8),
 						width: "100%",
-						webkitBackdropFilter: "blur(20px)",
-						backdropFilter: "blur(20px)",
+						webkitBackdropFilter: "blur(10px)",
+						backdropFilter: "blur(10px)",
 						borderRadius: "16px",
 						justifyContent: "center",
 						display: "flex",

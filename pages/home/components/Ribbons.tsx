@@ -61,7 +61,6 @@ const Ribbon: FC<IRibbon> = ({
 				decorations.push(getMemoji(`-${k}-${j}-b`));
 				decoWidth += 170;
 			}
-			console.log(decoWidth, 0);
 			i++;
 			j++;
 		} while (decoWidth <= ribbonLength);
@@ -111,7 +110,6 @@ export const Ribbons: FC = () => {
 					justifyContent="center"
 				>
 					{ribbons.map((ribbonProps, i) => {
-						console.log(ribbonLength, 111);
 						return (
 							<Box key={"ribbon-" + i}>
 								<Ribbon
