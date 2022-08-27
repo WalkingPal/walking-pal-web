@@ -8,8 +8,8 @@ import {
 } from "react";
 import { Box, TextField } from "@mui/material";
 import styles from "./form.module.scss";
-import { FormHeader } from "components/Form/FormHeader";
-import { checkValidity } from "components/Form/formValidation";
+import { FormHeader } from "components/FeedbackForm/FormHeader";
+import { checkValidity } from "components/FeedbackForm/formValidation";
 import _ from "lodash";
 import { Popup } from "components/Popup";
 import { LoadingButton } from "@mui/lab";
@@ -23,7 +23,7 @@ export interface IFormData {
 	message: string | null;
 }
 
-export const Form: FC = ({}) => {
+export const FeedbackForm: FC = ({}) => {
 	const errorMsg = useRef("");
 
 	const [formData, setFormData] = useState<IFormData>({

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { FAQsection } from "pages/faq/components/FAQsection";
 import { Hero } from "pages/faq/components/Hero";
-import { Form } from "components/Form";
+import { FeedbackForm } from "components/FeedbackForm";
 
 const generalFAQs = [
 	{
@@ -37,8 +37,7 @@ export const FAQ: NextPage = () => {
 			<main style={{ marginBottom: 80 }}>
 				<Hero />
 				<FAQsection title="General" faqs={generalFAQs} />
-				{/* <FAQsection title="Security" /> */}
-				<Form />
+				<FeedbackForm />
 			</main>
 		</>
 	);

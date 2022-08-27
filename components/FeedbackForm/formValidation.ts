@@ -1,4 +1,4 @@
-import { IFormData } from "components/Form/Form";
+import { IFormData } from "components/FeedbackForm/FeedbackForm";
 import * as yup from "yup";
 import "yup-phone";
 
