@@ -2,7 +2,9 @@ import { Button } from "@mui/material";
 import Link from "next/link";
 import React, { FC } from "react";
 
-interface IList2 {}
+interface IList2 {
+	mobile?: boolean;
+}
 
 export const List2: FC<IList2> = ({}) => {
 	return (

@@ -38,7 +38,13 @@ export const FormHeader: FC<IFormHeader> = ({}) => {
 					</Box>
 				</Box>
 			</Box>
-			<Image src={ELcenter} width={1298} height={655} wrapstyle={{ mb: 6 }} />
+			<Image
+				src={ELcenter}
+				width={1298}
+				height={655}
+				wrapstyle={{ mb: 6 }}
+				alt="VSSUT, Burla"
+			/>
 
 			<Typography variant="h2" textAlign="center">
 				Let us know who you are

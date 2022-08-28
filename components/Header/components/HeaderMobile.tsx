@@ -37,14 +37,14 @@ export const HeaderMobile: FC = () => {
 						style={{
 							display: "grid",
 							gap: "30px",
-							padding: "30px 20px",
+							padding: "30px 0px",
 						}}
 					>
-						<List1 />
+						<List1 mobile />
 
 						<Divider />
 
-						<List2 />
+						<List2 mobile />
 					</div>
 				</Box>
 			</Drawer>
