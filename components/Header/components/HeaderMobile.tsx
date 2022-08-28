@@ -40,11 +40,11 @@ export const HeaderMobile: FC = () => {
 							padding: "30px 0px",
 						}}
 					>
-						<List1 />
+						<List1 mobile />
 
 						<Divider />
 
-						<List2 />
+						<List2 mobile />
 					</div>
 				</Box>
 			</Drawer>

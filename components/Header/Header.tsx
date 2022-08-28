@@ -41,6 +41,7 @@ export const Header: FC = () => {
 						alignItems: "center",
 						padding: "8px 20px",
 					})}
+					elevation={0}
 				>
 					{!width || width < 1200 ? <HeaderMobile /> : <HeaderDesktop />}
 				</Paper>

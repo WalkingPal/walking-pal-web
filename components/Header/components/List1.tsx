@@ -4,7 +4,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FC, MouseEvent } from "react";
 
-export const List1: FC = ({}) => {
+interface IList1 {
+	mobile?: boolean;
+}
+
+export const List1: FC<IList1> = ({ mobile }) => {
 	const router = useRouter();
 
 	const handleClick = (
@@ -16,10 +20,27 @@ export const List1: FC = ({}) => {
 	};
 
 	return (
-		<List sx={{ width: "100%" }}>
+		<List
+			sx={
+				mobile
+					? {
+							display: "grid",
+							width: "100%",
+					  }
+					: {
+							display: "flex",
+							justifyContent: "flex-start",
+							width: "unset",
+					  }
+			}
+		>
 			{links.map(({ name, route }) => {
 				return (
-					<ListItemButton key={name} onClick={e => handleClick(e, route)}>
+					<ListItemButton
+						key={name}
+						onClick={e => handleClick(e, route)}
+						sx={{ borderRadius: 1 }}
+					>
 						<ListItemText>
 							<Typography
 								variant="body2"

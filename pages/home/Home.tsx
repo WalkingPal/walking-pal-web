@@ -46,6 +46,11 @@ export const Home: NextPage = () => {
 								playIcon={<Play />} // TODO : Doesnt work. ref: https://stackoverflow.com/q/69132970/12872199
 								style={{ borderRadius: 30, overflow: "hidden", zIndex: 1 }}
 								url="https://www.youtube.com/watch?v=L73A9fyyQqw"
+								loop
+								muted
+								playing
+								playsinline
+								controls
 							/>
 						)}
 					</Box>

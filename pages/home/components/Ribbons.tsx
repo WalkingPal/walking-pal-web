@@ -31,12 +31,18 @@ export const RibbonsSection: FC = () => {
 						zIndex={ribbons.length - i}
 						height={ribbonBoxHeight}
 						key={"ribbon-" + i}
-						sx={{ transform: `rotateZ(${rotateZ}rad)` }}
+						sx={{
+							transform: {
+								xs: `rotateZ(${rotateZ}rad) scale(0.7)`,
+								sm: `rotateZ(${rotateZ}rad) scale(0.85)`,
+								md: `rotateZ(${rotateZ}rad) scale(1)`,
+							},
+						}}
 					>
 						<Ribbon
 							{...{ rotateZ: elevAngle, color }}
 							elevation={(ribbons.length - i) * 3}
-							decorations={getRibbonDecoration(label, width * 1, i)}
+							decorations={getRibbonDecoration(label, width * 1.5, i)}
 						/>
 					</Box>
 				);
