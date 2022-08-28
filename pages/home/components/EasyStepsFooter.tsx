@@ -44,6 +44,7 @@ export const EasyStepsFooter: FC = ({}) => {
 					width="217"
 					height="149"
 					src={foundersHub}
+					alt=""
 				/>
 			</Box>
 		</Box>

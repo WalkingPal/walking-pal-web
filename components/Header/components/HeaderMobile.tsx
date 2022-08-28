@@ -37,7 +37,7 @@ export const HeaderMobile: FC = () => {
 						style={{
 							display: "grid",
 							gap: "30px",
-							padding: "30px 20px",
+							padding: "30px 0px",
 						}}
 					>
 						<List1 />
