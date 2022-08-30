@@ -21,10 +21,15 @@ interface IFAQsection {
 		faq: string;
 		desc: string;
 	}[];
+	isOpen?: boolean;
 }
 
-export const FAQsection: FC<IFAQsection> = ({ title, faqs }) => {
-	const [open, setOpen] = useState(true);
+export const FAQsection: FC<IFAQsection> = ({
+	title,
+	faqs,
+	isOpen = false,
+}) => {
+	const [open, setOpen] = useState(isOpen);
 
 	const handleClick = () => {
 		setOpen(!open);
