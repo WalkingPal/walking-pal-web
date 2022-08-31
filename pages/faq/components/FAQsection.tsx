@@ -19,7 +19,7 @@ interface IFAQsection {
 	title: string;
 	faqs: {
 		faq: string;
-		desc: string;
+		desc: string | JSX.Element;
 	}[];
 	isOpen?: boolean;
 }

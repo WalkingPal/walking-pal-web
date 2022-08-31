@@ -1,4 +1,5 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
+import { boy, legs, man } from "assets/gif";
 import { foundersHub } from "assets/png";
 import { Accent } from "components/Accent";
 import { Image } from "components/Image";
@@ -18,6 +19,26 @@ export const EasyStepsFooter: FC = ({}) => {
 					Either go with the best match, or browse and select from the available
 					profiles. Send foot request and viola! start walking together.
 				</Typography>
+				<Box display="flex" py={1} gap={1}>
+					<Image
+						src={boy}
+						height="70"
+						width="70"
+						style={{ borderRadius: 10 }}
+					/>
+					<Image
+						src={legs}
+						height="70"
+						width="70"
+						style={{ borderRadius: 10 }}
+					/>
+					<Image
+						src={man}
+						height="70"
+						width="70"
+						style={{ borderRadius: 10 }}
+					/>
+				</Box>
 			</Box>
 
 			<Box
