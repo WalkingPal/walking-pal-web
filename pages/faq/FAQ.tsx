@@ -15,7 +15,16 @@ const generalFAQs = [
 	},
 	{
 		faq: "How walkingpal works?",
-		desc: "WalkingPal scans all the nearly people that are in need of a walking buddy, and it connects you with your nearest walking buddy going towards the same direction and destination as you. \nP.S. We won’t be sharing your exact destination with anyone for obvious security reasons.",
+		desc: (
+			<>
+				WalkingPal scans all the nearly people that are in need of a walking
+				buddy, and it connects you with your nearest walking buddy going towards
+				the same direction and destination as you.
+				<br />
+				<strong>P.S.</strong> We won’t be sharing your exact destination with
+				anyone for obvious security reasons.
+			</>
+		),
 	},
 	{
 		faq: "What Platforms do we support?",
@@ -36,10 +45,30 @@ const TrustnSafetyFAQs = [
 		faq: "What about fake users?",
 		desc: "In order to minimise fake users, we will be verifying the identity of every user by a government approved I’d, like passport, Aadhar Card, Etc. So that no one ends up with an undocumented person.",
 	},
-	// {
-	// 	faq: "How will you ensure the safety of the users?",
-	// 	desc: "We have listed below the steps that we are taking to ensure your safety:\n\t• I’D verification of every user.\n\t• We will be tracking your whole journey once you get connected with a walking buddy, and you can also share you live location to your friends and family as well to be extra safe.\n\t• After you start walking with your walking buddy there will be an SOS bubble popup on the screen (kinda like a messenger bubble). If you are in danger or at an uncomfortable position you can just tap on that bubble and a notification will be sent to all your emergence contacts and to us as well and we will try our best to help you out in every possible way.",
-	// },
+	{
+		faq: "How will you ensure the safety of the users?",
+		desc: (
+			<>
+				We have listed below the steps that we are taking to ensure your safety:
+				<ul>
+					<li>ID verification of every user.</li>
+					<li>
+						We will be tracking your whole journey once you get connected with a
+						walking buddy, and you can also share you live location to your
+						friends and family as well to be extra safe.
+					</li>
+					<li>
+						After you start walking with your walking buddy there will be an SOS
+						bubble popup on the screen (kinda like a messenger bubble). If you
+						are in danger or at an uncomfortable position you can just tap on
+						that bubble and a notification will be sent to all your emergence
+						contacts and to us as well and we will try our best to help you out
+						in every possible way.
+					</li>
+				</ul>
+			</>
+		),
+	},
 	{
 		faq: "What if I don’t want to go alone with a stranger?",
 		desc: "If you are not comfortable walking alone with a stranger, we also have an option to create a walking group. You can add 2-3 more people to join with you in your journey.",
