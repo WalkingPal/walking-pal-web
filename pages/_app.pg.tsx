@@ -6,6 +6,7 @@ import { WPThemeProvider } from "theme";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { useRouter } from "next/router";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -21,11 +22,13 @@ function App({ Component, pageProps }: AppProps) {
 					content="minimum-scale=1, initial-scale=1, width=device-width"
 				/>
 			</Head>
-			<WPThemeProvider>
-				{showCompo.current && <Header />}
-				<Component {...pageProps} />
-				{showCompo.current && <Footer />}
-			</WPThemeProvider>
+			<ParallaxProvider>
+				<WPThemeProvider>
+					{showCompo.current && <Header />}
+					<Component {...pageProps} />
+					{showCompo.current && <Footer />}
+				</WPThemeProvider>
+			</ParallaxProvider>
 		</React.Fragment>
 	);
 }
