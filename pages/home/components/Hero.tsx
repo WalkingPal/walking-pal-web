@@ -11,7 +11,7 @@ export const Hero: FC<IHero> = ({}) => {
 				Empowering <br /> Walking
 			</Typography>
 			<Typography variant="h5" mt={7}>
-				Get you walking buddy anytime, anywhere!
+				Get your walking buddy anytime, anywhere!
 			</Typography>
 			<Box my={4}>
 				<Button variant="contained">

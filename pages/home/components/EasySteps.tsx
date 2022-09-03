@@ -66,7 +66,7 @@ export const EasySteps: FC = () => {
 		<Box className={styles.easysteps}>
 			<Box display="flex" justifyContent="center">
 				<Typography variant="h4" textAlign="center" py={5} maxWidth={500}>
-					Get you walking buddy in four easy steps
+					Get your walking buddy in four easy steps
 				</Typography>
 			</Box>
 			<Box className={styles.content}>
