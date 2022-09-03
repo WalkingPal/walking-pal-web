@@ -8,15 +8,20 @@ export const Intro: FC = ({}) => {
 	return (
 		<div className={ss.intro}>
 			<Image className={ss.mockup} src={mockup} alt="" />
-			<Image className={ss.credit} src={credit} width="327px" alt="" />
-			<Image className={ss.screens2} src={screens2} width="327px" alt="" />
-			<Image className={`${ss.walker} ${ss.noSm}`} src={walker} alt="" />
+			<Image className={ss.credit} src={credit} alt="" />
+			<Image className={ss.screens2} src={screens2} alt="" />
+			<Image
+				className={ss.walker}
+				src={walker}
+				alt=""
+				wrapstyle={{ width: 684 }}
+			/>
 			<span className={ss.screens1}>
 				<Paper
 					sx={{
 						background: "#F7F7F7",
 						borderRadius: "50px",
-						width: "327px",
+						maxWidth: "327px",
 						overflow: "hidden",
 						display: "grid",
 					}}
@@ -38,9 +43,11 @@ export const Intro: FC = ({}) => {
 					sx={{
 						background: "#F7F7F7",
 						borderRadius: "50px",
-						width: "327px",
+						maxWidth: "327px",
 						overflow: "hidden",
-						py: 9,
+						alignItems: "center",
+						display: "grid",
+						height: "100%",
 					}}
 				>
 					<Image src={group} style={{ width: "100%" }} alt="" />
@@ -52,8 +59,6 @@ export const Intro: FC = ({}) => {
 					</Box>
 				</Paper>
 			</span>
-			<span className={ss.x1}></span>
-			<span className={ss.x2}></span>
 		</div>
 	);
 };

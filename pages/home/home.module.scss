@@ -1,17 +1,18 @@
 main {
 	.intro {
+		max-width: 1350px;
+		margin: 5rem auto;
 		padding: 4vw;
 		gap: 30px;
 		display: grid;
 		grid-template-areas:
-			"x1 a a x2"
-			"c a a o"
-			"c a a o"
-			"t a a o"
-			"t a a g"
-			"w w w g"
-			"w w w g";
-
+			". a ."
+			". a ."
+			"c a o"
+			"t a o"
+			"w w g";
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 0px 0px auto auto auto;
 		.mockup {
 			grid-area: a;
 			justify-self: center;
@@ -27,7 +28,7 @@ main {
 		}
 		.screens1 {
 			grid-area: o;
-			align-self: flex-end;
+			align-self: center;
 		}
 		.walker {
 			grid-area: w;
@@ -38,13 +39,11 @@ main {
 			grid-area: g;
 			align-self: flex-end;
 			justify-self: flex-start;
-		}
-		.x1 {
-			grid-area: x1;
-			height: 100px;
-		}
-		.x2 {
-			grid-area: x2;
+			grid-row-start: 5;
+			grid-row-end: 6;
+			grid-column-start: 3;
+			grid-column-end: 4;
+			height: 130%;
 		}
 	}
 
@@ -109,15 +108,15 @@ main {
 	main {
 		.intro {
 			grid-template-areas:
-				"x1 a"
-				"c a"
+				". a"
+				". a"
 				"c a"
 				"t a"
-				"t a"
-				"w w"
 				"w w"
 				"o g";
-
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 0px 0px auto auto auto auto;
+			max-width: 684px;
 			.screens1 {
 				grid-area: o;
 				align-self: center;
@@ -126,15 +125,7 @@ main {
 
 			.group {
 				grid-area: g;
-				align-self: center;
-				justify-self: center;
-			}
-			.x1 {
-				grid-area: x1;
-				height: 100px;
-			}
-			.x2 {
-				display: none;
+				height: 100%;
 			}
 		}
 		.easysteps {
@@ -154,15 +145,15 @@ main {
 				"c"
 				"o"
 				"g";
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
 
 			& > span {
 				align-self: center !important;
 				justify-self: center !important;
 			}
 			.screens2,
-			.walker,
-			.x1,
-			.x2 {
+			.walker {
 				display: none;
 			}
 		}
