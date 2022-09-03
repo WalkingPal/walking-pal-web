@@ -2,20 +2,16 @@ import { Box, Paper, Typography } from "@mui/material";
 import { credit, group, mockup, screens1, screens2, walker } from "assets/png";
 import { Image } from "components/Image";
 import React, { FC } from "react";
-import styles from "../home.module.scss";
+import ss from "../home.module.scss";
 
 export const Intro: FC = ({}) => {
 	return (
-		<div className={styles.intro}>
-			<Image className={styles.mockup} src={mockup} alt="" />
-			<Image className={styles.credit} src={credit} width="327px" alt="" />
-			<Image className={styles.screens2} src={screens2} width="327px" alt="" />
-			<Image
-				className={`${styles.walker} ${styles.noSm}`}
-				src={walker}
-				alt=""
-			/>
-			<span className={styles.screens1}>
+		<div className={ss.intro}>
+			<Image className={ss.mockup} src={mockup} alt="" />
+			<Image className={ss.credit} src={credit} width="327px" alt="" />
+			<Image className={ss.screens2} src={screens2} width="327px" alt="" />
+			<Image className={`${ss.walker} ${ss.noSm}`} src={walker} alt="" />
+			<span className={ss.screens1}>
 				<Paper
 					sx={{
 						background: "#F7F7F7",
@@ -24,7 +20,7 @@ export const Intro: FC = ({}) => {
 						overflow: "hidden",
 						display: "grid",
 					}}
-					className={styles.screens1}
+					className={ss.screens1}
 				>
 					<Typography variant="h6" p={5} textAlign="center">
 						This app will change the way you commute.
@@ -37,7 +33,7 @@ export const Intro: FC = ({}) => {
 					/>
 				</Paper>
 			</span>
-			<span className={styles.group}>
+			<span className={ss.group}>
 				<Paper
 					sx={{
 						background: "#F7F7F7",
@@ -56,8 +52,8 @@ export const Intro: FC = ({}) => {
 					</Box>
 				</Paper>
 			</span>
-			<span className={styles.x1}></span>
-			<span className={styles.x2}></span>
+			<span className={ss.x1}></span>
+			<span className={ss.x2}></span>
 		</div>
 	);
 };
