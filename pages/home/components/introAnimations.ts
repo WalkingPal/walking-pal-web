@@ -60,7 +60,7 @@ export const animations: Record<string, Animation> = {
 			opacity: [0, 1],
 			translateX: ["-30%", "0"],
 			startScroll: 150,
-			endScroll: 500,
+			endScroll: 600,
 		},
 		md: {
 			opacity: [0, 1],
@@ -76,8 +76,8 @@ export const animations: Record<string, Animation> = {
 			scale: [1.1, 1],
 			opacity: [0, 1],
 			translateY: ["30%", "0"],
-			startScroll: 400,
-			endScroll: 750,
+			startScroll: 800,
+			endScroll: 900,
 		},
 		md: {
 			scale: [1.1, 1],
@@ -93,8 +93,8 @@ export const animations: Record<string, Animation> = {
 			scale: [1.1, 1],
 			opacity: [0, 1],
 			translateY: ["30%", "0"],
-			startScroll: 400,
-			endScroll: 750,
+			startScroll: 700,
+			endScroll: 850,
 		},
 		md: {
 			scale: [1.2, 1],
