@@ -2,16 +2,11 @@ import { Box, Paper, Typography, useMediaQuery } from "@mui/material";
 import { credit, group, mockup, screens1, screens2, walker } from "assets/png";
 import { Image } from "components/Image";
 import { animations, AnimSet } from "pages/home/components/introAnimations";
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC } from "react";
 import { useParallax } from "react-scroll-parallax";
 import ss from "../home.module.scss";
 
 export const Intro: FC = ({}) => {
-	const introRef = useRef(null);
-	const [targetElement, setElement] = useState(null);
-	useEffect(() => {
-		setElement(introRef.current);
-	}, []);
 	const is1200 = useMediaQuery("(max-width:1200px)");
 	const is750 = useMediaQuery("(max-width:750px)");
 	const animSet: AnimSet = is1200 ? (is750 ? "sm" : "md") : "default";
@@ -32,10 +27,9 @@ export const Intro: FC = ({}) => {
 	});
 	const anim6 = useParallax<HTMLSpanElement>({
 		...animations.group[animSet],
-		targetElement: targetElement ? targetElement : undefined,
 	});
 	return (
-		<div className={ss.intro} ref={introRef}>
+		<div className={ss.intro}>
 			<Image className={ss.mockup} src={mockup} alt="" ref={anim1.ref} />
 			<Image className={ss.credit} src={credit} alt="" ref={anim2.ref} />
 			<Image className={ss.screens2} src={screens2} alt="" ref={anim3.ref} />
