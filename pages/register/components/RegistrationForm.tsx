@@ -60,8 +60,10 @@ export const RegistrationForm: FC<Props> = ({
 		setStepsCompleted(stepsCompleted + 1);
 	};
 
+	const [loading, setLoading] = useState(false);
 	const [alertOpen, setAlertOpen] = useState(false);
 	const handleSubmit = async () => {
+		setLoading(true);
 		try {
 			await axios.post("/api/early-user", formData);
 			setIsSubmitted(true);
@@ -69,6 +71,7 @@ export const RegistrationForm: FC<Props> = ({
 			console.error(e);
 			setAlertOpen(true);
 		}
+		setLoading(false);
 	};
 
 	const { width } = useWindowSize();
@@ -152,6 +155,7 @@ export const RegistrationForm: FC<Props> = ({
 				handleSubmit={handleSubmit}
 				isError={isError}
 				setShowErr={setShowErr}
+				loading={loading}
 			/>
 			<Popup
 				open={alertOpen}
