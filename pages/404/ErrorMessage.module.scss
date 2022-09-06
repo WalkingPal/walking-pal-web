@@ -4,6 +4,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	top: 0px;
 }
 .left {
 	height: 900px;
@@ -20,6 +22,8 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding-bottom: 229px;
+	padding-top: 248px;
 }
 
 @media (max-width: 750px) {
@@ -41,5 +45,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		padding-bottom: 110px;
+		padding-top: 72px;
 	}
 }
