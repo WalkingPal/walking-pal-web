@@ -1,0 +1,107 @@
+main {
+	
+
+	.data {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 4vw;
+		gap: 30px;
+		justify-content: space-around;
+		align-items: center;
+
+		.cards {
+			display: grid;
+			grid-template-areas:
+				"a b"
+				"c d";
+			gap: 110px;
+			justify-content: center;
+			& > div {
+				width: 230px;
+				max-width: 400px;
+			}
+			.card1 {
+				grid-area: a;
+			}
+			.card2 {
+				grid-area: b;
+			}
+			.card3 {
+				grid-area: c;
+			}
+			.card4 {
+				grid-area: d;
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	main {
+		.intro {
+			grid-template-areas:
+				". a"
+				". a"
+				"c a"
+				"t a"
+				"w w"
+				"o g";
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 0px 0px auto auto auto auto;
+			max-width: 684px;
+			.screens1 {
+				grid-area: o;
+				align-self: center;
+				justify-self: flex-end;
+			}
+
+			.group {
+				grid-area: g;
+				height: 100%;
+			}
+		}
+		.easysteps {
+			.content {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	main {
+		.intro {
+			grid-template-areas:
+				"a"
+				"a"
+				"c"
+				"o"
+				"g";
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+
+			& > span {
+				align-self: center !important;
+				justify-self: center !important;
+			}
+			.screens2,
+			.walker {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	main {
+		.easysteps {
+			.content {
+				grid-template-columns: 1fr;
+				.stepcard {
+					display: flex;
+					flex-wrap: nowrap;
+				}
+			}
+		}
+	}
+}
