@@ -35,9 +35,17 @@ export const Register: NextPage = () => {
 					color="white"
 					fontWeight={500}
 				>
-					Early User Registration
+					Early User Registration window has closed.
 				</Typography>
-				{isSubmitted ? (
+				<Typography
+					variant="subtitle1"
+					textAlign="center"
+					color="white"
+					fontWeight={500}
+				>
+					Thankyou for your interest in WalkingPal!
+				</Typography>
+				{/* {isSubmitted ? (
 					<SubmittedAck />
 				) : (
 					<>
@@ -46,7 +54,7 @@ export const Register: NextPage = () => {
 						/>
 						<FormProgress stepsCompleted={stepsCompleted} />
 					</>
-				)}
+				)} */}
 			</Stack>
 		</>
 	);
