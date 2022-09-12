@@ -43,3 +43,4 @@ walking-pal-firebase-adminsdk-*.json
 .dump
 .eslintcache
 pages/api/test/
+firestore-backup.json
