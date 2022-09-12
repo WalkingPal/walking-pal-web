@@ -11,8 +11,13 @@ import { ParallaxProvider } from "react-scroll-parallax";
 function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	const showCompo = useRef(true);
+	const allowPadding = useRef(true);
+
 	if (["/register"].includes(router.route)) {
 		showCompo.current = false;
+	}
+	if (["/404"].includes(router.route)) {
+		allowPadding.current = false;
 	}
 	return (
 		<React.Fragment>
@@ -24,7 +29,7 @@ function App({ Component, pageProps }: AppProps) {
 			</Head>
 			<ParallaxProvider>
 				<WPThemeProvider>
-					{showCompo.current && <Header />}
+					{showCompo.current && <Header allowPadding={allowPadding.current} />}
 					<Component {...pageProps} />
 					{showCompo.current && <Footer />}
 				</WPThemeProvider>
