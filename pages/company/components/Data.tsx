@@ -18,17 +18,11 @@ const data = [
 export const Data: FC = () => {
 	return (
 		<div className={styles.data}>
-			<Typography
-				variant="body1"
-				fontWeight="400"
-				fontSize="32px"
-				lineHeight="38px"
-				maxWidth="500px"
-			>
-				First, look, then leap. It-s our philosophy that, regardless of who you
-				are or what you trade, preparing first and then committing is the best
-				way to maximize life-s returns. Every day, we see this spirit in our
-				users.
+			<Typography variant="h5" textAlign="left" maxWidth={500}>
+				First, look, then leap. It&apos;s our philosophy that, regardless of who
+				you are or what you trade, preparing first and then committing is the
+				best way to maximize life&apos;s returns. Every day, we see this spirit
+				in our users.
 			</Typography>
 			<Box
 				className={styles.cards}
@@ -53,20 +47,10 @@ export const Data: FC = () => {
 								},
 							})}
 						>
-							<Typography
-								variant="subtitle1"
-								fontWeight="400"
-								fontSize="60px"
-								lineHeight="72px"
-							>
+							<Typography variant="h4" textAlign="center">
 								{feat.title}
 							</Typography>
-							<Typography
-								variant="body1"
-								fontWeight="400"
-								fontSize="18px"
-								lineHeight="25px"
-							>
+							<Typography variant="body2" textAlign="center">
 								{feat.desc}
 							</Typography>
 						</Box>
