@@ -1,14 +1,12 @@
 import { useWindowSize } from "hooks/useWindowResize";
 import Head from "next/head";
 import type { NextPage } from "next";
-import styles from "./ErrorMessage.module.scss";
+import styles from "./404.module.scss";
 import { Error } from "assets/png";
 import Image from "next/image";
 import { Typography } from "@mui/material";
 
-export const ErrorMessage: NextPage = () => {
-	const { width } = useWindowSize();
-
+export const Error404: NextPage = () => {
 	return (
 		<>
 			<Head>
