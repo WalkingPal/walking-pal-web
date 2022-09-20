@@ -22,13 +22,13 @@ import { InputField } from "./InputField";
 
 const totalSteps = Object.keys(fields).length - 1;
 
-interface Props {
+interface IRegistrationForm {
 	stepsCompleted: number;
 	setStepsCompleted: Dispatch<SetStateAction<number>>;
 	setIsSubmitted: Dispatch<SetStateAction<boolean>>;
 }
 
-export const RegistrationForm: FC<Props> = ({
+export const RegistrationForm: FC<IRegistrationForm> = ({
 	stepsCompleted,
 	setStepsCompleted,
 	setIsSubmitted,
@@ -62,10 +62,10 @@ export const RegistrationForm: FC<Props> = ({
 
 	const [loading, setLoading] = useState(false);
 	const [alertOpen, setAlertOpen] = useState(false);
-	const handleSubmit = async () => {
+	const handleSubmit = async (captchaToken: string) => {
 		setLoading(true);
 		try {
-			await axios.post("/api/early-user", formData);
+			await axios.post("/api/early-user", { formData, captcha: captchaToken });
 			setIsSubmitted(true);
 		} catch (e) {
 			console.error(e);
