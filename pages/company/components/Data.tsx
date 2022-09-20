@@ -18,7 +18,11 @@ const data = [
 export const Data: FC = () => {
 	return (
 		<div className={styles.data}>
-			<Typography variant="h5" textAlign="left" maxWidth={500}>
+			<Typography
+				variant="h5"
+				textAlign={{ xs: "center", lg: "left" }}
+				maxWidth={500}
+			>
 				First, look, then leap. It&apos;s our philosophy that, regardless of who
 				you are or what you trade, preparing first and then committing is the
 				best way to maximize life&apos;s returns. Every day, we see this spirit
@@ -26,27 +30,11 @@ export const Data: FC = () => {
 			</Typography>
 			<Box
 				className={styles.cards}
-				sx={theme => ({
-					[theme.breakpoints.down("sm")]: {
-						gridTemplateAreas: '"a" "b" "c" "d" !important',
-						width: "100%",
-					},
-				})}
+				gridTemplateAreas={{ xs: '"a" "b" "c" "d"', sm: '"a b" "c d"' }}
 			>
 				{data.map((feat, i) => {
-					const textAlign = i % 2 === 0 ? "left" : "right";
 					return (
-						<Box
-							className={styles[`card${i + 1}`]}
-							key={`card${i + 1}`}
-							sx={theme => ({
-								[theme.breakpoints.down("sm")]: {
-									textAlign,
-									width: "100% !important",
-									px: "7vw",
-								},
-							})}
-						>
+						<Box className={styles[`card${i + 1}`]} key={`card${i + 1}`}>
 							<Typography variant="h4" textAlign="center">
 								{feat.title}
 							</Typography>

@@ -1,6 +1,4 @@
 main {
-	
-
 	.data {
 		display: flex;
 		flex-wrap: wrap;
@@ -11,9 +9,6 @@ main {
 
 		.cards {
 			display: grid;
-			grid-template-areas:
-				"a b"
-				"c d";
 			gap: 110px;
 			justify-content: center;
 			& > div {
