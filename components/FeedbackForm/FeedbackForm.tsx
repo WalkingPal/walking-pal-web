@@ -1,5 +1,6 @@
 import {
 	ChangeEvent,
+	createRef,
 	FC,
 	FormEvent,
 	SyntheticEvent,
@@ -15,6 +16,7 @@ import { Popup } from "components/Popup";
 import { LoadingButton } from "@mui/lab";
 import { Send } from "@mui/icons-material";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export interface IFormData {
 	name: string | null;
@@ -65,9 +67,7 @@ export const FeedbackForm: FC = ({}) => {
 	};
 
 	const [loading, setLoading] = useState(false);
-	async function onSubmit(e: FormEvent<HTMLFormElement>) {
-		e.preventDefault();
-
+	async function handleSubmit(captchaToken: string | null) {
 		const nullProp = _.findKey(formData, prop => prop === null);
 		if (!nullProp) {
 			errorMsg.current = await checkValidity(formData);
@@ -80,7 +80,7 @@ export const FeedbackForm: FC = ({}) => {
 		} else {
 			setLoading(true);
 			try {
-				await axios.post("/api/feedback", formData);
+				await axios.post("/api/feedback", { formData, captcha: captchaToken });
 				setShowSuccess(true);
 			} catch (e) {
 				errorMsg.current = "Some error occured! Please try again later.";
@@ -91,6 +91,24 @@ export const FeedbackForm: FC = ({}) => {
 		}
 	}
 
+	function proceedSubmit(e: FormEvent<HTMLFormElement>) {
+		e.preventDefault();
+		// Execute the reCAPTCHA when the form is submitted
+		recaptchaRef.current && recaptchaRef.current.execute();
+	}
+
+	const recaptchaRef = createRef<ReCAPTCHA>();
+	// createRef - https://www.geeksforgeeks.org/difference-between-useref-and-createref-in-reactjs/
+
+	function onReCAPTCHAChange(captchaToken: string | null) {
+		// If captchaCode=null =>> reCAPTCHA expired =>> return early
+		if (!captchaToken) return;
+		// Else reCAPTCHA was executed successfully
+		handleSubmit(captchaToken);
+		// Reset the reCAPTCHA so that it can be executed again
+		recaptchaRef.current && recaptchaRef.current.reset();
+	}
+
 	return (
 		<div className={styles.main}>
 			<FormHeader />
@@ -99,7 +117,7 @@ export const FeedbackForm: FC = ({}) => {
 				mt={10}
 				width="100%"
 				display="grid"
-				onSubmit={onSubmit}
+				onSubmit={proceedSubmit}
 			>
 				<Box width="100%" flexWrap="wrap" display="flex" gap={3}>
 					<Box
@@ -165,6 +183,12 @@ export const FeedbackForm: FC = ({}) => {
 				onClose={handleSuccessClose}
 				open={showSuccess}
 				severity="success"
+			/>
+			<ReCAPTCHA
+				ref={recaptchaRef}
+				size="invisible"
+				sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+				onChange={onReCAPTCHAChange}
 			/>
 		</div>
 	);
