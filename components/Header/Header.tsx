@@ -4,11 +4,13 @@ import styles from "./header.module.scss";
 import { useWindowSize } from "hooks/useWindowResize";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
 import { HeaderMobile } from "components/Header/components/HeaderMobile";
+import { Dropdown } from "components/Header/components/Dropdown";
 
 export const links = [
 	{ name: "home", route: "/" },
 	{ name: "about", route: "/about" },
 	{ name: "FAQ", route: "/faq" },
+	{ name: "company", route: "/Company" },
 ];
 
 export const Header: FC = () => {
@@ -45,6 +47,7 @@ export const Header: FC = () => {
 				>
 					{!width || width < 1200 ? <HeaderMobile /> : <HeaderDesktop />}
 				</Paper>
+				<Dropdown />
 			</header>
 			<div style={{ height: "calc(var(--header-height) + 5px)" }}></div>
 		</>
