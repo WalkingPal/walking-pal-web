@@ -16,7 +16,7 @@ import { Popup } from "components/Popup";
 import { LoadingButton } from "@mui/lab";
 import { Send } from "@mui/icons-material";
 import axios from "axios";
-import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha"
 
 export interface IFormData {
 	name: string | null;
