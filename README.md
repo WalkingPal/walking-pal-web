@@ -34,7 +34,7 @@ Contribute to any of our [repositories](https://github.com/WalkingPal) and get y
 
 ## Community 👥
 
-[![Discord](https://img.shields.io/badge/chat-discord-purple.svg?style=for-the-badge&logo=discord)](https://discord.gg/P5XMVshexG)
+[![Discord](https://img.shields.io/badge/chat-discord-purple.svg?style=for-the-badge&logo=discord)](https://discord.gg/Et3aQTsW6a)
 
 ## The geeks🤓 behind this initiative:
 
