@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { FC } from "react";
 import styles from "../company.module.scss";
-import { story4 } from "assets/png";
+import { pollution } from "assets/png";
 import Image from "next/image";
 
 const story = [
@@ -15,19 +15,20 @@ const story = [
 export const Story: FC = () => {
 	return (
 		<div className={styles.story}>
-			<Typography
-				variant="h4"
-				sx={theme => ({
-					[theme.breakpoints.down("sm")]: {
-						textAlign: "center",
-					},
-				})}
-			>
-				<Typography variant="h5" mb={3}>
-					OUR STORY
+			<div className={styles.title}>
+				<Typography
+					variant="h4"
+					sx={{
+						sm: { textAlign: "center" },
+						md: { textAlign: "left" },
+					}}
+				>
+					<Typography fontSize="1.8rem" fontWeight={500} mb={3}>
+						OUR STORY
+					</Typography>
+					We’re going to become <br /> partners for long run.
 				</Typography>
-				We’re going to become <br /> partners for long run.
-			</Typography>
+			</div>
 			<Box>
 				<Typography maxWidth={559} textAlign="center">
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et odit
@@ -37,37 +38,21 @@ export const Story: FC = () => {
 				<br />
 				<Box
 					className={styles.cards}
-					sx={theme => ({
-						[theme.breakpoints.down("sm")]: {
-							gridTemplateAreas: '"a" "b" "c" "d" !important',
-							width: "100%",
-						},
-					})}
+					gridTemplateAreas={{ xs: '"a" "b" "c" "d"', sm: '"a b" "c d"' }}
 				>
 					{story.map((feat, i) => {
 						const textAlign = i % 2 === 0 ? "left" : "right";
 						return (
-							<Box
-								className={styles[`card${i + 1}`]}
-								key={`card${i + 1}`}
-								sx={theme => ({
-									[theme.breakpoints.down("sm")]: {
-										textAlign,
-										width: "100% !important",
-										px: "7vw",
-									},
-								})}
-							>
+							<Box className={styles[`card${i + 1}`]} key={`card${i + 1}`}>
 								<Typography variant="subtitle1">{feat.title}</Typography>
 							</Box>
 						);
 					})}
 				</Box>
 			</Box>
-			<Box mt={5} display="flex">
-				<div>
-					<Image src={story4} alt="" />
-				</div>
+			<Box mt={5} display="flex" flexWrap="wrap">
+				<Image src={pollution} alt="" />
+
 				<div className={styles.typo}>
 					<Typography maxWidth={341}>
 						"We estimate that using WalkingPal can save our designers and

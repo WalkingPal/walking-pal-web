@@ -11,7 +11,7 @@ export { default as about4 } from "./about4.png";
 export { default as story1 } from "./story1.png";
 export { default as story2 } from "./story2.png";
 export { default as story3 } from "./story3.png";
-export { default as story4 } from "./story4.png";
+export { default as pollution } from "./pollution.png";
 export { default as Error } from "./404.png";
 export { default as clip } from "./clip.png";
 export { default as footstep } from "./footstep.png";

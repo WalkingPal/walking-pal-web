@@ -1,54 +1,4 @@
 main {
-	.intro {
-		max-width: 1350px;
-		margin: 5rem auto;
-		padding: 4vw;
-		gap: 30px;
-		display: grid;
-		grid-template-areas:
-			". a ."
-			". a ."
-			"c a o"
-			"t a o"
-			"w w g";
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 0px 0px auto auto auto;
-		.mockup {
-			position: relative;
-			z-index: 2;
-			grid-area: a;
-			justify-self: center;
-		}
-		.credit {
-			grid-area: c;
-			align-self: center;
-			justify-self: flex-end;
-		}
-		.screens2 {
-			grid-area: t;
-			justify-self: flex-end;
-		}
-		.screens1 {
-			grid-area: o;
-			align-self: center;
-		}
-		.walker {
-			grid-area: w;
-			align-self: flex-end;
-			justify-self: center;
-		}
-		.group {
-			grid-area: g;
-			align-self: flex-end;
-			justify-self: flex-start;
-			grid-row-start: 5;
-			grid-row-end: 6;
-			grid-column-start: 3;
-			grid-column-end: 4;
-			height: 130%;
-		}
-	}
-
 	.typo {
 		width: 421px;
 		display: flex;
@@ -57,6 +7,11 @@ main {
 		background-color: #fafafa;
 		text-align: center;
 		border-radius: 0 30px 30px 0;
+	}
+
+	.pic {
+		max-width: 600px;
+		margin-right: 800px;
 	}
 
 	.story {
@@ -92,96 +47,28 @@ main {
 			}
 		}
 	}
-
-	.easysteps {
-		background: #fff;
-		border-radius: 30px;
-		display: grid;
-		padding: 4vw;
-
-		.content {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			align-items: center;
-			justify-content: space-around;
-			gap: 50px;
-
-			.stepcard {
-				display: grid;
-				align-content: center;
-				justify-content: space-around;
-				gap: 10px;
-			}
-		}
-	}
 }
 
 @media (max-width: 1200px) {
 	main {
-		.intro {
-			grid-template-areas:
-				". a"
-				". a"
-				"c a"
-				"t a"
-				"w w"
-				"o g";
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 0px 0px auto auto auto auto;
-			max-width: 684px;
-			.screens1 {
-				grid-area: o;
-				align-self: center;
-				justify-self: flex-end;
-			}
-
-			.group {
-				grid-area: g;
-				height: 100%;
-			}
-		}
-		.easysteps {
-			.content {
-				grid-template-columns: 1fr 1fr;
-			}
+		.title {
+			text-align: center;
 		}
 	}
 }
 
 @media (max-width: 750px) {
 	main {
-		.intro {
-			grid-template-areas:
-				"a"
-				"a"
-				"c"
-				"o"
-				"g";
-			grid-template-columns: 1fr;
-			grid-template-rows: auto;
-
-			& > span {
-				align-self: center !important;
-				justify-self: center !important;
-			}
-			.screens2,
-			.walker {
-				display: none;
-			}
+		.title {
+			text-align: center;
 		}
 	}
 }
 
 @media (max-width: 600px) {
 	main {
-		.easysteps {
-			.content {
-				grid-template-columns: 1fr;
-				.stepcard {
-					display: flex;
-					flex-wrap: nowrap;
-				}
-			}
+		.title {
+			text-align: center;
 		}
 	}
 }
