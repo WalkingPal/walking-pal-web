@@ -1,5 +1,9 @@
+# Color System Guide
+
 This style guide is created from Material.io design guidelines
 If you want to learn from animations and illustrations, [follow this link](https://material.io/design/color/the-color-system.html#color-theme-creation)
+
+Following given are the types of colors that we using across our WebApp.
 
 1. **background color** - background color for pages/screens. this color DOES NOT represent brand.
 
