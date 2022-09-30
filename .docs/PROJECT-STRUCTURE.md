@@ -1,5 +1,7 @@
 # Project File Stucture
 
+This ASCII tree represents the Project Stucture. Read through the comments to know about the Project Stucture.
+
 ```sh
 .
 ├── .docs #contains all markdown files and assets used to write the documentation files.
