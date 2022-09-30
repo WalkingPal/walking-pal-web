@@ -1,6 +1,6 @@
 # WalkingPal
 
-<div style="box-sizing:border-box; padding: 20px 10px; background: white; width: 100%"><img src=".docs/assets/walkingpal.png"></div>
+![WalkingPal](.docs/assets/walkingpal.png)
 
 WalkingPal is the world's first walking buddy app of its kind. Get yourself a walking buddy anytime and anywhere in just a few clicks! Visit [walkingpal.in](https://walkingpal.in/) to know more about us!
 
@@ -44,7 +44,7 @@ Contribute to any of our [repositories](https://github.com/WalkingPal) and get y
 
 ## Community 👥
 
-[![Discord](https://img.shields.io/badge/chat-discord-purple.svg?style=for-the-badge&logo=discord)](https://discord.gg/P5XMVshexG)
+[![Discord](https://img.shields.io/badge/chat-discord-purple.svg?style=for-the-badge&logo=discord)](https://discord.gg/Et3aQTsW6a)
 
 > Make sure you read and follow the instructions in `#🚦start-here` channel after you join the Discord server.
 
