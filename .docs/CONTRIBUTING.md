@@ -148,7 +148,7 @@ Sometime Maintainers may request changes in your PR. It is advised NOT to close 
 
 ## Asking for help
 
-[Join our discord server](https://discord.gg/P5XMVshexG) to meet with the amazing community folks at our Discord server.
+[Join our discord server](https://discord.gg/Et3aQTsW6a) to meet with the amazing community folks at our Discord server.
 
 > Make sure you read and follow the instructions in `#🚦start-here` channel after you join the Discord server
 
