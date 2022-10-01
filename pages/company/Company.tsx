@@ -2,6 +2,7 @@ import { useWindowSize } from "hooks/useWindowResize";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Story } from "pages/company/components/Story";
+import { Data } from "pages/company/components/Data";
 
 export const Company: NextPage = () => {
 	const { width } = useWindowSize();
@@ -19,6 +20,7 @@ export const Company: NextPage = () => {
 
 			<main style={{ marginBottom: 80 }}>
 				<Story />
+				<Data />
 			</main>
 		</div>
 	);
