@@ -8,7 +8,7 @@ export interface ICommuteCard {
 	highlight: string;
 	img: string;
 	bgcolor: string;
-	textColor: string;
+	description: string;
 }
 
 const commuteCards: ICommuteCard[] = [
@@ -18,7 +18,8 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "shopping",
 		img: shopping.src,
 		bgcolor: "#8DD8D7",
-		textColor: "#67CBC9",
+		description:
+			"illustration of multiple shopping bags in different sizes, shapes and colors.",
 	},
 	{
 		id: 1,
@@ -26,7 +27,8 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "work",
 		img: promotion.src,
 		bgcolor: "#FFE3E3",
-		textColor: "#FFACAC",
+		description:
+			"illustration of a man in formal attire climbing stairs that turns into arrow pointing up",
 	},
 	{
 		id: 2,
@@ -34,7 +36,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "traveling",
 		img: bagpack.src,
 		bgcolor: "#F8CF7D",
-		textColor: "#F6BF51",
+		description: "illustration of a big green backpack",
 	},
 	{
 		id: 3,
@@ -42,7 +44,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "walk!",
 		img: footstep2.src,
 		bgcolor: "#FF8282",
-		textColor: "#FF5959",
+		description: "illustration of two shoe prints",
 	},
 ];
 
@@ -78,9 +80,7 @@ export const CommuteCard: FC<{ cc: ICommuteCard }> = ({ cc }) => {
 					gap="4px"
 				>
 					<Typography fontWeight={500}>{cc.text}</Typography>
-					<Typography fontWeight={500} color={cc.textColor}>
-						{cc.highlight}
-					</Typography>
+					<Typography fontWeight={800}>{cc.highlight}</Typography>
 				</Stack>
 				<Stack
 					height="180px"
@@ -97,6 +97,7 @@ export const CommuteCard: FC<{ cc: ICommuteCard }> = ({ cc }) => {
 							width: { xs: "100%", md: "unset" },
 							height: { md: "100%" },
 						}}
+						alt={cc.description}
 					/>
 				</Stack>
 			</Stack>

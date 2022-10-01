@@ -45,7 +45,7 @@ export const List1: FC<IList1> = ({ mobile }) => {
 							<Typography
 								variant="body2"
 								sx={{
-									color: router.route === route ? "primary.main" : "#828282",
+									color: router.route === route ? "primary.main" : "#737373",
 									textTransform: "capitalize",
 									px: 2,
 								}}
