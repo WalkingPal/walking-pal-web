@@ -19,8 +19,8 @@ export const Company: NextPage = () => {
 			</Head>
 
 			<main style={{ marginBottom: 80 }}>
-				<Story />
 				<Data />
+				<Story />
 			</main>
 		</div>
 	);

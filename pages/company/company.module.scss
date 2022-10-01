@@ -34,6 +34,9 @@
 		}
 		.card4 {
 			grid-area: d;
+		}
+	}
+}
 main {
 	.data {
 		display: flex;
@@ -79,6 +82,7 @@ main {
 		width: 100%;
 		border-radius: 0 0 30px 30px;
 		padding: 50px;
+	}
 	main {
 		.intro {
 			grid-template-areas:
@@ -122,6 +126,7 @@ main {
 		width: 100%;
 		border-radius: 0 0 30px 30px;
 		padding: 50px;
+	}
 	main {
 		.intro {
 			grid-template-areas:
@@ -157,6 +162,7 @@ main {
 		width: 100%;
 		border-radius: 0 0 30px 30px;
 		padding: 50px;
+	}
 	main {
 		.easysteps {
 			.content {
