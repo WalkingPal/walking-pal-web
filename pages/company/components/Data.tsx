@@ -34,7 +34,7 @@ export const Data: FC = () => {
 			>
 				{data.map((feat, i) => {
 					return (
-						<Box className={styles[`card${i + 1}`]} key={`card${i + 1}`}>
+						<Box key={`card${i + 1}`}>
 							<Typography variant="h4" textAlign="center">
 								{feat.title}
 							</Typography>

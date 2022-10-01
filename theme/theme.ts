@@ -90,7 +90,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				fontFamily: OutfitFont,
 			},
 			h5: {
-				fontSize: "1.8rem",
+				fontSize: "1.5rem",
 				fontWeight: 400,
 				lineHeight: 1.5,
 				letterSpacing: 0.1,
