@@ -78,6 +78,7 @@ export const Footer: FC = ({}) => {
 						alignItems="center"
 						justifyContent="center"
 						style={{ transform: "scale(1.3)" }}
+						height={200}
 					>
 						{socials.map((social, i) => {
 							return (
