@@ -3,43 +3,46 @@ import { gallery1, gallery2, gallery3, gallery4, gallery5 } from "assets/png";
 import { Accent } from "components/Accent";
 import { Image } from "components/Image";
 import { Autoplay } from "swiper";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 interface IHero {}
 
 export const Hero: FC<IHero> = ({}) => {
+	const [loop, setLoop] = useState(false);
+	useEffect(() => {
+		setLoop(true);
+	}, []);
+
 	return (
 		<>
 			<Box pt={7} textAlign="center">
-				<Typography variant="h3" mx={1} maxWidth="800px">
+				<Typography variant="h3">
 					Love in every
-				</Typography>
-				<Typography variant="h3" mx={1} maxWidth="800px">
+					<br />
 					<Accent>#Step</Accent>
 				</Typography>
 			</Box>
 			<Box py={7} width="100%">
 				<Swiper
+					loop={loop}
 					breakpoints={{
-						100: { slidesPerView: 1 },
-						750: { slidesPerView: 2 },
+						100: { slidesPerView: 2 },
 						1050: { slidesPerView: 3 },
 						1500: { slidesPerView: 4 },
+						1700: { slidesPerView: 5 },
 					}}
-					autoplay={{
-						delay: 2500,
-						disableOnInteraction: false,
-						pauseOnMouseEnter: true,
-					}}
+					autoplay={{ delay: 2500, disableOnInteraction: false }}
 					modules={[Autoplay]}
 					centeredSlides={true}
+					spaceBetween={30}
+					initialSlide={3}
 				>
 					{[gallery4, gallery1, gallery2, gallery3, gallery5].map(
 						(img, index) => (
 							<SwiperSlide key={index}>
-								<Box width="100%" display="flex" justifyContent="center">
+								<Box sx={{ userSelect: "none" }}>
 									<Image src={img} alt={`Hero Slider Image ${index + 1}`} />
 								</Box>
 							</SwiperSlide>
