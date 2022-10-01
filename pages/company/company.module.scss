@@ -1,177 +1,21 @@
-.typo {
-	padding: 0 50px 0 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #fafafa;
-	text-align: center;
-	border-radius: 0 30px 30px 0;
-}
-.story {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 4vw;
-	gap: 30px;
-	justify-content: space-around;
-	align-items: center;
-
-	.cards {
-		display: grid;
-		gap: 50px;
-		justify-content: center;
-		& > div {
-			width: 230px;
-			max-width: 400px;
-		}
-		.card1 {
-			grid-area: a;
-		}
-		.card2 {
-			grid-area: b;
-		}
-		.card3 {
-			grid-area: c;
-		}
-		.card4 {
-			grid-area: d;
-		}
-	}
-}
 main {
 	.data {
+		align-items: center;
+		margin-bottom: 80px;
+	}
+	.data,
+	.story {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 4vw;
-		gap: 30px;
 		justify-content: space-around;
-		align-items: center;
-
 		.cards {
 			display: grid;
-			gap: 110px;
 			justify-content: center;
-			& > div {
-				width: 230px;
-				max-width: 400px;
-			}
-			.card1 {
-				grid-area: a;
-			}
-			.card2 {
-				grid-area: b;
-			}
-			.card3 {
-				grid-area: c;
-			}
-			.card4 {
-				grid-area: d;
-			}
+			gap: 40px;
+			padding: 25px 0;
 		}
 	}
-}
-
-@media (max-width: 1200px) {
-	.title {
-		text-align: center;
-	}
-	.pollution {
-		border-radius: 0 30px 0 0;
-		overflow: hidden;
-	}
-	.typo {
-		width: 100%;
-		border-radius: 0 0 30px 30px;
-		padding: 50px;
-	}
-	main {
-		.intro {
-			grid-template-areas:
-				". a"
-				". a"
-				"c a"
-				"t a"
-				"w w"
-				"o g";
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 0px 0px auto auto auto auto;
-			max-width: 684px;
-			.screens1 {
-				grid-area: o;
-				align-self: center;
-				justify-self: flex-end;
-			}
-
-			.group {
-				grid-area: g;
-				height: 100%;
-			}
-		}
-		.easysteps {
-			.content {
-				grid-template-columns: 1fr 1fr;
-			}
-		}
-	}
-}
-
-@media (max-width: 750px) {
-	.title {
-		text-align: center;
-	}
-	.pollution {
-		border-radius: 0 30px 0 0;
-		overflow: hidden;
-	}
-	.typo {
-		width: 100%;
-		border-radius: 0 0 30px 30px;
-		padding: 50px;
-	}
-	main {
-		.intro {
-			grid-template-areas:
-				"a"
-				"a"
-				"c"
-				"o"
-				"g";
-			grid-template-columns: 1fr;
-			grid-template-rows: auto;
-
-			& > span {
-				align-self: center !important;
-				justify-self: center !important;
-			}
-			.screens2,
-			.walker {
-				display: none;
-			}
-		}
-	}
-}
-
-@media (max-width: 600px) {
-	.title {
-		text-align: center;
-	}
-	.pollution {
-		border-radius: 0 30px 0 0;
-		overflow: hidden;
-	}
-	.typo {
-		width: 100%;
-		border-radius: 0 0 30px 30px;
-		padding: 50px;
-	}
-	main {
-		.easysteps {
-			.content {
-				grid-template-columns: 1fr;
-				.stepcard {
-					display: flex;
-					flex-wrap: nowrap;
-				}
-			}
-		}
+	.story {
+		gap: 20px;
 	}
 }

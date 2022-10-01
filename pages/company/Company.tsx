@@ -1,12 +1,9 @@
-import { useWindowSize } from "hooks/useWindowResize";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Story } from "pages/company/components/Story";
 import { Data } from "pages/company/components/Data";
 
 export const Company: NextPage = () => {
-	const { width } = useWindowSize();
-
 	return (
 		<div style={{ position: "relative" }}>
 			<Head>
@@ -18,7 +15,7 @@ export const Company: NextPage = () => {
 				<meta name="keywords" content="home, walking, pal, buddy, walk" />
 			</Head>
 
-			<main style={{ marginBottom: 80 }}>
+			<main style={{ padding: "4vw" }}>
 				<Data />
 				<Story />
 			</main>
