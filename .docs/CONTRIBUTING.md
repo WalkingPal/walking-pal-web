@@ -28,9 +28,10 @@ We are happy to welcome all the contributions from anyone willing to improve/add
 
 - ##### Pull Requests review criteria:
 
-  - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
+  - Your PR title must be in the form of `PR_TYPE: PR_TITLE` 
     - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
     - Refer [Git Commit Guidelines](./GIT-GUIDELINES.MD) for more details
+  - Make sure you have created the issue for your PR. Link that issue to your PR.
   - In your PR, if created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
   - Your work must be **original**, written by you not copied from other resources. Copying is not bad. But copying without properly understanding what part of code is actually needed and what what part is not, is very bad. Make sure you avoid adding redundant code.
   - You must **comment** on your code wherever necessary. **Avoid committing commented code**, e.g `console.log` statements, etc
