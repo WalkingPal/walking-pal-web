@@ -1,92 +1,84 @@
-main {
-	.typo {
-		padding: 0 50px 0 50px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: #fafafa;
-		text-align: center;
-		border-radius: 0 30px 30px 0;
-	}
-	.story {
-		display: flex;
-		flex-wrap: wrap;
-		padding: 4vw;
-		gap: 30px;
-		justify-content: space-around;
-		align-items: center;
+.typo {
+	padding: 0 50px 0 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fafafa;
+	text-align: center;
+	border-radius: 0 30px 30px 0;
+}
+.story {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 4vw;
+	gap: 30px;
+	justify-content: space-around;
+	align-items: center;
 
-		.cards {
-			display: grid;
-			gap: 50px;
-			justify-content: center;
-			& > div {
-				width: 230px;
-				max-width: 400px;
-			}
-			.card1 {
-				grid-area: a;
-			}
-			.card2 {
-				grid-area: b;
-			}
-			.card3 {
-				grid-area: c;
-			}
-			.card4 {
-				grid-area: d;
-			}
+	.cards {
+		display: grid;
+		gap: 50px;
+		justify-content: center;
+		& > div {
+			width: 230px;
+			max-width: 400px;
+		}
+		.card1 {
+			grid-area: a;
+		}
+		.card2 {
+			grid-area: b;
+		}
+		.card3 {
+			grid-area: c;
+		}
+		.card4 {
+			grid-area: d;
 		}
 	}
 }
 
 @media (max-width: 1200px) {
-	main {
-		.title {
-			text-align: center;
-		}
-		.pollution {
-			border-radius: 0 30px 0 0;
-			overflow: hidden;
-		}
-		.typo {
-			width: 100%;
-			border-radius: 0 0 30px 30px;
-			padding: 50px;
-		}
+	.title {
+		text-align: center;
+	}
+	.pollution {
+		border-radius: 0 30px 0 0;
+		overflow: hidden;
+	}
+	.typo {
+		width: 100%;
+		border-radius: 0 0 30px 30px;
+		padding: 50px;
 	}
 }
 
 @media (max-width: 750px) {
-	main {
-		.title {
-			text-align: center;
-		}
-		.pollution {
-			border-radius: 0 30px 0 0;
-			overflow: hidden;
-		}
-		.typo {
-			width: 100%;
-			border-radius: 0 0 30px 30px;
-			padding: 50px;
-		}
+	.title {
+		text-align: center;
+	}
+	.pollution {
+		border-radius: 0 30px 0 0;
+		overflow: hidden;
+	}
+	.typo {
+		width: 100%;
+		border-radius: 0 0 30px 30px;
+		padding: 50px;
 	}
 }
 
 @media (max-width: 600px) {
-	main {
-		.title {
-			text-align: center;
-		}
-		.pollution {
-			border-radius: 0 30px 0 0;
-			overflow: hidden;
-		}
-		.typo {
-			width: 100%;
-			border-radius: 0 0 30px 30px;
-			padding: 50px;
-		}
+	.title {
+		text-align: center;
+	}
+	.pollution {
+		border-radius: 0 30px 0 0;
+		overflow: hidden;
+	}
+	.typo {
+		width: 100%;
+		border-radius: 0 0 30px 30px;
+		padding: 50px;
 	}
 }
