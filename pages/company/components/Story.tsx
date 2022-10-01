@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 import { FC } from "react";
 import styles from "../company.module.scss";
 import { pollution } from "assets/png";
-import Image from "next/image";
+import { Image } from "components/Image";
 
 const story = [
 	{ title: "	✓ Founded in 2014" },
@@ -23,7 +23,7 @@ export const Story: FC = () => {
 						md: { textAlign: "left" },
 					}}
 				>
-					<Typography fontSize="1.8rem" fontWeight={500} mb={3}>
+					<Typography fontSize="18px" fontWeight={500} mb={3}>
 						OUR STORY
 					</Typography>
 					We’re going to become <br /> partners for long run.
@@ -41,7 +41,6 @@ export const Story: FC = () => {
 					gridTemplateAreas={{ xs: '"a" "b" "c" "d"', sm: '"a b" "c d"' }}
 				>
 					{story.map((feat, i) => {
-						const textAlign = i % 2 === 0 ? "left" : "right";
 						return (
 							<Box className={styles[`card${i + 1}`]} key={`card${i + 1}`}>
 								<Typography variant="subtitle1">{feat.title}</Typography>
@@ -51,7 +50,16 @@ export const Story: FC = () => {
 				</Box>
 			</Box>
 			<Box mt={5} display="flex" flexWrap="wrap">
-				<Image src={pollution} alt="" />
+				<div className={styles.pollution}>
+					<Image
+						wrapstyle={{
+							maxWidth: "600px",
+							objectFit: "cover",
+						}}
+						src={pollution}
+						alt=""
+					/>
+				</div>
 
 				<div className={styles.typo}>
 					<Typography maxWidth={341}>
