@@ -1,13 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import { company1, company2, company3, company4, company5 } from "assets/png";
+import { gallery1, gallery2, gallery3, gallery4, gallery5 } from "assets/png";
 import { Accent } from "components/Accent";
 import { Image } from "components/Image";
 import { Autoplay } from "swiper";
 import { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
-import styles from "../company.module.scss";
 
 interface IHero {}
 
@@ -25,16 +23,10 @@ export const Hero: FC<IHero> = ({}) => {
 			<Box py={7} width="100%">
 				<Swiper
 					breakpoints={{
-						100: {
-							slidesPerView: 1,
-						},
+						100: { slidesPerView: 1 },
 						750: { slidesPerView: 2 },
-						1050: {
-							slidesPerView: 3,
-						},
-						1500: {
-							slidesPerView: 4,
-						},
+						1050: { slidesPerView: 3 },
+						1500: { slidesPerView: 4 },
 					}}
 					autoplay={{
 						delay: 2500,
@@ -44,7 +36,7 @@ export const Hero: FC<IHero> = ({}) => {
 					modules={[Autoplay]}
 					centeredSlides={true}
 				>
-					{[company4, company1, company2, company3, company5].map(
+					{[gallery4, gallery1, gallery2, gallery3, gallery5].map(
 						(img, index) => (
 							<SwiperSlide key={index}>
 								<Box width="100%" display="flex" justifyContent="center">

@@ -26,11 +26,11 @@ export { default as step3 } from "./step3.png";
 export { default as step4 } from "./step4.png";
 export { default as foundersHub } from "./founders-hub.png";
 export { default as ELcenter } from "./ELcenter.png";
-export { default as company1 } from "./company1.png";
-export { default as company2 } from "./company2.png";
-export { default as company3 } from "./company3.png";
-export { default as company4 } from "./company4.png";
-export { default as company5 } from "./company5.png";
+export { default as gallery1 } from "./gallery1.png";
+export { default as gallery2 } from "./gallery2.png";
+export { default as gallery3 } from "./gallery3.png";
+export { default as gallery4 } from "./gallery4.png";
+export { default as gallery5 } from "./gallery5.png";
 
 import memoji1 from "./memoji1.png";
 import memoji2 from "./memoji2.png";
