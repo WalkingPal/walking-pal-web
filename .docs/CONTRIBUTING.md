@@ -1,12 +1,42 @@
 # Contributing Guidelines
 
-- walking-pal-web is [Next.js](https://nextjs.org/) project.
-- We strictly abide by our [Style Guide](./STYLE-GUIDE.md) to create and style our React components
-- We have an opinionated Project file structure. Always follow our [Project Structure Guide](./PROJECT-STRUCTURE.md) when creating new files/folders.
+This documentation contains a set of guidelines to help you during the contribution process.
 
-To start contributing a feature of a bugfix, follow the steps to setup your developement environmanet.
+We are happy to welcome all the contributions from anyone willing to improve/add new scripts to this project. Thank you for helping out and remember, **no contribution is too small.**
+
+- Each participant/contributor will be assigned **2 issues (max)** at a time to work on.
+- Participants are expected to follow [project guidelines and coding style](PROJECT-GUIDELINES.md). Structured code is one of our top priorities.
+- Participants/contributors have to **comment** on issues they would like to work on, and mentors will assign you.
+- Issues will be assigned on a **first-come, first-serve basis**.
+- Participants/contributors can also **open their issues**, but it needs to be verified and labelled by a mentor.
+- Before opening a new issue, please **check** if it is already created or not.
+- Pull requests will be merged after being **reviewed by a mentor**.
+- Create a pull request from a **new branch** other than `dev`.
+- Create **new branch** from a freshly updated `dev` branch only. Do NOT create new branches from `main` branch.
+- It might take a day to review your pull request. Please have patience and be nice.
+- We all are here to learn. You are allowed to make mistakes. That's how you learn, right!
+
+- **MAKE SURE TO OPEN A DRAFT PR AS SOON AS YOU START WORKING ON AN ISSUE AND KEEP COMMITTING TO IT SO THAT WE CAN KNOW THAT YOU ARE WORKING ON THAT PARTICULAR ISSUE** (see [Converting Existing PR to Draft PR](#converting-existing-pr-to-draft-pr))
+- Participants/contributors have **5 days** to complete issues. If they think they would need more time, make sure you update your Draft Pull Request regularly by committing you changes you have done so far. This would help maintainer to track your progress and help you out on your PRs more effectively. We want you to succeed in merging your PRs. We want to make sure that you learn open source in a effective way.
+
+- Pull Requests review criteria:
+
+  - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
+    - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
+    - Refer [Git Commit Guidelines](./GIT-GUIDELINES.MD) for more details
+  - In your PR, if created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
+  - Your work must be **original**, written by you not copied from other resources. Copying is not bad. But copying without properly understanding what part of code is actually needed and what what part is not, is very bad. Make sure you avoid adding redundant code.
+  - You must **comment** on your code wherever necessary. **Avoid committing commented code**, e.g `console.log` statements, etc
+  - For **frontend changes** kindly share screenshots and work samples of your work before sending a PR.
+  - For **frontend changes**, abide by the [STYLE GUIDE](./STYLE-GUIDE.md).
+
+- For any queries or discussions, see [Asking for help](#asking-for-help)
+
+# Get Started for you first PR👩‍💻👨‍💻
 
 ## Development Environment Setup
+
+To start contributing a feature of a bugfix, follow the steps to setup your developement environment.
 
 ### Install tools
 
@@ -72,7 +102,16 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Contributing your first Pull Request
+# Contributing Workflow
+
+## Find an issue 🔍
+
+- Take a look at the Existing Issues or [create your own Issues](https://github.com/WalkingPal/walking-pal-web/issues/new/choose)!
+- Wait for the Issue to be assigned to you after which you can start working on it.
+- Note : Every change in this project should/must have an associated issue.
+- Now you can start working on your Pull Request for the Issue you got assigned to.
+
+## Start working on your Pull Request
 
 1. When starting to work on new feature or a bugfix, always first checkout the dev branch and update the dev branch
    ```sh
@@ -98,12 +137,21 @@ To learn more about Next.js, take a look at the following resources:
    ![Creating A PR](./assets/creating-pr.png)
    Create your Pull Request using that link 🎉
 
+## Converting Existing PR to Draft PR
+
+If you Pull Request is a Work in Progress, then go to your Pull Request, click on `Convert to draft` to convert it to a Draft PR.
+![Converting Existing PR to Draft PR](./assets/how-to-draft-PR.png)
+
 ## Making changes to a existing PR
 
 Sometime Maintainers may request changes in your PR. It is advised NOT to close the existing PR to create a new one. Push changes to the exisiting PR branch. The PR will get automatically updated with your latest changes.
 
 ## Asking for help
 
-[Join our discord server](https://discord.gg/Et3aQTsW6a) to meet with the amazing community folks at our Discord server. Ask your questions in the `#💬devs-general` channel.
+[Join our discord server](https://discord.gg/Et3aQTsW6a) to meet with the amazing community folks at our Discord server.
+
+> Make sure you read and follow the instructions in `#🚦start-here` channel after you join the Discord server
+
+Ask your questions in the `#💬devs-general` channel.
 
 That's all! Happy Contributing!!
