@@ -13,7 +13,10 @@ function App({ Component, pageProps }: AppProps) {
 	const showCompo = useRef(true);
 	if (["/register"].includes(router.route)) {
 		showCompo.current = false;
+	} else {
+		showCompo.current = true;
 	}
+
 	return (
 		<React.Fragment>
 			<Head>
