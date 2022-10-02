@@ -96,7 +96,7 @@ export const Footer: FC = ({}) => {
 					flexGrow={1}
 					maxWidth={650}
 				>
-					Our<Accent>mission</Accent>is to change the people cover their
+					Our<Accent>mission</Accent>is to change the way people cover their
 					<Accent>last-mile</Accent>by making walking more fun and the
 					<Accent>preferred</Accent>way to commute.
 				</Typography>

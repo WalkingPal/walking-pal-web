@@ -83,7 +83,7 @@ export const FeedbackForm: FC = ({}) => {
 				await axios.post("/api/feedback", { formData, captcha: captchaToken });
 				setShowSuccess(true);
 			} catch (e) {
-				errorMsg.current = "Some error occured! Please try again later.";
+				errorMsg.current = "Some error occurred! Please try again later.";
 				setShowError(true);
 				console.error(e);
 			}

@@ -68,19 +68,19 @@ export const OurStory: FC = () => {
 			<Story
 				rowReverse
 				imgSrc={story1}
-				content="Sometimes walking alone on a sidewalk feels very exhausting and lonely, but if there is a buddy by our side the journey however long it may be, it doesn't bother us anymore. But finding the one to commute daily is like finding a needle in the haystack, We won't be able to help you to find your needle but we can certainly help you find a walking buddy anytime you need and I am sure you have come across this problem atleast once in your life."
+				content="Sometimes walking alone on a sidewalk feels very exhausting and lonely, but if there is a buddy by our side the journey however long it may be, it doesn't bother us anymore. But finding the one to commute daily is like finding a needle in the haystack. We won't be able to help you to find your needle but we can certainly help you find a walking buddy anytime you need and I am sure you have come across this problem at least once in your life."
 				icon={pin}
 			/>
 			<Story
 				imgSrc={story2}
-				content="You will be glad to hear that you are not alone there are many people out there too who do feel the same. WalkingPal is the antidote to all those problems of our's, it joins people like us who have a similar problem so that we can complete the journey easily together."
+				content="You will be glad to hear that you are not alone there are many people out there too who do feel the same. WalkingPal is the antidote to all those problems of ours, it joins people like us who have a similar problem so that we can complete the journey easily together."
 				icon={footstep}
 			/>
 
 			<Story
 				rowReverse
 				imgSrc={story3}
-				content="By making walking more fun and enjoyable it's a great way to complete the last mile which is both cheap (free actually) and eco-friendly. Oh, and it's good for your health too. It's a great way to connect and meet new people, make new friends, relationships To explore and talk about the local food, places & culture that too completing your journey at the same time while walking together."
+				content="By making walking more fun and enjoyable it's a great way to complete the last mile which is both cheap (free actually) and eco-friendly. Oh, and it's good for your health too. It's a great way to connect and meet new people, make new friends, and build relationships. Explore and talk about local food, places, and culture while completing your journey walking together."
 				icon={clip}
 			/>
 		</div>

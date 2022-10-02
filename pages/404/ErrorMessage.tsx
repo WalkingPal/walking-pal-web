@@ -15,7 +15,7 @@ export const ErrorMessage: NextPage = () => {
 				<title> 404 | Page Not Found </title>
 				<meta
 					name="description"
-					content="Uh oh! 404 Not Found. looks like you got lost"
+					content="Uh oh! 404 Not Found. Looks like you got lost"
 				/>
 				<meta
 					name="keywords"
@@ -50,7 +50,7 @@ export const ErrorMessage: NextPage = () => {
 						fontWeight="400"
 					>
 						Looks like this page is missing. Don’t worry though, our best man is
-						on the case! <br /> meanwhile, please headback.
+						on the case! <br /> Meanwhile, please head back.
 					</Typography>
 				</div>
 			</main>
