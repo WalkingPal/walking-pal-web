@@ -12,22 +12,27 @@ const socials = [
 	{
 		link: "https://www.facebook.com/walkingpal.in",
 		icon: <FacebookOutlined sx={{ color: "#fff" }} />,
+		name: "Facebook",
 	},
 	{
 		link: "https://twitter.com/WalkingPal_in",
 		icon: <Twitter color="#fff" />,
+		name: "Twitter",
 	},
 	{
 		link: "https://www.linkedin.com/company/walkingpal/",
 		icon: <Linkedin color="#fff" />,
+		name: "Linkedin",
 	},
 	{
 		link: "https://www.instagram.com/walkingpal.in/",
 		icon: <Insta color="#fff" />,
+		name: "Instagram",
 	},
 	{
 		link: "https://youtu.be/L73A9fyyQqw",
 		icon: <YouTube color="#fff" />,
+		name: "Youtube",
 	},
 ];
 export const Footer: FC = ({}) => {
@@ -81,7 +86,12 @@ export const Footer: FC = ({}) => {
 					>
 						{socials.map((social, i) => {
 							return (
-								<Link href={social.link} target="_blank" key={"socail-" + i}>
+								<Link
+									href={social.link}
+									target="_blank"
+									key={"socail-" + i}
+									aria-label={social.name}
+								>
 									{social.icon}
 								</Link>
 							);
