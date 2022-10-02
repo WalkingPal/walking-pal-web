@@ -32,9 +32,7 @@ export const ErrorMessage: NextPage = () => {
 						color="#ffffffcc"
 						align="center"
 						variant="h2"
-						pt={7}
 						pb={4}
-						mx={1}
 						maxWidth="800px"
 					>
 						Ouppps! <br /> 404
