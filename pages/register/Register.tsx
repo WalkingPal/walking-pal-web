@@ -29,7 +29,7 @@ export const Register: NextPage = () => {
 				alignItems="center"
 				gap="80px"
 			>
-				<Typography
+				{/* <Typography
 					variant="h4"
 					textAlign="center"
 					color="white"
@@ -44,8 +44,8 @@ export const Register: NextPage = () => {
 					fontWeight={500}
 				>
 					Thankyou for your interest in WalkingPal!
-				</Typography>
-				{/* {isSubmitted ? (
+				</Typography> */}
+				{isSubmitted ? (
 					<SubmittedAck />
 				) : (
 					<>
@@ -54,7 +54,7 @@ export const Register: NextPage = () => {
 						/>
 						<FormProgress stepsCompleted={stepsCompleted} />
 					</>
-				)} */}
+				)}
 			</Stack>
 		</>
 	);

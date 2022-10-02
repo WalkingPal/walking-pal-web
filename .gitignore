@@ -37,7 +37,7 @@ yarn-error.log*
 next-env.d.ts
 
 #firebase
-walking-pal-firebase-adminsdk-*.json
+*-adminsdk-*.json
 
 #misc
 .dump
