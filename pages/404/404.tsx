@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 import styles from "./404.module.scss";
 import { Error } from "assets/png";
 import Image from "next/image";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export const Error404: NextPage = () => {
 	return (
@@ -25,32 +25,16 @@ export const Error404: NextPage = () => {
 				<div className={styles.left}>
 					<Image src={Error} alt="" />
 				</div>
-				<div className={styles.right}>
-					<Typography
-						color="#ffffffcc"
-						align="center"
-						variant="h2"
-						pb={4}
-						lineHeight="103%"
-						maxWidth="800px"
-					>
+				<Box bgcolor="primary.main" color="#ffffffcc" className={styles.right}>
+					<Typography variant="h1" pb={3}>
 						Ouppps! <br /> 404
 					</Typography>
-					<Typography
-						variant="body1"
-						align="center"
-						mx={3}
-						maxWidth="600px"
-						color="#ffffffcc"
-						fontSize="31px"
-						lineHeight="42px"
-						fontWeight="400"
-					>
-						Looks like this page is missing. Don’t worry though, our best man is
-						on the case! <br />
-						<br /> meanwhile, please headback.
+					<Typography variant="h5">
+						Looks like this page is missing or unavailable. If you think this is
+						a mistake, don’t worry though, our best man is on the case! <br />
+						<br /> Meanwhile, please headback.
 					</Typography>
-				</div>
+				</Box>
 			</main>
 		</>
 	);
