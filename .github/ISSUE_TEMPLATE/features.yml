@@ -15,7 +15,6 @@ body:
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
       options:
         - label: I have read and I am following [the guidelines for creating a new issue](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#make-sure-to-follow-these-when-opening-issues)
           required: true
