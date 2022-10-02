@@ -1,4 +1,3 @@
-import { useWindowSize } from "hooks/useWindowResize";
 import Head from "next/head";
 import type { NextPage } from "next";
 import styles from "./404.module.scss";

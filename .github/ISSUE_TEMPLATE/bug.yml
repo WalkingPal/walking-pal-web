@@ -7,13 +7,7 @@ body:
     id: description
     attributes:
       label: Description
-      description: A brief description of the question or issue, also include what you tried and what didn't work
+      description:
+        A brief description of the question or issue, also include what you tried and what didn't work. Please add screenshots if applicable along with steps to reproduce the issue. If you need help or if you want to to discuss something with us, join the WalkingPal [discord server community](https://discord.gg/Et3aQTsW6a)!
     validations:
       required: true
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      description: Please add screenshots if applicable
-    validations:
-      required: false
