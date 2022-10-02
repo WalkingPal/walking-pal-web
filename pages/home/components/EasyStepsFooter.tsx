@@ -59,7 +59,7 @@ export const EasyStepsFooter: FC = ({}) => {
 					justifyContent="center"
 					display="inherit"
 				>
-					<Typography textAlign="center" m={1}>
+					<Typography textAlign="center" m={1} color="white">
 						A proud<Accent>partner</Accent>
 					</Typography>
 				</Box>
