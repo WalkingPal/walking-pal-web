@@ -18,8 +18,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "shopping",
 		img: shopping.src,
 		bgcolor: "#8DD8D7",
-		description:
-			"illustration of multiple shopping bags in different sizes, shapes and colors.",
+		description: "Go out shopping with Walking Pal",
 	},
 	{
 		id: 1,
@@ -27,8 +26,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "work",
 		img: promotion.src,
 		bgcolor: "#FFE3E3",
-		description:
-			"illustration of a man in formal attire climbing stairs that turns into arrow pointing up",
+		description: "Go to work with Walking Pal",
 	},
 	{
 		id: 2,
@@ -36,7 +34,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "traveling",
 		img: bagpack.src,
 		bgcolor: "#F8CF7D",
-		description: "illustration of a big green backpack",
+		description: "Travel everywhere with Walking Pal",
 	},
 	{
 		id: 3,
@@ -44,7 +42,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "walk!",
 		img: footstep2.src,
 		bgcolor: "#FF8282",
-		description: "illustration of two shoe prints",
+		description: "Go anywhere with Walking Pal",
 	},
 ];
 
