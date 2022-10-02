@@ -9,7 +9,7 @@ interface ILogoWordmark extends BoxProps {
 
 export const LogoWordmark: FC<ILogoWordmark> = props => {
 	const fill = props.dark ? "#767676" : "#FFFCFC";
-	const scale = props.size / 100;
+	const scale = props.size / 160;
 	const width = 311;
 	const height = 73;
 	return (
