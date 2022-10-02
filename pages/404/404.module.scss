@@ -1,7 +1,7 @@
 .main {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 	position: relative;
 	top: 0px;
 }
@@ -20,8 +20,6 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding-bottom: 229px;
-	padding-top: 248px;
 }
 
 @media (max-width: 750px) {

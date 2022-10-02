@@ -30,9 +30,7 @@ export const Error404: NextPage = () => {
 						color="#ffffffcc"
 						align="center"
 						variant="h2"
-						pt={7}
 						pb={4}
-						mx={1}
 						lineHeight="103%"
 						maxWidth="800px"
 					>
