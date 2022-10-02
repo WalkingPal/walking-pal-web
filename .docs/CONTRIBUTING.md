@@ -6,9 +6,9 @@ We are happy to welcome all the contributions from anyone willing to improve/add
 
 - Each participant/contributor will be assigned **2 issues (max)** at a time to work on.
 - Participants are expected to follow [project guidelines and coding style](PROJECT-GUIDELINES.md). Structured code is one of our top priorities.
-- Participants/contributors have to **comment** on issues they would like to work on, and mentors will assign you.
+- Participants/contributors have to **comment** on "open issues" they would like to work on, and mentors will assign you.
 - Issues will be assigned on a **first-come, first-serve basis**.
-- Participants/contributors can also **open their issues**
+- Participants/contributors can also **open their issues** and they can assign themselves if they want to work on it.
   - ##### Make sure to follow these when opening Issues:
     - Your Issue title must be in the form of `ISSUE_TYPE: ISSUE_TITLE`
       - ISSUE_TYPE can be `feat` (issues for new features), `bug`(for bug), `docs` (for docs), `chore`(for miscellaneous)
