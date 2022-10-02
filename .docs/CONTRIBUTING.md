@@ -90,6 +90,28 @@ The following tools should be installed and running on your computer:
    yarn install
    ```
 
+### Additonal Setup
+
+Our app uses reCAPTCHA to help us prevent spammers/bots for polluting our database and helps us enhance the security we provide on our app.
+In order to access the `/register` and `/faq` pages on the app seamlessly, follow the required steps:
+
+1. Head to the [reCAPTCHA admin console](https://www.google.com/recaptcha/admin/create) and fill in the required details.
+
+![recaptcha-registration-1200](https://user-images.githubusercontent.com/51470769/193463737-5e6eda09-2015-4fec-93a0-a763a7b0993e.jpg)
+
+2. After clicking submit, you should be able to see the public and secret keys.
+
+![recaptcha-keys-1200](https://user-images.githubusercontent.com/51470769/193463777-b2438d33-3053-4811-9be2-9c6eae000d2a.jpg)
+
+3. Create a file called .env.local and add the following to it, and paste the keys you copied from the reCAPTCHA dashboard here appropriately.
+
+```bash
+# Add the public site key here
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
+# Add the secret key here
+RECAPTCHA_SECRET_KEY=
+```
+
 ## Run Next.js Developement server
 
 ```bash
