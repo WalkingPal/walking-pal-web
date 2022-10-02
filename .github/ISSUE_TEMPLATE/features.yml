@@ -1,19 +1,15 @@
 name: 💡 General Feature Request
 description: Have a new idea/feature for this project? Please suggest!
-title: '[FEATURE] <description>'
-labels: ['feature']
+title: "feat: <description>"
+labels: ["feature", "hacktoberfest"]
 body:
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Description of the enhancement you propose, also include what you tried and what worked.
+      description:
+        Write a description of the enhancement you propose. **Add screenshots/images or reference links (if applicable)**. If you need help or if you want to to discuss something with us, join the WalkingPal [Discord community](https://discord.gg/Et3aQTsW6a)!
+
+        You can assign this issue to yourself if you want to work on it.
     validations:
       required: true
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      description: Screenshots if applicable
-    validations:
-      required: false

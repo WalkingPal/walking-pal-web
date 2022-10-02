@@ -1,20 +1,15 @@
-
 name: 📄 Documentation
 description: Found an issue in the documentation? You can use this one!
-title: '[DOCS] <description>'
-labels: ['documentation']
+title: "docs: <description>"
+labels: ["documentation", "hacktoberfest"]
 body:
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Description of the question or issue, also include what you tried and what didn't work
+      description:
+        Write a description of the question or issue in the documentation. **Add reference links (if applicable)**. If you need help or if you want to to discuss something with us, join the WalkingPal [Discord community](https://discord.gg/Et3aQTsW6a)!
+
+        You can assign this issue to yourself if you want to work on it.
     validations:
       required: true
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      description: Screenshots if applicable
-    validations:
-      required: false
