@@ -13,3 +13,9 @@ body:
         You can assign this issue to yourself if you want to work on it.
     validations:
       required: true
+  - type: checkboxes
+      id: terms
+      attributes:
+        label: Code of Conduct
+        description: I have read and I am following [the guidelines for creating a new issue](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#make-sure-to-follow-these-when-opening-issues)
+        required: true
