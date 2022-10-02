@@ -1,3 +1,5 @@
+# Type System Guide
+
 This style guide is created from Material.io design guidelines
 If you want to learn from animations and illustrations, [follow this link to official material.io type-system docs](https://material.io/design/typography/the-type-system.html#type-scale)
 
