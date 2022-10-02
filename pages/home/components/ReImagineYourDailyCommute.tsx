@@ -18,7 +18,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "shopping",
 		img: shopping.src,
 		bgcolor: "#8DD8D7",
-		description: "Go out shopping with Walking Pal",
+		description: "Go out shopping with WalkingPal",
 	},
 	{
 		id: 1,
@@ -26,7 +26,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "work",
 		img: promotion.src,
 		bgcolor: "#FFE3E3",
-		description: "Go to work with Walking Pal",
+		description: "Go to work with WalkingPal",
 	},
 	{
 		id: 2,
@@ -34,7 +34,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "traveling",
 		img: bagpack.src,
 		bgcolor: "#F8CF7D",
-		description: "Travel everywhere with Walking Pal",
+		description: "Travel everywhere with WalkingPal",
 	},
 	{
 		id: 3,
@@ -42,7 +42,7 @@ const commuteCards: ICommuteCard[] = [
 		highlight: "walk!",
 		img: footstep2.src,
 		bgcolor: "#FF8282",
-		description: "Go anywhere with Walking Pal",
+		description: "Go for walks anywhere with WalkingPal",
 	},
 ];
 
