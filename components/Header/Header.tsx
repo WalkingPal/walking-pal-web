@@ -46,7 +46,11 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 					})}
 					elevation={0}
 				>
-					{!width || width < 1200 ? <HeaderMobile /> : <HeaderDesktop />}
+					{(() => {
+						if (width) {
+							return width < 1200 ? <HeaderMobile /> : <HeaderDesktop />;
+						}
+					})()}
 				</Paper>
 			</header>
 			<div
