@@ -5,7 +5,7 @@ If you want to learn from animations and illustrations, [follow this link to off
 
 ![type-system](./assets/material-type-face.png)
 
-There are total 13 font variants which is shown below in decreasing order of emphasis:
+There is a total of 13 font variants which are shown below in decreasing order of emphasis:
 
 - h1
 - h2
@@ -28,10 +28,10 @@ There are total 13 font variants which is shown below in decreasing order of emp
 **Caption and overline**: used sparingly to annotate imagery
 **overline**: Sparingly used. Mainly Used over headlines to introduce the headline.
 
-_For UI examples refer the link given above_
+_For UI examples refer to the link given above_
 
 ### Key Takeaways
 
-- difference between subtitle variant and body variant:
-  - Both might look same (same size or same font) but there is little difference other than font weight, i.e, Subtitle should be short (few words) whereas body variant can be as long as you want
-- Subtitles are not headlines, they are small size text but dark colored for more emphasis
+- the difference between subtitle variant and body variant:
+  - Both might look the same (same size or same font) but there is little difference other than font weight, i.e, the Subtitle should be short (few words) whereas the body variant can be as long as you want
+- Subtitles are not headlines, they are small-size text but dark-colored for more emphasis
