@@ -12,7 +12,7 @@ export const Error404: NextPage = () => {
 				<title> 404 | Page Not Found </title>
 				<meta
 					name="description"
-					content="Uh oh! 404 Not Found. looks like you got lost"
+					content="Uh oh! 404 Not Found. Looks like you got lost"
 				/>
 				<meta
 					name="keywords"
@@ -31,7 +31,7 @@ export const Error404: NextPage = () => {
 					<Typography variant="h5">
 						Looks like this page is missing or unavailable. If you think this is
 						a mistake, don’t worry though, our best man is on the case! <br />
-						<br /> Meanwhile, please headback.
+						<br /> Meanwhile, please head back.
 					</Typography>
 				</Box>
 			</main>

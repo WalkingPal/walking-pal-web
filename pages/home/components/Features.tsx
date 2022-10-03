@@ -6,14 +6,14 @@ import styles from "../home.module.scss";
 const features = [
 	{ title: "Last-Mile", desc: "Cover your last mile with your walking buddy." },
 	{
-		title: "New frienships",
+		title: "New friendships",
 		desc: "Meet new people and nurture new friendships.",
 	},
 	{
 		title: "Local connection",
 		desc: "A chance to have a local connection in an new city.",
 	},
-	{ title: "Fun. and Chill.", desc: "Walk have fun and chill together." },
+	{ title: "Fun and chill.", desc: "Walk, have fun, and chill together." },
 ];
 export const Features: FC = () => {
 	return (

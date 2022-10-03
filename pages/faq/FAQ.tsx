@@ -14,10 +14,10 @@ const generalFAQs = [
 		desc: "We are currently in private beta stage. You could either register as an early user and become a beta tester or wait for the public release soon.",
 	},
 	{
-		faq: "How walkingpal works?",
+		faq: "How does WalkingPal work?",
 		desc: (
 			<>
-				WalkingPal scans all the nearly people that are in need of a walking
+				WalkingPal scans all the nearby people that are in need of a walking
 				buddy, and it connects you with your nearest walking buddy going towards
 				the same direction and destination as you.
 				<br />
@@ -27,12 +27,12 @@ const generalFAQs = [
 		),
 	},
 	{
-		faq: "What Platforms do we support?",
-		desc: "We will be launching our android app first and subsequently it will be available on the Apple app store in future.",
+		faq: "What platforms do we support?",
+		desc: "We will be launching our Android app first and subsequently it will be available on the Apple App Store in future.",
 	},
 	{
 		faq: "Where can we download the app?",
-		desc: "You can download WalkingPal on the Google play store post our private beta test. As of now you can register for it and we will notify you when it is available.",
+		desc: "You can download WalkingPal on the Google Play Store post our private beta test. As of now you can register for it and we will notify you when it is available.",
 	},
 ];
 
@@ -43,7 +43,7 @@ const TrustnSafetyFAQs = [
 	},
 	{
 		faq: "What about fake users?",
-		desc: "In order to minimise fake users, we will be verifying the identity of every user by a government approved I’d, like passport, Aadhar Card, Etc. So that no one ends up with an undocumented person.",
+		desc: "In order to minimise fake users, we will be verifying the identity of every user by a government approved ID, like passport, Aadhar Card, Etc. So that no one ends up with an undocumented person.",
 	},
 	{
 		faq: "How will you ensure the safety of the users?",
@@ -59,9 +59,9 @@ const TrustnSafetyFAQs = [
 					</li>
 					<li>
 						After you start walking with your walking buddy there will be an SOS
-						bubble popup on the screen (kinda like a messenger bubble). If you
-						are in danger or at an uncomfortable position you can just tap on
-						that bubble and a notification will be sent to all your emergence
+						bubble pop up on the screen (kind of like a messenger bubble). If
+						you are in danger or in an uncomfortable position you can just tap
+						on that bubble and a notification will be sent to all your emergency
 						contacts and to us as well and we will try our best to help you out
 						in every possible way.
 					</li>
