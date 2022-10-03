@@ -6,3 +6,7 @@ export { default as Twitter } from "./twitter.svg";
 export { default as YouTube } from "./youtube.svg";
 export { default as Linkedin } from "./linkedin.svg";
 export { default as Insta } from "./insta.svg";
+export { default as Shopping } from "./shopping.svg";
+export { default as Promotion } from "./promotion.svg";
+export { default as Bagpack } from "./bagpack.svg";
+export { default as Footstep2 } from "./footstep2.svg";

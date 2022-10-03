@@ -1,12 +1,14 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import { bagpack, footstep2, promotion, shopping } from "assets/png";
+import { Bagpack, Footstep2, Promotion, Shopping } from "assets/svg";
 import { Accent } from "components/Accent";
 import { FC } from "react";
 export interface ICommuteCard {
 	id: number;
 	text: string;
 	highlight: string;
-	img: string;
+	highlightColor: string;
+	img: React.SVGProps<SVGSVGElement>;
 	bgcolor: string;
 	description: string;
 }
@@ -16,7 +18,8 @@ const commuteCards: ICommuteCard[] = [
 		id: 0,
 		text: "For",
 		highlight: "shopping",
-		img: shopping.src,
+		highlightColor: "#67CBC9",
+		img: <Shopping />,
 		bgcolor: "#8DD8D7",
 		description: "Go out shopping with WalkingPal",
 	},
@@ -24,7 +27,8 @@ const commuteCards: ICommuteCard[] = [
 		id: 1,
 		text: "For",
 		highlight: "work",
-		img: promotion.src,
+		highlightColor: "#FFACAC",
+		img: <Promotion />,
 		bgcolor: "#FFE3E3",
 		description: "Go to work with WalkingPal",
 	},
@@ -32,7 +36,8 @@ const commuteCards: ICommuteCard[] = [
 		id: 2,
 		text: "For",
 		highlight: "traveling",
-		img: bagpack.src,
+		highlightColor: "#F6BF51",
+		img: <Bagpack />,
 		bgcolor: "#F8CF7D",
 		description: "Travel everywhere with WalkingPal",
 	},
@@ -40,7 +45,8 @@ const commuteCards: ICommuteCard[] = [
 		id: 3,
 		text: "Or just a",
 		highlight: "walk!",
-		img: footstep2.src,
+		highlightColor: "#FF5959",
+		img: <Footstep2 />,
 		bgcolor: "#FF8282",
 		description: "Go for walks anywhere with WalkingPal",
 	},
@@ -78,25 +84,18 @@ export const CommuteCard: FC<{ cc: ICommuteCard }> = ({ cc }) => {
 					gap="4px"
 				>
 					<Typography fontWeight={500}>{cc.text}</Typography>
-					<Typography fontWeight={800}>{cc.highlight}</Typography>
+					<Typography fontWeight={800} color={cc.highlightColor}>
+						{cc.highlight}
+					</Typography>
 				</Stack>
 				<Stack
 					height="180px"
 					bgcolor={cc.bgcolor}
 					justifyContent="center"
 					alignItems="center"
-					padding={{ xs: "24px 0", md: "24px" }}
+					padding={{ xs: "24px 0", md: "14px" }}
 				>
-					<Box
-						component="img"
-						src={cc.img}
-						sx={{
-							aspectRatio: 1,
-							width: { xs: "100%", md: "unset" },
-							height: { md: "100%" },
-						}}
-						alt={cc.description}
-					/>
+					{cc.img}
 				</Stack>
 			</Stack>
 		</Paper>
