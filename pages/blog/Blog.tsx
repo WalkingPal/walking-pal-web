@@ -13,18 +13,11 @@ export const Blog: NextPage = () => {
 				/>
 				<meta
 					name="keywords"
-					content="home, walking, pal, buddy, walk, about"
+					content="blog, walking, pal, buddy, walk, about"
 				/>
 			</Head>
 
-			<main
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					justifyContent: "center",
-					alignItems: "center",
-				}}
-			>
+			<main style={{ padding: "4vw", maxWidth: 1450, margin: "auto" }}>
 				<Hero />
 			</main>
 		</>
