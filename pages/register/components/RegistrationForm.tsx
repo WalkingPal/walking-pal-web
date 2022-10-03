@@ -133,6 +133,7 @@ export const RegistrationForm: FC<IRegistrationForm> = ({
 						return (
 							<Box ref={boxRef} key={"field-" + i} sx={{ minWidth: "100%" }}>
 								<InputField
+									tabIndex={-1}
 									label={label}
 									name={fieldName}
 									value={formData[fieldName]}

@@ -5,7 +5,16 @@ import { useWindowSize } from "hooks/useWindowResize";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
 import { HeaderMobile } from "components/Header/components/HeaderMobile";
 
-export const Header: FC = () => {
+export const links = [
+	{ name: "home", route: "/" },
+	{ name: "about", route: "/about" },
+	{ name: "FAQ", route: "/faq" },
+];
+
+interface IHeader {
+	allowPadding: boolean;
+}
+export const Header: FC<IHeader> = ({ allowPadding }) => {
 	const marginTop = 20;
 	const headerRef = useRef<HTMLElement>(null);
 	useEffect(() => {
@@ -37,10 +46,18 @@ export const Header: FC = () => {
 					})}
 					elevation={0}
 				>
-					{!width || width < 1200 ? <HeaderMobile /> : <HeaderDesktop />}
+					{(() => {
+						if (width) {
+							return width < 1200 ? <HeaderMobile /> : <HeaderDesktop />;
+						}
+					})()}
 				</Paper>
 			</header>
-			<div style={{ height: "calc(var(--header-height) + 5px)" }}></div>
+			<div
+				style={{
+					height: allowPadding ? "calc(var(--header-height) + 5px)" : 0,
+				}}
+			/>
 		</>
 	);
 };

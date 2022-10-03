@@ -1,12 +1,11 @@
 import {
 	List,
+	ListItem,
 	ListItemButton,
 	ListItemText,
-	MenuItem,
-	Select,
 	Typography,
 } from "@mui/material";
-import Link from "next/link";
+import { links } from "components/Header";
 import { useRouter } from "next/router";
 import { FC, MouseEvent } from "react";
 import { Dropdown } from "./Dropdown";
@@ -35,7 +34,7 @@ export const List1: FC<IList1> = ({ mobile }) => {
 	const router = useRouter();
 
 	const handleClick = (
-		e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>,
+		e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>,
 		route: string,
 	) => {
 		e.preventDefault();
@@ -59,25 +58,29 @@ export const List1: FC<IList1> = ({ mobile }) => {
 		>
 			{links.map(({ name, route }) => {
 				return (
-					<ListItemButton
-						key={name}
-						onClick={e => handleClick(e, route)}
-						sx={{ borderRadius: 1 }}
-					>
-						<ListItemText>
-							<Typography
-								variant="body2"
-								sx={{
-									color: router.route === route ? "primary.main" : "#828282",
-									textTransform: "capitalize",
-									px: 2,
-								}}
-							>
-								<Link href={route}>{name}</Link>
-								{subroutes && <Dropdown subroute={subroute} />}
-							</Typography>
-						</ListItemText>
-					</ListItemButton>
+					<ListItem key={name}>
+						<ListItemButton
+							onClick={(
+								e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>,
+							) => handleClick(e, route)}
+							sx={{ borderRadius: 1 }}
+							component="a"
+							role="link"
+						>
+							<ListItemText>
+								<Typography
+									variant="body2"
+									sx={{
+										color: router.route === route ? "primary.main" : "#828282",
+										textTransform: "capitalize",
+										px: 2,
+									}}
+								>
+									{name}
+								</Typography>
+							</ListItemText>
+						</ListItemButton>
+					</ListItem>
 				);
 			})}
 		</List>

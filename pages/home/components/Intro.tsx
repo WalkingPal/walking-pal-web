@@ -78,7 +78,7 @@ export const Intro: FC = ({}) => {
 					<Box sx={{ padding: 3, textAlign: "center" }}>
 						<Typography variant="h6">Create Groups</Typography>
 						<Typography variant="body1">
-							Go solo or create a walking group on the go. anytime, anywhere!
+							Go solo or create a walking group on the go. Anytime, anywhere!
 						</Typography>
 					</Box>
 				</Paper>
