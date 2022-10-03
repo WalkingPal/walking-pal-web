@@ -1,0 +1,19 @@
+main {
+	.hero {
+		.shape1 {
+			position: absolute;
+			right: -10px;
+			top: -20px;
+			width: 120px;
+
+			@media (min-width: 500px) {
+				top: -40px;
+			}
+
+			@media (min-width: 1000px) {
+				width: 150px;
+				top: -100px;
+			}
+		}
+	}
+}
