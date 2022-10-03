@@ -13,10 +13,10 @@ export const Hero: FC<IHero> = ({}) => {
 		<Box className={styles.blog_page_container}>
 			<Typography variant="h3" pt={7} mx={1}>
 				We have this to say
-				<Typography pt={2} mx={1} variant="h5">
-					Stay up to date on the latest from
-					<Accent>WalkingPal</Accent>
-				</Typography>
+			</Typography>
+			<Typography pt={2} mx={1} variant="h5">
+				Stay up to date on the latest from
+				<Accent>WalkingPal</Accent>
 			</Typography>
 			<Box pt={5} display="grid" className={styles.grid_container1}>
 				<Box display="flex" flexDirection="column" className={styles.grid_col1}>
