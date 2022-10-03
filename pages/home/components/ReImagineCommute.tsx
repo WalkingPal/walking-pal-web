@@ -1,7 +1,10 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import { bagpack, footstep2, promotion, shopping } from "assets/png";
+import { Green, Vehicle, Walk } from "assets/svg";
 import { Accent } from "components/Accent";
+import { Image } from "components/Image";
 import { FC } from "react";
+import styles from "./reImagineCommute.module.scss";
 export interface ICommuteCard {
 	id: number;
 	text: string;
@@ -46,7 +49,7 @@ const commuteCards: ICommuteCard[] = [
 	},
 ];
 
-export const ReImagineYourDailyCommute: FC = () => {
+export const ReImagineCommute: FC = () => {
 	return (
 		<Box pt={9} px={3}>
 			<Typography variant="h3" textAlign="center" mb={5}>
@@ -57,6 +60,49 @@ export const ReImagineYourDailyCommute: FC = () => {
 				{commuteCards.map(cc => (
 					<CommuteCard key={cc.id} cc={cc} />
 				))}
+			</Box>
+			<Box pt={14} className={styles.container1}>
+				<Box display="flex" flexDirection="column" gap={7.5}>
+					<Box>
+						<Typography fontSize={31} lineHeight="42.22px" px={4.5}>
+							#LetsWalk
+						</Typography>
+						<Typography fontSize={18} lineHeight="24.51px" pt={1} px={4.5}>
+							Walking an extra 20 minutes a day will burn 7 pounds of body fat
+							per year.
+						</Typography>
+						<Walk />
+					</Box>
+					<Box>
+						<Typography fontSize={31} lineHeight="42.22px" px={4.5}>
+							#DitchVehicles
+						</Typography>
+						<Typography fontSize={18} lineHeight="24.51px" pt={1} px={4.5}>
+							The cost of operating a card for one year is approximately ₹
+							100,000. The cost of operating a bicycle for a year is only ₹
+							1000. Walking is free!
+						</Typography>
+						<Vehicle />
+					</Box>
+				</Box>
+				<Box
+					display="flex"
+					flexDirection="column"
+					justifyContent="space-between"
+					py={2.5}
+				>
+					<Green />
+					<Box>
+						<Typography fontSize={31} lineHeight="42.22px" px={7.5}>
+							#GreenMovement
+						</Typography>
+						<Typography fontSize={18} lineHeight="24.51px" pt={1} px={7.5}>
+							Avoiding just 15 KM walk of driving every week would eliminate 500
+							pounds of carbon dioxide emissions a year. Which is equivalent to
+							planting 10 trees.
+						</Typography>
+					</Box>
+				</Box>
 			</Box>
 		</Box>
 	);

@@ -32,6 +32,9 @@ export { default as gallery2 } from "./gallery2.png";
 export { default as gallery3 } from "./gallery3.png";
 export { default as gallery4 } from "./gallery4.png";
 export { default as gallery5 } from "./gallery5.png";
+export { default as green } from "./green.png";
+export { default as walk } from "./walk.png";
+export { default as vehicles } from "./vehicles.png";
 
 import memoji1 from "./memoji1.png";
 import memoji2 from "./memoji2.png";

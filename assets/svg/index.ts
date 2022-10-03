@@ -6,3 +6,6 @@ export { default as Twitter } from "./twitter.svg";
 export { default as YouTube } from "./youtube.svg";
 export { default as Linkedin } from "./linkedin.svg";
 export { default as Insta } from "./insta.svg";
+export { default as Green } from "./green.svg";
+export { default as Vehicle } from "./vehicle.svg";
+export { default as Walk } from "./walk.svg";
