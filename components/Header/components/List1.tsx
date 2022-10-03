@@ -1,8 +1,31 @@
-import { List, ListItemButton, ListItemText, Typography } from "@mui/material";
-import { links } from "components/Header";
+import {
+	List,
+	ListItemButton,
+	ListItemText,
+	MenuItem,
+	Select,
+	Typography,
+} from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FC, MouseEvent } from "react";
+import { Dropdown } from "./Dropdown";
+
+export const links = [
+	{ name: "home", route: "/" },
+	{ name: "about", route: "/about" },
+	{ name: "FAQ", route: "/faq" },
+	{
+		name: "company",
+		route: "/Company",
+		subroutes: [
+			{ name: "social impact", route: "/social" },
+			{ name: "our team", route: "/team" },
+			{ name: "careers", route: "/career" },
+			{ name: "contact", route: "/contact" },
+		],
+	},
+];
 
 interface IList1 {
 	mobile?: boolean;
@@ -51,6 +74,7 @@ export const List1: FC<IList1> = ({ mobile }) => {
 								}}
 							>
 								<Link href={route}>{name}</Link>
+								{subroutes && <Dropdown subroute={subroute} />}
 							</Typography>
 						</ListItemText>
 					</ListItemButton>
