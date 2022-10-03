@@ -32,6 +32,6 @@ _For UI examples refer to the link given above_
 
 ### Key Takeaways
 
-- the difference between subtitle variant and body variant:
+- The difference between subtitle variant and body variant:
   - Both might look the same (same size or same font) but there is little difference other than font weight, i.e, the Subtitle should be short (few words) whereas the body variant can be as long as you want
 - Subtitles are not headlines, they are small-size text but dark-colored for more emphasis
