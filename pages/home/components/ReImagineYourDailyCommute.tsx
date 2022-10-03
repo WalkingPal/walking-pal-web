@@ -1,5 +1,4 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
-import { bagpack, footstep2, promotion, shopping } from "assets/png";
 import { Bagpack, Footstep2, Promotion, Shopping } from "assets/svg";
 import { Accent } from "components/Accent";
 import { FC } from "react";
