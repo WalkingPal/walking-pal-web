@@ -17,14 +17,7 @@ export const Blog: NextPage = () => {
 				/>
 			</Head>
 
-			<main
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					justifyContent: "center",
-					alignItems: "center",
-				}}
-			>
+			<main style={{ padding: "4vw", maxWidth: 1450, margin: "auto" }}>
 				<Hero />
 			</main>
 		</>
