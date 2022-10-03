@@ -85,7 +85,7 @@ export const EasySteps: FC = () => {
 								{i + 1}
 							</Typography>
 							<Typography
-								color="#A3A3A3"
+								color="#767676"
 								variant="subtitle1"
 								fontSize="clamp(0.7rem, 0.8rem + 1vw, 1.25rem)"
 							>

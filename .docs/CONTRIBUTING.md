@@ -6,9 +6,9 @@ We are happy to welcome all the contributions from anyone willing to improve/add
 
 - Each participant/contributor will be assigned **2 issues (max)** at a time to work on.
 - Participants are expected to follow [project guidelines and coding style](PROJECT-GUIDELINES.md). Structured code is one of our top priorities.
-- Participants/contributors have to **comment** on issues they would like to work on, and mentors will assign you.
+- Participants/contributors have to **comment** on "open issues" they would like to work on, and mentors will assign you.
 - Issues will be assigned on a **first-come, first-serve basis**.
-- Participants/contributors can also **open their issues**
+- Participants/contributors can also **open their issues** and they can assign themselves if they want to work on it.
   - ##### Make sure to follow these when opening Issues:
     - Your Issue title must be in the form of `ISSUE_TYPE: ISSUE_TITLE`
       - ISSUE_TYPE can be `feat` (issues for new features), `bug`(for bug), `docs` (for docs), `chore`(for miscellaneous)
@@ -31,8 +31,9 @@ We are happy to welcome all the contributions from anyone willing to improve/add
   - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
     - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
     - Refer [Git Commit Guidelines](./GIT-GUIDELINES.MD) for more details
-  - Make sure you have created the issue for your PR. Link that issue to your PR.
-  - In your PR, if created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
+  - Make sure you have created the issue for your PR. [Link that issue to your PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
+  - Mention you proposed changes in you PR description along with screenshots and reference links (if applicable).
+  - In your PR, if you created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
   - Your work must be **original**, written by you not copied from other resources. Copying is not bad. But copying without properly understanding what part of code is actually needed and what what part is not, is very bad. Make sure you avoid adding redundant code.
   - You must **comment** on your code wherever necessary. **Avoid committing commented code**, e.g `console.log` statements, etc
   - For **frontend changes** kindly share screenshots and work samples of your work before sending a PR.
@@ -89,6 +90,28 @@ The following tools should be installed and running on your computer:
    ```sh
    yarn install
    ```
+
+### Additonal Setup
+
+Our app uses reCAPTCHA to help us prevent spammers/bots for polluting our database and helps us enhance the security we provide on our app.
+In order to access the `/register` and `/faq` pages on the app seamlessly, follow the required steps:
+
+1. Head to the [reCAPTCHA admin console](https://www.google.com/recaptcha/admin/create) and fill in the required details.
+
+![recaptcha-registration](./assets/recaptcha-registration.jpg)
+
+2. After clicking submit, you should be able to see the public and secret keys.
+
+![recaptcha-keys](./assets/recaptcha-keys.jpg)
+
+3. Create a file called .env.local and add the following to it, and paste the keys you copied from the reCAPTCHA dashboard here appropriately.
+
+```bash
+# Add the public site key here
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
+# Add the secret key here
+RECAPTCHA_SECRET_KEY=
+```
 
 ## Run Next.js Developement server
 
