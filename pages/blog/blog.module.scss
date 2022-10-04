@@ -16,4 +16,30 @@ main {
 			}
 		}
 	}
+	.blogsList {
+		margin: 100px auto;
+		// background-color: blue;
+
+		.tags {
+			margin-bottom: 40px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		.blogCard {
+			width: 100%;
+			text-decoration: none;
+			color: black;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			.blogTitle {
+				margin-top: 10px;
+			}
+		}
+	}
 }
