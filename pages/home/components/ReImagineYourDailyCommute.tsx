@@ -7,7 +7,7 @@ export interface ICommuteCard {
 	text: string;
 	highlight: string;
 	highlightColor: string;
-	img: React.SVGProps<SVGSVGElement>;
+	img: React.ReactNode;
 	bgcolor: string;
 	description: string;
 }
