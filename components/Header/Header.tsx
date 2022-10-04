@@ -5,12 +5,6 @@ import { useWindowSize } from "hooks/useWindowResize";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
 import { HeaderMobile } from "components/Header/components/HeaderMobile";
 
-export const links = [
-	{ name: "home", route: "/" },
-	{ name: "about", route: "/about" },
-	{ name: "FAQ", route: "/faq" },
-];
-
 interface IHeader {
 	allowPadding: boolean;
 }

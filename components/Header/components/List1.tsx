@@ -3,11 +3,30 @@ import {
 	ListItem,
 	ListItemButton,
 	ListItemText,
+	MenuItem,
+	Select,
 	Typography,
 } from "@mui/material";
-import { links } from "components/Header";
+import link from "next/link";
 import { useRouter } from "next/router";
 import { FC, MouseEvent } from "react";
+import { Dropdown } from "./Dropdown";
+
+export const links = [
+	{ name: "home", route: "/" },
+	{ name: "about", route: "/about" },
+	{ name: "FAQ", route: "/faq" },
+	{
+		name: "company",
+		route: "/Company",
+		subroutes: [
+			{ name: "social impact", route: "/social" },
+			{ name: "our team", route: "/team" },
+			{ name: "careers", route: "/career" },
+			{ name: "contact", route: "/contact" },
+		],
+	},
+];
 
 interface IList1 {
 	mobile?: boolean;
@@ -39,31 +58,29 @@ export const List1: FC<IList1> = ({ mobile }) => {
 					  }
 			}
 		>
-			{links.map(({ name, route }) => {
+			{links.map(({ name, route, subroutes }) => {
 				return (
-					<ListItem key={name}>
-						<ListItemButton
-							onClick={(
-								e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>,
-							) => handleClick(e, route)}
-							sx={{ borderRadius: 1 }}
-							component="a"
-							role="link"
-						>
-							<ListItemText>
-								<Typography
-									variant="body2"
-									sx={{
-										color: router.route === route ? "primary.main" : "#828282",
-										textTransform: "capitalize",
-										px: 2,
-									}}
-								>
-									{name}
-								</Typography>
-							</ListItemText>
-						</ListItemButton>
-					</ListItem>
+					<ListItemButton
+						key={name}
+						onClick={e => handleClick(e, route)}
+						sx={{ borderRadius: 1 }}
+						component="a"
+						role="link"
+					>
+						<ListItemText>
+							<Typography
+								variant="body2"
+								sx={{
+									color: router.route === route ? "primary.main" : "#828282",
+									textTransform: "capitalize",
+									px: 2,
+								}}
+							>
+								<link href={route}>{name}</link>
+								{subroutes && <Dropdown />}
+							</Typography>
+						</ListItemText>
+					</ListItemButton>
 				);
 			})}
 		</List>

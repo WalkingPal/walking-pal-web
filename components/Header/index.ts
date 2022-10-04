@@ -1,1 +1,2 @@
-export { Header, links } from "./Header";
+export { Header } from "./Header";
+export { links } from "./components/List1";
