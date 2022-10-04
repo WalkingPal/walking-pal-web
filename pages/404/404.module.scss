@@ -1,0 +1,20 @@
+.main {
+	text-align: center;
+	display: flex;
+	min-height: 100vh;
+	flex-wrap: wrap;
+}
+.left {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 300px;
+}
+.right {
+	flex: 1;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	padding: 30px 4vw;
+}

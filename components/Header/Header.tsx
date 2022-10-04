@@ -13,7 +13,10 @@ export const links = [
 	{ name: "company", route: "/Company" },
 ];
 
-export const Header: FC = () => {
+interface IHeader {
+	allowPadding: boolean;
+}
+export const Header: FC<IHeader> = ({ allowPadding }) => {
 	const marginTop = 20;
 	const headerRef = useRef<HTMLElement>(null);
 	useEffect(() => {
@@ -45,11 +48,19 @@ export const Header: FC = () => {
 					})}
 					elevation={0}
 				>
-					{!width || width < 1200 ? <HeaderMobile /> : <HeaderDesktop />}
+					{(() => {
+						if (width) {
+							return width < 1200 ? <HeaderMobile /> : <HeaderDesktop />;
+						}
+					})()}
 				</Paper>
 				<Dropdown />
 			</header>
-			<div style={{ height: "calc(var(--header-height) + 5px)" }}></div>
+			<div
+				style={{
+					height: allowPadding ? "calc(var(--header-height) + 5px)" : 0,
+				}}
+			/>
 		</>
 	);
 };

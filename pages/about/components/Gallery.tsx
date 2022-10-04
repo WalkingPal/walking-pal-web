@@ -16,9 +16,9 @@ export const Gallery: FC = ({}) => {
 			<Typography variant="h6" minWidth="300px" width="70%" textAlign="center">
 				Every groundbreaking App begins with a series of small ideas that are
 				combined into an all inclusive one. At WalkingPal, we wanted to change
-				how consumers see the concept of Walking to commute daily, by offering a
-				simple and user-friendly platform they can trust. Now having a Walking
-				Buddy anytime and anywhere is easier than ever!
+				how consumers see the concept of walking to commute daily, by offering a
+				simple and user-friendly platform they can trust. Now having a walking
+				buddy anytime and anywhere is easier than ever!
 			</Typography>
 		</>
 	);

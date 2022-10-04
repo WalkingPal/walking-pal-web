@@ -30,7 +30,7 @@ const CommunityForm: FC = () => {
 				<Stack gap="12px">
 					<Typography variant="h5">Join the community</Typography>
 					<Typography variant="body1">
-						Subscribe to our news letter to stay updated with our latest
+						Subscribe to our newsletter to stay updated with our latest
 						offerings.
 					</Typography>
 				</Stack>
