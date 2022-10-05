@@ -1,24 +1,40 @@
-// import * as React from "react";
+import { Button, Menu } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
 import React, { FC } from "react";
 
 export const Dropdown: FC = () => {
+	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+	const open = Boolean(anchorEl);
+	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+		setAnchorEl(event.currentTarget);
+	};
+	const handleClose = () => {
+		setAnchorEl(null);
+	};
 	return (
-		<Select
-			sx={{
-				position: "absolute",
-				top: 0,
-				left: 0,
-				opacity: 0,
-				height: "100%",
-				width: "100%",
-			}}
-		>
-			<MenuItem value={10}>Social Impact</MenuItem>
-			<MenuItem value={10}>Our Team</MenuItem>
-			<MenuItem value={10}>Carriers</MenuItem>
-			<MenuItem value={10}>Contact</MenuItem>
-		</Select>
+		<>
+			<Button
+				id="basic-button"
+				aria-controls={open ? "basic-menu" : undefined}
+				aria-haspopup="true"
+				aria-expanded={open ? "true" : undefined}
+				onClick={handleClick}
+			>
+				Dashboard
+			</Button>
+			<Menu
+				id="basic-menu"
+				anchorEl={anchorEl}
+				open={open}
+				onClose={handleClose}
+				MenuListProps={{
+					"aria-labelledby": "basic-button",
+				}}
+			>
+				<MenuItem onClick={handleClose}>Profile</MenuItem>
+				<MenuItem onClick={handleClose}>My account</MenuItem>
+				<MenuItem onClick={handleClose}>Logout</MenuItem>
+			</Menu>
+		</>
 	);
 };
