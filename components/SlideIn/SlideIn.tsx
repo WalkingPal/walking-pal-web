@@ -1,43 +1,33 @@
 import { Slide } from "@mui/material";
-import { FC, ReactElement, useEffect, useRef, useState } from "react";
-import VisibilitySensor from "react-visibility-sensor";
+import { FC, ReactElement } from "react";
+import { useInView } from "react-intersection-observer";
 
 interface ISlideIn {
+	/**
+	 * Margin around the root.  Can have values similar to the CSS margin property, e.g. "10px 20px 30px 40px" (top, right, bottom, left).
+	 */
 	rootMargin?: string;
-	threshold?: number;
+	/**
+	 * Number between 0 and 1 indicating the percentage that should be visible before triggering. Can also be an array of numbers, to create multiple trigger points.
+	 */
+	threshold?: number | number[];
 	children: ReactElement;
 }
 
 export const SlideIn: FC<ISlideIn> = ({
 	rootMargin = "0px",
-	threshold = 1.0,
+	threshold = [0.4, 0.6],
 	children,
 }) => {
-	const containerRef = useRef(null);
-	const [isVisible, setIsVisible] = useState(false);
-
-	const callbackFunction = (entries: IntersectionObserverEntry[]) => {
-		const [entry] = entries;
-		setIsVisible(entry.isIntersecting);
-	};
-
-	useEffect(() => {
-		const options = {
-			root: null,
-			rootMargin: rootMargin,
-			threshold: threshold,
-		};
-		const observer = new IntersectionObserver(callbackFunction, options);
-		if (containerRef.current) observer.observe(containerRef.current);
-
-		return () => {
-			if (containerRef.current) observer.unobserve(containerRef.current);
-		};
-	}, [containerRef, rootMargin, threshold]);
+	const { ref, inView } = useInView({
+		rootMargin,
+		threshold,
+		fallbackInView: true,
+	});
 
 	return (
-		<div ref={containerRef}>
-			<Slide in={isVisible} direction="right">
+		<div ref={ref}>
+			<Slide in={inView} direction="right">
 				{children}
 			</Slide>
 		</div>
