@@ -1,17 +1,12 @@
 import { FC, useState } from "react";
 import { StaticImageData } from "next/image";
-import { Box, Typography, Chip, Stack, Grid, Link } from "@mui/material";
+import { Box, Typography, Chip, Grid, Link } from "@mui/material";
 import { Image } from "components/Image";
 
 import { blogsData } from "../blogsData";
 import styles from "../blog.module.scss";
 
 interface IBlogsList {}
-interface IBlogCard {
-	title: String;
-	subtitle: String;
-	image: StaticImageData;
-}
 
 export const BlogsList: FC<IBlogsList> = ({}) => {
 	const [selected, setSelected] = useState(0);
@@ -36,14 +31,10 @@ export const BlogsList: FC<IBlogsList> = ({}) => {
 				))}
 			</Box>
 			<Grid container spacing={2}>
-				{blogsData.map((data, i) => {
+				{blogsData.map((blogData, i) => {
 					return (
 						<Grid item xs={12} md={6} key={i}>
-							<BlogCard
-								title={data.title}
-								subtitle={data.subtitle}
-								image={data.image}
-							/>
+							<BlogCard {...blogData} />
 						</Grid>
 					);
 				})}
@@ -52,18 +43,22 @@ export const BlogsList: FC<IBlogsList> = ({}) => {
 	);
 };
 
-const BlogCard: FC<IBlogCard> = ({ title, subtitle, image }) => {
+interface IBlogCard {
+	title: string;
+	subtitle: string;
+	image: StaticImageData;
+	href: string;
+}
+
+const BlogCard: FC<IBlogCard> = ({ title, subtitle, image, href }) => {
 	return (
-		<Link href="#" target="_blank" rel="noopener" className={styles.blogCard}>
-			<div style={{ overflow: "hidden", borderRadius: "30px" }}>
-				<Image
-					alt="feature image"
-					src={image}
-					layout="responsive"
-					objectFit="contain"
-				/>
-			</div>
-			<Typography variant="h5" className={styles.blogTitle}>
+		<Link href={href} target="_blank" className={styles.blogCard}>
+			<Image
+				wrapstyle={{ overflow: "hidden", borderRadius: "30px" }}
+				alt="feature image"
+				src={image}
+			/>
+			<Typography variant="h5" mt={1}>
 				{title}
 			</Typography>
 			<Typography variant="body2">{subtitle}</Typography>
