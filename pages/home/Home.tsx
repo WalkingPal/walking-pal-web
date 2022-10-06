@@ -34,7 +34,7 @@ export const Home: NextPage = () => {
 				<Intro />
 				<Features />
 				<Box
-					borderRadius="0 0 50px 50px"
+					sx={{ "& html5-video-player": { background: "#fff" } }}
 					position="relative"
 					zIndex={1}
 					bgcolor="#fff"
