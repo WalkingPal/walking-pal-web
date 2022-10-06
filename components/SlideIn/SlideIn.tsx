@@ -11,12 +11,14 @@ interface ISlideIn {
 	 * Number between 0 and 1 indicating the percentage that should be visible before triggering. Can also be an array of numbers, to create multiple trigger points.
 	 */
 	threshold?: number | number[];
+	direction?: "right" | "left" | "up" | "down";
 	children: ReactElement;
 }
 
 export const SlideIn: FC<ISlideIn> = ({
 	rootMargin = "0px",
 	threshold = [0.4, 0.6],
+	direction = "right",
 	children,
 }) => {
 	const { ref, inView } = useInView({
@@ -27,7 +29,7 @@ export const SlideIn: FC<ISlideIn> = ({
 
 	return (
 		<div ref={ref}>
-			<Slide in={inView} direction="right">
+			<Slide in={inView} direction={direction}>
 				{children}
 			</Slide>
 		</div>
