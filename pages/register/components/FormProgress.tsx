@@ -4,11 +4,11 @@ import { FC } from "react";
 import { ProgressConnector } from "./ProgressConnector";
 import { ProgressIcon } from "./ProgressIcon";
 
-interface Props {
+interface IFormProgress {
 	stepsCompleted: number;
 }
 
-export const FormProgress: FC<Props> = ({ stepsCompleted }) => {
+export const FormProgress: FC<IFormProgress> = ({ stepsCompleted }) => {
 	const steps = Object.keys(fields);
 
 	return (

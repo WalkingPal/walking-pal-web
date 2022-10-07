@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
 import { FC } from "react";
 
-interface Props {
+interface IProgressIcon {
 	active: boolean;
 	completed: boolean;
 }
 
-export const ProgressIcon: FC<Props> = ({ active, completed }) => {
+export const ProgressIcon: FC<IProgressIcon> = ({ active, completed }) => {
 	return (
 		<Box
 			sx={{
