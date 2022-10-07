@@ -27,6 +27,7 @@ export { default as step3 } from "./step3.png";
 export { default as step4 } from "./step4.png";
 export { default as foundersHub } from "./founders-hub.png";
 export { default as ELcenter } from "./ELcenter.png";
+export { default as gallery0 } from "./gallery0.png";
 export { default as gallery1 } from "./gallery1.png";
 export { default as gallery2 } from "./gallery2.png";
 export { default as gallery3 } from "./gallery3.png";
