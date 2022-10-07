@@ -2,7 +2,7 @@ import { Slide, SlideProps } from "@mui/material";
 import { FC, ReactNode, useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-interface ISlideIn extends Omit<SlideProps, "children"> {
+export interface ISlideIn extends Omit<SlideProps, "children"> {
 	/**
 	 * Margin around the root.  Can have values similar to the CSS margin property, e.g. "10px 20px 30px 40px" (top, right, bottom, left).
 	 */
