@@ -14,15 +14,15 @@ documentation, submitting pull requests or patches, and other activities.
 ## Our Standards
 
 We are committed to making participation in this project a harassment-free
-experience for everyone, regardless of level of experience, gender, gender
-identity and expression, sexual orientation, disability, personal appearance,
+experience for everyone, regardless of the level of experience, education, socio-economic status,
+gender identity and expression, sexual identity and orientation, disability, personal appearance,
 body size, race, ethnicity, age, religion, or nationality.
 
-Examples of unacceptable behavior by participants include:
+Examples of unacceptable behavior by contributors include:
 
 - The use of sexualized language or imagery
 - Personal attacks
-- Trolling or insulting/derogatory comments
+- Trolling, insulting/derogatory comments
 - Public or private harassment
 - Publishing other's private information, such as physical or electronic
   addresses, without explicit permission
