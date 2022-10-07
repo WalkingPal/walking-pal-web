@@ -4,9 +4,9 @@
 
 ## Our Pledge
 
-We, as contributors and maintainers of this project, and in the interest of
+As contributors and maintainers of this project, and in the interest of
 fostering an open and welcoming community, we pledge to respect all people who
-contribute to this project by reporting issues, posting feature requests, updating
+contribute through reporting issues, posting feature requests, updating
 documentation, submitting pull requests or patches, and other activities.
 
 ---
@@ -18,15 +18,15 @@ experience for everyone, regardless of the level of experience, education, socio
 gender identity and expression, sexual identity and orientation, disability, personal appearance,
 body size, race, ethnicity, age, religion, or nationality.
 
-Examples of unacceptable behavior by contributors that create a negative environment include:
+Examples of unacceptable behavior by contributors include:
 
 - The use of sexualized language or imagery
-- Personal or political attacks
+- Personal attacks
 - Trolling, insulting/derogatory comments
 - Public or private harassment
 - Publishing other's private information, such as physical or electronic
   addresses, without explicit permission
-- Other conduct which could be considered unethical or unprofessional
+- Other unethical or unprofessional conduct
 
 ---
 
@@ -38,7 +38,7 @@ that are not aligned to this Code of Conduct, or to ban temporarily or
 permanently any contributor for other behaviors that they deem inappropriate,
 threatening, offensive, or harmful.
 
-By adopting this Code of Conduct, project maintainers commit to
+By adopting this Code of Conduct, project maintainers commit themselves to
 fairly and consistently applying these principles to every aspect of managing
 this project. Project maintainers who do not follow or enforce the Code of
 Conduct may be permanently removed from the project team.
@@ -48,8 +48,7 @@ Conduct may be permanently removed from the project team.
 ## Scope
 
 This Code of Conduct applies both within project spaces and in public spaces
-when an individual is representing the project or its community. Representation of
-a project may be further defined and clarified by the project maintainers.
+when an individual is representing the project or its community.
 
 ---
 
