@@ -5,12 +5,6 @@ import { useWindowSize } from "hooks/useWindowResize";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
 import { HeaderMobile } from "components/Header/components/HeaderMobile";
 
-export const links = [
-	{ name: "home", route: "/" },
-	{ name: "about", route: "/about" },
-	{ name: "FAQ", route: "/faq" },
-];
-
 interface IHeader {
 	allowPadding: boolean;
 }
@@ -46,7 +40,11 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 					})}
 					elevation={0}
 				>
-					{!width || width < 1200 ? <HeaderMobile /> : <HeaderDesktop />}
+					{(() => {
+						if (width) {
+							return width < 1200 ? <HeaderMobile /> : <HeaderDesktop />;
+						}
+					})()}
 				</Paper>
 			</header>
 			<div

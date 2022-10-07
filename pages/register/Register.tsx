@@ -13,7 +13,7 @@ export const Register: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Early User Registeration</title>
+				<title>Early User Registration</title>
 				<meta
 					name="description"
 					content="Register for WalkingPal App's Early User Access"
@@ -43,7 +43,7 @@ export const Register: NextPage = () => {
 					color="white"
 					fontWeight={500}
 				>
-					Thankyou for your interest in WalkingPal!
+					Thank you for your interest in WalkingPal!
 				</Typography> */}
 				{isSubmitted ? (
 					<SubmittedAck />

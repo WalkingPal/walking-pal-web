@@ -13,6 +13,7 @@ main {
 			"w w g";
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 0px 0px auto auto auto;
+		overflow-x: clip;
 		.mockup {
 			position: relative;
 			z-index: 2;

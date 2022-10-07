@@ -1,5 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import { gallery1, gallery2, gallery3, gallery4, gallery5 } from "assets/png";
+import {
+	gallery0,
+	gallery1,
+	gallery2,
+	gallery3,
+	gallery4,
+	gallery5,
+} from "assets/png";
 import { Accent } from "components/Accent";
 import { Image } from "components/Image";
 import { Autoplay } from "swiper";
@@ -39,7 +46,7 @@ export const Hero: FC<IHero> = ({}) => {
 					spaceBetween={30}
 					initialSlide={3}
 				>
-					{[gallery4, gallery1, gallery2, gallery3, gallery5].map(
+					{[gallery0, gallery4, gallery1, gallery2, gallery3, gallery5].map(
 						(img, index) => (
 							<SwiperSlide key={index}>
 								<Box sx={{ userSelect: "none" }}>
