@@ -2,7 +2,7 @@ import { SlideIn } from "components/SlideIn";
 import { ISlideIn } from "components/SlideIn/SlideIn";
 import React, { FC, ReactNode } from "react";
 
-interface ISlideEach extends Omit<ISlideIn, "children"> {
+interface ISlideEach extends ISlideIn {
 	children: ReactNode;
 }
 
