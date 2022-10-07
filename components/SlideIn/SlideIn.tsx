@@ -14,14 +14,13 @@ interface ISlideIn extends SlideProps {
 	children: ReactElement;
 }
 
-export const SlideIn: FC<ISlideIn> = props => {
-	const {
-		rootMargin: rootmargin = "-100px",
-		threshold = [0.4, 0.6],
-		direction = "up",
-		children,
-	} = props;
-
+export const SlideIn: FC<ISlideIn> = ({
+	rootMargin: rootmargin = "-100px",
+	threshold = [0.4, 0.6],
+	children,
+	direction = "up",
+	...slideProps
+}) => {
 	const { ref, inView } = useInView({
 		rootMargin: rootmargin,
 		threshold,
@@ -49,8 +48,8 @@ export const SlideIn: FC<ISlideIn> = props => {
 			<div ref={ref}>
 				<Slide
 					in={inView}
-					{...props}
-					timeout={props.timeout || 500}
+					{...slideProps}
+					timeout={slideProps.timeout || 500}
 					direction={dirn}
 				>
 					{children}

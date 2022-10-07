@@ -7,16 +7,13 @@ interface IImage extends ImageProps {
 	wrapstyle?: SxProps<Theme>;
 }
 
-export const Image = forwardRef<HTMLSpanElement, IImage>((props, ref) => {
-	return (
-		<Box
-			ref={ref}
-			className={props.className}
-			sx={props.wrapstyle}
-			component="span"
-		>
-			<NextImage alt="" {...props} />
-		</Box>
-	);
-});
+export const Image = forwardRef<HTMLSpanElement, IImage>(
+	({ className, wrapstyle, ...props }, ref) => {
+		return (
+			<Box ref={ref} className={className} sx={wrapstyle} component="span">
+				<NextImage alt="" {...props} />
+			</Box>
+		);
+	},
+);
 Image.displayName = "Image";

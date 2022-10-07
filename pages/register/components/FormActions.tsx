@@ -4,7 +4,7 @@ import { Send } from "@mui/icons-material";
 import { LoadingButton } from "@mui/lab";
 import ReCAPTCHA from "react-google-recaptcha";
 
-interface Props {
+interface IFormActions {
 	totalSteps: number;
 	stepsCompleted: number;
 	goToPrevious: () => void;
@@ -15,7 +15,7 @@ interface Props {
 	loading: boolean;
 }
 
-export const FormActions: FC<Props> = ({
+export const FormActions: FC<IFormActions> = ({
 	goToNext,
 	goToPrevious,
 	stepsCompleted,
