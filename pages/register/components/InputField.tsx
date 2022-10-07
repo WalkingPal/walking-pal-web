@@ -9,13 +9,26 @@ import {
 	SelectChangeEvent,
 	MenuItem,
 } from "@mui/material";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import { FCC } from "types/IReact";
 
 interface IInputField extends InputBaseProps {
+	enableFocus: boolean;
 	label: string;
 }
-export const InputField: FCC<IInputField> = props => {
+export const InputField: FCC<IInputField> = ({
+	enableFocus,
+	label,
+	...inputProps
+}) => {
+	const inputRef = useRef<HTMLElement>(null);
+	useEffect(() => {
+		if (!inputRef.current) return;
+
+		if (enableFocus) {
+			inputRef.current.getElementsByTagName("input")[0].focus();
+		}
+	}, [inputRef]);
 	return (
 		<Stack gap="8px" sx={{ p: "32px", backgroundColor: "white" }}>
 			<InputLabel
@@ -28,22 +41,22 @@ export const InputField: FCC<IInputField> = props => {
 				}}
 			>
 				<Typography variant="h6" component="span" fontWeight="medium">
-					{props.label}
+					{label}
 				</Typography>
 			</InputLabel>
-			{props.label === "University" ? (
+			{label === "University" ? (
 				<FormControl fullWidth>
 					<Select
-						{...props}
+						{...inputProps}
 						onChange={
-							props.onChange as (
+							inputProps.onChange as (
 								event: SelectChangeEvent<unknown>,
 								child: ReactNode,
 							) => void
 						}
 						label={undefined}
 						sx={{
-							...props.sx,
+							...inputProps.sx,
 							lineHeight: "unset",
 							fontSize: 24,
 							fontWeight: 500,
@@ -77,7 +90,8 @@ export const InputField: FCC<IInputField> = props => {
 				</FormControl>
 			) : (
 				<OutlinedInput
-					{...props}
+					{...inputProps}
+					ref={inputRef}
 					label={undefined}
 					sx={{
 						fontSize: 24,
@@ -86,7 +100,7 @@ export const InputField: FCC<IInputField> = props => {
 					}}
 				/>
 			)}
-			{props.children}
+			{inputProps.children}
 		</Stack>
 	);
 };
