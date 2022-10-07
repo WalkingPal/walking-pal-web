@@ -28,20 +28,20 @@ This ASCII tree represents the project structure. Read through the comments to l
 │   │   ├── utils/ #miscellaneous utilities used by endpoints
 │   │   └── index.pg.ts #root (/) endpoint handler
 │   ├── page-name1/
-│   │   ├── components/ #local components (used inside page-name1/ only)
+│   │   ├── components/ #local components (used by PageName1 page only)
 │   │   │   ├── LocalComponent1/
 │   │   │   │   ├── LocalComponent1.tsx #component file names are in PascalCase
 │   │   │   │   ├── local-component.module.scss #SCSS file names are in kebab-case
 │   │   │   │   └── index.ts #re-exports the React component from LocalComponent.tsx
 │   │   │   └── LocalComponent2/
-│   │   ├── page-name1.module.scss #this single SCSS file is used by all the local components in page-name1/
-│   │   ├── PageName1.tsx #page-name1/ component
-│   │   ├── index.pg.ts #re-exports page-name1/ component (PageName1.tsx) as a "default export"
-│   │   └── hooks/ #local custom hooks (used by page-name1/ only)
+│   │   ├── page-name1.module.scss #this single SCSS file is used by all local components in the page
+│   │   ├── PageName1.tsx #PageName1 component
+│   │   ├── index.pg.ts #re-exports PageName1 component as a "default export"
+│   │   └── hooks/ #contains local custom hooks (used by PageName1 page only)
 │   ├── page-name2/
 │   ├── _app.pg.ts #walking-pal-web's root App component
 │   ├── _document.pg.ts #ref- https://nextjs.org/docs/advanced-features/custom-document
-│   ├── _global.scsss #rarely used global styles
+│   ├── _global.scsss #contains global styles. (Rarely used)
 │   └── 404.pg.ts #custom 404 error page
 ├── public/ #do not add or edit any files inside this
 ├── theme/
@@ -54,4 +54,4 @@ This ASCII tree represents the project structure. Read through the comments to l
 └── package.json
 ```
 
-**Credits**: This ASCII tree was generated using [tree.nathanfriend.io](<https://tree.nathanfriend.io/?s=(%27options!(%27fancy!true~fullPath!false~trailingSlash!true~rootDot!true)~source!(%27source!%27.doc37all%20markdowKfile3and%20%7Fto%20writ8th8%7CatioKfiles.QassetsB7%7FiKth8WebAppVgif*6some-gif.gif%20%23All%20gif%2C%20png%2C%20svg%20name3musMb8%25%3FFThi3import3all%20th8gifZile3iKth8%60gif%2F%60%20directory%20and%20%3C3them.%20*6...%7Botheqgifs%7D*png*svgQc5sB7gH%20c5%26GHC51*6GHC51%2BC5Zile3ar8%5EgH-c51XSCSSZile3ar8%25%3FFJGHC51.tsx%20%7Balong%20with%20any%20otheqaccompanied%20%3Cs%7D*6c5UtilityFthi3mighMhav8any%20utilityZunctioK9th8GHC51%20ReacMC5%20*GHC52%2FQhooksB7gH%3E%26useWindowResize.tsQpages*apiB7ouqNextj3api%3BtsV6route1B%23thi3i3route1%3BtV66%3F.pgFroute1%3BMlogic*6%24e39endpoints*6%3F.pg.t37rooM%7B%2F%7D%3BMhandler*%401*%20c5sB7local%20c5%3DV6%5B1*66%5B1%2BC5Zil8nam8i3%5E6local-c5XSCSSZil8nam8i3%256%3FFJ%5B.tsx*6%5B2%2F*%20%401Xthi3singl8scs3fil8i39all%20local%20c53iKth8Page*%20PageName1%2BContain3th8OC5*%20%3F.pgFre-%3C3OC5%20a3a%20%5C%27defaulM%3C%5C%27*%20hooksB7local%3E%3D*%402%2F*_app.pg.t37WebApp%223rooMApp%20c5*_%7C.pgFref-%20https%3A%2F%2Fnextjs.org%2Fdocs%2Fadvanced-features%2Fcustom-%7C*_gH.scss37gH%20styles.%20%7BRarely%20used%7D*404.pgFouqcustom%20404%20erroqpageQpublicB%23Do%20noMpuMoqediManyZile3insid8thisQtheme*%5D%2BouqThem8Provideqc5*themeFgenerate3ouqtheme3foqc5s.%20StrictlyZollow%20STYLE-GUIDE.md%20wheKediting%20this.*%3FFre-%3C3everythingZrom%20%5D.tsxQtypesB%23contian3gH%20TypeScripMtypesQ%24iesQ.gitignoreQpackage.json%27)~version!%271%27)*Q63s%205omponent6%20%207%23contain38e%209used%20by%20B%2F%20F.t3%23HlobalJthi3fil8re-%3C3th8ReacMC5Zrom%20Kn%20Mt%20OPageName1%20Q%5CnV%5C%5C*X.module.scs3%23Z%20fqr%20%24utilsB%23miscellaneou3utilit%25iKkebab-case*6%263%7B9mor8thaKon8pages%7DV%2B.tsx%20%23%3B%20endpoin%3Cexport%3D3%7B9Opag8only%7D%3E%20custom%20hook%3Findex%40page-name%5BLocalC5%5DWPThemeProvider%5EiKPascalCase*6%7Cdocument%7Fasset3used%20%01%7F%7C%5E%5D%5B%40%3F%3E%3D%3C%3B%2B%26%25%24qZXVQOMKJHFB987653*>)
+**Credits**: This ASCII tree was generated using [tree.nathanfriend.io](<https://tree.nathanfriend.io/?s=(%27options!(%27fancy!true~fullPath!false~trailingSlash!true~rootDot!true)~source!(%27source!%27.docs5markdownOile7and%20%5Bo%20writ8th8%5EationOilesQassetsV%5Bhroughout%20%40*gif*6some-gif.gif5gif%2C%20png%2C%20svg%20name7must%20b8in%20kebab-case*6%5DK5import7all%20th8gifOile7in%20th8%60gif%2F%60%20directory%20and%3D7them*6...%7Bother%20gifs%7D*png*svgQc3sVgHF%24*GHC31*6GHC3%2B6gH-c31Z*%25GHC31Kx%20%7Balong%20with%20any%20other%20accompanied%3Ds%7D*6c3UtilityK5utilityOunction%209th8GHC31%20ReactF%20*GHC32%2FQhooksVgH%3C%24%5C%5C*useWindowResizeKQpages*apiVNextj7APIXs*6route1Vroute1X*66%5D%7Froute1X%20logic*6q79endpoints*6%5D%7Froot%20%7B%2F%7DX%20handler*%3E1*FsVlocalF%26%5C%5C*6%3F1*66%3F%2B66local-c3Z*6%25%3FKx*6%3F2%2F*%20%3E1%7Cthi7singl8SCSSOil8i79all%20localF7in%20th8page*%20MKx5MF*%20%5D.pgJMF%20a7a%20%5C%27default%3D%5C%27*%20hooksVcontain7local%3C%26*%3E2%2F*_app%7F%40%227root%20AppF*_%5E%7Fref-%20https%3A%2F%2Fnextjs.org%2Fdocs%2Fadvanced-features%2Fcustom-%5E*_gH.scsss5contain7gH%20styles.%20%7BRarely%20used%7D*404%7Fcustom%20404%20error%20pageQpublicVdo%20not%20add%20or%20edit%20anyOile7insid8thisQtheme*%3B5Them8ProviderF*themeK5generate7theme7forFs.%20StrictlyOollow%20STYLE-GUIDE.md%20when%20editing%20this*%5DJeverythingOrom%20%3BQtypesVgH%20TypeScript%20typesQqsQ.gitignoreQpackage.json%27)~version!%271%27)*Q63omponent5%20%236%20%207s%208e%209used%20by%20BOil8name7ar8in%20F%20c3HlobalJK5re-export7K.tsMPageName1O%20fQ%5CnV%2F5X%20endpointZ%7CSCSSBkebab-casequtilsVmiscellaneou7utilitie%247%7B9mor8than%20on8page%7D%256%5DJth8ReactFOrom%20%267%7B9M%20pag8only%7D%2B1Kx5c3BPascalCase*%3BWPThemeProviderKx%3C%20custom%20hook%3D%20export%3Epage-name%3FLocalC3%40walking-pal-web%5Basset7used%20t%5Dindex%5Edocument%7C.module.scss5%7F.pgK5%01%7F%7C%5E%5D%5B%40%3F%3E%3D%3C%3B%2B%26%25%24qZXVQOMKJHFB987653*>)
