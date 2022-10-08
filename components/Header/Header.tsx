@@ -22,6 +22,10 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 	}, []);
 
 	const { width } = useWindowSize();
+	let Header = <HeaderDesktop key={"headerDesktop"} />;
+	if (width && width < 1200) {
+		Header = <HeaderMobile key={"headerMobile"} />;
+	}
 
 	return (
 		<>
@@ -40,11 +44,7 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 					})}
 					elevation={0}
 				>
-					{(() => {
-						if (width) {
-							return width < 1200 ? <HeaderMobile /> : <HeaderDesktop />;
-						}
-					})()}
+					{Header}
 				</Paper>
 			</header>
 			<div
