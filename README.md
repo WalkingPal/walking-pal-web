@@ -8,9 +8,9 @@ WalkingPal is the world's first walking buddy app of its kind. Get yourself a wa
 
 [![Discord](https://img.shields.io/badge/chat-discord-purple.svg?style=for-the-badge&logo=discord)](https://discord.gg/Et3aQTsW6a)
 
-> Make sure you read and follow the instructions in `#🚦start-here` channel after you join the Discord server.
+> **IMPORTANT**: Go to `#🚦start-here` channel after you join the Discord server. Read and follow the instructions given there to get started.
 
-Make sure you read and follow the [code of conduct](./.docs/CODE-OF-CONDUCT.md)
+> Make sure you read and follow the [code of conduct](./.docs/CODE-OF-CONDUCT.md)
 
 ---
 
@@ -42,7 +42,7 @@ Checkout our [contributing guidelines](.docs/CONTRIBUTING.md)!
 
 ## WalkingPal is participating in Hacktoberfest'22 🎉〽🥳
 
-Contribute to any of our [repositories](https://github.com/WalkingPal) and get you Pull Requests accepted between October 1 and October 31 to count your Pull Request towards you hacktoberfest contributions! We strictly abide by Hacktoberfest Rules and Guidelines. [Checkout Participation Guidelines](https://hacktoberfest.com/participation/)
+Contribute to any of our [repositories](https://github.com/WalkingPal) and get your Pull Requests accepted between October 1 and October 31 to count your Pull Request towards your hacktoberfest contributions! We strictly abide by Hacktoberfest Rules and Guidelines. [Checkout Participation Guidelines](https://hacktoberfest.com/participation/)
 
 <p align="center"><img width="500px" src="./.docs/assets/hacktober.jpeg"/></p>
 
