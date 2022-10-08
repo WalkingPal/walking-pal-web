@@ -1,5 +1,5 @@
-import { FC } from "react";
 import { motion } from "framer-motion";
+import { FCC } from "types/IReact";
 
 const variants = {
 	hidden: { opacity: 0, x: 0, y: -200 },
@@ -7,11 +7,7 @@ const variants = {
 	exit: { opacity: 0, x: -100, y: 0 },
 };
 
-interface Props {
-	children: JSX.Element;
-}
-
-export const PageTransition: FC<Props> = ({ children }: Props) => {
+export const PageTransition: FCC = ({ children }) => {
 	return (
 		<motion.main
 			variants={variants}
@@ -19,7 +15,6 @@ export const PageTransition: FC<Props> = ({ children }: Props) => {
 			animate="enter"
 			exit="exit"
 			transition={{ type: "linear" }}
-			className=""
 		>
 			{children}
 		</motion.main>
