@@ -31,7 +31,7 @@ export const Hero: FC<IHero> = ({}) => {
 					<Accent>#Step</Accent>
 				</Typography>
 			</Box>
-			<Box py={7} width="100%">
+			<Box py={7} width="100vw">
 				<Swiper
 					loop={loop}
 					breakpoints={{
