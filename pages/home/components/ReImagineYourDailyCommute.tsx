@@ -2,6 +2,7 @@ import { Box, Paper, Stack, Typography } from "@mui/material";
 import { bagpack, footstep2, promotion, shopping } from "assets/png";
 import { Accent } from "components/Accent";
 import { FC } from "react";
+import { Grid } from "@mui/material";
 export interface ICommuteCard {
 	id: number;
 	text: string;
@@ -48,16 +49,18 @@ const commuteCards: ICommuteCard[] = [
 
 export const ReImagineYourDailyCommute: FC = () => {
 	return (
-		<Box pt={9} px={3}>
+		<Box pt={9} px={8}>
 			<Typography variant="h3" textAlign="center" mb={5}>
 				Reimagine your daily
 				<br /> <Accent>commute</Accent>
 			</Typography>
-			<Box gap={3} justifyContent="center" display="flex" flexWrap="wrap">
+			<Grid container spacing={{ lg: 3, sm: 4, xs: 5 }} justifyContent="center">
 				{commuteCards.map(cc => (
-					<CommuteCard key={cc.id} cc={cc} />
+					<Grid item xs={12} sm={6} lg={3} key={cc.id} width="auto">
+						<CommuteCard cc={cc} />
+					</Grid>
 				))}
-			</Box>
+			</Grid>
 		</Box>
 	);
 };
@@ -66,7 +69,7 @@ export const CommuteCard: FC<{ cc: ICommuteCard }> = ({ cc }) => {
 	return (
 		<Paper
 			elevation={2}
-			sx={{ width: 256, borderRadius: 3, overflow: "hidden" }}
+			sx={{ width: "auto", borderRadius: 3, overflow: "hidden" }}
 		>
 			<Stack padding="14px" bgcolor={cc.bgcolor} width="100%">
 				<Stack
@@ -92,7 +95,7 @@ export const CommuteCard: FC<{ cc: ICommuteCard }> = ({ cc }) => {
 						src={cc.img}
 						sx={{
 							aspectRatio: 1,
-							width: { xs: "100%", md: "unset" },
+							width: { xs: "auto", md: "unset" },
 							height: { md: "100%" },
 						}}
 						alt={cc.description}
