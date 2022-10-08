@@ -1,6 +1,6 @@
 import { FacebookOutlined } from "@mui/icons-material";
-import { Box, Divider, Link, Stack, Typography } from "@mui/material";
-import { Insta, Linkedin, Twitter, YouTube } from "assets/svg";
+import { Box, colors, Divider, Link, Stack, Typography } from "@mui/material";
+import { Insta, Linkedin, Twitter, YouTube, Discord } from "assets/svg";
 import { Accent } from "components/Accent";
 import { LogoWordmark } from "components/LogoWordmark";
 import { FC } from "react";
@@ -11,28 +11,33 @@ import { LinkContainer } from "./LinkContainer";
 const socials = [
 	{
 		link: "https://www.facebook.com/walkingpal.in",
-		icon: <FacebookOutlined sx={{ color: "#fff" }} />,
+		icon: <FacebookOutlined sx={{ color: "#3b5998" }} />,
 		name: "Facebook",
 	},
 	{
 		link: "https://twitter.com/WalkingPal_in",
-		icon: <Twitter color="#fff" />,
+		icon: <Twitter color="#00acee" />,
 		name: "Twitter",
 	},
 	{
 		link: "https://www.linkedin.com/company/walkingpal/",
-		icon: <Linkedin color="#fff" />,
+		icon: <Linkedin color="#0A66C2" />,
 		name: "Linkedin",
 	},
 	{
 		link: "https://www.instagram.com/walkingpal.in/",
-		icon: <Insta color="#fff" />,
+		icon: <Insta color="#bc2a8d" />,
 		name: "Instagram",
 	},
 	{
 		link: "https://youtu.be/L73A9fyyQqw",
-		icon: <YouTube color="#fff" />,
+		icon: <YouTube color="#ff0000" />,
 		name: "Youtube",
+	},
+	{
+		link: "https://discord.com/invite/Et3aQTsW6a",
+		icon: <Discord color="#7289da" />,
+		name: "Discord",
 	},
 ];
 export const Footer: FC = ({}) => {
