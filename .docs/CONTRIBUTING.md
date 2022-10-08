@@ -10,7 +10,11 @@ We are happy to welcome contributions from anyone willing to add to or improve t
 - Issues will be assigned on a **first-come, first-serve basis**.
 - Contributors may also **open their own issues** and assign themselves if they want to work on them.
 
-![Make sure to follow these when opening issues (7) 1](https://user-images.githubusercontent.com/78583437/194693709-8222a10e-c790-456b-bb59-b9fbc25cb4e4.png)
+___
+
+![Make sure to follow these when opening issues 1](https://user-images.githubusercontent.com/78583437/194697449-0f0e1e91-3bbd-4a43-8dbc-e8c9e43be353.png)
+
+___
 
 - Before opening a new issue, please **check** that it hasn't already been created.
 - Pull requests will be merged after being **reviewed by a maintainer**.
