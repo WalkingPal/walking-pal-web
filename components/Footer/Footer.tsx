@@ -1,5 +1,5 @@
+import { Box, Link, Stack, Typography } from "@mui/material";
 import { FacebookOutlined } from "@mui/icons-material";
-import { Box, colors, Divider, Link, Stack, Typography } from "@mui/material";
 import { Insta, Linkedin, Twitter, YouTube, Discord } from "assets/svg";
 import { Accent } from "components/Accent";
 import { LogoWordmark } from "components/LogoWordmark";
@@ -11,32 +11,32 @@ import { LinkContainer } from "./LinkContainer";
 const socials = [
 	{
 		link: "https://www.facebook.com/walkingpal.in",
-		icon: <FacebookOutlined sx={{ color: "#3b5998" }} />,
+		icon: <FacebookOutlined sx={{ color: "#fff" }} />,
 		name: "Facebook",
 	},
 	{
 		link: "https://twitter.com/WalkingPal_in",
-		icon: <Twitter color="#00acee" />,
+		icon: <Twitter color="#fff" />,
 		name: "Twitter",
 	},
 	{
 		link: "https://www.linkedin.com/company/walkingpal/",
-		icon: <Linkedin color="#0A66C2" />,
+		icon: <Linkedin color="#fff" />,
 		name: "Linkedin",
 	},
 	{
 		link: "https://www.instagram.com/walkingpal.in/",
-		icon: <Insta color="#bc2a8d" />,
+		icon: <Insta color="#fff" />,
 		name: "Instagram",
 	},
 	{
 		link: "https://youtu.be/L73A9fyyQqw",
-		icon: <YouTube color="#ff0000" />,
+		icon: <YouTube color="#fff" />,
 		name: "Youtube",
 	},
 	{
 		link: "https://discord.com/invite/Et3aQTsW6a",
-		icon: <Discord color="#7289da" />,
+		icon: <Discord color="#fff" />,
 		name: "Discord",
 	},
 ];
@@ -84,10 +84,10 @@ export const Footer: FC = ({}) => {
 					<LogoWordmark size={100} />
 					<Box
 						display="flex"
-						gap={2}
+						gap={3}
 						alignItems="center"
 						justifyContent="center"
-						style={{ transform: "scale(1.3)" }}
+						sx={{ "& svg": { transform: "scale(1.3)" } }}
 					>
 						{socials.map((social, i) => {
 							return (
