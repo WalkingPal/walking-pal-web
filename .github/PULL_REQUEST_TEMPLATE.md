@@ -1,32 +1,19 @@
-- [ ] I have read and I am following [the guidelines for creating a new Pull Request.](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#pull-request-review-criteria)
-<!-- Follow the tips & guidelines for creating a new Pull Request by following the link above. 
------------------------------------------------->
+<!-----------------------------------------------
+Please CREATE THIS NEW PULL REQUEST after reading the guidelines given here: https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#pull-request-review-criteria
 
+🛑🛑 This PR wont be reviewed until your PR meets the *PR review criterias* given in the link above
+------------------------------------------------>
 
 ## Proposed Changes
-<!-----------------------------------------------
-Write your PR description in the space below. Explain what changes you have Proposed in detail.
------------------------------------------------->
-  
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
--------------------------------------------------
+<!-- Write your PR description in the space below. Explain what changes you have Proposed in detail. -->
+
+
 
 - closes #
 <!-----------------------------------------------
-Link this PR to your issues by writing: 
-fixes #issue_id 
-      OR 
+Link this PR to your issues by writing:
+fixes #issue_id
+      OR
 closes #issue_id
 ------------------------------------------------>
 
