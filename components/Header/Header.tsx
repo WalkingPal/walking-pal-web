@@ -40,9 +40,9 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 					elevation={0}
 				>
 					{isMobile ? (
-						<HeaderMobile key={"headerMobile"} />
+						<HeaderMobile key="headerMobile" />
 					) : (
-						<HeaderDesktop key={"headerDesktop"} />
+						<HeaderDesktop key="headerDesktop" />
 					)}
 				</Paper>
 			</header>

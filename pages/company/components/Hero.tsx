@@ -24,7 +24,7 @@ export const Hero: FC<IHero> = ({}) => {
 
 	return (
 		<>
-			<Box pt={7} textAlign="center">
+			<Box textAlign="center">
 				<Typography variant="h3">
 					Love in every
 					<br />
