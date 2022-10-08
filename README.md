@@ -8,9 +8,9 @@ WalkingPal is the world's first walking buddy app of its kind. Get yourself a wa
 
 [![Discord](https://img.shields.io/badge/chat-discord-purple.svg?style=for-the-badge&logo=discord)](https://discord.gg/Et3aQTsW6a)
 
-> Make sure you read and follow the instructions mentioned in the `#🚦start-here` channel after you join the Discord server.
+> **IMPORTANT**: Go to `#🚦start-here` channel after you join the Discord server. Read and follow the instructions given there to get started.
 
-Make sure you read and follow the [code of conduct](./.docs/CODE-OF-CONDUCT.md)
+> Make sure you read and follow the [code of conduct](./.docs/CODE-OF-CONDUCT.md)
 
 ---
 
@@ -33,7 +33,7 @@ This is the official repo for the [WalkingPal website](https://walkingpal.in/).
 
 ## Contributing Guidelines[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)🤝🏽🍀:
 
-**If you wish to fix a bug or add a new feature?**
+**Wish to fix a bug or add a new feature?**
 Checkout our [contributing guidelines](.docs/CONTRIBUTING.md)!
 
 <p align="center"><img src = "https://media.giphy.com/media/1xOe0qgiYLYWE6pkki/giphy.gif"></p>
