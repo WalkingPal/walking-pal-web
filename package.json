@@ -33,7 +33,8 @@
 		"sass": "^1.54.3",
 		"swiper": "^8.4.2",
 		"yup": "^0.32.11",
-		"yup-phone": "^1.3.2"
+		"yup-phone": "^1.3.2",
+		"zod": "^3.19.1"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",
