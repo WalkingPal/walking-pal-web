@@ -12,11 +12,9 @@ Please CREATE THIS NEW PULL REQUEST after reading the guidelines given here: htt
 - closes #
 <!-----------------------------------------------
 Link this PR to your issues by writing:
-fixes #issue_id
-      OR
-closes #issue_id
------------------------------------------------->
-
-<!-----------------------------------------------
+- fixes #issue_id
+  OR
+- closes #issue_id
+-------------------------------------------------
 Need help with your PR? Want to discuss something with us? Join the **WalkingPal** Discord community:- https://discord.gg/Et3aQTsW6a !
 ------------------------------------------------>
