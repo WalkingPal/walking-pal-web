@@ -16,7 +16,15 @@ export const Company: NextPage = () => {
 				<meta name="keywords" content="company, walking, pal, buddy, walk" />
 			</Head>
 
-			<main style={{ padding: "4vw" }}>
+			<main
+				style={{
+					padding: "4vw",
+					display: "grid",
+					justifyContent: "center",
+					alignContent: "flex-start",
+					overflow: "hidden",
+				}}
+			>
 				<Hero />
 				<Data />
 				<Story />

@@ -31,7 +31,7 @@ export const Hero: FC<IHero> = ({}) => {
 					<Accent>#Step</Accent>
 				</Typography>
 			</Box>
-			<Box py={7} width="100%">
+			<Box py={7} width="100vw">
 				<Swiper
 					loop={loop}
 					breakpoints={{
@@ -50,7 +50,18 @@ export const Hero: FC<IHero> = ({}) => {
 						(img, index) => (
 							<SwiperSlide key={index}>
 								<Box sx={{ userSelect: "none" }}>
-									<Image src={img} alt={`Hero Slider Image ${index + 1}`} />
+									<Image
+										src={img}
+										alt={`Hero Slider Image ${index + 1}`}
+										wrapstyle={{
+											height: "100%",
+											aspectRatio: "1",
+											display: "block",
+											"& *": {
+												height: "100% !important",
+											},
+										}}
+									/>
 								</Box>
 							</SwiperSlide>
 						),
