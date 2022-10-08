@@ -1,7 +1,6 @@
-import { alpha, Paper } from "@mui/material";
+import { alpha, Paper, useMediaQuery } from "@mui/material";
 import { FC, useEffect, useRef } from "react";
 import styles from "./header.module.scss";
-import { useWindowSize } from "hooks/useWindowResize";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
 import { HeaderMobile } from "components/Header/components/HeaderMobile";
 
@@ -21,11 +20,7 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 		}
 	}, []);
 
-	const { width } = useWindowSize();
-	let Header = <HeaderDesktop key={"headerDesktop"} />;
-	if (width && width < 1200) {
-		Header = <HeaderMobile key={"headerMobile"} />;
-	}
+	const isMobile = useMediaQuery("(max-width:1200px)");
 
 	return (
 		<>
@@ -44,7 +39,11 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 					})}
 					elevation={0}
 				>
-					{Header}
+					{isMobile ? (
+						<HeaderMobile key={"headerMobile"} />
+					) : (
+						<HeaderDesktop key={"headerDesktop"} />
+					)}
 				</Paper>
 			</header>
 			<div
