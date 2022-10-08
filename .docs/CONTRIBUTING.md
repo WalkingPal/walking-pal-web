@@ -9,13 +9,9 @@ We are happy to welcome contributions from anyone willing to add to or improve t
 - Contributors must **comment** on the "open issue" they would like to work on, and wait to be assigned by a maintainer.
 - Issues will be assigned on a **first-come, first-serve basis**.
 - Contributors may also **open their own issues** and assign themselves if they want to work on them.
-  - ##### Make sure to follow these when opening issues:
-    - Your issue title must be in the form of `ISSUE_TYPE: ISSUE_TITLE`
-      - ISSUE_TYPE can be `feat` (issues for new features), `bug`(for bug), `docs` (for docs), `chore`(for miscellaneous)
-      - ISSUE_TITLE must be clear and concise.
-    - Make sure to give sufficient context in your issue description.
-    - Wherever applicable, add reference links or screenshots.
-    - If you are going to work on it yourself, mention that in the issue. You will be assigned by a maintainer.
+
+![Make sure to follow these when opening issues (7) 1](https://user-images.githubusercontent.com/78583437/194693709-8222a10e-c790-456b-bb59-b9fbc25cb4e4.png)
+
 - Before opening a new issue, please **check** that it hasn't already been created.
 - Pull requests will be merged after being **reviewed by a maintainer**.
 - Create a pull request from a **new branch** other than `dev`.
