@@ -13,7 +13,6 @@ import { Autoplay } from "swiper";
 import { FC, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import styles from "../company.module.scss";
 
 interface IHero {}
 
@@ -54,8 +53,14 @@ export const Hero: FC<IHero> = ({}) => {
 									<Image
 										src={img}
 										alt={`Hero Slider Image ${index + 1}`}
-										height={330}
-										width={330}
+										wrapstyle={{
+											height: "100%",
+											aspectRatio: "1",
+											display: "block",
+											"& *": {
+												height: "100% !important",
+											},
+										}}
 									/>
 								</Box>
 							</SwiperSlide>
