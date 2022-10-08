@@ -9,7 +9,7 @@ We are happy to welcome contributions from anyone willing to add to or improve t
 - Contributors must **comment** on the "open issue" they would like to work on, and wait to be assigned by a maintainer.
 - Issues will be assigned on a **first-come, first-serve basis**.
 - Contributors may also **open their own issues** and assign themselves if they want to work on them.
-___
+  ____
   - ### Make sure to follow these when opening issues:
       - Your issue title must be in the form of `ISSUE_TYPE: ISSUE_TITLE`
         - ISSUE_TYPE can be `feat` (issues for new features), `bug`(for bug), `docs` (for docs), `chore`(for miscellaneous)
@@ -17,7 +17,7 @@ ___
       - Make sure to give sufficient context in your issue description.
       - Wherever applicable, add reference links or screenshots.
       - If you are going to work on it yourself, mention that in the issue. You will be assigned by a maintainer.
-___
+  ___
 - Before opening a new issue, please **check** that it hasn't already been created.
 - Pull requests will be merged after being **reviewed by a maintainer**.
 - Create a pull request from a **new branch** other than `dev`.
@@ -27,22 +27,22 @@ ___
 
 - **MAKE SURE TO OPEN A DRAFT PR AS SOON AS YOU START WORKING ON AN ISSUE AND KEEP COMMITTING TO IT SO THAT WE CAN KNOW THAT YOU ARE WORKING ON THAT PARTICULAR ISSUE** (see [Converting Existing PR to Draft PR](#converting-existing-pr-to-draft-pr))
 - Contributors have **5 days** to complete issues. If you think you will need more time, make sure to update your Draft Pull Request regularly by committing any changes you have made so far. This will help maintainers track your progress and assist you with your PRs more effectively. We want you to succeed in merging your PRs. We want to make sure that you learn open source in an effective way.
+  ___
+  - ### Pull request review criteria:
 
-- ##### Pull request review criteria:
-
-  - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
-    - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
-    - Refer [Git Commit Guidelines](./GIT-GUIDELINES.MD) for more details
-  - Make sure you have created an issue for your PR. [Link that issue to your PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
-  - Mention your proposed changes in the PR description along with screenshots and reference links (if applicable).
-  - If you created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
-  - Your work must be **original**, written by you, not copied from other resources. Copying is not bad. But copying without properly understanding which parts of the code are needed and which are not is very bad. Make sure you avoid adding redundant code.
-  - You must **comment** on your code wherever necessary. **Avoid committing commented code**, e.g `console.log` statements, etc.
-  - For **frontend changes** kindly share screenshots and samples of your work before sending a PR.
-  - For **frontend changes**, abide by the [STYLE GUIDE](./STYLE-GUIDE.md).
-  - ⚠**IMPORTANT**⚠ After creating your PR, Vercel will try to automatically deploy your PR code. If your Vercel build fails in your PR, you need to run `yarn build` locally and address those build errors. Your PR won't be reviewed until after the build errors have been fixed. It would be considered a WIP draft PR.
-
-- For any queries or discussions, see [Asking for help](#asking-for-help)
+    - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
+      - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
+      - Refer [Git Commit Guidelines](./GIT-GUIDELINES.MD) for more details
+    - Make sure you have created an issue for your PR. [Link that issue to your PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
+    - Mention your proposed changes in the PR description along with screenshots and reference links (if applicable).
+    - If you created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
+    - Your work must be **original**, written by you, not copied from other resources. Copying is not bad. But copying without properly understanding which parts of the code are needed and which are not is very bad. Make sure you avoid adding redundant code.
+    - You must **comment** on your code wherever necessary. **Avoid committing commented code**, e.g `console.log` statements, etc.
+    - For **frontend changes** kindly share screenshots and samples of your work before sending a PR.
+    - For **frontend changes**, abide by the [STYLE GUIDE](./STYLE-GUIDE.md).
+    - ⚠**IMPORTANT**⚠ After creating your PR, Vercel will try to automatically deploy your PR code. If your Vercel build fails in your PR, you need to run `yarn build` locally and address those build errors. Your PR won't be reviewed until after the build errors have been fixed. It would be considered a WIP draft PR.
+  ___
+- For any queries or discussions, see [ASKING FOR HELP](#asking-for-help) section.
 
 # Get started on your first PR👩‍💻👨‍💻
 
