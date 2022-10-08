@@ -13,6 +13,7 @@ import { Autoplay } from "swiper";
 import { FC, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import styles from "../company.module.scss";
 
 interface IHero {}
 
@@ -50,7 +51,12 @@ export const Hero: FC<IHero> = ({}) => {
 						(img, index) => (
 							<SwiperSlide key={index}>
 								<Box sx={{ userSelect: "none" }}>
-									<Image src={img} alt={`Hero Slider Image ${index + 1}`} />
+									<Image
+										src={img}
+										alt={`Hero Slider Image ${index + 1}`}
+										height={330}
+										width={330}
+									/>
 								</Box>
 							</SwiperSlide>
 						),
