@@ -53,11 +53,19 @@ export const ReImagineYourDailyCommute: FC = () => {
 				Reimagine your daily
 				<br /> <Accent>commute</Accent>
 			</Typography>
-			<Box gap={3} justifyContent="center" display="flex" flexWrap="wrap">
-				{commuteCards.map(cc => (
-					<CommuteCard key={cc.id} cc={cc} />
-				))}
-			</Box>
+			<Stack justifyContent="center">
+				<Box
+					gap={3}
+					justifyContent="center"
+					display="inline-grid"
+					mx="auto"
+					gridTemplateColumns={{ sm: "1fr 1fr", lg: "repeat(4, 1fr)" }}
+				>
+					{commuteCards.map(cc => (
+						<CommuteCard key={cc.id} cc={cc} />
+					))}
+				</Box>
+			</Stack>
 		</Box>
 	);
 };
