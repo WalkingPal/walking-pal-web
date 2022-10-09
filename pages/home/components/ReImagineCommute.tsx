@@ -62,6 +62,7 @@ export const ReImagineCommute: FC = () => {
 				flexWrap="wrap"
 				gap={GAP}
 				maxWidth={1100}
+				mx="auto"
 			>
 				<Box
 					display="grid"
