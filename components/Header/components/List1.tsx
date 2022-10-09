@@ -7,7 +7,7 @@ import {
 	MenuItem,
 	Typography,
 } from "@mui/material";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import { FC, MouseEvent, useState } from "react";
 
 export const links = [
@@ -49,6 +49,60 @@ export const List1: FC<IList1> = ({ mobile }) => {
 	);
 };
 
+interface SubroutesMenu {
+	open: boolean;
+	handleClose: () => void;
+	handleMouseLeave: () => void;
+	anchorEl: HTMLElement | null;
+	router: NextRouter;
+	pageroute: string;
+	subroutes?: {
+		name: string;
+		subroute: string;
+	}[];
+}
+
+const SubroutesMenu: FC<SubroutesMenu> = ({
+	open,
+	handleClose,
+	handleMouseLeave,
+	anchorEl,
+	router,
+	pageroute,
+	subroutes,
+}) => {
+	if (!subroutes) {
+		return null;
+	}
+
+	return (
+		<Menu
+			open={open}
+			onClose={handleClose}
+			anchorEl={anchorEl}
+			sx={{ zIndex: 99999 }}
+		>
+			<div onMouseLeave={handleMouseLeave}>
+				{subroutes.map(({ name, subroute }) => (
+					<MenuItem
+						key={name}
+						onClick={() => {
+							router.route !== pageroute && router.push(pageroute + subroute);
+							handleClose();
+						}}
+						component="a"
+						role="link"
+						href={subroute}
+						sx={{ textTransform: "capitalize" }}
+					>
+						{name}
+					</MenuItem>
+				))}
+			</div>
+		</Menu>
+	);
+};
+
 interface IL1Item {
 	name: string;
 	pageroute: string;
@@ -61,21 +115,34 @@ interface IL1Item {
 export const L1Item: FC<IL1Item> = ({ name, pageroute, subroutes }) => {
 	const router = useRouter();
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-	const open = Boolean(anchorEl);
+	const [isHovered, setHovered] = useState(false);
+
+	const handleMouseEnter = (
+		e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>,
+	) => {
+		setAnchorEl(e.currentTarget);
+		setHovered(true);
+	};
+
+	const handleMouseLeave = () => {
+		setHovered(false);
+	};
 
 	const handleClick = (
 		e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>,
 	) => {
 		e.stopPropagation();
 		e.preventDefault();
-		setAnchorEl(e.currentTarget);
 		router.route !== pageroute && router.push(pageroute);
 	};
+
 	const handleClose = () => {
+		setHovered(false);
 		setAnchorEl(null);
 	};
+
 	return (
-		<>
+		<div onMouseEnter={handleMouseEnter}>
 			<ListItemButton
 				onClick={handleClick}
 				sx={{ borderRadius: 1 }}
@@ -95,30 +162,15 @@ export const L1Item: FC<IL1Item> = ({ name, pageroute, subroutes }) => {
 					</Typography>
 				</ListItemText>
 			</ListItemButton>
-			{subroutes && (
-				<Menu
-					open={open}
-					onClose={handleClose}
-					anchorEl={anchorEl}
-					sx={{ zIndex: 99999 }}
-				>
-					{subroutes.map(({ name, subroute }) => (
-						<MenuItem
-							key={name}
-							onClick={() => {
-								router.route !== pageroute && router.push(pageroute + subroute);
-								handleClose();
-							}}
-							component="a"
-							role="link"
-							href={subroute}
-							sx={{ textTransform: "capitalize" }}
-						>
-							{name}
-						</MenuItem>
-					))}
-				</Menu>
-			)}
-		</>
+			<SubroutesMenu
+				open={isHovered}
+				handleClose={handleClose}
+				handleMouseLeave={handleMouseLeave}
+				anchorEl={anchorEl}
+				router={router}
+				pageroute={pageroute}
+				subroutes={subroutes}
+			/>
+		</div>
 	);
 };
