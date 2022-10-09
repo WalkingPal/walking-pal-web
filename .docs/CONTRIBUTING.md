@@ -99,8 +99,10 @@ The following tools should be installed and running on your computer:
 
 ### Additional Setup
 
-The WalkingPal app utilizes reCAPTCHA to enhance security and prevent spammers/bots from polluting our database.
-To access the `/register` and `/faq` pages on the app seamlessly, follow the required steps:
+#### #1 reCAPTCHA Setup
+
+WalkingPal webapp utilizes reCAPTCHA to enhance security and prevent spammers/bots from polluting our database.
+To access the `/register` and `/faq` pages on the webapp seamlessly, follow the required steps:
 
 1. Head to the [reCAPTCHA admin console](https://www.google.com/recaptcha/admin/create) and fill in the required details.
 
@@ -118,6 +120,49 @@ NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
 # Add the secret key here
 RECAPTCHA_SECRET_KEY=
 ```
+
+#### #2 Firebase Setup
+
+We use firebase's for backend services. e.g We use firestore Database to store our forms data).
+
+If you want to contribute on issues that need firebase services, **follow these steps below to setup you new walking-pal-web firebase project**
+
+1. Login to you google account and head on to [console.firebase.google.com](https://console.firebase.google.com/)
+2. Click on `Add Project`
+   ![Add Project](assets/firebase1.png)
+3. **Create a project (Step 1 of 3)**
+   - Enter project name: `walking-pal-web`. Click `Continue`
+4. **Create a project (Step 2 of 3)**
+   - Click `Continue`
+5. **Create a project (Step 3 of 3)**
+   - Click on `Select an account` => Click on `Default Account on Firebase`
+   - Click `Create Project`
+6. After you come to Firebase "Console" Page, now its time to generate the Firebase Service Account key.
+   - Click on "Gear Icon" on the left hand side panel.
+   - Click on `Project Settings`
+   - Click on `Service Accounts`
+   - Click on `Generate new private key`
+   - Finally, click on `Generate key`. This will download a JSON file. Save that JSON file. Do not share it with anyone.
+     ![Firebase Service Account key generation step 1](assets/firebase2-key-gen.png)
+     ![Firestore Service Account key generation step 2](assets/firebase2-key-gen-s2.png)
+7. Now we need to create a `FIREBASE_SERVICE_ACCOUNT_KEY` environment variable using that downloaded service account key JSON file. For that first we need to remove line breaks in the JSON file.
+   - Go to [textfixer.com](https://www.textfixer.com/tools/remove-line-breaks.php) and paste the content of the JSON file.
+     - Do NOT remove the `\n` characters from the `private_key` fields or the key won't be valid afterwards.
+   - Copy your newly generated text. That new text is without line breaks.
+   - Create a `.env.local` file in the project root directory.
+   - In the `.env.local` file, paste the copied text in `FIREBASE_SERVICE_ACCOUNT_KEY` key
+     ```sh
+     # .env.local
+     FIREBASE_SERVICE_ACCOUNT_KEY='Put your copied JSON file content text without line breaks here'
+     ```
+     That's all! We have setup firebase with our NEXTjs project.
+8. Now **let's setup Firestore** too. On the left-hand side panel, click `Build`. Then click on `Firestore Database`.
+   ![Firestore step 1](assets/firestore1.png)
+9. Now Click on `Create database`
+   ![Firestore step 2](assets/firestore2.png)
+10. Click on `Next`
+    ![Firestore step 3](assets/firestore3.png)
+11. Then, Click on `Enable`. All done! We have Enabled Firestore database.
 
 ## Run Next.js development server
 
