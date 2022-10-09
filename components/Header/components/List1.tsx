@@ -48,7 +48,6 @@ export const List1: FC<IList1> = ({ mobile }) => {
 		</List>
 	);
 };
-
 interface IL1Item {
 	name: string;
 	pageroute: string;
@@ -61,21 +60,30 @@ interface IL1Item {
 export const L1Item: FC<IL1Item> = ({ name, pageroute, subroutes }) => {
 	const router = useRouter();
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-	const open = Boolean(anchorEl);
+	const [isHovered, setHovered] = useState(false);
+
+	const handleMouseEnter = (
+		e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>,
+	) => {
+		setAnchorEl(e.currentTarget);
+		setHovered(true);
+	};
 
 	const handleClick = (
 		e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>,
 	) => {
 		e.stopPropagation();
 		e.preventDefault();
-		setAnchorEl(e.currentTarget);
 		router.route !== pageroute && router.push(pageroute);
 	};
+
 	const handleClose = () => {
+		setHovered(false);
 		setAnchorEl(null);
 	};
+
 	return (
-		<>
+		<div onMouseEnter={handleMouseEnter}>
 			<ListItemButton
 				onClick={handleClick}
 				sx={{ borderRadius: 1 }}
@@ -97,28 +105,31 @@ export const L1Item: FC<IL1Item> = ({ name, pageroute, subroutes }) => {
 			</ListItemButton>
 			{subroutes && (
 				<Menu
-					open={open}
+					open={isHovered}
 					onClose={handleClose}
 					anchorEl={anchorEl}
 					sx={{ zIndex: 99999 }}
 				>
-					{subroutes.map(({ name, subroute }) => (
-						<MenuItem
-							key={name}
-							onClick={() => {
-								router.route !== pageroute && router.push(pageroute + subroute);
-								handleClose();
-							}}
-							component="a"
-							role="link"
-							href={subroute}
-							sx={{ textTransform: "capitalize" }}
-						>
-							{name}
-						</MenuItem>
-					))}
+					<div onMouseLeave={() => setHovered(false)}>
+						{subroutes.map(({ name, subroute }) => (
+							<MenuItem
+								key={name}
+								onClick={() => {
+									router.route !== pageroute &&
+										router.push(pageroute + subroute);
+									handleClose();
+								}}
+								component="a"
+								role="link"
+								href={subroute}
+								sx={{ textTransform: "capitalize" }}
+							>
+								{name}
+							</MenuItem>
+						))}
+					</div>
 				</Menu>
 			)}
-		</>
+		</div>
 	);
 };
