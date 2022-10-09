@@ -14,6 +14,7 @@ import { RibbonsSection } from "pages/home/components/Ribbons";
 import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
+import { Scroll } from "components/ScrollToTop";
 
 export const Home: NextPage = () => {
 	const { width } = useWindowSize();
@@ -74,6 +75,7 @@ export const Home: NextPage = () => {
 				</Box>
 				<ReImagineYourDailyCommute />
 				{/* <CommunityForm /> */}
+				<Scroll />
 			</main>
 		</div>
 	);

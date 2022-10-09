@@ -1,0 +1,25 @@
+.scroll {
+	border: 2px solid black;
+	padding: 6px;
+	width: 2rem;
+	height: 2rem;
+	background-color: rgb(255, 166, 0);
+	color: rgb(0, 0, 0);
+	border-radius: 10%;
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	&--icon {
+		animation: gototop 1.2s linear infinite alternate-reverse;
+	}
+}
+
+.scroll:hover {
+	transform: scale(1.2);
+	transition: 0.3s;
+}
