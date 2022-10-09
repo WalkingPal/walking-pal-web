@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Story } from "pages/company/components/Story";
 import { Data } from "pages/company/components/Data";
 import { Hero } from "pages/company/components/Hero";
+import { ScrollToTop } from "components/ScrollToTop";
 
 export const Company: NextPage = () => {
 	return (
@@ -28,6 +29,7 @@ export const Company: NextPage = () => {
 				<Hero />
 				<Data />
 				<Story />
+				<ScrollToTop />
 			</main>
 		</>
 	);
