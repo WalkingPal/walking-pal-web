@@ -1,17 +1,13 @@
-import { alpha, Paper } from "@mui/material";
+import { alpha, Paper, useMediaQuery } from "@mui/material";
 import { FC, useEffect, useRef } from "react";
 import styles from "./header.module.scss";
-import { useWindowSize } from "hooks/useWindowResize";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
 import { HeaderMobile } from "components/Header/components/HeaderMobile";
 
-export const links = [
-	{ name: "home", route: "/" },
-	{ name: "about", route: "/about" },
-	{ name: "FAQ", route: "/faq" },
-];
-
-export const Header: FC = () => {
+interface IHeader {
+	allowPadding: boolean;
+}
+export const Header: FC<IHeader> = ({ allowPadding }) => {
 	const marginTop = 20;
 	const headerRef = useRef<HTMLElement>(null);
 	useEffect(() => {
@@ -24,7 +20,7 @@ export const Header: FC = () => {
 		}
 	}, []);
 
-	const { width } = useWindowSize();
+	const isLT1200 = useMediaQuery("(max-width:1200px)");
 
 	return (
 		<>
@@ -43,10 +39,18 @@ export const Header: FC = () => {
 					})}
 					elevation={0}
 				>
-					{!width || width < 1200 ? <HeaderMobile /> : <HeaderDesktop />}
+					{isLT1200 ? (
+						<HeaderMobile key="headerMobile" />
+					) : (
+						<HeaderDesktop key="headerDesktop" />
+					)}
 				</Paper>
 			</header>
-			<div style={{ height: "calc(var(--header-height) + 5px)" }}></div>
+			<div
+				style={{
+					height: allowPadding ? "calc(var(--header-height) + 5px)" : 0,
+				}}
+			/>
 		</>
 	);
 };

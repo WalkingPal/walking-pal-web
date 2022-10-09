@@ -19,8 +19,9 @@ const registerEarlyUser = async (
 			message: "Invalid HTTP Method. Only POST method is Accepted.",
 		});
 
-	// do zod and neccesary validations here & email check via api too
-	// if captcha is misssing OR isAnyFieldEmpty check
+	// do zod and neccesary validations here & email check via any free to use available apis too
+
+	// if captcha is missing OR isAnyFieldEmpty check
 	if (!Object.values(formData).every(x => !!x))
 		return res.status(422).json({
 			message: "Unproccesable request, Missing Fields",

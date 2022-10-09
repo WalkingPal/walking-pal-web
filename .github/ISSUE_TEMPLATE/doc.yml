@@ -1,0 +1,20 @@
+name: 📄 Documentation
+description: Found an issue in the documentation? You can use this one!
+title: "docs: <description>"
+labels: ["documentation", "hacktoberfest"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description:
+        "## Need some help? Let's discuss together, join the WalkingPal [Discord community](https://discord.gg/Et3aQTsW6a)!
+
+        ### Assign this issue to yourself if you want to work on it.
+
+        READ AND FOLLOW THE [GUIDELINES TO CREATE A NEW ISSUE](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#make-sure-to-follow-these-when-opening-issues)"
+      placeholder: 
+        Write a brief description of the issue you found with the documentations. 
+        
+        Add screenshots/reference links (if applicable).
+    validations:
+      required: true

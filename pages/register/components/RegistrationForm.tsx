@@ -112,6 +112,7 @@ export const RegistrationForm: FC<IRegistrationForm> = ({
 
 		setAlertOpen(false);
 	};
+
 	return (
 		<Stack
 			maxWidth={700}
@@ -133,6 +134,8 @@ export const RegistrationForm: FC<IRegistrationForm> = ({
 						return (
 							<Box ref={boxRef} key={"field-" + i} sx={{ minWidth: "100%" }}>
 								<InputField
+									enableFocus={i === 0}
+									tabIndex={-1}
 									label={label}
 									name={fieldName}
 									value={formData[fieldName]}

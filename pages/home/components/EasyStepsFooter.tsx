@@ -25,18 +25,21 @@ export const EasyStepsFooter: FC = ({}) => {
 						height="70"
 						width="70"
 						style={{ borderRadius: 10 }}
+						alt=""
 					/>
 					<Image
 						src={legs}
 						height="70"
 						width="70"
 						style={{ borderRadius: 10 }}
+						alt=""
 					/>
 					<Image
 						src={man}
 						height="70"
 						width="70"
 						style={{ borderRadius: 10 }}
+						alt=""
 					/>
 				</Box>
 			</Box>
@@ -56,7 +59,7 @@ export const EasyStepsFooter: FC = ({}) => {
 					justifyContent="center"
 					display="inherit"
 				>
-					<Typography textAlign="center" m={1}>
+					<Typography textAlign="center" m={1} color="white">
 						A proud<Accent>partner</Accent>
 					</Typography>
 				</Box>

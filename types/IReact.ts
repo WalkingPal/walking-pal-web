@@ -1,4 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 
-// react functional components with chilren
+/**
+ * Type for React functional components with `children?` prop
+ */
 export type FCC<P = {}> = FC<PropsWithChildren<P>>;

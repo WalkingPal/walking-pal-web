@@ -1,0 +1,21 @@
+main {
+	.data {
+		align-items: center;
+		margin-bottom: 80px;
+	}
+	.data,
+	.story {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		.cards {
+			display: grid;
+			justify-content: center;
+			gap: 40px;
+			padding: 25px 0;
+		}
+	}
+	.story {
+		gap: 20px;
+	}
+}

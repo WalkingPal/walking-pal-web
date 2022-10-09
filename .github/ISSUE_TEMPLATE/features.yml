@@ -1,0 +1,20 @@
+name: 💡Feature Request
+description: Have a new idea/feature for this project? Please suggest!
+title: "feat: <description>"
+labels: ["enhancement", "hacktoberfest"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description:
+        "## Need some help? Let's discuss together, join the WalkingPal [Discord community](https://discord.gg/Et3aQTsW6a)!
+
+        ### Assign this issue to yourself if you want to work on it.
+
+        READ AND FOLLOW THE [GUIDELINES TO CREATE A NEW ISSUE](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#make-sure-to-follow-these-when-opening-issues)"
+      placeholder: 
+        Write a breif description of the enhancement you are proposing. 
+      
+        Add screenshots/images or reference links (if applicable).
+    validations:
+      required: true

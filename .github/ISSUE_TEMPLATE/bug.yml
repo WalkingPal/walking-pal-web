@@ -1,0 +1,22 @@
+name: 🐛 Bug
+description: Report an issue to help improve the project.
+title: "bug: <description>"
+labels: ["bug", "hacktoberfest"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description:
+        "## Need some help? Let's discuss together, join the WalkingPal [Discord community](https://discord.gg/Et3aQTsW6a)!
+
+        ### Assign this issue to yourself if you want to work on it.
+
+        READ AND FOLLOW THE [GUIDELINES TO CREATE A NEW ISSUE](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#make-sure-to-follow-these-when-opening-issues)"
+      placeholder: 
+        Write a brief description of issue.
+
+        Include what you tried and what didn't work. 
+        
+        Add screenshots if applicable along with steps to reproduce the issue and reference links (if applicable).
+    validations:
+      required: true
