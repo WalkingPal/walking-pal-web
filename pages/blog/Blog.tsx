@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Hero } from "pages/blog/components/Hero";
 import { BlogsList } from "pages/blog/components/BlogsList";
+import { ScrollToTop } from "components/ScrollToTop";
 
 export const Blog: NextPage = () => {
 	return (
@@ -21,6 +22,7 @@ export const Blog: NextPage = () => {
 			<main style={{ padding: "4vw", maxWidth: 1450, margin: "auto" }}>
 				<Hero />
 				<BlogsList />
+				<ScrollToTop />
 			</main>
 		</>
 	);

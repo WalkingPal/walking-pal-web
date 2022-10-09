@@ -7,9 +7,9 @@ import { useParallax } from "react-scroll-parallax";
 import ss from "../home.module.scss";
 
 export const Intro: FC = ({}) => {
-	const is1200 = useMediaQuery("(max-width:1200px)");
-	const is750 = useMediaQuery("(max-width:750px)");
-	const animSet: AnimSet = is1200 ? (is750 ? "sm" : "md") : "default";
+	const isLT1200 = useMediaQuery("(max-width:1200px)");
+	const isLT750 = useMediaQuery("(max-width:750px)");
+	const animSet: AnimSet = isLT1200 ? (isLT750 ? "sm" : "md") : "default";
 	const anim1 = useParallax<HTMLSpanElement>({
 		...animations.mockup[animSet],
 	});
