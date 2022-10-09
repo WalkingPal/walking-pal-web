@@ -70,12 +70,12 @@ export const FormActions: FC<IFormActions> = ({
 					</Button>
 				)}
 			</Stack>
-			<ReCAPTCHA
+			{/* <ReCAPTCHA
 				ref={recaptchaRef}
 				size="invisible"
 				sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
 				onChange={onReCAPTCHAChange}
-			/>
+			/> */}
 		</>
 	);
 };
