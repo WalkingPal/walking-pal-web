@@ -1,37 +1,37 @@
 import { FacebookOutlined } from "@mui/icons-material";
 import { Box, Divider, Link, Stack, Typography } from "@mui/material";
-import { Insta, Linkedin, Twitter, YouTube } from "assets/svg";
 import { Accent } from "components/Accent";
 import { LogoWordmark } from "components/LogoWordmark";
 import { FC } from "react";
 import { footerLinks } from "./footer-links";
 import styles from "./footer.module.scss";
+import { Facebook, Twitter, Linkedin, Instagram, Youtube } from "./Icons";
 import { LinkContainer } from "./LinkContainer";
 
 const socials = [
 	{
 		link: "https://www.facebook.com/walkingpal.in",
-		icon: <FacebookOutlined sx={{ color: "#fff" }} />,
+		icon: <Facebook />,
 		name: "Facebook",
 	},
 	{
 		link: "https://twitter.com/WalkingPal_in",
-		icon: <Twitter color="#fff" />,
+		icon: <Twitter />,
 		name: "Twitter",
 	},
 	{
 		link: "https://www.linkedin.com/company/walkingpal/",
-		icon: <Linkedin color="#fff" />,
+		icon: <Linkedin />,
 		name: "Linkedin",
 	},
 	{
 		link: "https://www.instagram.com/walkingpal.in/",
-		icon: <Insta color="#fff" />,
+		icon: <Instagram />,
 		name: "Instagram",
 	},
 	{
 		link: "https://youtu.be/L73A9fyyQqw",
-		icon: <YouTube color="#fff" />,
+		icon: <Youtube />,
 		name: "Youtube",
 	},
 ];
