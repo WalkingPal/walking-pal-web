@@ -20,7 +20,7 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 		}
 	}, []);
 
-	const isMobile = useMediaQuery("(max-width:1200px)");
+	const isLT1200 = useMediaQuery("(max-width:1200px)");
 
 	return (
 		<>
@@ -39,7 +39,7 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 					})}
 					elevation={0}
 				>
-					{isMobile ? (
+					{isLT1200 ? (
 						<HeaderMobile key="headerMobile" />
 					) : (
 						<HeaderDesktop key="headerDesktop" />
