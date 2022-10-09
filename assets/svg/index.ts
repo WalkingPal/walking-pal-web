@@ -7,4 +7,3 @@ export { default as YouTube } from "./youtube.svg";
 export { default as Linkedin } from "./linkedin.svg";
 export { default as Insta } from "./insta.svg";
 export { default as Discord } from "./discord.svg";
-export { default as UpArrow } from "./UpArrow.svg";

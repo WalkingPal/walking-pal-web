@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Hero } from "pages/about/components/Hero";
 import { OurStory } from "pages/about/components/OurStory";
 import { Gallery } from "pages/about/components/Gallery";
-import { Scroll } from "components/ScrollToTop";
+import { ScrollToTop } from "components/ScrollToTop";
 
 export const About: NextPage = () => {
 	return (
@@ -31,7 +31,7 @@ export const About: NextPage = () => {
 				<Hero />
 				<Gallery />
 				<OurStory />
-				<Scroll />
+				<ScrollToTop />
 			</main>
 		</>
 	);
