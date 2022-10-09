@@ -1,21 +1,11 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import { bagpack, footstep2, promotion, shopping } from "assets/png";
-import { Accent } from "components/Accent";
 import { Green, Vehicle, Walk } from "assets/svg";
+import { Accent } from "components/Accent";
+import { Image } from "components/Image";
 import { FC } from "react";
 
-import styles from "./reImagineCommute.module.scss";
-
-export interface ICommuteCard {
-	id: number;
-	text: string;
-	highlight: string;
-	img: string;
-	bgcolor: string;
-	description: string;
-}
-
-const commuteCards: ICommuteCard[] = [
+const commuteCards = [
 	{
 		id: 0,
 		text: "For",
@@ -51,61 +41,64 @@ const commuteCards: ICommuteCard[] = [
 ];
 
 export const ReImagineCommute: FC = () => {
+	const GAP = "60px";
 	return (
-		<Box pt={9} px={3}>
+		<Box pt={9} px="4vw">
 			<Typography variant="h3" textAlign="center" mb={5}>
 				Reimagine your daily
 				<br /> <Accent>commute</Accent>
 			</Typography>
-			<Stack justifyContent="center">
+			<Box gap={3} justifyContent="center" display="flex" flexWrap="wrap">
+				{commuteCards.map(cc => (
+					<CommuteCard key={cc.id} cc={cc} />
+				))}
+			</Box>
+
+			<Box
+				pt={14}
+				display="flex"
+				justifyContent="space-between"
+				alignItems="center"
+				flexWrap="wrap"
+				gap={GAP}
+				maxWidth={1100}
+			>
 				<Box
-					gap={3}
-					justifyContent="center"
-					display="inline-grid"
+					display="grid"
+					maxWidth={{ sm: 700, lg: 500 }}
+					width={{ lg: `calc(50% - ${GAP}/2)` }}
+					gap={GAP}
 					mx="auto"
-					gridTemplateColumns={{ sm: "1fr 1fr", lg: "repeat(4, 1fr)" }}
 				>
-					{commuteCards.map(cc => (
-						<CommuteCard key={cc.id} cc={cc} />
-					))}
-				</Box>
-			</Stack>
-			<Box pt={14} className={styles.container1}>
-				<Box display="flex" flexDirection="column" gap={7.5}>
-					<Box>
-						<Typography fontSize={31} lineHeight="42.22px" px={4.5}>
-							#LetsWalk
-						</Typography>
-						<Typography fontSize={18} lineHeight="24.51px" pt={1} px={4.5}>
+					<Box minWidth={300}>
+						<Typography variant="h4">#LetsWalk</Typography>
+						<Typography variant="body1">
 							Walking an extra 20 minutes a day will burn 7 pounds of body fat
 							per year.
 						</Typography>
-						<Walk />
+						<Walk width="100%" />
 					</Box>
-					<Box>
-						<Typography fontSize={31} lineHeight="42.22px" px={4.5}>
-							#DitchVehicles
-						</Typography>
-						<Typography fontSize={18} lineHeight="24.51px" pt={1} px={4.5}>
+					<Box minWidth={300}>
+						<Typography variant="h4">#DitchVehicles</Typography>
+						<Typography variant="body1">
 							The cost of operating a card for one year is approximately ₹
 							100,000. The cost of operating a bicycle for a year is only ₹
 							1000. Walking is free!
 						</Typography>
-						<Vehicle />
+						<Vehicle width="100%" />
 					</Box>
 				</Box>
+
 				<Box
-					display="flex"
-					flexDirection="column"
-					justifyContent="space-between"
-					py={2.5}
+					minWidth={300}
+					maxWidth={{ sm: 700, lg: 500 }}
+					width={{ lg: `calc(50% - ${GAP}/2)` }}
+					mx="auto"
 				>
-					<Green />
+					<Green width="100%" />
 					<Box>
-						<Typography fontSize={31} lineHeight="42.22px" px={7.5}>
-							#GreenMovement
-						</Typography>
-						<Typography fontSize={18} lineHeight="24.51px" pt={1} px={7.5}>
+						<Typography variant="h4">#GreenMovement</Typography>
+						<Typography variant="body1">
 							Avoiding just 15 KM walk of driving every week would eliminate 500
 							pounds of carbon dioxide emissions a year. Which is equivalent to
 							planting 10 trees.
@@ -117,7 +110,7 @@ export const ReImagineCommute: FC = () => {
 	);
 };
 
-export const CommuteCard: FC<{ cc: ICommuteCard }> = ({ cc }) => {
+export const CommuteCard: FC<{ cc: typeof commuteCards[0] }> = ({ cc }) => {
 	return (
 		<Paper
 			elevation={2}
