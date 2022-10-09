@@ -10,11 +10,10 @@ import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
 import CommunityForm from "pages/home/components/JoinTheCommunityForm";
 import { ReImagineCommute } from "pages/home/components/ReImagineCommute";
-import { RibbonsSection } from "pages/home/components/RibbonsSection";
+import { RibbonsSection } from "pages/home/components/Ribbons";
 import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
-import { ScrollToTop } from "components/ScrollToTop";
 
 export const Home: NextPage = () => {
 	const { width } = useWindowSize();
@@ -35,7 +34,7 @@ export const Home: NextPage = () => {
 				<Intro />
 				<Features />
 				<Box
-					sx={{ "& html5-video-player": { background: "#fff" } }}
+					borderRadius="0 0 50px 50px"
 					position="relative"
 					zIndex={1}
 					bgcolor="#fff"
@@ -75,7 +74,6 @@ export const Home: NextPage = () => {
 				</Box>
 				<ReImagineCommute />
 				{/* <CommunityForm /> */}
-				<ScrollToTop />
 			</main>
 		</div>
 	);
