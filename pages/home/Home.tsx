@@ -10,7 +10,7 @@ import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
 import CommunityForm from "pages/home/components/JoinTheCommunityForm";
 import { ReImagineYourDailyCommute } from "pages/home/components/ReImagineYourDailyCommute";
-import { RibbonsSection } from "pages/home/components/Ribbons";
+import { RibbonsSection } from "pages/home/components/RibbonsSection";
 import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
