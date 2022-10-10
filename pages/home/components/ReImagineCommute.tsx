@@ -72,7 +72,9 @@ export const ReImagineCommute: FC = () => {
 					mx="auto"
 				>
 					<Box minWidth={300}>
-						<Typography variant="h4">#LetsWalk</Typography>
+						<Typography variant="h4" component="h3">
+							#LetsWalk
+						</Typography>
 						<Typography variant="body1">
 							Walking an extra 20 minutes a day will burn 7 pounds of body fat
 							per year.
@@ -80,7 +82,9 @@ export const ReImagineCommute: FC = () => {
 						<Walk width="100%" />
 					</Box>
 					<Box minWidth={300}>
-						<Typography variant="h4">#DitchVehicles</Typography>
+						<Typography variant="h4" component="h3">
+							#DitchVehicles
+						</Typography>
 						<Typography variant="body1">
 							The cost of operating a card for one year is approximately ₹
 							100,000. The cost of operating a bicycle for a year is only ₹
@@ -98,7 +102,9 @@ export const ReImagineCommute: FC = () => {
 				>
 					<Green width="100%" />
 					<Box>
-						<Typography variant="h4">#GreenMovement</Typography>
+						<Typography variant="h4" component="h3">
+							#GreenMovement
+						</Typography>
 						<Typography variant="body1">
 							Avoiding just 15 KM walk of driving every week would eliminate 500
 							pounds of carbon dioxide emissions a year. Which is equivalent to
