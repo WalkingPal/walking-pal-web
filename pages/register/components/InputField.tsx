@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import { FCC } from "types/IReact";
-import { firstLetterCaps } from "utils/db/textTransform";
+import { firstLetterCaps } from "utils/textTransform";
 import styles from "../register.module.scss";
 
 interface IInputField extends InputBaseProps {

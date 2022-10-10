@@ -18,7 +18,7 @@ const steps = [
 				app
 			</>
 		),
-		color: "#FF5959",
+		color: "primary.main",
 	},
 	{
 		imgSrc: step2,
@@ -44,7 +44,7 @@ const steps = [
 				button
 			</>
 		),
-		color: "#F6BF51",
+		color: "secondary.main",
 	},
 	{
 		imgSrc: step4,
@@ -57,7 +57,7 @@ const steps = [
 				your journey
 			</>
 		),
-		color: "#FF5959",
+		color: "primary.main",
 	},
 ];
 
@@ -85,7 +85,7 @@ export const EasySteps: FC = () => {
 								{i + 1}
 							</Typography>
 							<Typography
-								color="#767676"
+								color="secondary.main"
 								variant="subtitle1"
 								fontSize="clamp(0.7rem, 0.8rem + 1vw, 1.25rem)"
 							>

@@ -28,7 +28,6 @@ export const ScrollToTop: FC = () => {
 						zIndex: 999999,
 						backgroundColor: "primary.main",
 						transition: "500ms cubic-bezier(0.4, 0, 0.2, 1) !important",
-						color: "#fff",
 						"&:hover": {
 							transform: `scale(1.2)`,
 							backgroundColor: `primary.main`,
