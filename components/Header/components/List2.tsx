@@ -1,5 +1,4 @@
 import { Button } from "@mui/material";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { FC } from "react";
 
@@ -26,7 +25,7 @@ export const List2: FC<IList2> = ({}) => {
 				role="link"
 				component="a"
 				variant="contained"
-				sx={{ mx: "20px" }}
+				sx={{ mx: 2 }}
 				href="/register"
 			>
 				Register
