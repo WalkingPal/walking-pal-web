@@ -8,33 +8,26 @@ import youtube from "react-useanimations/lib/youtube";
 import JSONAnimation from "../Footer/assets/github/github.json";
 
 export const Github = () => (
-	<UseAnimations animation={github} size={26} strokeColor="#fff" loop={true} />
+	<UseAnimations animation={github} size={30} strokeColor="#fff" loop={true} />
 );
 
 export const Facebook = () => (
 	<UseAnimations
 		animation={facebook}
-		size={26}
+		size={30}
 		strokeColor="#fff"
-		autoplay={true}
 		loop={true}
 	/>
 );
 
 export const Twitter = () => (
-	<UseAnimations
-		animation={twitter}
-		size={26}
-		strokeColor="#fff"
-		autoplay={true}
-		loop={true}
-	/>
+	<UseAnimations animation={twitter} size={30} strokeColor="#fff" loop={true} />
 );
 
 export const Linkedin = () => (
 	<UseAnimations
 		animation={linkedin}
-		size={26}
+		size={30}
 		strokeColor="#fff"
 		autoplay={true}
 		loop={true}
@@ -44,7 +37,7 @@ export const Linkedin = () => (
 export const Instagram = () => (
 	<UseAnimations
 		animation={instagram}
-		size={26}
+		size={30}
 		strokeColor="#fff"
 		autoplay={true}
 		loop={true}
@@ -54,7 +47,7 @@ export const Instagram = () => (
 export const Youtube = () => (
 	<UseAnimations
 		animation={youtube}
-		size={26}
+		size={30}
 		strokeColor="#fff"
 		autoplay={true}
 		loop={true}

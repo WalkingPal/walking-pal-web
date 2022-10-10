@@ -1,11 +1,7 @@
 import { Box, Link, Stack, Typography } from "@mui/material";
-import { FacebookOutlined } from "@mui/icons-material";
-import { Box, Divider, Link, Stack, Typography } from "@mui/material";
 import { Accent } from "components/Accent";
 import { LogoWordmark } from "components/LogoWordmark";
 import { FC } from "react";
-import { footerLinks } from "./footer-links";
-import styles from "./footer.module.scss";
 import {
 	Github,
 	Facebook,
@@ -14,7 +10,7 @@ import {
 	Instagram,
 	Youtube,
 } from "./Icons";
-import { LinkContainer } from "./LinkContainer";
+import { Discord } from "assets/svg";
 
 const socials = [
 	{
