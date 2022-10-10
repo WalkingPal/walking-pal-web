@@ -1,0 +1,10 @@
+.icons {
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+@media (max-width: 750px) {
+	.icons {
+		justify-content: center;
+	}
+}

@@ -2,6 +2,7 @@ import { Box, Link, Stack, Typography } from "@mui/material";
 import { Accent } from "components/Accent";
 import { LogoWordmark } from "components/LogoWordmark";
 import { FC } from "react";
+import styles from "./footer.module.scss";
 import {
 	Github,
 	Facebook,
@@ -92,10 +93,10 @@ export const Footer: FC = ({}) => {
 				<Box display="grid" alignItems="center" justifyContent="center" gap={3}>
 					<LogoWordmark size={100} />
 					<Box
+						className={styles.icons}
 						display="flex"
 						gap={3}
 						alignItems="center"
-						justifyContent="center"
 						sx={{ "& svg": { transform: "scale(1.3)" } }}
 					>
 						{socials.map((social, i) => {
