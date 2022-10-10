@@ -65,7 +65,13 @@ export const EasySteps: FC = () => {
 	return (
 		<Box className={styles.easysteps}>
 			<Box display="flex" justifyContent="center">
-				<Typography variant="h4" textAlign="center" py={5} maxWidth={500}>
+				<Typography
+					variant="h4"
+					component="h2"
+					textAlign="center"
+					py={5}
+					maxWidth={500}
+				>
 					Get your walking buddy in four easy steps
 				</Typography>
 			</Box>
@@ -79,6 +85,7 @@ export const EasySteps: FC = () => {
 							<Typography
 								color={color}
 								variant="h1"
+								component="span"
 								fontWeight="500"
 								fontSize={105}
 							>
@@ -87,6 +94,7 @@ export const EasySteps: FC = () => {
 							<Typography
 								color="#767676"
 								variant="subtitle1"
+								component="h3"
 								fontSize="clamp(0.7rem, 0.8rem + 1vw, 1.25rem)"
 							>
 								{txt}
