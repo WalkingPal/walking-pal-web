@@ -184,12 +184,12 @@ export const FeedbackForm: FC = ({}) => {
 				open={showSuccess}
 				severity="success"
 			/>
-			{/* <ReCAPTCHA
+			<ReCAPTCHA
 				ref={recaptchaRef}
 				size="invisible"
 				sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
 				onChange={onReCAPTCHAChange}
-			/> */}
+			/>
 		</div>
 	);
 };

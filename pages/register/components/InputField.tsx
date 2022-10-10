@@ -4,7 +4,6 @@ import {
 	InputLabel,
 	OutlinedInput,
 	InputBaseProps,
-	FormControl,
 	Select,
 	SelectChangeEvent,
 	MenuItem,
@@ -14,7 +13,7 @@ import {
 } from "@mui/material";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { FCC } from "types/IReact";
-
+import styles from "../register.module.scss";
 interface IInputField extends InputBaseProps {
 	enableFocus: boolean;
 	label: string;
@@ -33,96 +32,71 @@ export const InputField: FCC<IInputField> = ({
 		}
 	}, [inputRef]);
 
-	const [otherUniversity, setOtherUniversity] = useState("OTHER");
+	const OTHER = "Other";
+	const [otherUniversity, setOtherUniversity] = useState(OTHER);
 	const [dialogActive, setDialogActive] = useState(false);
+	const isOther = otherUniversity === OTHER;
 	return (
-		<Stack gap="8px" sx={{ p: "32px", backgroundColor: "white" }}>
-			<InputLabel
-				required
-				sx={{
-					fontSize: 30,
-					position: "static",
-					transform: "none",
-					color: "#000",
-				}}
-			>
+		<Stack gap={1} sx={{ p: 3, backgroundColor: "#fff" }}>
+			<InputLabel required sx={{ fontSize: 30, color: "#000" }}>
 				<Typography variant="h6" component="span" fontWeight="medium">
 					{label}
 				</Typography>
 			</InputLabel>
 			{label === "University" ? (
-				<FormControl fullWidth>
-					<Select
-						{...inputProps}
-						onChange={
-							inputProps.onChange as (
-								event: SelectChangeEvent<unknown>,
-								child: ReactNode,
-							) => void
-						}
-						label={undefined}
-						sx={{
-							...inputProps.sx,
-							lineHeight: "unset",
-							fontSize: 24,
-							fontWeight: 500,
-							fontFamily: "Outfit",
-							zIndex: 0,
-						}}
-					>
-						{[
-							"VSSUT",
-							"VIMSAR",
-							"IIM Sambalpur",
-							"Sambalpur University",
-							"SUIIT",
-							otherUniversity,
-						].map((univ, i) => {
-							if (univ === otherUniversity) {
-								return (
-									<MenuItem
-										value={"OTHER"}
-										key={"univ-" + i}
-										sx={{
-											color: "#767676",
-											fontSize: 24,
-											fontWeight: 500,
-											fontFamily: "Outfit",
-										}}
-										onClick={() => setDialogActive(true)}
-									>
-										{otherUniversity}
-									</MenuItem>
-								);
-							}
-
+				<Select
+					{...inputProps}
+					onChange={inputProps.onChange as any}
+					label={undefined}
+					className={styles.inputText}
+					sx={{ ...inputProps.sx, zIndex: 0 }}
+				>
+					{[
+						"VSSUT",
+						"VIMSAR",
+						"IIM Sambalpur",
+						"Sambalpur University",
+						"SUIIT",
+						otherUniversity,
+					].map((univ, i) => {
+						if (univ === otherUniversity) {
 							return (
 								<MenuItem
-									value={univ}
-									key={"univ-" + i}
+									value={OTHER}
+									key={"otheruniv-" + otherUniversity}
+									className={styles.inputText}
+									onClick={() => setDialogActive(true)}
 									sx={{
-										color: "#767676",
-										fontSize: 24,
-										fontWeight: 500,
-										fontFamily: "Outfit",
+										"&::after": {
+											content: !isOther ? '"Edit University name"' : '""',
+											position: "absolute",
+											right: 10,
+											fontSize: "1rem",
+										},
 									}}
 								>
-									{univ}
+									{otherUniversity}
 								</MenuItem>
 							);
-						})}
-					</Select>
-				</FormControl>
+						}
+
+						return (
+							<MenuItem
+								value={univ}
+								key={"univ-" + i}
+								className={styles.inputText}
+							>
+								{univ}
+							</MenuItem>
+						);
+					})}
+				</Select>
 			) : (
 				<OutlinedInput
 					{...inputProps}
 					ref={inputRef}
 					label={undefined}
-					sx={{
-						fontSize: 24,
-						fontWeight: 500,
-						fontFamily: "Outfit",
-					}}
+					className={styles.inputText}
 				/>
 			)}
 			{inputProps.children}
@@ -136,42 +110,24 @@ export const InputField: FCC<IInputField> = ({
 					backdropFilter: "blur(5px)",
 				}}
 			>
-				<Stack
-					gap="8px"
-					sx={{ width: "600px", p: "32px", backgroundColor: "white" }}
-				>
+				<Stack gap={1} sx={{ width: 600, p: 3, bgcolor: "white" }}>
 					<InputLabel
 						required
-						sx={{
-							fontSize: 30,
-							position: "static",
-							transform: "none",
-							color: "#000",
-						}}
+						sx={{ fontSize: 30, transform: "none", color: "#000" }}
 					>
 						<Typography variant="h6" component="span" fontWeight="medium">
 							Enter your University name
 						</Typography>
 					</InputLabel>
-					<FormControl fullWidth>
-						<TextField
-							onChange={e => {
-								setOtherUniversity(e.target.value.toUpperCase());
-								console.log(otherUniversity);
-							}}
-							value={otherUniversity}
-							sx={{
-								input: {
-									lineHeight: "unset",
-									fontSize: 24,
-									fontWeight: 500,
-									fontFamily: "Outfit",
-									color: "#767676",
-								},
-							}}
-							placeholder="Enter your university name"
-						/>
-					</FormControl>
+					<TextField
+						onChange={e => {
+							const newVal = e.target.value.toUpperCase().trim();
+							setOtherUniversity(() => (newVal === "" ? OTHER : newVal));
+						}}
+						value={isOther ? "" : otherUniversity}
+						className={styles.inputText}
+						placeholder="Enter your University name"
+					/>
 				</Stack>
 				<Stack
 					direction="row"
@@ -179,23 +135,8 @@ export const InputField: FCC<IInputField> = ({
 					padding="10px 16px"
 					bgcolor="#F6BF51"
 				>
-					<Button
-						onClick={() => {
-							setOtherUniversity("OTHER");
-							setDialogActive(false);
-						}}
-					>
-						CANCEL
-					</Button>
-
-					<Button
-						sx={{ color: "black" }}
-						onClick={() => {
-							setDialogActive(false);
-						}}
-					>
-						DONE
-					</Button>
+					<Button onClick={() => setDialogActive(false)}>CANCEL</Button>
+					<Button onClick={() => setDialogActive(false)}>DONE</Button>
 				</Stack>
 			</Dialog>
 		</Stack>
