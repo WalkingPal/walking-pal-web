@@ -106,6 +106,7 @@ export const Footer: FC = ({}) => {
 				<Typography
 					color="white"
 					variant="h5"
+					component="p"
 					px={3}
 					textAlign={{ xs: "center", md: "right" }}
 					flexGrow={1}

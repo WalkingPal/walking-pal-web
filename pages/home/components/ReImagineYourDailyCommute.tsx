@@ -49,7 +49,7 @@ const commuteCards: ICommuteCard[] = [
 export const ReImagineYourDailyCommute: FC = () => {
 	return (
 		<Box pt={9} px={3}>
-			<Typography variant="h3" textAlign="center" mb={5}>
+			<Typography variant="h3" component="h2" textAlign="center" mb={5}>
 				Reimagine your daily
 				<br /> <Accent>commute</Accent>
 			</Typography>
