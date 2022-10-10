@@ -1,3 +1,4 @@
+import { Box, Link, Stack, Typography } from "@mui/material";
 import { FacebookOutlined } from "@mui/icons-material";
 import { Box, Divider, Link, Stack, Typography } from "@mui/material";
 import { Accent } from "components/Accent";
@@ -46,6 +47,11 @@ const socials = [
 		icon: <Youtube />,
 		name: "Youtube",
 	},
+	{
+		link: "https://discord.com/invite/Et3aQTsW6a",
+		icon: <Discord color="#fff" />,
+		name: "Discord",
+	},
 ];
 export const Footer: FC = ({}) => {
 	return (
@@ -91,10 +97,10 @@ export const Footer: FC = ({}) => {
 					<LogoWordmark size={100} />
 					<Box
 						display="flex"
-						gap={2}
+						gap={3}
 						alignItems="center"
 						justifyContent="center"
-						style={{ transform: "scale(1.3)" }}
+						sx={{ "& svg": { transform: "scale(1.3)" } }}
 					>
 						{socials.map((social, i) => {
 							return (

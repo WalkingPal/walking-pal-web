@@ -9,13 +9,15 @@ We are happy to welcome contributions from anyone willing to add to or improve t
 - Contributors must **comment** on the "open issue" they would like to work on, and wait to be assigned by a maintainer.
 - Issues will be assigned on a **first-come, first-serve basis**.
 - Contributors may also **open their own issues** and assign themselves if they want to work on them.
-  - ##### Make sure to follow these when opening issues:
+  ***
+  - ### Make sure to follow these when opening issues:
     - Your issue title must be in the form of `ISSUE_TYPE: ISSUE_TITLE`
       - ISSUE_TYPE can be `feat` (issues for new features), `bug`(for bug), `docs` (for docs), `chore`(for miscellaneous)
       - ISSUE_TITLE must be clear and concise.
     - Make sure to give sufficient context in your issue description.
     - Wherever applicable, add reference links or screenshots.
     - If you are going to work on it yourself, mention that in the issue. You will be assigned by a maintainer.
+  ***
 - Before opening a new issue, please **check** that it hasn't already been created.
 - Pull requests will be merged after being **reviewed by a maintainer**.
 - Create a pull request from a **new branch** other than `dev`.
@@ -26,23 +28,27 @@ We are happy to welcome contributions from anyone willing to add to or improve t
 - **MAKE SURE TO OPEN A DRAFT PR AS SOON AS YOU START WORKING ON AN ISSUE AND KEEP COMMITTING TO IT SO THAT WE CAN KNOW THAT YOU ARE WORKING ON THAT PARTICULAR ISSUE** (see [Converting Existing PR to Draft PR](#converting-existing-pr-to-draft-pr))
 - Contributors have **5 days** to complete issues. If you think you will need more time, make sure to update your Draft Pull Request regularly by committing any changes you have made so far. This will help maintainers track your progress and assist you with your PRs more effectively. We want you to succeed in merging your PRs. We want to make sure that you learn open source in an effective way.
 
-- ##### Pull request review criteria:
+  ***
 
-  - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
-    - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
-    - Refer [Git Commit Guidelines](./GIT-GUIDELINES.MD) for more details
-  - Make sure you have created an issue for your PR. [Link that issue to your PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
-  - Mention your proposed changes in the PR description along with screenshots and reference links (if applicable).
-  - If you created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
-  - Your work must be **original**, written by you, not copied from other resources. Copying is not bad. But copying without properly understanding which parts of the code are needed and which are not is very bad. Make sure you avoid adding redundant code.
-  - You must **comment** on your code wherever necessary. **Avoid committing commented code**, e.g `console.log` statements, etc.
-  - For **frontend changes** kindly share screenshots and samples of your work before sending a PR.
-  - For **frontend changes**, abide by the [STYLE GUIDE](./STYLE-GUIDE.md).
-  - ⚠**IMPORTANT**⚠ After creating your PR, Vercel will try to automatically deploy your PR code. If your Vercel build fails in your PR, you need to run `yarn build` locally and address those build errors. Your PR won't be reviewed until after the build errors have been fixed. It would be considered a WIP draft PR.
+  - ### Pull request review criteria:
 
-- For any queries or discussions, see [Asking for help](#asking-for-help)
+    - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
+      - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
+      - Refer [Git Commit Guidelines](./GIT-GUIDELINES.MD) for more details
+    - Make sure you have created an issue for your PR. [Link that issue to your PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
+    - Mention your proposed changes in the PR description along with screenshots and reference links (if applicable).
+    - If you created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
+    - Your work must be **original**, written by you, not copied from other resources. Copying is not bad. But copying without properly understanding which parts of the code are needed and which are not is very bad. Make sure you avoid adding redundant code.
+    - You must **comment** on your code wherever necessary. **Avoid committing commented code**, e.g `console.log` statements, etc.
+    - For **frontend changes** kindly share screenshots and samples of your work before sending a PR.
+    - For **frontend changes**, abide by the [STYLE GUIDE](./STYLE-GUIDE.md).
+    - ⚠**IMPORTANT**⚠ After creating your PR, Vercel will try to automatically deploy your PR code. If your Vercel build fails in your PR, you need to run `yarn build` locally and address those build errors. Your PR won't be reviewed until after the build errors have been fixed. It would be considered a WIP draft PR.
 
-# Get started on your first PR👩‍💻👨‍💻
+  ***
+
+- For any queries or discussions, see [ASKING FOR HELP](#asking-for-help) section.
+
+# Get started 👩‍💻👨‍💻
 
 ## Development environment setup
 
@@ -93,8 +99,10 @@ The following tools should be installed and running on your computer:
 
 ### Additional Setup
 
-The WalkingPal app utilizes reCAPTCHA to enhance security and prevent spammers/bots from polluting our database.
-To access the `/register` and `/faq` pages on the app seamlessly, follow the required steps:
+#### #1 reCAPTCHA Setup
+
+WalkingPal webapp utilizes reCAPTCHA to enhance security and prevent spammers/bots from polluting our database.
+To access the `/register` and `/faq` pages on the webapp seamlessly, follow the required steps:
 
 1. Head to the [reCAPTCHA admin console](https://www.google.com/recaptcha/admin/create) and fill in the required details.
 
@@ -112,6 +120,49 @@ NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
 # Add the secret key here
 RECAPTCHA_SECRET_KEY=
 ```
+
+#### #2 Firebase Setup
+
+We use firebase's for backend services. e.g We use firestore Database to store our forms data).
+
+If you want to contribute on issues that need firebase services, **follow these steps below to setup you new walking-pal-web firebase project**
+
+1. Login to you google account and head on to [console.firebase.google.com](https://console.firebase.google.com/)
+2. Click on `Add Project`
+   ![Add Project](assets/firebase1.png)
+3. **Create a project (Step 1 of 3)**
+   - Enter project name: `walking-pal-web`. Click `Continue`
+4. **Create a project (Step 2 of 3)**
+   - Click `Continue`
+5. **Create a project (Step 3 of 3)**
+   - Click on `Select an account` => Click on `Default Account on Firebase`
+   - Click `Create Project`
+6. After you come to Firebase "Console" Page, now its time to generate the Firebase Service Account key.
+   - Click on "Gear Icon" on the left hand side panel.
+   - Click on `Project Settings`
+   - Click on `Service Accounts`
+   - Click on `Generate new private key`
+   - Finally, click on `Generate key`. This will download a JSON file. Save that JSON file. Do not share it with anyone.
+     ![Firebase Service Account key generation step 1](assets/firebase2-key-gen.png)
+     ![Firestore Service Account key generation step 2](assets/firebase2-key-gen-s2.png)
+7. Now we need to create a `FIREBASE_SERVICE_ACCOUNT_KEY` environment variable using that downloaded service account key JSON file. For that first we need to remove line breaks in the JSON file.
+   - Go to [textfixer.com](https://www.textfixer.com/tools/remove-line-breaks.php) and paste the content of the JSON file.
+     - Do NOT remove the `\n` characters from the `private_key` fields or the key won't be valid afterwards.
+   - Copy your newly generated text. That new text is without line breaks.
+   - Create a `.env.local` file in the project root directory.
+   - In the `.env.local` file, paste the copied text in `FIREBASE_SERVICE_ACCOUNT_KEY` key
+     ```sh
+     # .env.local
+     FIREBASE_SERVICE_ACCOUNT_KEY='Put your copied JSON file content text without line breaks here'
+     ```
+     That's all! We have setup firebase with our NEXTjs project.
+8. Now **let's setup Firestore** too. On the left-hand side panel, click `Build`. Then click on `Firestore Database`.
+   ![Firestore step 1](assets/firestore1.png)
+9. Now Click on `Create database`
+   ![Firestore step 2](assets/firestore2.png)
+10. Click on `Next`
+    ![Firestore step 3](assets/firestore3.png)
+11. Then, Click on `Enable`. All done! We have Enabled Firestore database.
 
 ## Run Next.js development server
 

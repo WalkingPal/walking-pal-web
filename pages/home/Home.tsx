@@ -9,11 +9,12 @@ import { Features } from "pages/home/components/Features";
 import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
 import CommunityForm from "pages/home/components/JoinTheCommunityForm";
-import { ReImagineYourDailyCommute } from "pages/home/components/ReImagineYourDailyCommute";
-import { RibbonsSection } from "pages/home/components/Ribbons";
+import { ReImagineCommute } from "pages/home/components/ReImagineCommute";
+import { RibbonsSection } from "pages/home/components/RibbonsSection";
 import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
+import { ScrollToTop } from "components/ScrollToTop";
 
 export const Home: NextPage = () => {
 	const { width } = useWindowSize();
@@ -72,8 +73,9 @@ export const Home: NextPage = () => {
 					<EasySteps />
 					<EasyStepsFooter />
 				</Box>
-				<ReImagineYourDailyCommute />
+				<ReImagineCommute />
 				{/* <CommunityForm /> */}
+				<ScrollToTop />
 			</main>
 		</div>
 	);

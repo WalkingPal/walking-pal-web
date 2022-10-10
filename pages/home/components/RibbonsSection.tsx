@@ -1,7 +1,7 @@
 import { Box, Paper } from "@mui/material";
 import { useWindowSize } from "hooks/useWindowResize";
 import { getRibbonDecoration } from "pages/home/components/RibbonDecoration";
-import { FC, ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 
 const RIBBON_HEIGHT = 80;
 const ribbons = [
@@ -10,7 +10,7 @@ const ribbons = [
 	{ label: "Walk", color: "#8DD8D7" },
 	{ label: "Repeat", color: "#FFE3E3" },
 ];
-export const RibbonsSection: FC = () => {
+export const RibbonsSection: FC = React.memo(() => {
 	const { width } = useWindowSize();
 	if (!width) return null;
 
@@ -49,7 +49,8 @@ export const RibbonsSection: FC = () => {
 			})}
 		</Box>
 	);
-};
+});
+RibbonsSection.displayName = "RibbonsSection";
 
 interface IRibbon {
 	color: string;

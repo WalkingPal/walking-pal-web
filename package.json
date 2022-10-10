@@ -1,5 +1,5 @@
 {
-	"name": "walkingpal-web",
+	"name": "walking-pal-web",
 	"version": "0.1.0",
 	"private": true,
 	"license": "MIT",
@@ -21,6 +21,7 @@
 		"axios": "^0.27.2",
 		"firebase": "^9.9.2",
 		"firebase-admin": "^11.0.1",
+		"framer-motion": "^7.5.3",
 		"lodash": "^4.17.21",
 		"next": "^12.2.4",
 		"react": "^18.2.0",

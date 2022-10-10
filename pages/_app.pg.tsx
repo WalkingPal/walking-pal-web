@@ -7,6 +7,7 @@ import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { useRouter } from "next/router";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { PageTransition } from "components/PageTransition";
 
 function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -32,7 +33,9 @@ function App({ Component, pageProps }: AppProps) {
 					{showHeaderCompo.current && (
 						<Header allowPadding={allowPadding.current} />
 					)}
-					<Component {...pageProps} />
+					<PageTransition>
+						<Component {...pageProps} />
+					</PageTransition>
 					{showFooterCompo.current && <Footer />}
 				</WPThemeProvider>
 			</ParallaxProvider>
