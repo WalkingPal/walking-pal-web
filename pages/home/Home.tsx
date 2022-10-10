@@ -9,7 +9,7 @@ import { Features } from "pages/home/components/Features";
 import { Hero } from "pages/home/components/Hero";
 import { Intro } from "pages/home/components/Intro";
 import CommunityForm from "pages/home/components/JoinTheCommunityForm";
-import { ReImagineYourDailyCommute } from "pages/home/components/ReImagineYourDailyCommute";
+import { ReImagineCommute } from "pages/home/components/ReImagineCommute";
 import { RibbonsSection } from "pages/home/components/RibbonsSection";
 import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
@@ -73,7 +73,7 @@ export const Home: NextPage = () => {
 					<EasySteps />
 					<EasyStepsFooter />
 				</Box>
-				<ReImagineYourDailyCommute />
+				<ReImagineCommute />
 				{/* <CommunityForm /> */}
 				<ScrollToTop />
 			</main>
