@@ -49,6 +49,7 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 
 			<Typography
 				variant="body1"
+				component="span"
 				sx={{ width: { xs: "80%", md: "60%" }, maxWidth: 500 }}
 				textAlign="justify"
 			>
@@ -61,7 +62,7 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 export const OurStory: FC = () => {
 	return (
 		<div className={styles.ourstory}>
-			<Typography variant="h2">
+			<Typography variant="h2" component="h2">
 				Our <Accent>Story</Accent>
 			</Typography>
 
