@@ -36,4 +36,6 @@ export const Youtube = () => (
 	<UseAnimations animation={youtube} {...commonIconStyles} />
 );
 
-export const Discord = () => <DiscordSVG {...commonIconStyles} />;
+export const Discord = () => (
+	<DiscordSVG color={commonIconStyles.strokeColor} />
+);
