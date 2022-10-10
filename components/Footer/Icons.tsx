@@ -7,33 +7,33 @@ import instagram from "react-useanimations/lib/instagram";
 import youtube from "react-useanimations/lib/youtube";
 import { Discord as DiscordSVG } from "assets/svg";
 
-const styles = {
+const commonIconStyles = {
 	size: 30,
 	strokeColor: "#fff",
 };
 
 export const Github = () => (
-	<UseAnimations animation={github} {...styles} loop={true} />
+	<UseAnimations animation={github} {...commonIconStyles} />
 );
 
 export const Facebook = () => (
-	<UseAnimations animation={facebook} {...styles} loop={true} />
+	<UseAnimations animation={facebook} {...commonIconStyles} />
 );
 
 export const Twitter = () => (
-	<UseAnimations animation={twitter} {...styles} loop={true} />
+	<UseAnimations animation={twitter} {...commonIconStyles} />
 );
 
 export const Linkedin = () => (
-	<UseAnimations animation={linkedin} {...styles} loop={true} />
+	<UseAnimations animation={linkedin} {...commonIconStyles} />
 );
 
 export const Instagram = () => (
-	<UseAnimations animation={instagram} {...styles} loop={true} />
+	<UseAnimations animation={instagram} {...commonIconStyles} />
 );
 
 export const Youtube = () => (
-	<UseAnimations animation={youtube} {...styles} loop={true} />
+	<UseAnimations animation={youtube} {...commonIconStyles} />
 );
 
-export const Discord = () => <DiscordSVG {...styles} />;
+export const Discord = () => <DiscordSVG {...commonIconStyles} />;
