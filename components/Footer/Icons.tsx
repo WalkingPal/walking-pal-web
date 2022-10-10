@@ -1,10 +1,15 @@
 import UseAnimations from "react-useanimations";
-import { motion } from "framer-motion";
+import github from "react-useanimations/lib/github";
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
 import linkedin from "react-useanimations/lib/linkedin";
 import instagram from "react-useanimations/lib/instagram";
 import youtube from "react-useanimations/lib/youtube";
+import JSONAnimation from "../Footer/assets/github/github.json";
+
+export const Github = () => (
+	<UseAnimations animation={github} size={26} strokeColor="#fff" loop={true} />
+);
 
 export const Facebook = () => (
 	<UseAnimations

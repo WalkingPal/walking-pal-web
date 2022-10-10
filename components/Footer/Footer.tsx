@@ -5,10 +5,22 @@ import { LogoWordmark } from "components/LogoWordmark";
 import { FC } from "react";
 import { footerLinks } from "./footer-links";
 import styles from "./footer.module.scss";
-import { Facebook, Twitter, Linkedin, Instagram, Youtube } from "./Icons";
+import {
+	Github,
+	Facebook,
+	Twitter,
+	Linkedin,
+	Instagram,
+	Youtube,
+} from "./Icons";
 import { LinkContainer } from "./LinkContainer";
 
 const socials = [
+	{
+		link: "https://github.com/WalkingPal/walking-pal-web",
+		icon: <Github />,
+		name: "Github",
+	},
 	{
 		link: "https://www.facebook.com/walkingpal.in",
 		icon: <Facebook />,
