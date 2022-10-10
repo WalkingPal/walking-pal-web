@@ -1,9 +1,10 @@
-import { Button, Link, Stack, Typography } from "@mui/material";
-import { Insta } from "assets/svg";
+import { Button, Stack, Typography } from "@mui/material";
+import { Instagram } from "@mui/icons-material";
 import { Accent } from "components/Accent";
 import { useWindowSize } from "hooks/useWindowResize";
 import React, { FC } from "react";
 import ReactConfetti from "react-confetti";
+import styles from "../register.module.scss";
 
 export const SubmittedAck: FC = () => {
 	const { width, scrollHeight } = useWindowSize();
@@ -37,39 +38,16 @@ export const SubmittedAck: FC = () => {
 						your mail soon. Untill then happy walking!😊
 					</Typography>
 				</Stack>
-				<Stack
-					direction="row"
-					justifyContent="flex-end"
-					padding="10px 16px"
-					bgcolor="#F6BF51"
-				>
-					<Link
+				<Stack bgcolor="secondary.main">
+					<Button
+						sx={{ gap: 0.3, fontSize: 24 }}
+						className={styles.formButton}
+						role="link"
 						href="https://www.instagram.com/walkingpal.in/"
-						target="_blank"
-						underline="none"
 					>
-						<Button
-							style={{
-								display: "flex",
-								alignItems: "center",
-								justifyContent: "center",
-								gap: 10,
-							}}
-						>
-							<Typography>TAKE ME TO</Typography>
-							<div
-								style={{
-									transform: "scale(1.3)",
-									display: "flex",
-									alignItems: "center",
-									justifyContent: "center",
-								}}
-							>
-								<Insta color="#fff" />
-							</div>
-							<Typography>INSTAGRAM</Typography>
-						</Button>
-					</Link>
+						TAKE ME TO INSTAGRAM
+						<Instagram fontSize="large" />
+					</Button>
 				</Stack>
 			</Stack>
 		</>

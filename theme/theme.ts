@@ -25,7 +25,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				main: "#FF5959",
 			},
 			secondary: {
-				main: "#F4CC3B",
+				main: "#F6BF51",
 			},
 			text: {
 				primary: "#210B0B",
@@ -187,16 +187,12 @@ export function getThemedComponents(theme: Theme): {
 			},
 			MuiButton: {
 				defaultProps: {
-					disableRipple: true,
 					disableElevation: true,
 				},
 				styleOverrides: {
 					root: ({ ownerState }) => ({
-						...(ownerState.variant === "text" && {
-							"&:hover": { backgroundColor: "initial" },
-						}),
-						...(ownerState.disabled && { color: "gray" }),
 						padding: "12px 40px",
+						...(ownerState.disabled && { color: "gray" }),
 					}),
 				},
 			},

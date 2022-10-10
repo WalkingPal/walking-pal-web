@@ -3,6 +3,7 @@ import { Stack, Button, Typography } from "@mui/material";
 import { Send } from "@mui/icons-material";
 import { LoadingButton } from "@mui/lab";
 import ReCAPTCHA from "react-google-recaptcha";
+import styles from "../register.module.scss";
 
 interface IFormActions {
 	totalSteps: number;
@@ -46,11 +47,14 @@ export const FormActions: FC<IFormActions> = ({
 			<Stack
 				direction="row"
 				justifyContent="space-between"
-				padding="10px 16px"
-				bgcolor="#F6BF51"
+				bgcolor="secondary.main"
 			>
-				<Button disabled={stepsCompleted === 0} onClick={goToPrevious}>
-					<Typography textTransform="uppercase">previous</Typography>
+				<Button
+					disabled={stepsCompleted === 0}
+					onClick={goToPrevious}
+					className={styles.formButton}
+				>
+					PREVIOUS
 				</Button>
 				{stepsCompleted === totalSteps ? (
 					<LoadingButton
@@ -65,8 +69,11 @@ export const FormActions: FC<IFormActions> = ({
 						SUBMIT
 					</LoadingButton>
 				) : (
-					<Button onClick={() => (isError() ? setShowErr(true) : goToNext())}>
-						<Typography>NEXT</Typography>
+					<Button
+						onClick={() => (isError() ? setShowErr(true) : goToNext())}
+						className={styles.formButton}
+					>
+						NEXT
 					</Button>
 				)}
 			</Stack>
