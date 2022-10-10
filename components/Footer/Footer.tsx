@@ -1,49 +1,59 @@
 import { Box, Link, Stack, Typography } from "@mui/material";
-import { FacebookOutlined } from "@mui/icons-material";
-import { Insta, Linkedin, Twitter, YouTube, Discord } from "assets/svg";
 import { Accent } from "components/Accent";
 import { LogoWordmark } from "components/LogoWordmark";
 import { FC } from "react";
-import { footerLinks } from "./footer-links";
-import styles from "./footer.module.scss";
-import { LinkContainer } from "./LinkContainer";
+import {
+	Github,
+	Facebook,
+	Twitter,
+	Linkedin,
+	Instagram,
+	Youtube,
+	Discord,
+} from "./Icons";
 
 const socials = [
 	{
-		link: "https://www.facebook.com/walkingpal.in",
-		icon: <FacebookOutlined sx={{ color: "#fff" }} />,
-		name: "Facebook",
-	},
-	{
-		link: "https://twitter.com/WalkingPal_in",
-		icon: <Twitter color="#fff" />,
-		name: "Twitter",
-	},
-	{
-		link: "https://www.linkedin.com/company/walkingpal/",
-		icon: <Linkedin color="#fff" />,
-		name: "Linkedin",
-	},
-	{
 		link: "https://www.instagram.com/walkingpal.in/",
-		icon: <Insta color="#fff" />,
+		icon: <Instagram />,
 		name: "Instagram",
 	},
 	{
+		link: "https://www.linkedin.com/company/walkingpal/",
+		icon: <Linkedin />,
+		name: "Linkedin",
+	},
+	{
+		link: "https://twitter.com/WalkingPal_in",
+		icon: <Twitter />,
+		name: "Twitter",
+	},
+	{
 		link: "https://youtu.be/L73A9fyyQqw",
-		icon: <YouTube color="#fff" />,
+		icon: <Youtube />,
 		name: "Youtube",
 	},
 	{
+		link: "https://github.com/WalkingPal/walking-pal-web",
+		icon: <Github />,
+		name: "Github",
+	},
+	{
 		link: "https://discord.com/invite/Et3aQTsW6a",
-		icon: <Discord color="#fff" />,
+		icon: <Discord />,
 		name: "Discord",
+	},
+
+	{
+		link: "https://www.facebook.com/walkingpal.in",
+		icon: <Facebook />,
+		name: "Facebook",
 	},
 ];
 export const Footer: FC = ({}) => {
 	return (
 		<Stack
-			gap="24px"
+			gap={2}
 			padding="120px 24px 100px"
 			bgcolor="#000000"
 			alignItems="center"
@@ -51,9 +61,9 @@ export const Footer: FC = ({}) => {
 		>
 			{/* <Stack
         gap={{
-          xs: '24px',
-          sm: '48px',
-          md: '72px'
+          xs: 2,
+          sm: 5,
+          md: 7
         }}
         direction='row'
         flexWrap='wrap'
@@ -77,16 +87,16 @@ export const Footer: FC = ({}) => {
 				justifyContent="space-between"
 				alignItems="center"
 				width="100%"
-				padding={{ xs: "24px", md: "90px" }}
-				gap="30px"
+				padding={{ xs: 2, md: 9 }}
+				gap={3}
 			>
 				<Box display="grid" alignItems="center" justifyContent="center" gap={3}>
 					<LogoWordmark size={100} />
 					<Box
 						display="flex"
-						gap={3}
+						gap={1}
 						alignItems="center"
-						justifyContent="center"
+						justifyContent="space-around"
 						sx={{ "& svg": { transform: "scale(1.3)" } }}
 					>
 						{socials.map((social, i) => {
