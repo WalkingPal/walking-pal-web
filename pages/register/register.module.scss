@@ -20,8 +20,8 @@
 }
 
 .formButton {
-	padding: 20px 50px;
-	border-radius: 0;
+	padding: 20px 50px !important;
+	border-radius: 0 !important;
 	&:disabled {
 		opacity: 0;
 	}
