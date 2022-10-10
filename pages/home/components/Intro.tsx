@@ -44,7 +44,7 @@ export const Intro: FC = ({}) => {
 					}}
 					className={ss.screens1}
 				>
-					<Typography variant="h6" p={5} textAlign="center">
+					<Typography variant="h6" component="span" p={5} textAlign="center">
 						This app will change the way you commute.
 					</Typography>
 					<Image
@@ -76,7 +76,9 @@ export const Intro: FC = ({}) => {
 				>
 					<Image src={group} style={{ width: "100%" }} alt="" />
 					<Box sx={{ padding: 3, textAlign: "center" }}>
-						<Typography variant="h6">Create Groups</Typography>
+						<Typography variant="h6" component="span">
+							Create Groups
+						</Typography>
 						<Typography variant="body1">
 							Go solo or create a walking group on the go. Anytime, anywhere!
 						</Typography>
