@@ -13,16 +13,16 @@ import { FC, MouseEvent, useState } from "react";
 export const links = [
 	{ name: "home", pageroute: "/" },
 	{ name: "about", pageroute: "/about" },
-	{
-		name: "company",
-		pageroute: "/company",
-		subroutes: [
-			{ name: "social impact", subroute: "#social" },
-			{ name: "our team", subroute: "#team" },
-			{ name: "careers", subroute: "#career" },
-			{ name: "contact", subroute: "#contact" },
-		],
-	},
+	// {
+	// 	name: "company",
+	// 	pageroute: "/company",
+	// 	subroutes: [
+	// 		{ name: "social impact", subroute: "#social" },
+	// 		{ name: "our team", subroute: "#team" },
+	// 		{ name: "careers", subroute: "#career" },
+	// 		{ name: "contact", subroute: "#contact" },
+	// 	],
+	// },
 ];
 
 interface IList1 {
