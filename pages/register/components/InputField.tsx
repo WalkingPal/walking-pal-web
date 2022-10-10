@@ -5,15 +5,16 @@ import {
 	OutlinedInput,
 	InputBaseProps,
 	Select,
-	SelectChangeEvent,
 	MenuItem,
 	TextField,
 	Button,
 	Dialog,
 } from "@mui/material";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FCC } from "types/IReact";
+import { firstLetterCaps } from "utils/db/textTransform";
 import styles from "../register.module.scss";
+
 interface IInputField extends InputBaseProps {
 	enableFocus: boolean;
 	label: string;
@@ -62,7 +63,7 @@ export const InputField: FCC<IInputField> = ({
 						if (univ === otherUniversity) {
 							return (
 								<MenuItem
-									value={OTHER}
+									value={otherUniversity}
 									key={"otheruniv-" + otherUniversity}
 									className={styles.inputText}
 									onClick={() => setDialogActive(true)}
@@ -101,43 +102,35 @@ export const InputField: FCC<IInputField> = ({
 			)}
 			{inputProps.children}
 
-			<Dialog
-				open={dialogActive}
-				sx={{
-					overflow: "visible",
-					width: "100vw",
-					margin: "auto",
-					backdropFilter: "blur(5px)",
-				}}
-			>
+			<Dialog open={dialogActive} sx={{ backdropFilter: "blur(5px)" }}>
 				<Stack gap={1} sx={{ width: 600, p: 3, bgcolor: "white" }}>
-					<InputLabel
-						required
-						sx={{ fontSize: 30, transform: "none", color: "#000" }}
-					>
+					<InputLabel sx={{ fontSize: 30, transform: "none", color: "#000" }}>
 						<Typography variant="h6" component="span" fontWeight="medium">
 							Enter your University name
 						</Typography>
 					</InputLabel>
 					<TextField
 						onChange={e => {
-							const newVal = e.target.value.toUpperCase().trim();
-							setOtherUniversity(() => (newVal === "" ? OTHER : newVal));
+							const inputVal = firstLetterCaps(e.target.value.trim());
+							const newVal = inputVal === "" ? OTHER : inputVal;
+							e.target.value = newVal;
+							inputProps.onChange && inputProps.onChange(e);
+							setOtherUniversity(newVal);
 						}}
+						name={inputProps.name}
 						value={isOther ? "" : otherUniversity}
 						className={styles.inputText}
 						placeholder="Enter your University name"
 					/>
 				</Stack>
-				<Stack
-					direction="row"
-					justifyContent="space-between"
-					padding="10px 16px"
-					bgcolor="#F6BF51"
+
+				<Button
+					onClick={() => setDialogActive(false)}
+					variant="contained"
+					className={styles.formButton}
 				>
-					<Button onClick={() => setDialogActive(false)}>CANCEL</Button>
-					<Button onClick={() => setDialogActive(false)}>DONE</Button>
-				</Stack>
+					DONE
+				</Button>
 			</Dialog>
 		</Stack>
 	);
