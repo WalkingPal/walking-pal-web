@@ -1,4 +1,9 @@
-main {
+.main {
+	padding: 4vw;
+	display: grid;
+	justify-content: center;
+	align-content: flex-start;
+	overflow: hidden;
 	.data {
 		align-items: center;
 		margin-bottom: 80px;

@@ -23,15 +23,13 @@ export const ScrollToTop: FC = () => {
 				<Fab
 					sx={{
 						position: "fixed",
+						color: "#fff",
 						bottom: 24,
 						right: 24,
 						zIndex: 999999,
-						backgroundColor: "primary.main",
+						bgcolor: "primary.main",
 						transition: "500ms cubic-bezier(0.4, 0, 0.2, 1) !important",
-						"&:hover": {
-							transform: `scale(1.2)`,
-							backgroundColor: `primary.main`,
-						},
+						"&:hover": { transform: `scale(1.2)`, bgcolor: `primary.main` },
 					}}
 					size="medium"
 					onClick={handleClick}

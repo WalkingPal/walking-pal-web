@@ -20,7 +20,7 @@ export const Error404: NextPage = () => {
 				/>
 			</Head>
 
-			<main className={styles.main}>
+			<div className={styles.main}>
 				<div className={styles.left}>
 					<Image src={Error} alt="" />
 				</div>
@@ -34,7 +34,7 @@ export const Error404: NextPage = () => {
 						<br /> Meanwhile, please head back.
 					</Typography>
 				</Box>
-			</main>
+			</div>
 		</>
 	);
 };

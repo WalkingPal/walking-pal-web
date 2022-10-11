@@ -1,4 +1,4 @@
-main {
+.main {
 	.gallery {
 		padding: 4vw;
 		display: grid;
@@ -39,7 +39,7 @@ main {
 }
 
 @media (max-width: 750px) {
-	main {
+	.main {
 		.gallery {
 			grid-template-columns: 1fr 1.5fr;
 			grid-template-areas:
