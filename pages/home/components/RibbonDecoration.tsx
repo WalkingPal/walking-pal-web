@@ -34,7 +34,7 @@ const getMemoji = (key: string) => {
 			src={memojis[index].src}
 			sx={{ width: "70px", height: "70px" }}
 			key={"deco" + key}
-			alt=""
+			alt="WalkingPal memoji avatar"
 		/>
 	);
 };
