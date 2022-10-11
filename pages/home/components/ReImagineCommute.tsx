@@ -2,7 +2,6 @@ import { Box, Paper, Stack, Typography } from "@mui/material";
 import { bagpack, footstep2, promotion, shopping } from "assets/png";
 import { Green, Vehicle, Walk } from "assets/svg";
 import { Accent } from "components/Accent";
-import { Image } from "components/Image";
 import { FC } from "react";
 
 const commuteCards = [
@@ -32,7 +31,7 @@ const commuteCards = [
 	},
 	{
 		id: 3,
-		text: "Or just a",
+		text: "Or just a ",
 		highlight: "walk!",
 		img: footstep2.src,
 		bgcolor: "#FF8282",
@@ -125,7 +124,7 @@ export const CommuteCard: FC<{ cc: typeof commuteCards[0] }> = ({ cc }) => {
 		>
 			<Stack padding="14px" bgcolor={cc.bgcolor} width="100%">
 				<Stack
-					sx={{ height: "112px", backgroundColor: "#FFFFFF" }}
+					sx={{ height: 112, backgroundColor: "#FFF" }}
 					justifyContent="center"
 					alignItems="center"
 					borderRadius="20px 20px 0 0"

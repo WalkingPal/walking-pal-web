@@ -1,4 +1,5 @@
-main {
+.main {
+	margin-bottom: 80px;
 	.intro {
 		max-width: 1350px;
 		margin: 5rem auto;
@@ -108,7 +109,7 @@ main {
 }
 
 @media (max-width: 1200px) {
-	main {
+	.main {
 		.intro {
 			grid-template-areas:
 				". a"
@@ -140,7 +141,7 @@ main {
 }
 
 @media (max-width: 750px) {
-	main {
+	.main {
 		.intro {
 			grid-template-areas:
 				"a"
@@ -164,7 +165,7 @@ main {
 }
 
 @media (max-width: 600px) {
-	main {
+	.main {
 		.easysteps {
 			.content {
 				grid-template-columns: 1fr;

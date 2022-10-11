@@ -150,7 +150,7 @@ export const FeedbackForm: FC = ({}) => {
 						/>
 					</Box>
 					<TextField
-						style={{ height: "100%", flex: 1, minWidth: 280 }}
+						sx={{ height: "100%", flex: 1, minWidth: 280 }}
 						name="message"
 						label="Message"
 						onChange={updateFormData}

@@ -8,7 +8,7 @@ interface ILogoWordmark extends BoxProps {
 }
 
 export const LogoWordmark: FC<ILogoWordmark> = ({ size, dark, ...props }) => {
-	const fill = dark ? "#767676" : "#FFFCFC";
+	const textColor = dark ? "#767676" : "#FFFCFC";
 	const scale = size / 100;
 	const width = 311;
 	const height = 73;
@@ -24,7 +24,7 @@ export const LogoWordmark: FC<ILogoWordmark> = ({ size, dark, ...props }) => {
 				}}
 			>
 				<Logo style={{ width: 50, marginRight: 10 }} />
-				<Wordmark color={fill} />
+				<Wordmark color={textColor} />
 			</span>
 		</Box>
 	);

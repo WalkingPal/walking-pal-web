@@ -4,7 +4,7 @@ import { FAQsection } from "pages/faq/components/FAQsection";
 import { Hero } from "pages/faq/components/Hero";
 import { FeedbackForm } from "components/FeedbackForm";
 import { ScrollToTop } from "components/ScrollToTop";
-
+import styles from "./faq.module.scss";
 const generalFAQs = [
 	{
 		faq: "Is WalkingPal free?",
@@ -91,13 +91,13 @@ export const FAQ: NextPage = () => {
 				/>
 			</Head>
 
-			<main style={{ marginBottom: 80 }}>
+			<div className={styles.main}>
 				<Hero />
 				<FAQsection title="General" faqs={generalFAQs} isOpen />
 				<FAQsection title="Trust and Safety" faqs={TrustnSafetyFAQs} />
 				<FeedbackForm />
 				<ScrollToTop />
-			</main>
+			</div>
 		</>
 	);
 };

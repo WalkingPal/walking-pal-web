@@ -19,7 +19,7 @@ const steps = [
 			</>
 		),
 		altText: "WalkingPal app home screen",
-		color: "#FF5959",
+		color: "primary.main",
 	},
 	{
 		imgSrc: step2,
@@ -47,7 +47,7 @@ const steps = [
 			</>
 		),
 		altText: "Magic red button on WalkingPal app screen",
-		color: "#F6BF51",
+		color: "secondary.main",
 	},
 	{
 		imgSrc: step4,
@@ -61,7 +61,7 @@ const steps = [
 			</>
 		),
 		altText: "Browse & send request screen on WalkingPal app",
-		color: "#FF5959",
+		color: "primary.main",
 	},
 ];
 
@@ -96,7 +96,7 @@ export const EasySteps: FC = () => {
 								{i + 1}
 							</Typography>
 							<Typography
-								color="#767676"
+								color="text.secondary"
 								variant="subtitle1"
 								component="h3"
 								fontSize="clamp(0.7rem, 0.8rem + 1vw, 1.25rem)"

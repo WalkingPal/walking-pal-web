@@ -1,4 +1,4 @@
-import { alpha, Paper, useMediaQuery } from "@mui/material";
+import { alpha, Box, Paper, useMediaQuery } from "@mui/material";
 import { FC, useEffect, useRef } from "react";
 import styles from "./header.module.scss";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
@@ -46,11 +46,7 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 					)}
 				</Paper>
 			</header>
-			<div
-				style={{
-					height: allowPadding ? "calc(var(--header-height) + 5px)" : 0,
-				}}
-			/>
+			<Box height={allowPadding ? "calc(var(--header-height) + 5px)" : 0} />
 		</>
 	);
 };
