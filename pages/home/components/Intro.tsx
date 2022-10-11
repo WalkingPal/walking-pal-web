@@ -92,7 +92,7 @@ export const Intro: FC = ({}) => {
 					<Image
 						src={group}
 						style={{ width: "100%" }}
-						alt="A group of people avatar for a walking group with WalkingPal app"
+						alt="Create walking buddy groups in WalkingPal app"
 					/>
 					<Box sx={{ padding: 3, textAlign: "center" }}>
 						<Typography variant="h6" component="span">
