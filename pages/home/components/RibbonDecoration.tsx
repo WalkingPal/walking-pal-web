@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 const getTag = (key: string) => (
 	<Typography
 		variant="subtitle1"
+		component="span"
 		color="#fff"
 		bgcolor="#000"
 		p="10px 25px"
@@ -16,7 +17,13 @@ const getTag = (key: string) => (
 	</Typography>
 );
 const getLabel = (key: string, label: string) => (
-	<Typography variant="h5" width="100px" textAlign="center" key={"deco" + key}>
+	<Typography
+		variant="h5"
+		component="span"
+		width="100px"
+		textAlign="center"
+		key={"deco" + key}
+	>
 		{label}
 	</Typography>
 );
@@ -27,6 +34,7 @@ const getMemoji = (key: string) => {
 			src={memojis[index].src}
 			sx={{ width: "70px", height: "70px" }}
 			key={"deco" + key}
+			alt="WalkingPal memoji avatar"
 		/>
 	);
 };

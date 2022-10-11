@@ -30,9 +30,24 @@ export const Intro: FC = ({}) => {
 	});
 	return (
 		<div className={ss.intro}>
-			<Image className={ss.mockup} src={mockup} alt="" ref={anim1.ref} />
-			<Image className={ss.credit} src={credit} alt="" ref={anim2.ref} />
-			<Image className={ss.screens2} src={screens2} alt="" ref={anim3.ref} />
+			<Image
+				className={ss.mockup}
+				src={mockup}
+				alt="iPhone screen displaying WalkingPal app"
+				ref={anim1.ref}
+			/>
+			<Image
+				className={ss.credit}
+				src={credit}
+				alt="100% free to get a working buddy with WalkingPal"
+				ref={anim2.ref}
+			/>
+			<Image
+				className={ss.screens2}
+				src={screens2}
+				alt="WalkingPal app in mobile phones"
+				ref={anim3.ref}
+			/>
 			<span className={ss.screens1} ref={anim4.ref}>
 				<Paper
 					sx={{
@@ -44,21 +59,21 @@ export const Intro: FC = ({}) => {
 					}}
 					className={ss.screens1}
 				>
-					<Typography variant="h6" p={5} textAlign="center">
+					<Typography variant="h6" component="span" p={5} textAlign="center">
 						This app will change the way you commute.
 					</Typography>
 					<Image
 						src={screens1}
 						style={{ width: "100%" }}
 						wrapstyle={{ display: "flex" }}
-						alt=""
+						alt="Different screens of WalkingPal app"
 					/>
 				</Paper>
 			</span>
 			<Image
 				className={ss.walker}
 				src={walker}
-				alt=""
+				alt="A man with WalkingPal app walking beside a van"
 				wrapstyle={{ maxWidth: 684 }}
 				ref={anim5.ref}
 			/>
@@ -74,9 +89,15 @@ export const Intro: FC = ({}) => {
 						height: "100%",
 					}}
 				>
-					<Image src={group} style={{ width: "100%" }} alt="" />
+					<Image
+						src={group}
+						style={{ width: "100%" }}
+						alt="Create walking buddy groups in WalkingPal app"
+					/>
 					<Box sx={{ padding: 3, textAlign: "center" }}>
-						<Typography variant="h6">Create Groups</Typography>
+						<Typography variant="h6" component="span">
+							Create Groups
+						</Typography>
 						<Typography variant="body1">
 							Go solo or create a walking group on the go. Anytime, anywhere!
 						</Typography>
