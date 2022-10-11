@@ -20,6 +20,7 @@ export const Features: FC = () => {
 		<div className={styles.features}>
 			<Typography
 				variant="h4"
+				component="h2"
 				sx={theme => ({
 					[theme.breakpoints.down("sm")]: {
 						textAlign: "center",
@@ -51,7 +52,9 @@ export const Features: FC = () => {
 								},
 							})}
 						>
-							<Typography variant="subtitle1">{feat.title}</Typography>
+							<Typography variant="subtitle1" component="h3">
+								{feat.title}
+							</Typography>
 							<Typography variant="body2">{feat.desc}</Typography>
 						</Box>
 					);
