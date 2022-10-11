@@ -8,7 +8,7 @@ import { FC } from "react";
 const commuteCards = [
 	{
 		id: 0,
-		text: "For",
+		text: "For ",
 		highlight: "shopping",
 		img: shopping.src,
 		bgcolor: "#8DD8D7",
@@ -16,7 +16,7 @@ const commuteCards = [
 	},
 	{
 		id: 1,
-		text: "For",
+		text: "For ",
 		highlight: "work",
 		img: promotion.src,
 		bgcolor: "#FFE3E3",
@@ -24,7 +24,7 @@ const commuteCards = [
 	},
 	{
 		id: 2,
-		text: "For",
+		text: "For ",
 		highlight: "traveling",
 		img: bagpack.src,
 		bgcolor: "#F8CF7D",
@@ -132,8 +132,12 @@ export const CommuteCard: FC<{ cc: typeof commuteCards[0] }> = ({ cc }) => {
 					direction="row"
 					gap="4px"
 				>
-					<Typography fontWeight={500}>{cc.text}</Typography>
-					<Typography fontWeight={800}>{cc.highlight}</Typography>
+					<Typography fontWeight={500} variant="body1" component="h3">
+						{cc.text}
+						<Box fontWeight={800} component="span">
+							{cc.highlight}
+						</Box>
+					</Typography>
 				</Stack>
 				<Stack
 					height="180px"
