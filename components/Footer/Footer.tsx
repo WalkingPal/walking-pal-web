@@ -10,7 +10,7 @@ import {
 	Instagram,
 	Youtube,
 	Discord,
-} from "./Icons";
+} from "./components/Icons";
 
 const socials = [
 	{

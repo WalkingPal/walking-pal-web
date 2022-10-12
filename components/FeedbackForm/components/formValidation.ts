@@ -1,4 +1,4 @@
-import { IFormData } from "components/FeedbackForm/FeedbackForm";
+import { IFormData } from "components/FeedbackForm";
 import { firstLetterCaps } from "utils/textTransform";
 import * as yup from "yup";
 import "yup-phone";
