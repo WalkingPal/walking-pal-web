@@ -13,7 +13,13 @@ export const Gallery: FC = ({}) => {
 				<Image className={styles.about3} src={about3} alt="" />
 				<Image className={styles.about4} src={about4} alt="" />
 			</div>
-			<Typography variant="h6" minWidth="300px" width="70%" textAlign="center">
+			<Typography
+				variant="h6"
+				minWidth={300}
+				width="70%"
+				align="center"
+				mx="auto"
+			>
 				Every groundbreaking App begins with a series of small ideas that are
 				combined into an all inclusive one. At WalkingPal, we wanted to change
 				how consumers see the concept of walking to commute daily, by offering a

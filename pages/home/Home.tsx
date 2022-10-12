@@ -15,12 +15,13 @@ import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
 import { ScrollToTop } from "components/ScrollToTop";
+import styles from "./home.module.scss";
 
 export const Home: NextPage = () => {
 	const { width } = useWindowSize();
 	const [Yplay, setYplay] = useState(false);
 	return (
-		<div style={{ position: "relative" }}>
+		<>
 			<Head>
 				<title>WalkingPal</title>
 				<meta
@@ -30,7 +31,7 @@ export const Home: NextPage = () => {
 				<meta name="keywords" content="home, walking, pal, buddy, walk" />
 			</Head>
 
-			<main style={{ marginBottom: 80 }}>
+			<div className={styles.main}>
 				<Hero />
 				<Intro />
 				<Features />
@@ -67,7 +68,7 @@ export const Home: NextPage = () => {
 					pb={5}
 					px="4vw"
 					pt={10}
-					bgcolor="#0D0D0D"
+					bgcolor="#121212"
 					borderRadius="0 0 50px 50px"
 				>
 					<EasySteps />
@@ -76,7 +77,7 @@ export const Home: NextPage = () => {
 				<ReImagineCommute />
 				{/* <CommunityForm /> */}
 				<ScrollToTop />
-			</main>
-		</div>
+			</div>
+		</>
 	);
 };

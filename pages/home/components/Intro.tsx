@@ -50,8 +50,8 @@ export const Intro: FC = ({}) => {
 			/>
 			<span className={ss.screens1} ref={anim4.ref}>
 				<Paper
+					elevation={3}
 					sx={{
-						background: "#F7F7F7",
 						borderRadius: "50px",
 						maxWidth: "327px",
 						overflow: "hidden",
@@ -79,8 +79,8 @@ export const Intro: FC = ({}) => {
 			/>
 			<span className={ss.group} ref={anim6.ref}>
 				<Paper
+					elevation={3}
 					sx={{
-						background: "#F7F7F7",
 						borderRadius: "50px",
 						maxWidth: "327px",
 						overflow: "hidden",

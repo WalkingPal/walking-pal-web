@@ -4,6 +4,7 @@ import { Hero } from "pages/about/components/Hero";
 import { OurStory } from "pages/about/components/OurStory";
 import { Gallery } from "pages/about/components/Gallery";
 import { ScrollToTop } from "components/ScrollToTop";
+import styles from "./about.module.scss";
 
 export const About: NextPage = () => {
 	return (
@@ -20,19 +21,12 @@ export const About: NextPage = () => {
 				/>
 			</Head>
 
-			<main
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					justifyContent: "center",
-					alignItems: "center",
-				}}
-			>
+			<div className={styles.main}>
 				<Hero />
 				<Gallery />
 				<OurStory />
 				<ScrollToTop />
-			</main>
+			</div>
 		</>
 	);
 };

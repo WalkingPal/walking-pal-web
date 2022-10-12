@@ -4,6 +4,6 @@ import { StyledComponent } from "@emotion/styled";
 export const ProgressConnector: StyledComponent<StepConnectorProps> = styled(
 	StepConnector,
 )({
-	backgroundColor: "#FFFFFF",
+	backgroundColor: "#FFF",
 	height: 2,
 });

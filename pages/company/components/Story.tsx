@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { FC } from "react";
 import styles from "../company.module.scss";
@@ -49,12 +49,13 @@ export const Story: FC = () => {
 				</Box>
 			</div>
 			<Box display="flex" justifyContent="center">
-				<Box
-					bgcolor="#fafafa"
-					borderRadius={3}
-					overflow="hidden"
-					textAlign="center"
-					display={{ xs: "inline-grid", md: "inline-flex" }}
+				<Paper
+					sx={{
+						borderRadius: 3,
+						overflow: "hidden",
+						textAlign: "center",
+						display: { xs: "inline-grid", md: "inline-flex" },
+					}}
 				>
 					<Image
 						wrapstyle={{
@@ -76,7 +77,7 @@ export const Story: FC = () => {
 						<br /> <br />
 						Fighting climate change one step at a time
 					</Typography>
-				</Box>
+				</Paper>
 			</Box>
 		</>
 	);

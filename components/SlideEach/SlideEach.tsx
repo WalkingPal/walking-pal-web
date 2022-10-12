@@ -1,6 +1,5 @@
-import { SlideIn } from "components/SlideIn";
-import { ISlideIn } from "components/SlideIn/SlideIn";
-import React, { FC, ReactNode } from "react";
+import { ISlideIn, SlideIn } from "components/SlideIn";
+import React, { FC } from "react";
 
 interface ISlideEach extends ISlideIn {}
 

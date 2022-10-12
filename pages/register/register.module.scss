@@ -1,8 +1,16 @@
+.main {
+	padding: 30px;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	min-height: 100vh;
+}
+
 .inputText {
-	color: #767676;
-	font-size: 24px;
-	font-weight: 500;
-	font-family: "Outfit";
+	color: #767676 !important;
+	font-size: 24px !important;
+	font-weight: 500 !important;
+	font-family: "Outfit" !important;
 
 	input:-webkit-autofill,
 	input:-webkit-autofill:hover,
@@ -23,6 +31,6 @@
 	padding: 20px 50px !important;
 	border-radius: 0 !important;
 	&:disabled {
-		opacity: 0;
+		opacity: 0 !important;
 	}
 }

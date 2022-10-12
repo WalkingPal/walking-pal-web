@@ -9,8 +9,8 @@ import {
 } from "react";
 import { Box, TextField } from "@mui/material";
 import styles from "./form.module.scss";
-import { FormHeader } from "components/FeedbackForm/FormHeader";
-import { checkValidity } from "components/FeedbackForm/formValidation";
+import { FormHeader } from "components/FeedbackForm/components/FormHeader";
+import { checkValidity } from "components/FeedbackForm/components/formValidation";
 import _ from "lodash";
 import { Popup } from "components/Popup";
 import { LoadingButton } from "@mui/lab";
@@ -150,7 +150,7 @@ export const FeedbackForm: FC = ({}) => {
 						/>
 					</Box>
 					<TextField
-						style={{ height: "100%", flex: 1, minWidth: 280 }}
+						sx={{ height: "100%", flex: 1, minWidth: 280 }}
 						name="message"
 						label="Message"
 						onChange={updateFormData}

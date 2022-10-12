@@ -10,7 +10,7 @@ import {
 	Instagram,
 	Youtube,
 	Discord,
-} from "./Icons";
+} from "./components/Icons";
 
 const socials = [
 	{
@@ -55,7 +55,7 @@ export const Footer: FC = ({}) => {
 		<Stack
 			gap={2}
 			padding="120px 24px 100px"
-			bgcolor="#000000"
+			bgcolor="#121212"
 			alignItems="center"
 			justifyContent="center"
 		>

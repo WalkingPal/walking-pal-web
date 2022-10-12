@@ -5,6 +5,7 @@ import { Data } from "pages/company/components/Data";
 import { Hero } from "pages/company/components/Hero";
 import { ScrollToTop } from "components/ScrollToTop";
 import { Career } from "./components/Career";
+import styles from "./company.module.scss";
 
 export const Company: NextPage = () => {
 	return (
@@ -18,21 +19,13 @@ export const Company: NextPage = () => {
 				<meta name="keywords" content="company, walking, pal, buddy, walk" />
 			</Head>
 
-			<main
-				style={{
-					padding: "4vw",
-					display: "grid",
-					justifyContent: "center",
-					alignContent: "flex-start",
-					overflow: "hidden",
-				}}
-			>
+			<div className={styles.main}>
 				<Hero />
 				<Data />
 				<Story />
 				<Career />
 				<ScrollToTop />
-			</main>
+			</div>
 		</>
 	);
 };

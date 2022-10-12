@@ -37,8 +37,8 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 				<Image
 					wrapstyle={{
 						position: "absolute",
-						bottom: "-50px",
-						width: "100px",
+						bottom: -50,
+						width: 100,
 						left: rowReverse ? undefined : 0,
 						right: rowReverse ? 0 : undefined,
 					}}
@@ -49,8 +49,9 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 
 			<Typography
 				variant="body1"
-				sx={{ width: { xs: "80%", md: "60%" }, maxWidth: 500 }}
-				textAlign="justify"
+				width={{ xs: "80%", md: "60%" }}
+				maxWidth={500}
+				align="justify"
 			>
 				{content}
 			</Typography>

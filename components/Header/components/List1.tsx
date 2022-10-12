@@ -94,7 +94,8 @@ export const L1Item: FC<IL1Item> = ({ name, pageroute, subroutes }) => {
 					<Typography
 						variant="body2"
 						sx={{
-							color: router.route === pageroute ? "primary.main" : "#828282",
+							color:
+								router.route === pageroute ? "primary.main" : "text.secondary",
 							textTransform: "capitalize",
 							px: 2,
 						}}
