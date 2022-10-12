@@ -16,11 +16,12 @@ export const Story: FC = () => {
 		<>
 			<div className={styles.story}>
 				<Box textAlign={{ xs: "center", lg: "left" }}>
-					<Typography variant="subtitle1" mb={2}>
+					<Typography variant="subtitle1" component="h2" mb={2}>
 						OUR STORY
 					</Typography>
 					<Typography
 						variant="h4"
+						component="h3"
 						sx={{ sm: { textAlign: "center" }, md: { textAlign: "left" } }}
 						mb={2}
 					>
