@@ -12,21 +12,14 @@ interface IRegEarlyUserResponse {
 const formDataSchema = z.object({
 	firstName: z
 		.string()
-		.regex(/^[aA-zZ\s]+$/, { message: "Enter a valid First Name" })
+		.regex(/^[aA-zZ\s]+$/, { message: "Please provide a valid First Name" })
 		.min(3, { message: "Names must be greater the 2 characters" }),
 	lastName: z
 		.string()
-		.regex(/^[aA-zZ\s]+$/, { message: "Enter a valid Last Name" })
+		.regex(/^[aA-zZ\s]+$/, { message: "Please provide a valid Last Name" })
 		.min(3, { message: "Names must be greater the 2 characters" }),
-	email: z.string().min(1).email({ message: "Please enter valid Email" }),
-	university: z.enum([
-		"VSSUT",
-		"VIMSAR",
-		"IIM Sambalpur",
-		"Sambalpur University",
-		"SUIIT",
-		"Other",
-	]),
+	email: z.string().email({ message: "Please provide a valid Email" }),
+	university: z.string().min(2),
 });
 
 const captchaSchema = z.string().min(1);
@@ -48,16 +41,16 @@ const registerEarlyUser = async (
 	const parsedFormData = formDataSchema.safeParse(formData);
 	const parsedCaptcha = captchaSchema.safeParse(captcha);
 
+	if (!parsedCaptcha.success)
+		return res.status(422).json({
+			message: "Unproccesable Request. Provide reCAPTCHA code",
+			errors: parsedCaptcha.error.issues,
+		});
+
 	if (!parsedFormData.success)
 		return res.status(422).json({
 			message: "Unproccesable Request",
 			errors: parsedFormData.error.issues,
-		});
-
-	if (!parsedCaptcha.success)
-		return res.status(422).json({
-			message: "Unproccesable Request",
-			errors: parsedCaptcha.error.issues,
 		});
 
 	if (!(await isReCaptchaValid(captcha)))

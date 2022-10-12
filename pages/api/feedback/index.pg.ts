@@ -13,8 +13,8 @@ const formDataSchema = z.object({
 	name: z
 		.string()
 		.min(3, { message: "Name must be greater the 2 characters" })
-		.regex(/^[aA-zZ\s]+$/, { message: "Enter a valid Name" }),
-	email: z.string().min(1).email({ message: "Please enter valid Email" }),
+		.regex(/^[aA-zZ\s]+$/, { message: "Provide a valid Name" }),
+	email: z.string().email({ message: "Provide a valid Email" }),
 	phone: z.string().optional(),
 	message: z.string().min(1),
 });
@@ -38,16 +38,16 @@ const registerFeedback = async (
 	const parsedFormData = formDataSchema.safeParse(formData);
 	const parsedCaptcha = captchaSchema.safeParse(captcha);
 
+	if (!parsedCaptcha.success)
+		return res.status(422).json({
+			message: "Unproccesable Request. Provide reCAPTCHA code",
+			errors: parsedCaptcha.error.issues,
+		});
+
 	if (!parsedFormData.success)
 		return res.status(422).json({
 			message: "Unproccesable Request",
 			errors: parsedFormData.error.issues,
-		});
-
-	if (!parsedCaptcha.success)
-		return res.status(422).json({
-			message: "Unproccesable Request",
-			errors: parsedCaptcha.error.issues,
 		});
 
 	if (!(await isReCaptchaValid(captcha)))
