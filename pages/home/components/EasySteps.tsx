@@ -18,7 +18,8 @@ const steps = [
 				app
 			</>
 		),
-		color: "#FF5959",
+		altText: "WalkingPal app home screen",
+		color: "primary.main",
 	},
 	{
 		imgSrc: step2,
@@ -31,6 +32,7 @@ const steps = [
 				on the map
 			</>
 		),
+		altText: "Setting a destination on the map in WalkingPal app",
 		color: "#67CBC9",
 	},
 	{
@@ -44,7 +46,8 @@ const steps = [
 				button
 			</>
 		),
-		color: "#F6BF51",
+		altText: "Magic red button on WalkingPal app screen",
+		color: "secondary.main",
 	},
 	{
 		imgSrc: step4,
@@ -57,7 +60,8 @@ const steps = [
 				your journey
 			</>
 		),
-		color: "#FF5959",
+		altText: "Browse & send request screen on WalkingPal app",
+		color: "primary.main",
 	},
 ];
 
@@ -65,28 +69,36 @@ export const EasySteps: FC = () => {
 	return (
 		<Box className={styles.easysteps}>
 			<Box display="flex" justifyContent="center">
-				<Typography variant="h4" textAlign="center" py={5} maxWidth={500}>
+				<Typography
+					variant="h4"
+					component="h2"
+					textAlign="center"
+					py={5}
+					maxWidth={500}
+				>
 					Get your walking buddy in four easy steps
 				</Typography>
 			</Box>
 			<Box className={styles.content}>
-				{steps.map(({ imgSrc, txt, color }, i) => {
+				{steps.map(({ imgSrc, txt, color, altText }, i) => {
 					const StepImg = (
-						<Image width={212} height={428} src={imgSrc} alt="" />
+						<Image width={212} height={428} src={imgSrc} alt={altText} />
 					);
 					const StepDesc = (
 						<Box display="flex" alignItems="center" gap={1}>
 							<Typography
 								color={color}
 								variant="h1"
+								component="span"
 								fontWeight="500"
 								fontSize={105}
 							>
 								{i + 1}
 							</Typography>
 							<Typography
-								color="#767676"
+								color="text.secondary"
 								variant="subtitle1"
+								component="h3"
 								fontSize="clamp(0.7rem, 0.8rem + 1vw, 1.25rem)"
 							>
 								{txt}

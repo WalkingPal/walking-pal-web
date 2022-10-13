@@ -15,8 +15,12 @@ export const ProgressIcon: FC<IProgressIcon> = ({ active, completed }) => {
 				width: 16,
 				height: 16,
 				borderRadius: "50%",
-				border: active ? "2px solid #FFFFFF" : undefined,
-				backgroundColor: active ? "#F6BF51" : completed ? "#A6C753" : "#D9D9D9",
+				border: active ? "2px solid #FFF" : undefined,
+				backgroundColor: active
+					? "secondary.main"
+					: completed
+					? "#A6C753"
+					: "#D9D9D9",
 			}}
 		></Box>
 	);

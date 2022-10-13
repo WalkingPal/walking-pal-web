@@ -1,4 +1,5 @@
-import { IFormData } from "components/FeedbackForm/FeedbackForm";
+import { IFormData } from "components/FeedbackForm";
+import { firstLetterCaps } from "utils/textTransform";
 import * as yup from "yup";
 import "yup-phone";
 
@@ -17,9 +18,6 @@ let schema = yup.object().shape({
 	message: yup.string().required(),
 });
 
-const formatValidationMsg = (msg: string) =>
-	msg.charAt(0).toUpperCase() + msg.slice(1);
-
 export const checkValidity = async (formData: IFormData) => {
 	let testData;
 	if (formData.phone.length > 0) {
@@ -36,5 +34,5 @@ export const checkValidity = async (formData: IFormData) => {
 		validationMsg = err instanceof Error ? err.message : "Invalid input";
 	}
 
-	return formatValidationMsg(validationMsg);
+	return firstLetterCaps(validationMsg);
 };

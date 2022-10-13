@@ -1,0 +1,36 @@
+.main {
+	padding: 30px;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	min-height: 100vh;
+}
+
+.inputText {
+	color: #767676 !important;
+	font-size: 24px !important;
+	font-weight: 500 !important;
+	font-family: "Outfit" !important;
+
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	textarea:-webkit-autofill,
+	textarea:-webkit-autofill:hover,
+	textarea:-webkit-autofill:focus,
+	select:-webkit-autofill,
+	select:-webkit-autofill:hover,
+	select:-webkit-autofill:focus {
+		-webkit-text-fill-color: #767676;
+		box-shadow: 0 0 0px 1000px #fff inset;
+		-webkit-box-shadow: 0 0 0px 1000px #fff inset;
+	}
+}
+
+.formButton {
+	padding: 20px 50px !important;
+	border-radius: 0 !important;
+	&:disabled {
+		opacity: 0 !important;
+	}
+}

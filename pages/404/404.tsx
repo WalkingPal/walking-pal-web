@@ -20,11 +20,11 @@ export const Error404: NextPage = () => {
 				/>
 			</Head>
 
-			<main className={styles.main}>
+			<div className={styles.main}>
 				<div className={styles.left}>
 					<Image src={Error} alt="" />
 				</div>
-				<Box bgcolor="primary.main" color="#ffffffcc" className={styles.right}>
+				<Box bgcolor="primary.main" color="#fffc" className={styles.right}>
 					<Typography variant="h1" pb={3}>
 						Ouppps! <br /> 404
 					</Typography>
@@ -34,7 +34,7 @@ export const Error404: NextPage = () => {
 						<br /> Meanwhile, please head back.
 					</Typography>
 				</Box>
-			</main>
+			</div>
 		</>
 	);
 };

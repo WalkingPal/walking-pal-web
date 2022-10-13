@@ -154,6 +154,7 @@ If you want to contribute on issues that need firebase services, **follow these 
      ```sh
      # .env.local
      FIREBASE_SERVICE_ACCOUNT_KEY='Put your copied JSON file content text without line breaks here'
+     # !IMPORTANT! You have to use single quotes (not double quotes)
      ```
      That's all! We have setup firebase with our NEXTjs project.
 8. Now **let's setup Firestore** too. On the left-hand side panel, click `Build`. Then click on `Firestore Database`.
@@ -163,6 +164,8 @@ If you want to contribute on issues that need firebase services, **follow these 
 10. Click on `Next`
     ![Firestore step 3](assets/firestore3.png)
 11. Then, Click on `Enable`. All done! We have Enabled Firestore database.
+12. [OPTIONAL] You can create a `forms` document in firestore.
+    - In the `forms` doccument put 2 more documents namely `early-users` & `feedbacks`. After this, your forms on the website should work fine if you followed every step correctly.
 
 ## Run Next.js development server
 

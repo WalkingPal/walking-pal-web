@@ -1,4 +1,4 @@
-import { Box, Divider, Drawer } from "@mui/material";
+import { Box, Divider, Drawer, useTheme } from "@mui/material";
 import { Hamburger } from "assets/svg";
 import { List1 } from "components/Header/components/List1";
 import { List2 } from "components/Header/components/List2";
@@ -8,7 +8,7 @@ import styles from "../header.module.scss";
 
 export const HeaderMobile: FC = () => {
 	const [isDrawerOpen, toggleDrawer] = useState(false);
-
+	const { palette } = useTheme();
 	return (
 		<>
 			<div className={styles.mobile}>
@@ -16,14 +16,14 @@ export const HeaderMobile: FC = () => {
 
 				<Hamburger
 					onClick={() => toggleDrawer(true)}
-					color="#767676"
+					color={palette.text.secondary}
 					style={{ cursor: "pointer" }}
 				/>
 			</div>
 
 			<Drawer
 				anchor="right"
-				style={{ zIndex: 99999 }}
+				sx={{ zIndex: 99999 }}
 				open={isDrawerOpen}
 				onClose={() => toggleDrawer(false)}
 			>
@@ -33,19 +33,13 @@ export const HeaderMobile: FC = () => {
 					onClick={() => toggleDrawer(false)}
 					onKeyDown={() => toggleDrawer(false)}
 				>
-					<div
-						style={{
-							display: "grid",
-							gap: "30px",
-							padding: "30px 0px",
-						}}
-					>
+					<Box display="grid" gap={3} p="30px 0px">
 						<List1 mobile />
 
 						<Divider />
 
 						<List2 mobile />
-					</div>
+					</Box>
 				</Box>
 			</Drawer>
 		</>

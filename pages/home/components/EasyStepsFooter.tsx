@@ -1,4 +1,4 @@
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Paper, Typography, useMediaQuery } from "@mui/material";
 import { boy, legs, man } from "assets/gif";
 import { foundersHub } from "assets/png";
 import { Accent } from "components/Accent";
@@ -25,31 +25,34 @@ export const EasyStepsFooter: FC = ({}) => {
 						height="70"
 						width="70"
 						style={{ borderRadius: 10 }}
-						alt=""
+						alt="a walking boy"
 					/>
 					<Image
 						src={legs}
 						height="70"
 						width="70"
 						style={{ borderRadius: 10 }}
-						alt=""
+						alt="walking legs"
 					/>
 					<Image
 						src={man}
 						height="70"
 						width="70"
 						style={{ borderRadius: 10 }}
-						alt=""
+						alt="a walking man"
 					/>
 				</Box>
 			</Box>
 
-			<Box
-				p={1}
-				bgcolor="#181818"
-				borderRadius={3}
-				display={(isMd && "grid") || { xs: "flex" }}
-				mt={3}
+			<Paper
+				elevation={2}
+				sx={{
+					p: 1,
+					bgcolor: "#181818",
+					borderRadius: 3,
+					display: (isMd && "grid") || { xs: "flex" },
+					mt: 3,
+				}}
 			>
 				<Box
 					bgcolor="#000"
@@ -68,9 +71,9 @@ export const EasyStepsFooter: FC = ({}) => {
 					width="217"
 					height="149"
 					src={foundersHub}
-					alt=""
+					alt="Microsoft for Startups: Founders Hub"
 				/>
-			</Box>
+			</Paper>
 		</Box>
 	);
 };
