@@ -16,6 +16,21 @@ import "swiper/css";
 
 interface IHero {}
 
+const sliders = [
+	{ img: gallery0, alt: "Two people walking down a sidewalk" },
+	{ img: gallery1, alt: "Low angle view of two people walking on glass floor" },
+	{ img: gallery2, alt: "Walking down the road" },
+	{
+		img: gallery3,
+		alt: "A stick man figure that flies clinging to a red heart shape",
+	},
+	{
+		img: gallery4,
+		alt: "Colorful steps",
+	},
+	{ img: gallery5, alt: "Footstep surrounded by flowers and leaves" },
+];
+
 export const Hero: FC<IHero> = ({}) => {
 	const [loop, setLoop] = useState(false);
 	useEffect(() => {
@@ -25,7 +40,7 @@ export const Hero: FC<IHero> = ({}) => {
 	return (
 		<>
 			<Box textAlign="center">
-				<Typography variant="h3">
+				<Typography variant="h3" component="h1">
 					Love in every
 					<br />
 					<Accent>#Step</Accent>
@@ -46,26 +61,24 @@ export const Hero: FC<IHero> = ({}) => {
 					spaceBetween={30}
 					initialSlide={3}
 				>
-					{[gallery0, gallery4, gallery1, gallery2, gallery3, gallery5].map(
-						(img, index) => (
-							<SwiperSlide key={index}>
-								<Box sx={{ userSelect: "none" }}>
-									<Image
-										src={img}
-										alt={`Hero Slider Image ${index + 1}`}
-										wrapstyle={{
-											height: "100%",
-											aspectRatio: "1",
-											display: "block",
-											"& *": {
-												height: "100% !important",
-											},
-										}}
-									/>
-								</Box>
-							</SwiperSlide>
-						),
-					)}
+					{sliders.map((slider, index) => (
+						<SwiperSlide key={index}>
+							<Box sx={{ userSelect: "none" }}>
+								<Image
+									src={slider.img}
+									alt={slider.alt}
+									wrapstyle={{
+										height: "100%",
+										aspectRatio: "1",
+										display: "block",
+										"& *": {
+											height: "100% !important",
+										},
+									}}
+								/>
+							</Box>
+						</SwiperSlide>
+					))}
 				</Swiper>
 			</Box>
 		</>
