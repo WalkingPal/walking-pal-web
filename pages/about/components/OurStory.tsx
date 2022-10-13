@@ -32,7 +32,7 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 				<Image
 					wrapstyle={{ display: "flex", justifyContent: "center" }}
 					src={imgSrc}
-					alt="WalkingPal"
+					alt=""
 				/>
 				<Image
 					wrapstyle={{
@@ -43,13 +43,12 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 						right: rowReverse ? 0 : undefined,
 					}}
 					src={icon}
-					alt="WalkingPal"
+					alt=""
 				/>
 			</Box>
 
 			<Typography
 				variant="body1"
-				component="span"
 				width={{ xs: "80%", md: "60%" }}
 				maxWidth={500}
 				align="justify"
@@ -63,10 +62,9 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 export const OurStory: FC = () => {
 	return (
 		<div className={styles.ourstory}>
-			<Typography variant="h2" component="h2">
+			<Typography variant="h2">
 				Our <Accent>Story</Accent>
 			</Typography>
-			WalkingPal
 			<Story
 				rowReverse
 				imgSrc={story1}

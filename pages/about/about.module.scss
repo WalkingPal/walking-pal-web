@@ -7,7 +7,8 @@
 		grid-template-areas:
 			"a b d"
 			"c c d";
-
+		max-width: 1300px;
+		margin: auto;
 		.about1 {
 			grid-area: a;
 		}
