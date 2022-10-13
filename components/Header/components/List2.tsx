@@ -14,7 +14,7 @@ export const List2: FC<IList2> = ({}) => {
 				role="link"
 				component="a"
 				sx={{
-					mx: "20px",
+					mx: 2,
 					color: currentRoute === "/faq" ? "primary.main" : "text.secondary",
 				}}
 				href="/faq"

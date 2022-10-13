@@ -9,8 +9,8 @@ const getTag = (key: string) => (
 		color="#fff"
 		bgcolor="#000"
 		p="10px 25px"
-		borderRadius="30px"
-		width="185px"
+		borderRadius={3}
+		width={185}
 		key={"deco" + key}
 	>
 		Walking Buddy
@@ -20,7 +20,7 @@ const getLabel = (key: string, label: string) => (
 	<Typography
 		variant="h5"
 		component="span"
-		width="100px"
+		width={100}
 		textAlign="center"
 		key={"deco" + key}
 	>
@@ -32,9 +32,9 @@ const getMemoji = (key: string) => {
 	return (
 		<Avatar
 			src={memojis[index].src}
-			sx={{ width: "70px", height: "70px" }}
+			sx={{ width: 70, height: 70 }}
 			key={"deco" + key}
-			alt="WalkingPal memoji avatar"
+			alt=""
 		/>
 	);
 };

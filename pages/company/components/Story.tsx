@@ -22,7 +22,7 @@ export const Story: FC = () => {
 					<Typography
 						variant="h4"
 						component="h3"
-						sx={{ sm: { textAlign: "center" }, md: { textAlign: "left" } }}
+						textAlign={{ sm: "center", md: "left" }}
 						mb={2}
 					>
 						We’re going to become <br /> partners for long run.
@@ -71,7 +71,7 @@ export const Story: FC = () => {
 						alt=""
 					/>
 
-					<Typography maxWidth={400} padding="20px 40px" margin="auto">
+					<Typography maxWidth={400} p="20px 40px" m="auto">
 						We estimate that using WalkingPal can save our designers and
 						engineers 15,800 hours per year. That is equivalent to 263,200,000
 						won (220,000 USD) per year.

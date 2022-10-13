@@ -26,8 +26,8 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 				position="relative"
 				display="flex"
 				justifyContent="center"
-				maxWidth="400"
-				sx={{ width: { xs: "80%", md: "30%" } }}
+				maxWidth={400}
+				width={{ xs: "80%", md: "30%" }}
 			>
 				<Image
 					wrapstyle={{ display: "flex", justifyContent: "center" }}

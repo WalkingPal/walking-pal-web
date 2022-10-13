@@ -52,8 +52,8 @@ export const Intro: FC = ({}) => {
 				<Paper
 					elevation={3}
 					sx={{
-						borderRadius: "50px",
-						maxWidth: "327px",
+						borderRadius: 5,
+						maxWidth: 327,
 						overflow: "hidden",
 						display: "grid",
 					}}
@@ -81,8 +81,8 @@ export const Intro: FC = ({}) => {
 				<Paper
 					elevation={3}
 					sx={{
-						borderRadius: "50px",
-						maxWidth: "327px",
+						borderRadius: 5,
+						maxWidth: 327,
 						overflow: "hidden",
 						alignItems: "center",
 						display: "grid",
@@ -94,7 +94,7 @@ export const Intro: FC = ({}) => {
 						style={{ width: "100%" }}
 						alt="Create walking buddy groups in WalkingPal app"
 					/>
-					<Box sx={{ padding: 3, textAlign: "center" }}>
+					<Box p={3} textAlign="center">
 						<Typography variant="h6" component="span">
 							Create Groups
 						</Typography>

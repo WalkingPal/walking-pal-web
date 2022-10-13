@@ -27,15 +27,15 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 			<header ref={headerRef} className={styles.header} style={{ marginTop }}>
 				<Paper
 					sx={t => ({
-						background: alpha(t.palette.background.paper, 0.8),
+						bgcolor: alpha(t.palette.background.paper, 0.8),
 						width: "100%",
 						webkitBackdropFilter: "blur(10px)",
 						backdropFilter: "blur(10px)",
-						borderRadius: "16px",
+						borderRadius: 1,
 						justifyContent: "center",
 						display: "flex",
 						alignItems: "center",
-						padding: "8px 20px",
+						p: "8px 20px",
 					})}
 					elevation={0}
 				>

@@ -28,12 +28,12 @@ export const HeaderMobile: FC = () => {
 				onClose={() => toggleDrawer(false)}
 			>
 				<Box
-					sx={{ width: 280 }}
+					width={280}
 					role="presentation"
 					onClick={() => toggleDrawer(false)}
 					onKeyDown={() => toggleDrawer(false)}
 				>
-					<Box display="grid" gap={3} p="30px 0px">
+					<Box display="grid" gap={3} py={3}>
 						<List1 mobile />
 
 						<Divider />

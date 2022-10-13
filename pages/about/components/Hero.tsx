@@ -5,7 +5,7 @@ import { FC } from "react";
 export const Hero: FC = () => {
 	return (
 		<Box display="grid" justifyContent="center" textAlign="center">
-			<Typography variant="h3" component="h2" pt={7} mx={1} maxWidth={800}>
+			<Typography variant="h3" component="h1" pt={7} mx={1} maxWidth={800}>
 				We believe in a more sustainable and
 				<Accent>conscientious</Accent>
 				way of living.

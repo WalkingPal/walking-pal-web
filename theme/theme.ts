@@ -200,7 +200,7 @@ export function getThemedComponents(theme: Theme): {
 				styleOverrides: {
 					root: {
 						color: "#484848",
-						borderRadius: "10px",
+						borderRadius: 1,
 						"&:hover fieldset": {
 							border: "solid 3px #E7E7E7 !important",
 						},
