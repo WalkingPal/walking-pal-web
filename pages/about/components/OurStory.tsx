@@ -32,7 +32,7 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 				<Image
 					wrapstyle={{ display: "flex", justifyContent: "center" }}
 					src={imgSrc}
-					alt=""
+					alt="WalkingPal"
 				/>
 				<Image
 					wrapstyle={{
@@ -43,7 +43,7 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 						right: rowReverse ? 0 : undefined,
 					}}
 					src={icon}
-					alt=""
+					alt="WalkingPal"
 				/>
 			</Box>
 
@@ -65,7 +65,7 @@ export const OurStory: FC = () => {
 			<Typography variant="h2" component="h2">
 				Our <Accent>Story</Accent>
 			</Typography>
-
+			WalkingPal
 			<Story
 				rowReverse
 				imgSrc={story1}
@@ -77,7 +77,6 @@ export const OurStory: FC = () => {
 				content="You will be glad to hear that you are not alone there are many people out there too who do feel the same. WalkingPal is the antidote to all those problems of ours, it joins people like us who have a similar problem so that we can complete the journey easily together."
 				icon={footstep}
 			/>
-
 			<Story
 				rowReverse
 				imgSrc={story3}
