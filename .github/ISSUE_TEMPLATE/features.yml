@@ -11,10 +11,10 @@ body:
 
         ### Assign this issue to yourself if you want to work on it.
 
-        READ AND FOLLOW THE [GUIDELINES TO CREATE A NEW ISSUE](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#make-sure-to-follow-these-when-opening-issues)"
-      placeholder: 
-        Write a breif description of the enhancement you are proposing. 
-      
+        READ AND FOLLOW THE [GUIDELINES TO CREATE A NEW ISSUE](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#follow-these-when-opening-new-issues)"
+      placeholder:
+        Write a breif description of the enhancement you are proposing.
+
         Add screenshots/images or reference links (if applicable).
     validations:
       required: true

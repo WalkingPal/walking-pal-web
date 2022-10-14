@@ -11,7 +11,7 @@ body:
 
         ### Assign this issue to yourself if you want to work on it.
 
-        READ AND FOLLOW THE [GUIDELINES TO CREATE A NEW ISSUE](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#make-sure-to-follow-these-when-opening-issues)"
+        READ AND FOLLOW THE [GUIDELINES TO CREATE A NEW ISSUE](https://github.com/WalkingPal/walking-pal-web/blob/dev/.docs/CONTRIBUTING.md#follow-these-when-opening-new-issues)"
       placeholder: 
         Write a brief description of issue.
 

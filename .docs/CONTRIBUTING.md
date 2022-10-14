@@ -5,18 +5,21 @@ This documentation contains a set of guidelines to help you during the contribut
 We are happy to welcome contributions from anyone willing to add to or improve this project. Thank you for helping out and remember, **no contribution is too small.**
 
 - Each contributor can be assigned **2 issues (max)** at a time to work on.
-- Contributors are expected to follow [project guidelines and coding style](PROJECT-GUIDELINES.md). Structured code is one of our top priorities.
-- Contributors must **comment** on the "open issue" they would like to work on, and wait to be assigned by a maintainer.
+- Contributors are expected to follow **Project Structure Guidelines** and **Style Guidelines**. Well written easy to read code is one of our top priorities.
+  - walking-pal-web is a [Next.js](https://nextjs.org/) project.
+  - We strictly **abide by our [Style Guide](./STYLE-GUIDE.md) to style the React components**.
+  - We have an opinionated Project file structure, always **follow our [Project Structure Guide](./PROJECT-STRUCTURE.md) when creating new files/folders**.
+- Contributors must **comment on an open Issue** that they would like to work on, and wait to be assigned by a maintainer.
 - Issues will be assigned on a **first-come, first-serve basis**.
-- Contributors may also **open their own issues** and assign themselves if they want to work on them.
+- Contributors may also **open their own issues** _and assign themselves_ if they want to work on them. Before opening your own issues, check if a similar issue is opened already or not.
   ***
-  - ### Make sure to follow these when opening issues:
-    - Your issue title must be in the form of `ISSUE_TYPE: ISSUE_TITLE`
-      - ISSUE_TYPE can be `feat` (issues for new features), `bug`(for bug), `docs` (for docs), `chore`(for miscellaneous)
-      - ISSUE_TITLE must be clear and concise.
-    - Make sure to give sufficient context in your issue description.
-    - Wherever applicable, add reference links or screenshots.
-    - If you are going to work on it yourself, mention that in the issue. You will be assigned by a maintainer.
+- ### Follow these when opening new Issues:
+  - Your issue title must be in the form of `ISSUE_TYPE: ISSUE_TITLE`
+    - ISSUE_TYPE can be `feat` (issues for new features), `bug`(for bug), `docs` (for docs), `chore`(for miscellaneous)
+    - ISSUE_TITLE must be clear and concise.
+  - Make sure to give sufficient context in your issue description.
+  - Wherever applicable, add reference links or screenshots.
+  - If you are going to work on it yourself, mention that in the issue. You will be assigned by a maintainer.
   ***
 - Before opening a new issue, please **check** that it hasn't already been created.
 - Pull requests will be merged after being **reviewed by a maintainer**.
@@ -30,19 +33,19 @@ We are happy to welcome contributions from anyone willing to add to or improve t
 
   ***
 
-  - ### Pull request review criteria:
+- ### Pull request review criteria:
 
-    - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
-      - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
-      - Refer [Git Commit Guidelines](./GIT-GUIDELINES.md) for more details
-    - Make sure you have created an issue for your PR. [Link that issue to your PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
-    - Mention your proposed changes in the PR description along with screenshots and reference links (if applicable).
-    - If you created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
-    - Your work must be **original**, written by you, not copied from other resources. Copying is not bad. But copying without properly understanding which parts of the code are needed and which are not is very bad. Make sure you avoid adding redundant code.
-    - You must **comment** on your code wherever necessary. **Avoid committing commented code**, e.g `console.log` statements, etc.
-    - For **frontend changes** kindly share screenshots and samples of your work before sending a PR.
-    - For **frontend changes**, abide by the [STYLE GUIDE](./STYLE-GUIDE.md).
-    - ⚠**IMPORTANT**⚠ After creating your PR, Vercel will try to automatically deploy your PR code. If your Vercel build fails in your PR, you need to run `yarn build` locally and address those build errors. Your PR won't be reviewed until after the build errors have been fixed. It would be considered a WIP draft PR.
+  - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
+    - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
+    - Refer [Git Commit Guidelines](./GIT-GUIDELINES.md) for more details
+  - Make sure you have created an issue for your PR. [Link that issue to your PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
+  - Mention your proposed changes in the PR description along with screenshots and reference links (if applicable).
+  - If you created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
+  - Your work must be **original**, written by you, not copied from other resources. Copying is not bad. But copying without properly understanding which parts of the code are needed and which are not is very bad. Make sure you avoid adding redundant code.
+  - You must **comment** on your code wherever necessary. **Avoid committing commented code**, e.g `console.log` statements, etc.
+  - For **frontend changes** kindly share screenshots and samples of your work before sending a PR.
+  - For **frontend changes**, abide by the [STYLE GUIDE](./STYLE-GUIDE.md).
+  - ⚠**IMPORTANT**⚠ After creating your PR, Vercel will try to automatically deploy your PR code. If your Vercel build fails in your PR, you need to run `yarn build` locally and address those build errors. Your PR won't be reviewed until after the build errors have been fixed. It would be considered a WIP draft PR.
 
   ***
 
