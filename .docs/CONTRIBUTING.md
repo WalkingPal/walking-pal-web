@@ -34,7 +34,7 @@ We are happy to welcome contributions from anyone willing to add to or improve t
 
     - Your PR title must be in the form of `PR_TYPE: PR_TITLE`
       - eg, `feat: new funky section`, `fix: fix the fencepost error`, `docs: add link to discord`, `style: make header component responsive`, `chore: add walkingpal logo`
-      - Refer [Git Commit Guidelines](./GIT-GUIDELINES.MD) for more details
+      - Refer [Git Commit Guidelines](./GIT-GUIDELINES.md) for more details
     - Make sure you have created an issue for your PR. [Link that issue to your PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
     - Mention your proposed changes in the PR description along with screenshots and reference links (if applicable).
     - If you created new files, make sure they follow [Project Structure Guidelines](./PROJECT-STRUCTURE.md).
@@ -211,7 +211,7 @@ To learn more about Next.js, take a look at the following resources:
     # Now start working on your bugfix
    ```
 3. After finishing the bugfix, stage all your changes using the `git add` command.
-4. Commit all those changes with a nice commit message that follows [our commit message guidelines](./GIT-GUIDELINES.MD).
+4. Commit all those changes with a nice commit message that follows [our commit message guidelines](./GIT-GUIDELINES.md).
 
    - If you get an error from husky commit-msg hook after running `git commit` command, this means that your commit message does not follow the commit guidelines. Correct your commit message.
 
