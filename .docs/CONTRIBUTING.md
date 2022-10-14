@@ -13,7 +13,7 @@ We are happy to welcome contributions from anyone willing to add to or improve t
 - Issues will be assigned on a **first-come, first-serve basis**.
 - Contributors may also **open their own issues** _and assign themselves_ if they want to work on them. Before opening your own issues, check if a similar issue is opened already or not.
   ***
-- ### Follow these when opening new Issues:
+- ### Guidelines to create new Issues:
   - Your issue title must be in the form of `ISSUE_TYPE: ISSUE_TITLE`
     - ISSUE_TYPE can be `feat` (issues for new features), `bug`(for bug), `docs` (for docs), `chore`(for miscellaneous)
     - ISSUE_TITLE must be clear and concise.
