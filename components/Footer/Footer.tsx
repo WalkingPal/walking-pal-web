@@ -11,6 +11,7 @@ import {
 	Youtube,
 	Discord,
 } from "./components/Icons";
+import styles from "./footer.module.scss";
 
 const socials = [
 	{
@@ -58,6 +59,7 @@ export const Footer: FC = ({}) => {
 			bgcolor="#121212"
 			alignItems="center"
 			justifyContent="center"
+			className={styles.main}
 		>
 			{/* <Stack
 				gap={{ xs: 2, sm: 5, md: 7 }}
