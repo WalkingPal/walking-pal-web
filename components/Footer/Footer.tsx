@@ -11,6 +11,7 @@ import {
 	Youtube,
 	Discord,
 } from "./components/Icons";
+import styles from './footer.module.scss'
 
 const socials = [
 	{
@@ -90,7 +91,7 @@ export const Footer: FC = ({}) => {
 				padding={{ xs: 2, md: 9 }}
 				gap={3}
 			>
-				<Box display="grid" alignItems="center" justifyContent="center" gap={3}>
+				<Box className={styles.main} display="grid" alignItems="center" justifyContent="center" gap={3}>
 					<LogoWordmark size={100} />
 					<Box
 						display="flex"
@@ -106,6 +107,8 @@ export const Footer: FC = ({}) => {
 									target="_blank"
 									key={"socail-" + i}
 									aria-label={social.name}
+									// style={{fontSize: "50px"}}
+									className={social.name === "Discord" ? styles.discordLink : null}
 								>
 									{social.icon}
 								</Link>
