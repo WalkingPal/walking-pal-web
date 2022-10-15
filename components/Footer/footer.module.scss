@@ -1,16 +1,10 @@
 .main {
-    .discordLink {
-        &:hover {
-          animation: x 1s cubic-bezier(.67,-1.22,.4,2.05) infinite;
-        }
-    }
-
-    @mixin animation-mixin($name, $from, $to) {
-      @keyframes #{$name} {
-        0% {transform: rotate(0deg);}
-        100% {transform: rotate(360deg);}
-      }
-    }
-
-    @include animation-mixin(x, 0,100% )
+	.discordIcon {
+		transform: rotate(0deg);
+		transition: 0.5s ease-out;
+		&:hover {
+			transition: 1s cubic-bezier(0.67, -1.22, 0.4, 2.05);
+			transform: rotate(360deg);
+		}
+	}
 }
