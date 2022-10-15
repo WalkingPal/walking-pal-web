@@ -38,7 +38,7 @@ export const InputField: FCC<IInputField> = ({
 	const [dialogActive, setDialogActive] = useState(false);
 	const isOther = otherUniversity === OTHER;
 	return (
-		<Stack gap={1} sx={{ p: 3, backgroundColor: "#fff" }}>
+		<Stack gap={1} p={3} bgcolor="#fff">
 			<InputLabel required sx={{ fontSize: 30, color: "#000" }}>
 				<Typography variant="h6" component="span" fontWeight="medium">
 					{label}

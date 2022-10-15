@@ -55,40 +55,30 @@ export const Footer: FC = ({}) => {
 	return (
 		<Stack
 			gap={2}
-			padding="120px 24px 100px"
+			p="120px 24px 100px"
 			bgcolor="#121212"
 			alignItems="center"
 			justifyContent="center"
 		>
 			{/* <Stack
-        gap={{
-          xs: 2,
-          sm: 5,
-          md: 7
-        }}
-        direction='row'
-        flexWrap='wrap'
-        justifyContent='space-between'
-        width='100%'
-        maxWidth={1030}
-      >
-        { footerLinks.map(link => (
-          <LinkContainer 
-            key={link.title}
-            footerLink={link}
-          />
-        )) }
-      </Stack>
-      <Divider 
-        flexItem
-        color="grey"
-      /> */}
+				gap={{ xs: 2, sm: 5, md: 7 }}
+				direction="row"
+				flexWrap="wrap"
+				justifyContent="space-between"
+				width="100%"
+				maxWidth={1030}
+			>
+				{footerLinks.map(link => (
+					<LinkContainer key={link.title} footerLink={link} />
+				))}
+			</Stack>
+			<Divider flexItem color="grey" /> */}
 			<Stack
 				direction={{ xs: "column", md: "row" }}
 				justifyContent="space-between"
 				alignItems="center"
 				width="100%"
-				padding={{ xs: 2, md: 9 }}
+				p={{ xs: 2, md: 9 }}
 				gap={3}
 			>
 				<Box className={styles.main} display="grid" alignItems="center" justifyContent="center" gap={3}>

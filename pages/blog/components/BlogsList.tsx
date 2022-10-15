@@ -54,7 +54,7 @@ const BlogCard: FC<IBlogCard> = ({ title, subtitle, image, href }) => {
 	return (
 		<Link href={href} target="_blank" className={styles.blogCard}>
 			<Image
-				wrapstyle={{ overflow: "hidden", borderRadius: "30px" }}
+				wrapstyle={{ overflow: "hidden", borderRadius: 3 }}
 				alt="feature image"
 				src={image}
 			/>

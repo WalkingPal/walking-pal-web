@@ -9,12 +9,21 @@ export const Gallery: FC = ({}) => {
 		<>
 			<div className={styles.gallery}>
 				<Image className={styles.about1} src={about1} alt="" />
-				<Image className={styles.about2} src={about2} alt="" />
+				<Image
+					className={styles.about2}
+					src={about2}
+					alt="Using WalkingPal helps reduce global CO2 emission"
+				/>
 				<Image className={styles.about3} src={about3} alt="" />
-				<Image className={styles.about4} src={about4} alt="" />
+				<Image
+					className={styles.about4}
+					src={about4}
+					alt="Get your walking buddy anytime, anywhere!"
+				/>
 			</div>
 			<Typography
 				variant="h6"
+				component="p"
 				minWidth={300}
 				width="70%"
 				align="center"

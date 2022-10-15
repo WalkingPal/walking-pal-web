@@ -15,14 +15,14 @@ export interface ISlideIn extends Omit<SlideProps, "children"> {
 }
 
 export const SlideIn: FC<ISlideIn> = ({
-	rootMargin: rootmargin = "-50px",
+	rootMargin = "-50px",
 	threshold = [0.4, 0.6],
 	children,
 	direction = "up",
 	...slideProps
 }) => {
 	const { ref, inView } = useInView({
-		rootMargin: rootmargin,
+		rootMargin,
 		threshold,
 		fallbackInView: true,
 	});

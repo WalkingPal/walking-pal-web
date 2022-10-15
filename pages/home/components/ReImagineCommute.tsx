@@ -122,14 +122,15 @@ export const CommuteCard: FC<{ cc: typeof commuteCards[0] }> = ({ cc }) => {
 			elevation={2}
 			sx={{ width: 256, borderRadius: 3, overflow: "hidden" }}
 		>
-			<Stack padding="14px" bgcolor={cc.bgcolor} width="100%">
+			<Stack p={1} bgcolor={cc.bgcolor} width="100%">
 				<Stack
-					sx={{ height: 112, backgroundColor: "#FFF" }}
+					height={112}
+					bgcolor="#FFF"
 					justifyContent="center"
 					alignItems="center"
 					borderRadius="20px 20px 0 0"
 					direction="row"
-					gap="4px"
+					gap={0.5}
 				>
 					<Typography fontWeight={500} variant="body1" component="h3">
 						{cc.text}
@@ -139,11 +140,11 @@ export const CommuteCard: FC<{ cc: typeof commuteCards[0] }> = ({ cc }) => {
 					</Typography>
 				</Stack>
 				<Stack
-					height="180px"
+					height={180}
 					bgcolor={cc.bgcolor}
 					justifyContent="center"
 					alignItems="center"
-					padding={{ xs: "24px 0", md: "24px" }}
+					p={{ xs: "20px 0", md: 2 }}
 				>
 					<Box
 						component="img"
