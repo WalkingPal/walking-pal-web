@@ -1,7 +1,8 @@
 import NextNProgress from "nextjs-progressbar";
 import { FCC } from "types/IReact";
+import { useTheme } from "@mui/material";
 
 export const PageLoadProgress: FCC = () => {
-	const progressBarColor = "#FF5959";
-	return <NextNProgress color={progressBarColor} />;
+	const { palette } = useTheme();
+	return <NextNProgress color={palette.primary.main} />;
 };

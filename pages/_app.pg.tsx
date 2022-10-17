@@ -8,7 +8,7 @@ import { Header } from "components/Header";
 import { useRouter } from "next/router";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { PageTransition } from "components/PageTransition";
-import { PageLoadProgress } from "../components/PageLoadProgress/PageLoadProgress";
+import { PageLoadProgress } from "components/PageLoadProgress";
 
 function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -29,9 +29,10 @@ function App({ Component, pageProps }: AppProps) {
 					content="minimum-scale=1, initial-scale=1, width=device-width"
 				/>
 			</Head>
-			<PageLoadProgress />
+
 			<ParallaxProvider>
 				<WPThemeProvider>
+					<PageLoadProgress />
 					{showHeaderCompo.current && (
 						<Header allowPadding={allowPadding.current} />
 					)}
