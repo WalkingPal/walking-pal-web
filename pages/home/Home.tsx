@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import { Play } from "assets/svg";
 import { useWindowSize } from "hooks/useWindowResize";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -15,11 +14,13 @@ import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
 import { ScrollToTop } from "components/ScrollToTop";
+import { Play } from "assets/svg";
 import styles from "./home.module.scss";
 
 export const Home: NextPage = () => {
 	const { width } = useWindowSize();
 	const [Yplay, setYplay] = useState(false);
+
 	return (
 		<>
 			<Head>
@@ -36,21 +37,22 @@ export const Home: NextPage = () => {
 				<Intro />
 				<Features />
 				<Box
-					sx={{ "& html5-video-player": { background: "#fff" } }}
+					borderRadius={5}
 					position="relative"
 					zIndex={1}
 					bgcolor="#fff"
 					overflow="hidden"
 				>
-					<InView as="div" onChange={(inView, entry) => setYplay(inView)}>
+					<InView as="div" onChange={inView => setYplay(inView)}>
 						<Box display="flex" justifyContent="center" mx="4vw" my={4}>
 							{width && (
 								<ReactPlayer
 									width={width < 1200 ? width - 0.08 * width : 1200}
 									height={width < 1200 ? (width - 0.08 * width) * 0.5625 : 675}
-									playIcon={<Play />} // TODO : Doesnt work. ref: https://stackoverflow.com/q/69132970/12872199
+									playIcon={<Play />}
 									style={{ borderRadius: 30, overflow: "hidden", zIndex: 1 }}
 									url="https://www.youtube.com/watch?v=L73A9fyyQqw"
+									light
 									loop
 									muted
 									playing={Yplay}
