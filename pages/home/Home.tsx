@@ -14,22 +14,12 @@ import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
 import { ScrollToTop } from "components/ScrollToTop";
-import { VideoOverlay } from "./components/VideoOverlay";
-import { getThumbnailFromYoutubeVideo } from "utils/getThumbnailFromYoutubeVideo";
+import { Play } from "assets/svg";
 import styles from "./home.module.scss";
 
 export const Home: NextPage = () => {
 	const { width } = useWindowSize();
 	const [Yplay, setYplay] = useState(false);
-	const [isVideoActive, setIsVideoActive] = useState(false);
-	const videoThumbnail = getThumbnailFromYoutubeVideo(
-		"https://www.youtube.com/watch?v=L73A9fyyQqw",
-	);
-
-	const handlePlayClick = () => {
-		setIsVideoActive(true);
-		setYplay(true);
-	};
 
 	return (
 		<>
@@ -47,43 +37,31 @@ export const Home: NextPage = () => {
 				<Intro />
 				<Features />
 				<Box
-					sx={{ "& html5-video-player": { background: "#fff" } }}
+					borderRadius={5}
 					position="relative"
 					zIndex={1}
 					bgcolor="#fff"
 					overflow="hidden"
 				>
-					<Box
-						className="videoWrapper"
-						display={isVideoActive ? "flex" : "none"}
-						justifyContent="center"
-						mx="4vw"
-						my={4}
-					>
-						{width && (
-							<ReactPlayer
-								width={width < 1200 ? width - 0.08 * width : 1200}
-								height={width < 1200 ? (width - 0.08 * width) * 0.5625 : 675}
-								style={{ borderRadius: 30, overflow: "hidden", zIndex: 1 }}
-								url="https://www.youtube.com/watch?v=L73A9fyyQqw"
-								loop
-								muted
-								playing={Yplay}
-								playsinline
-								controls
-							/>
-						)}
-					</Box>
-					<Box
-						className="videoOverlayWrapper"
-						display={isVideoActive ? "none" : "flex"}
-						justifyContent="center"
-						mx="4vw"
-						my={4}
-						onClick={() => handlePlayClick()}
-					>
-						{width && <VideoOverlay thumbnail={videoThumbnail}></VideoOverlay>}
-					</Box>
+					<InView as="div" onChange={inView => setYplay(inView)}>
+						<Box display="flex" justifyContent="center" mx="4vw" my={4}>
+							{width && (
+								<ReactPlayer
+									width={width < 1200 ? width - 0.08 * width : 1200}
+									height={width < 1200 ? (width - 0.08 * width) * 0.5625 : 675}
+									playIcon={<Play />}
+									style={{ borderRadius: 30, overflow: "hidden", zIndex: 1 }}
+									url="https://www.youtube.com/watch?v=L73A9fyyQqw"
+									light
+									loop
+									muted
+									playing={Yplay}
+									playsinline
+									controls
+								/>
+							)}
+						</Box>
+					</InView>
 					<RibbonsSection />
 				</Box>
 				<Box
