@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { PageTransition } from "components/PageTransition";
 import { PageLoadProgress } from "components/PageLoadProgress";
+import { ScrollToTop } from "components/ScrollToTop";
 
 function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -38,6 +39,7 @@ function App({ Component, pageProps }: AppProps) {
 					)}
 					<PageTransition>
 						<Component {...pageProps} />
+						<ScrollToTop />
 					</PageTransition>
 					{showFooterCompo.current && <Footer />}
 				</WPThemeProvider>
