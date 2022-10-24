@@ -16,10 +16,14 @@ function App({ Component, pageProps }: AppProps) {
 	const showHeaderCompo = useRef(true);
 	const showFooterCompo = useRef(true);
 	const allowPadding = useRef(true);
+	const showScrollToTopComp = useRef(true);
 
 	showHeaderCompo.current = ["/register"].includes(router.route) ? false : true;
 	allowPadding.current = ["/404"].includes(router.route) ? false : true;
 	showFooterCompo.current = ["/register", "/404"].includes(router.route)
+		? false
+		: true;
+	showScrollToTopComp.current = ["/register", "/404"].includes(router.route)
 		? false
 		: true;
 	return (
@@ -39,7 +43,7 @@ function App({ Component, pageProps }: AppProps) {
 					)}
 					<PageTransition>
 						<Component {...pageProps} />
-						<ScrollToTop />
+						{showFooterCompo.current && <ScrollToTop />}
 					</PageTransition>
 					{showFooterCompo.current && <Footer />}
 				</WPThemeProvider>
