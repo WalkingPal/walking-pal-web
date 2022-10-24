@@ -4,6 +4,7 @@ import { Story } from "pages/company/components/Story";
 import { Data } from "pages/company/components/Data";
 import { Hero } from "pages/company/components/Hero";
 import { ScrollToTop } from "components/ScrollToTop";
+import { Team } from "./components/Team";
 import { Career } from "./components/Career";
 import styles from "./company.module.scss";
 
@@ -23,6 +24,7 @@ export const Company: NextPage = () => {
 				<Hero />
 				<Data />
 				<Story />
+				<Team />
 				<Career />
 				<ScrollToTop />
 			</div>
