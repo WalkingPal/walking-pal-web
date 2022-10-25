@@ -5,6 +5,7 @@ import { Data } from "pages/company/components/Data";
 import { Hero } from "pages/company/components/Hero";
 import { Career } from "./components/Career";
 import styles from "./company.module.scss";
+import { Team } from "./components/Team";
 
 export const Company: NextPage = () => {
 	return (
@@ -22,6 +23,7 @@ export const Company: NextPage = () => {
 				<Hero />
 				<Data />
 				<Story />
+				<Team />
 				<Career />
 			</div>
 		</>

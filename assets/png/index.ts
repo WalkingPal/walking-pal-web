@@ -66,3 +66,32 @@ export const memojis = [
 	memoji11,
 	memoji12,
 ];
+
+export { default as ashutosh } from "./Ashutosh.png";
+export { default as junaid } from "./Junaid.png";
+import arpit from "./Arpit.png";
+import astha from "./Astha.png";
+import flevie from "./Flevie.png";
+import misty from "./Misty.png";
+import akhilesh from "./Akhilesh.png";
+import pratham from "./Pratham.png";
+import pallav from "./Pallav.png";
+import asmi from "./Asmi.png";
+import pratikash from "./Pratikash.png";
+import prachi from "./Prachi.png";
+import ravindra from "./Ravindra.png";
+import ronak from "./Ronak.png";
+export const members = {
+	arpit,
+	astha,
+	asmi,
+	akhilesh,
+	flevie,
+	misty,
+	pratham,
+	pallav,
+	pratikash,
+	prachi,
+	ravindra,
+	ronak,
+};
