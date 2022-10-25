@@ -3,7 +3,6 @@ import Head from "next/head";
 import { FAQsection } from "pages/faq/components/FAQsection";
 import { Hero } from "pages/faq/components/Hero";
 import { FeedbackForm } from "components/FeedbackForm";
-import { ScrollToTop } from "components/ScrollToTop";
 import styles from "./faq.module.scss";
 const generalFAQs = [
 	{
@@ -96,7 +95,6 @@ export const FAQ: NextPage = () => {
 				<FAQsection title="General" faqs={generalFAQs} isOpen />
 				<FAQsection title="Trust and Safety" faqs={TrustnSafetyFAQs} />
 				<FeedbackForm />
-				<ScrollToTop />
 			</div>
 		</>
 	);

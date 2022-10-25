@@ -3,10 +3,9 @@ import Head from "next/head";
 import { Story } from "pages/company/components/Story";
 import { Data } from "pages/company/components/Data";
 import { Hero } from "pages/company/components/Hero";
-import { ScrollToTop } from "components/ScrollToTop";
-import { Team } from "./components/Team";
 import { Career } from "./components/Career";
 import styles from "./company.module.scss";
+import { Team } from "./components/Team";
 
 export const Company: NextPage = () => {
 	return (
@@ -26,7 +25,6 @@ export const Company: NextPage = () => {
 				<Story />
 				<Team />
 				<Career />
-				<ScrollToTop />
 			</div>
 		</>
 	);

@@ -3,7 +3,6 @@ import Head from "next/head";
 import { Hero } from "pages/about/components/Hero";
 import { OurStory } from "pages/about/components/OurStory";
 import { Gallery } from "pages/about/components/Gallery";
-import { ScrollToTop } from "components/ScrollToTop";
 import styles from "./about.module.scss";
 
 export const About: NextPage = () => {
@@ -25,7 +24,6 @@ export const About: NextPage = () => {
 				<Hero />
 				<Gallery />
 				<OurStory />
-				<ScrollToTop />
 			</div>
 		</>
 	);

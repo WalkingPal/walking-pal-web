@@ -13,7 +13,6 @@ import { RibbonsSection } from "pages/home/components/RibbonsSection";
 import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
-import { ScrollToTop } from "components/ScrollToTop";
 import { Play } from "assets/svg";
 import styles from "./home.module.scss";
 
@@ -78,7 +77,6 @@ export const Home: NextPage = () => {
 				</Box>
 				<ReImagineCommute />
 				{/* <CommunityForm /> */}
-				<ScrollToTop />
 			</div>
 		</>
 	);
