@@ -12,10 +12,12 @@ interface IRegEarlyUserResponse {
 const formDataSchema = z.object({
 	firstName: z
 		.string()
+		.trim()
 		.regex(/^[aA-zZ\s]+$/, { message: "Please provide a valid First Name" })
 		.min(3, { message: "Names must be greater the 2 characters" }),
 	lastName: z
 		.string()
+		.trim()
 		.regex(/^[aA-zZ\s]+$/, { message: "Please provide a valid Last Name" })
 		.min(3, { message: "Names must be greater the 2 characters" }),
 	email: z.string().email({ message: "Please provide a valid Email" }),

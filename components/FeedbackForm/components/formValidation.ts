@@ -6,7 +6,8 @@ import "yup-phone";
 let schema = yup.object().shape({
 	name: yup
 		.string()
-		.matches(/^[aA-zZ\s]+$/, "Enter a valid First Name")
+		.trim()
+		.matches(/^[aA-zZ\s]+$/, "Enter a valid Name")
 		.min(3, `Name must be greater the 2 characters`)
 		.required(),
 	email: yup.string().email("Please enter valid Email").required(),
