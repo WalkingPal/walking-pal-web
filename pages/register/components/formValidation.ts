@@ -12,10 +12,12 @@ export const fields: Fields = {
 let schema = yup.object().shape({
 	firstName: yup
 		.string()
+		.trim()
 		.matches(/^[aA-zZ\s]+$/, "Enter a valid First Name")
 		.min(3, `Names must be greater the 2 characters`),
 	lastName: yup
 		.string()
+		.trim()
 		.matches(/^[aA-zZ\s]+$/, "Enter a valid Last Name")
 		.min(3, "Names must be greater the 2 characters"),
 	email: yup.string().email("Please enter valid Email"),
