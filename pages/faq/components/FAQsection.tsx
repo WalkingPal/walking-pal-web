@@ -48,26 +48,22 @@ export const FAQsection: FC<IFAQsection> = ({
 					{open ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={open} timeout="auto" unmountOnExit>
-					<List component="div" disablePadding>
-						<ul className={styles.list}>
-							{faqs.map(({ faq, desc }, i) => (
-								<li key={`${title}-faq-${i}`}>
-									<Divider />
-									<Accordion sx={{ px: 4, py: 1 }} elevation={0}>
-										<AccordionSummary
-											expandIcon={<ExpandMore color="primary" />}
-										>
-											<Typography variant="subtitle1" color="text.secondary">
-												{faq}
-											</Typography>
-										</AccordionSummary>
-										<AccordionDetails>
-											<Typography variant="body1">{desc}</Typography>
-										</AccordionDetails>
-									</Accordion>
-								</li>
-							))}
-						</ul>
+					<List component="ul" className={styles.list} disablePadding>
+						{faqs.map(({ faq, desc }, i) => (
+							<li key={`${title}-faq-${i}`}>
+								<Divider />
+								<Accordion sx={{ px: 4, py: 1 }} elevation={0}>
+									<AccordionSummary expandIcon={<ExpandMore color="primary" />}>
+										<Typography variant="subtitle1" color="text.secondary">
+											{faq}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails>
+										<Typography variant="body1">{desc}</Typography>
+									</AccordionDetails>
+								</Accordion>
+							</li>
+						))}
 					</List>
 				</Collapse>
 			</List>
