@@ -17,7 +17,7 @@ const imageStyles = (bgcolor: string): SxProps<Theme> => ({
 });
 export const Team: FC = () => (
 	<Stack mx="4vw" my={10} borderRadius={3}>
-		<Typography variant="h3" align="center">
+		<Typography variant="h3" align="center" component="h2">
 			Meet the<Accent>team</Accent>
 		</Typography>
 		<Typography align="center" maxWidth={600} mb={4} mx="auto">
@@ -30,11 +30,14 @@ export const Team: FC = () => (
 					<Image
 						wrapstyle={imageStyles(bgcolor)}
 						src={src}
-						alt={name}
+						// alt={name}
+						alt=""
 						width={300}
 						height={300}
 					/>
-					<Typography variant="h5">{name}</Typography>
+					<Typography variant="h5" component="p">
+						{name}
+					</Typography>
 					<Typography variant="body2">{desg}</Typography>
 				</Stack>
 			))}
@@ -46,11 +49,14 @@ export const Team: FC = () => (
 						<Image
 							wrapstyle={imageStyles(bgcolor)}
 							src={src}
-							alt={name}
+							// alt={name}
+							alt=""
 							width={200}
 							height={200}
 						/>
-						<Typography variant="h5">{name}</Typography>
+						<Typography variant="h5" component="p">
+							{name}
+						</Typography>
 						<Typography variant="body2">{desg}</Typography>
 					</Stack>
 				))}
