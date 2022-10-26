@@ -47,7 +47,7 @@ export const FormHeader: FC<IFormHeader> = ({}) => {
 				width={1298}
 				height={655}
 				wrapstyle={{ mb: 6 }}
-				alt="VSSUT, Burla"
+				alt=""
 			/>
 
 			<Typography variant="h2" textAlign="center">
