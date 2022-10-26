@@ -12,14 +12,15 @@ interface ResponseData {
 const formDataSchema = z.object({
 	name: z
 		.string()
+		.trim()
 		.min(3, { message: "Name must be greater the 2 characters" })
 		.regex(/^[aA-zZ\s]+$/, { message: "Provide a valid Name" }),
 	email: z.string().email({ message: "Provide a valid Email" }),
 	phone: z.string().optional(),
-	message: z.string().min(1),
+	message: z.string().trim().min(1),
 });
 
-const captchaSchema = z.string().min(1);
+const captchaSchema = z.string().trim().min(1);
 
 const registerFeedback = async (
 	req: NextApiRequest,

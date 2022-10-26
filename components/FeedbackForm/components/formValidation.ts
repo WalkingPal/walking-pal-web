@@ -16,7 +16,7 @@ let schema = yup.object().shape({
 		then: yup.string().phone("Please enter valid Phone Number"),
 		otherwise: yup.string(),
 	}),
-	message: yup.string().required(),
+	message: yup.string().trim().required(),
 });
 
 export const checkValidity = async (formData: IFormData) => {

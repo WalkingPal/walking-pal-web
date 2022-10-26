@@ -21,10 +21,10 @@ const formDataSchema = z.object({
 		.regex(/^[aA-zZ\s]+$/, { message: "Please provide a valid Last Name" })
 		.min(3, { message: "Names must be greater the 2 characters" }),
 	email: z.string().email({ message: "Please provide a valid Email" }),
-	university: z.string().min(2),
+	university: z.string().trim().min(2),
 });
 
-const captchaSchema = z.string().min(1);
+const captchaSchema = z.string().trim().min(1);
 
 const registerEarlyUser = async (
 	req: NextApiRequest,
