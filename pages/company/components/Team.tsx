@@ -35,7 +35,7 @@ export const Team: FC = () => (
 						width={300}
 						height={300}
 					/>
-					<Typography variant="h5" component="p">
+					<Typography variant="h5" component="h3">
 						{name}
 					</Typography>
 					<Typography variant="body2">{desg}</Typography>
@@ -54,7 +54,7 @@ export const Team: FC = () => (
 							width={200}
 							height={200}
 						/>
-						<Typography variant="h5" component="p">
+						<Typography variant="h5" component="h3">
 							{name}
 						</Typography>
 						<Typography variant="body2">{desg}</Typography>
