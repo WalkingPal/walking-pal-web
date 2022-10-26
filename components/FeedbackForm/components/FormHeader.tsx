@@ -26,13 +26,17 @@ export const FormHeader: FC<IFormHeader> = ({}) => {
 				<Typography variant="h3">VSSUT, Burla</Typography>
 				<Box display="flex" flexWrap="wrap" gap={1}>
 					<Box display="grid">
-						<Typography variant="subtitle1">Address</Typography>
+						<Typography variant="subtitle1" component="span">
+							Address
+						</Typography>
 						<Typography variant="body2" maxWidth={170}>
 							Innovation and Incubation center
 						</Typography>
 					</Box>
 					<Box display="grid">
-						<Typography variant="subtitle1">Contact</Typography>
+						<Typography variant="subtitle1" component="span">
+							Contact
+						</Typography>
 						<Typography variant="body2">hello.walkingpal@gmail.com</Typography>
 						<Typography variant="body2">(+91) 78943 14020</Typography>
 					</Box>

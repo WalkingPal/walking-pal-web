@@ -43,7 +43,9 @@ export const FAQsection: FC<IFAQsection> = ({
 						<Quiz />
 					</ListItemIcon>
 					<ListItemText>
-						<Typography variant="h5">{title}</Typography>
+						<Typography variant="h5" component="p">
+							{title}
+						</Typography>
 					</ListItemText>
 					{open ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
