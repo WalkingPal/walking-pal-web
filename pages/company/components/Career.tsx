@@ -37,7 +37,9 @@ export const Career: FC = () => {
 						key={index}
 					>
 						<Box>
-							<Typography variant="h5">{job.title}</Typography>
+							<Typography variant="h5" component="h3">
+								{job.title}
+							</Typography>
 							<Typography variant="body2">{job.status}</Typography>
 						</Box>
 						<Button

@@ -17,18 +17,36 @@ import "swiper/css";
 interface IHero {}
 
 const sliders = [
-	{ img: gallery0, alt: "Two people walking down a sidewalk" },
-	{ img: gallery1, alt: "Low angle view of two people walking on glass floor" },
-	{ img: gallery2, alt: "Walking down the road" },
+	{
+		img: gallery0,
+		alt: "",
+		// alt: "Two people walking down a sidewalk"
+	},
+	{
+		img: gallery1,
+		alt: "",
+		// alt: "Low angle view of two people walking on glass floor",
+	},
+	{
+		img: gallery2,
+		alt: "",
+		//  alt: "Walking down the road"
+	},
 	{
 		img: gallery3,
-		alt: "A stick man figure that flies clinging to a red heart shape",
+		alt: "",
+		// alt: "A stick man figure that flies clinging to a red heart shape",
 	},
 	{
 		img: gallery4,
-		alt: "Colorful steps",
+		alt: "",
+		// alt: "Colorful steps",
 	},
-	{ img: gallery5, alt: "Footstep surrounded by flowers and leaves" },
+	{
+		img: gallery5,
+		alt: "",
+		// alt: "Footstep surrounded by flowers and leaves"
+	},
 ];
 
 export const Hero: FC<IHero> = ({}) => {
