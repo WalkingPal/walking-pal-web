@@ -33,19 +33,22 @@ export const Intro: FC = ({}) => {
 			<Image
 				className={ss.mockup}
 				src={mockup}
-				alt="iPhone screen displaying WalkingPal app"
+				// alt="iPhone screen displaying WalkingPal app"
+				alt=""
 				ref={anim1.ref}
 			/>
 			<Image
 				className={ss.credit}
 				src={credit}
-				alt="100% free to get a working buddy with WalkingPal"
+				// alt="100% free to get a working buddy with WalkingPal"
+				alt=""
 				ref={anim2.ref}
 			/>
 			<Image
 				className={ss.screens2}
 				src={screens2}
-				alt="WalkingPal app in mobile phones"
+				// alt="WalkingPal app in mobile phones"
+				alt=""
 				ref={anim3.ref}
 			/>
 			<span className={ss.screens1} ref={anim4.ref}>
@@ -66,14 +69,16 @@ export const Intro: FC = ({}) => {
 						src={screens1}
 						style={{ width: "100%" }}
 						wrapstyle={{ display: "flex" }}
-						alt="Different screens of WalkingPal app"
+						// alt="Different screens of WalkingPal app"
+						alt=""
 					/>
 				</Paper>
 			</span>
 			<Image
 				className={ss.walker}
 				src={walker}
-				alt="A man with WalkingPal app walking beside a van"
+				// alt="A man with WalkingPal app walking beside a van"
+				alt=""
 				wrapstyle={{ maxWidth: 684 }}
 				ref={anim5.ref}
 			/>
@@ -92,7 +97,8 @@ export const Intro: FC = ({}) => {
 					<Image
 						src={group}
 						style={{ width: "100%" }}
-						alt="Create walking buddy groups in WalkingPal app"
+						// alt="Create walking buddy groups in WalkingPal app"
+						alt=""
 					/>
 					<Box p={3} textAlign="center">
 						<Typography variant="h6" component="span">
