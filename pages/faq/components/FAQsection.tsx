@@ -14,6 +14,7 @@ import {
 	Typography,
 } from "@mui/material";
 import { FC, useState } from "react";
+import styles from "../faq.module.scss";
 
 interface IFAQsection {
 	title: string;
@@ -42,14 +43,16 @@ export const FAQsection: FC<IFAQsection> = ({
 						<Quiz />
 					</ListItemIcon>
 					<ListItemText>
-						<Typography variant="h5">{title}</Typography>
+						<Typography variant="h5" component="h2">
+							{title}
+						</Typography>
 					</ListItemText>
 					{open ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={open} timeout="auto" unmountOnExit>
-					<List component="div" disablePadding>
+					<List component="ul" className={styles.list} disablePadding>
 						{faqs.map(({ faq, desc }, i) => (
-							<Box key={`${title}-faq-${i}`}>
+							<li key={`${title}-faq-${i}`}>
 								<Divider />
 								<Accordion sx={{ px: 4, py: 1 }} elevation={0}>
 									<AccordionSummary expandIcon={<ExpandMore color="primary" />}>
@@ -61,7 +64,7 @@ export const FAQsection: FC<IFAQsection> = ({
 										<Typography variant="body1">{desc}</Typography>
 									</AccordionDetails>
 								</Accordion>
-							</Box>
+							</li>
 						))}
 					</List>
 				</Collapse>
