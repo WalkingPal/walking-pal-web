@@ -8,7 +8,7 @@ interface IFormHeader {}
 export const FormHeader: FC<IFormHeader> = ({}) => {
 	return (
 		<>
-			<Typography variant="h3" textAlign="center" mt={13}>
+			<Typography variant="h3" component="h2" textAlign="center" mt={13}>
 				Didn’t get what you are looking for?
 			</Typography>
 			<Typography variant="body1" my={2} textAlign="center">
