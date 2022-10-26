@@ -14,6 +14,7 @@ import {
 	Typography,
 } from "@mui/material";
 import { FC, useState } from "react";
+import styles from "../faq.module.scss";
 
 interface IFAQsection {
 	title: string;
@@ -48,21 +49,25 @@ export const FAQsection: FC<IFAQsection> = ({
 				</ListItemButton>
 				<Collapse in={open} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>
-						{faqs.map(({ faq, desc }, i) => (
-							<Box key={`${title}-faq-${i}`}>
-								<Divider />
-								<Accordion sx={{ px: 4, py: 1 }} elevation={0}>
-									<AccordionSummary expandIcon={<ExpandMore color="primary" />}>
-										<Typography variant="subtitle1" color="text.secondary">
-											{faq}
-										</Typography>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography variant="body1">{desc}</Typography>
-									</AccordionDetails>
-								</Accordion>
-							</Box>
-						))}
+						<ul className={styles.list}>
+							{faqs.map(({ faq, desc }, i) => (
+								<li key={`${title}-faq-${i}`}>
+									<Divider />
+									<Accordion sx={{ px: 4, py: 1 }} elevation={0}>
+										<AccordionSummary
+											expandIcon={<ExpandMore color="primary" />}
+										>
+											<Typography variant="subtitle1" color="text.secondary">
+												{faq}
+											</Typography>
+										</AccordionSummary>
+										<AccordionDetails>
+											<Typography variant="body1">{desc}</Typography>
+										</AccordionDetails>
+									</Accordion>
+								</li>
+							))}
+						</ul>
 					</List>
 				</Collapse>
 			</List>
