@@ -21,7 +21,7 @@ let schema = yup.object().shape({
 		.matches(/^[aA-zZ\s]+$/, "Enter a valid Last Name")
 		.min(3, "Names must be greater the 2 characters"),
 	email: yup.string().email("Please enter valid Email"),
-	university: yup.string(),
+	university: yup.string().trim().min(2),
 });
 
 export const checkValidity = async (

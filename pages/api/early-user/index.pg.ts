@@ -24,7 +24,7 @@ const formDataSchema = z.object({
 	university: z.string().trim().min(2),
 });
 
-const captchaSchema = z.string().trim().min(1);
+const captchaSchema = z.string().trim().min(2);
 
 const registerEarlyUser = async (
 	req: NextApiRequest,

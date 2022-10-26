@@ -17,7 +17,7 @@ const formDataSchema = z.object({
 		.regex(/^[aA-zZ\s]+$/, { message: "Provide a valid Name" }),
 	email: z.string().email({ message: "Provide a valid Email" }),
 	phone: z.string().optional(),
-	message: z.string().trim().min(1),
+	message: z.string().trim().min(2),
 });
 
 const captchaSchema = z.string().trim().min(1);
