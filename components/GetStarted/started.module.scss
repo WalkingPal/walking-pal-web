@@ -1,0 +1,45 @@
+.getstarted {
+	background: #ff5959;
+	border-radius: 30px;
+	display: grid;
+	padding: 4vw 4vw 0 4vw;
+	color: #fff;
+
+	.content {
+		.app {
+			display: grid;
+			grid-auto-flow: column;
+			align-content: baseline;
+			justify-content: center;
+			.appimage {
+				border-bottom-right-radius: 10px;
+				border-bottom-left-radius: 10px;
+			}
+			.imagebox {
+				display: flex;
+				align-items: flex-end;
+			}
+		}
+		.ring {
+			position: absolute;
+			left: -10px;
+			margin-top: -100px;
+		}
+		.cylinder {
+			position: absolute;
+			left: calc(100vw * 3 / 4);
+			margin-top: -120px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.getstarted {
+		.content {
+			.app {
+				display: flex;
+				flex-wrap: nowrap;
+			}
+		}
+	}
+}

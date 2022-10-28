@@ -27,6 +27,10 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 			secondary: {
 				main: "#F6BF51",
 			},
+			info: {
+				main: "#ffffff",
+				contrastText: "#484848",
+			},
 			text: {
 				primary: "#210B0B",
 				secondary: "#767676",
