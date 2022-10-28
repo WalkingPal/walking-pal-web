@@ -4,6 +4,7 @@ import { Hero } from "pages/about/components/Hero";
 import { OurStory } from "pages/about/components/OurStory";
 import { Gallery } from "pages/about/components/Gallery";
 import styles from "./about.module.scss";
+import { GetStarted } from "components/GetStarted";
 
 export const About: NextPage = () => {
 	return (
@@ -24,6 +25,7 @@ export const About: NextPage = () => {
 				<Hero />
 				<Gallery />
 				<OurStory />
+				<GetStarted />
 			</div>
 		</>
 	);
