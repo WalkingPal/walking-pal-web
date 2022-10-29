@@ -1,8 +1,6 @@
 import { FC } from "react";
-import { Button, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Image from "next/image";
-import Link from "next/link";
 import {
 	getstarted1,
 	getstarted2,
@@ -10,67 +8,63 @@ import {
 	cylinder,
 	ring,
 } from "assets/png";
-import styles from "./started.module.scss";
+import { Image } from "components/Image";
 
 export const GetStarted: FC = () => {
 	return (
-		<Box className={styles.getstarted}>
-			<Box
-				display="flex"
-				justifyContent="center"
-				alignItems="center"
-				flexDirection="column"
-			>
-				<Typography
-					variant="h3"
-					component="h2"
-					textAlign="center"
-					pt={3}
-					maxWidth={500}
-				>
+		<Box bgcolor="primary.main" color="#fff" borderRadius={3}>
+			<Stack alignItems="center">
+				<Typography variant="h3" component="h2" align="center" pt={6}>
 					Ready to get started?
 				</Typography>
-				<Typography variant="h5" pb={2} textAlign="center">
+				<Typography variant="h5" component="h3" align="center" pb={2}>
 					Download the app and sign up now!
 				</Typography>
-				<Box sx={{ mb: { xs: 2, md: 5 } }}>
-					<Button variant="contained" color="info">
-						<Link href="/">Download</Link>
+				<Box position="relative" width="100%" display="grid">
+					<Image
+						src={ring}
+						alt=""
+						wrapstyle={{
+							position: "absolute",
+							top: -40,
+							left: -90,
+						}}
+					/>
+					<Button
+						variant="contained"
+						sx={{ bgcolor: "#fff", color: "#484848", mx: "auto" }}
+						role="link"
+						href="#"
+					>
+						Download
 					</Button>
+					<Image
+						src={cylinder}
+						alt=""
+						wrapstyle={{
+							position: "absolute",
+							top: 0,
+							right: { xs: -80, md: "4vw" },
+						}}
+					/>
 				</Box>
-			</Box>
-			<Box className={styles.content}>
-				<Box
-					className={styles.ring}
-					sx={{ display: { xs: "none", md: "flex" } }}
-				>
-					<Image src={ring} alt={"altText"} />
-				</Box>
-				<Box
-					className={styles.cylinder}
-					sx={{ display: { xs: "none", md: "flex" } }}
-				>
-					<Image src={cylinder} alt={"altText"} />
-				</Box>
-				<Box className={styles.app}>
-					<Box component="span" className={styles.imagebox} mr={-4}>
-						<Image
-							src={getstarted1}
-							className={styles.appimage}
-							alt={"altText"}
-						/>
-					</Box>
-					<Box component="span" className={styles.imagebox} zIndex={1}>
-						<Image src={getstarted2} alt={"altText"} />
-					</Box>
-					<Box component="span" className={styles.imagebox} ml={-4}>
-						<Image
-							src={getstarted3}
-							className={styles.appimage}
-							alt={"altText"}
-						/>
-					</Box>
-				</Box>
+			</Stack>
+			<Box mt={20} display="flex" justifyContent="center" alignItems="flex-end">
+				<Image
+					src={getstarted1}
+					alt=""
+					wrapstyle={{ position: "relative", right: -40, display: "flex" }}
+				/>
+				<Image
+					src={getstarted2}
+					alt=""
+					wrapstyle={{ zIndex: 1, display: "flex" }}
+				/>
+				<Image
+					src={getstarted3}
+					alt=""
+					wrapstyle={{ position: "relative", left: -40, display: "flex" }}
+				/>
 			</Box>
 		</Box>
 	);

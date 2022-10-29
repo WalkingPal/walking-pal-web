@@ -28,6 +28,7 @@ export const Gallery: FC = ({}) => {
 				width="70%"
 				align="center"
 				mx="auto"
+				maxWidth={800}
 			>
 				Every groundbreaking App begins with a series of small ideas that are
 				combined into an all inclusive one. At WalkingPal, we wanted to change
