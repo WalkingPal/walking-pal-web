@@ -39,7 +39,11 @@ export const InputField: FCC<IInputField> = ({
 	const isOther = otherUniversity === OTHER;
 	return (
 		<Stack gap={1} p={3} bgcolor="#fff">
-			<InputLabel required sx={{ fontSize: 30, color: "#000" }}>
+			<InputLabel
+				required
+				sx={{ fontSize: 30, color: "#000" }}
+				id={inputProps.name}
+			>
 				<Typography variant="h6" component="span" fontWeight="medium">
 					{label}
 				</Typography>
@@ -97,6 +101,7 @@ export const InputField: FCC<IInputField> = ({
 					{...inputProps}
 					ref={inputRef}
 					label={undefined}
+					id={inputProps.name}
 					className={styles.inputText}
 				/>
 			)}
