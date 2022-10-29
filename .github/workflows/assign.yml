@@ -1,0 +1,17 @@
+name: Assign
+
+on: 
+  issue_comment:
+    types: created
+
+jobs:
+  assign:
+    if: ${{ !github.event.issue.pull_request && !github.event.issue.assignee && github.event.comment == 'assignme'}}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+    - run: gh issue edit $ISSUE --add-assignee $ASSIGNEE
+      env:
+        ISSUE: ${{ github.event.issue.html_url }}
+        ASSIGNEE: ${{ github.event.sender.login }}
