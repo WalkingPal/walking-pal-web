@@ -21,6 +21,7 @@ const Story: FC<IStory> = ({ imgSrc, content, rowReverse, icon }) => {
 			alignItems="center"
 			flexWrap="wrap"
 			gap={3}
+			width="100%"
 		>
 			<Box
 				position="relative"
