@@ -6,7 +6,7 @@ on:
 
 jobs:
   assign:
-    if: ${{ !github.event.issue.pull_request && github.event.comment.body ==  'assignme'}}
+    if: ${{ !github.event.issue.pull_request && github.event.comment.body ==  'assignme' && !github.event.comment.assignee}}
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -18,4 +18,5 @@ jobs:
       env:
         ISSUE: ${{ github.event.issue.html_url }}
         ASSIGNEE: ${{ github.event.sender.login }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
