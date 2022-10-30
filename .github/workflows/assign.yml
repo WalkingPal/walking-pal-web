@@ -6,20 +6,13 @@ on:
 
 jobs:
   assign:
-    if: ${{ !github.event.issue.pull_request && github.event.comment.body ==  'assignme' }}
+    if: ${{ !github.event.issue.pull_request && github.event.comment.body ==  'assignme' && !github.event.comment.assignee}}
     runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
-    - if: ${{ !github.event.comment.assignee }}
-      run: gh issue edit $ISSUE --add-assignee $ASSIGNEE
+    - run: gh issue edit $ISSUE --add-assignee $ASSIGNEE
       env:
         ISSUE: ${{ github.event.issue.html_url }}
         ASSIGNEE: ${{ github.event.sender.login }}
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
-    - if: ${{ github.event.comment.assignee }}
-      run: gh issue comment $ISSUE --body "❌ There's someone already assigned to this issue"
-      env:
-        ISSUE: ${{ github.event.issue.html_url }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
