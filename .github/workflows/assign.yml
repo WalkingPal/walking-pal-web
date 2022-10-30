@@ -6,14 +6,14 @@ on:
 
 jobs:
   assign:
-    if: ${{ !github.event.issue.pull_request}}
+    if: ${{ !github.event.issue.pull_request && github.event.comment.body ==  'assignme'}}
     runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
     - run: echo $COMMENT
       env:
-        COMMENT: ${{ github.event.comment.body }}
+        COMMENT: ${{ !github.event.comment.assignee }}
     - run: gh issue edit $ISSUE --add-assignee $ASSIGNEE
       env:
         ISSUE: ${{ github.event.issue.html_url }}
