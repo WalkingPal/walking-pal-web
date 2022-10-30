@@ -6,12 +6,16 @@ on:
 
 jobs:
   assign:
-    if: ${{ !github.event.issue.pull_request && github.event.comment == 'assignme'}}
+    if: ${{ !github.event.issue.pull_request}}
     runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
+    - run: echo $COMMENT
+      env:
+        COMMENT: ${{ github.event.comment }}
     - run: gh issue edit $ISSUE --add-assignee $ASSIGNEE
       env:
         ISSUE: ${{ github.event.issue.html_url }}
         ASSIGNEE: ${{ github.event.sender.login }}
+        
