@@ -55,7 +55,7 @@ export const InputField: FCC<IInputField> = ({
 					label={undefined}
 					className={styles.inputText}
 					sx={{ ...inputProps.sx, zIndex: 0 }}
-					id={inputProps.name}
+					id="university"
 				>
 					{[
 						"VSSUT",
