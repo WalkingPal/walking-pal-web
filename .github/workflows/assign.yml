@@ -13,7 +13,7 @@ jobs:
     steps:
     - run: echo $COMMENT
       env:
-        COMMENT: ${{ github.event.comment }}
+        COMMENT: ${{ github.event.comment.body }}
     - run: gh issue edit $ISSUE --add-assignee $ASSIGNEE
       env:
         ISSUE: ${{ github.event.issue.html_url }}
