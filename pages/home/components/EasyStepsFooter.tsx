@@ -25,21 +25,24 @@ export const EasyStepsFooter: FC = ({}) => {
 						height="70"
 						width="70"
 						style={{ borderRadius: 10 }}
-						alt="a walking boy"
+						// alt="a walking boy"
+						alt=""
 					/>
 					<Image
 						src={legs}
 						height="70"
 						width="70"
 						style={{ borderRadius: 10 }}
-						alt="walking legs"
+						// alt="walking legs"
+						alt=""
 					/>
 					<Image
 						src={man}
 						height="70"
 						width="70"
 						style={{ borderRadius: 10 }}
-						alt="a walking man"
+						// alt="a walking man"
+						alt=""
 					/>
 				</Box>
 			</Box>

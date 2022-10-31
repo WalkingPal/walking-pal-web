@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Hero } from "pages/blog/components/Hero";
 import { BlogsList } from "pages/blog/components/BlogsList";
+import { GetStarted } from "components/GetStarted";
 import styles from "./blog.module.scss";
 
 export const Blog: NextPage = () => {
@@ -22,6 +23,7 @@ export const Blog: NextPage = () => {
 			<div className={styles.main}>
 				<Hero />
 				<BlogsList />
+				<GetStarted />
 			</div>
 		</>
 	);
