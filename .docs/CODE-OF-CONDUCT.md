@@ -1,15 +1,11 @@
 # Code of Conduct
 
----
-
 ## Our Pledge
 
 As contributors and maintainers of this project, and in the interest of
 fostering an open and welcoming community, we pledge to respect all people who
 contribute through reporting issues, posting feature requests, updating
 documentation, submitting pull requests or patches, and other activities.
-
----
 
 ## Our Standards
 
@@ -28,8 +24,6 @@ Examples of unacceptable behavior by contributors include:
   addresses, without explicit permission
 - Other unethical or unprofessional conduct
 
----
-
 ## Our Responsibilities
 
 Project maintainers have the right and responsibility to remove, edit, or
@@ -43,14 +37,10 @@ fairly and consistently applying these principles to every aspect of managing
 this project. Project maintainers who do not follow or enforce the Code of
 Conduct may be permanently removed from the project team.
 
----
-
 ## Scope
 
 This Code of Conduct applies both within project spaces and in public spaces
 when an individual is representing the project or its community.
-
----
 
 ## Enforcement
 
@@ -60,8 +50,6 @@ complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. Maintainers are
 obligated to maintain confidentiality with regard to the reporter of an
 incident.
-
----
 
 ## Attribution
 

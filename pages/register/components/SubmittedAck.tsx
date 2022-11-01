@@ -17,19 +17,14 @@ export const SubmittedAck: FC = () => {
 				width="100%"
 				bgcolor="white"
 				boxShadow="10px 20px 50px rgba(0,0,0,0.25)"
-				borderRadius="16px"
+				borderRadius={2}
 				overflow="hidden"
 			>
-				<Stack sx={{ p: "32px", pt: "45px", alignItems: "center" }}>
-					<Typography variant="h5" fontWeight="medium" textAlign="center">
+				<Stack p={3} pt={4} alignItems="center">
+					<Typography variant="h5" fontWeight="medium" align="center">
 						Congratulations!🥳
 					</Typography>
-					<Typography
-						variant="body2"
-						component="span"
-						textAlign="center"
-						sx={{ p: 5 }}
-					>
+					<Typography variant="body2" align="center" p={5}>
 						You have sucessfully registered as one of the early users of
 						<Accent sx={{ fontWeight: 500 }}>WalkingPal.</Accent>
 						<br />

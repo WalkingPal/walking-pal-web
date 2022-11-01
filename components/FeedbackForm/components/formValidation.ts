@@ -1,12 +1,13 @@
-import { IFormData } from "components/FeedbackForm/FeedbackForm";
-import { firstLetterCaps } from "utils/db/textTransform";
+import { IFormData } from "components/FeedbackForm";
+import { firstLetterCaps } from "utils/textTransform";
 import * as yup from "yup";
 import "yup-phone";
 
 let schema = yup.object().shape({
 	name: yup
 		.string()
-		.matches(/^[aA-zZ\s]+$/, "Enter a valid First Name")
+		.trim()
+		.matches(/^[aA-zZ\s]+$/, "Enter a valid Name")
 		.min(3, `Name must be greater the 2 characters`)
 		.required(),
 	email: yup.string().email("Please enter valid Email").required(),
@@ -15,7 +16,7 @@ let schema = yup.object().shape({
 		then: yup.string().phone("Please enter valid Phone Number"),
 		otherwise: yup.string(),
 	}),
-	message: yup.string().required(),
+	message: yup.string().trim().min(2).required(),
 });
 
 export const checkValidity = async (formData: IFormData) => {

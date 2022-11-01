@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import { FCC } from "types/IReact";
-import { firstLetterCaps } from "utils/db/textTransform";
+import { firstLetterCaps } from "utils/textTransform";
 import styles from "../register.module.scss";
 
 interface IInputField extends InputBaseProps {
@@ -38,8 +38,12 @@ export const InputField: FCC<IInputField> = ({
 	const [dialogActive, setDialogActive] = useState(false);
 	const isOther = otherUniversity === OTHER;
 	return (
-		<Stack gap={1} sx={{ p: 3, backgroundColor: "#fff" }}>
-			<InputLabel required sx={{ fontSize: 30, color: "#000" }}>
+		<Stack gap={1} p={3} bgcolor="#fff">
+			<InputLabel
+				required
+				sx={{ fontSize: 30, color: "#000" }}
+				htmlFor={inputProps.name}
+			>
 				<Typography variant="h6" component="span" fontWeight="medium">
 					{label}
 				</Typography>
@@ -51,6 +55,7 @@ export const InputField: FCC<IInputField> = ({
 					label={undefined}
 					className={styles.inputText}
 					sx={{ ...inputProps.sx, zIndex: 0 }}
+					inputProps={{ id: inputProps.name }}
 				>
 					{[
 						"VSSUT",
@@ -97,6 +102,7 @@ export const InputField: FCC<IInputField> = ({
 					{...inputProps}
 					ref={inputRef}
 					label={undefined}
+					id={inputProps.name}
 					className={styles.inputText}
 				/>
 			)}
@@ -104,7 +110,7 @@ export const InputField: FCC<IInputField> = ({
 
 			<Dialog open={dialogActive} sx={{ backdropFilter: "blur(5px)" }}>
 				<Stack gap={1} sx={{ width: 600, p: 3, bgcolor: "white" }}>
-					<InputLabel sx={{ fontSize: 30, transform: "none", color: "#000" }}>
+					<InputLabel sx={{ color: "#000" }} htmlFor="other-univ">
 						<Typography variant="h6" component="span" fontWeight="medium">
 							Enter your University name
 						</Typography>
@@ -121,6 +127,7 @@ export const InputField: FCC<IInputField> = ({
 						value={isOther ? "" : otherUniversity}
 						className={styles.inputText}
 						placeholder="Enter your University name"
+						id="other-univ"
 					/>
 				</Stack>
 

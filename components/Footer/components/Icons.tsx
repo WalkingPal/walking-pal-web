@@ -6,6 +6,8 @@ import linkedin from "react-useanimations/lib/linkedin";
 import instagram from "react-useanimations/lib/instagram";
 import youtube from "react-useanimations/lib/youtube";
 import { Discord as DiscordSVG } from "assets/svg";
+import styles from "../footer.module.scss";
+import { Box } from "@mui/material";
 
 const commonIconStyles = {
 	size: 30,
@@ -37,5 +39,7 @@ export const Youtube = () => (
 );
 
 export const Discord = () => (
-	<DiscordSVG color={commonIconStyles.strokeColor} />
+	<Box className={styles.discordIcon}>
+		<DiscordSVG color={commonIconStyles.strokeColor} />
+	</Box>
 );

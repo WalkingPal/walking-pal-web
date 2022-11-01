@@ -33,12 +33,17 @@ export { default as gallery2 } from "./gallery2.png";
 export { default as gallery3 } from "./gallery3.png";
 export { default as gallery4 } from "./gallery4.png";
 export { default as gallery5 } from "./gallery5.png";
+export { default as getstarted1 } from "./getstarted1.png";
+export { default as getstarted2 } from "./getstarted2.png";
+export { default as getstarted3 } from "./getstarted3.png";
 export { default as blog1 } from "./blog1.png";
 export { default as blog2 } from "./blog2.png";
 export { default as blog3 } from "./blog3.png";
 export { default as blog4 } from "./blog4.png";
 export { default as blog5 } from "./blog5.png";
 export { default as shape1 } from "./shape1.png";
+export { default as cylinder } from "./cylinder.png";
+export { default as ring } from "./ring.png";
 
 import memoji1 from "./memoji1.png";
 import memoji2 from "./memoji2.png";
@@ -66,3 +71,32 @@ export const memojis = [
 	memoji11,
 	memoji12,
 ];
+
+export { default as ashutosh } from "./Ashutosh.png";
+export { default as junaid } from "./Junaid.png";
+import arpit from "./Arpit.png";
+import astha from "./Astha.png";
+import flevie from "./Flevie.png";
+import misty from "./Misty.png";
+import akhilesh from "./Akhilesh.png";
+import pratham from "./Pratham.png";
+import pallav from "./Pallav.png";
+import asmi from "./Asmi.png";
+import pratikash from "./Pratikash.png";
+import prachi from "./Prachi.png";
+import ravindra from "./Ravindra.png";
+import ronak from "./Ronak.png";
+export const members = {
+	arpit,
+	astha,
+	asmi,
+	akhilesh,
+	flevie,
+	misty,
+	pratham,
+	pallav,
+	pratikash,
+	prachi,
+	ravindra,
+	ronak,
+};

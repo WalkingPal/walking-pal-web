@@ -8,7 +8,7 @@ interface IFormHeader {}
 export const FormHeader: FC<IFormHeader> = ({}) => {
 	return (
 		<>
-			<Typography variant="h3" textAlign="center" mt={13}>
+			<Typography variant="h3" component="h2" textAlign="center" mt={13}>
 				Didn’t get what you are looking for?
 			</Typography>
 			<Typography variant="body1" my={2} textAlign="center">
@@ -26,13 +26,17 @@ export const FormHeader: FC<IFormHeader> = ({}) => {
 				<Typography variant="h3">VSSUT, Burla</Typography>
 				<Box display="flex" flexWrap="wrap" gap={1}>
 					<Box display="grid">
-						<Typography variant="subtitle1">Address</Typography>
+						<Typography variant="subtitle1" component="span">
+							Address
+						</Typography>
 						<Typography variant="body2" maxWidth={170}>
 							Innovation and Incubation center
 						</Typography>
 					</Box>
 					<Box display="grid">
-						<Typography variant="subtitle1">Contact</Typography>
+						<Typography variant="subtitle1" component="span">
+							Contact
+						</Typography>
 						<Typography variant="body2">hello.walkingpal@gmail.com</Typography>
 						<Typography variant="body2">(+91) 78943 14020</Typography>
 					</Box>
@@ -43,7 +47,7 @@ export const FormHeader: FC<IFormHeader> = ({}) => {
 				width={1298}
 				height={655}
 				wrapstyle={{ mb: 6 }}
-				alt="VSSUT, Burla"
+				alt=""
 			/>
 
 			<Typography variant="h2" textAlign="center">

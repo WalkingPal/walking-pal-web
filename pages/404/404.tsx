@@ -20,21 +20,21 @@ export const Error404: NextPage = () => {
 				/>
 			</Head>
 
-			<main className={styles.main}>
+			<div className={styles.main}>
 				<div className={styles.left}>
 					<Image src={Error} alt="" />
 				</div>
-				<Box bgcolor="primary.main" color="#ffffffcc" className={styles.right}>
+				<Box bgcolor="primary.main" color="#fffc" className={styles.right}>
 					<Typography variant="h1" pb={3}>
 						Ouppps! <br /> 404
 					</Typography>
-					<Typography variant="h5">
+					<Typography variant="h5" component="h2">
 						Looks like this page is missing or unavailable. If you think this is
 						a mistake, don’t worry though, our best man is on the case! <br />
 						<br /> Meanwhile, please head back.
 					</Typography>
 				</Box>
-			</main>
+			</div>
 		</>
 	);
 };

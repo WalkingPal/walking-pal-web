@@ -1,13 +1,15 @@
-main {
+.main {
+	padding: 4vw;
 	.gallery {
-		padding: 4vw;
+		padding: 40px 0;
 		display: grid;
 		gap: 30px;
 		grid-template-columns: 1fr 1fr 1.5fr;
 		grid-template-areas:
 			"a b d"
 			"c c d";
-
+		max-width: 1300px;
+		margin: auto;
 		.about1 {
 			grid-area: a;
 		}
@@ -39,7 +41,7 @@ main {
 }
 
 @media (max-width: 750px) {
-	main {
+	.main {
 		.gallery {
 			grid-template-columns: 1fr 1.5fr;
 			grid-template-areas:

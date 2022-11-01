@@ -119,7 +119,7 @@ export const RegistrationForm: FC<IRegistrationForm> = ({
 			width="100%"
 			bgcolor="white"
 			boxShadow="10px 20px 50px rgba(0,0,0,0.25)"
-			borderRadius="16px"
+			borderRadius={2}
 			overflow="hidden"
 		>
 			<div
@@ -132,7 +132,7 @@ export const RegistrationForm: FC<IRegistrationForm> = ({
 				{(Object.entries(fields) as Array<[FieldName, string]>).map(
 					([fieldName, label], i) => {
 						return (
-							<Box ref={boxRef} key={"field-" + i} sx={{ minWidth: "100%" }}>
+							<Box ref={boxRef} key={"field-" + i} minWidth="100%">
 								<InputField
 									enableFocus={i === 0}
 									tabIndex={-1}

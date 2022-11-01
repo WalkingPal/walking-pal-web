@@ -2,10 +2,30 @@ import { NextApiRequest, NextApiResponse } from "next";
 import isReCaptchaValid from "pages/api/utils/reCaptcha";
 import db from "utils/db";
 import admin from "firebase-admin";
+import { z, ZodIssue } from "zod";
 
 interface IRegEarlyUserResponse {
 	message: string;
+	errors?: ZodIssue[];
 }
+
+const formDataSchema = z.object({
+	firstName: z
+		.string()
+		.trim()
+		.regex(/^[aA-zZ\s]+$/, { message: "Please provide a valid First Name" })
+		.min(3, { message: "Names must be greater the 2 characters" }),
+	lastName: z
+		.string()
+		.trim()
+		.regex(/^[aA-zZ\s]+$/, { message: "Please provide a valid Last Name" })
+		.min(3, { message: "Names must be greater the 2 characters" }),
+	email: z.string().email({ message: "Please provide a valid Email" }),
+	university: z.string().trim().min(2),
+});
+
+const captchaSchema = z.string().trim().min(2);
+
 const registerEarlyUser = async (
 	req: NextApiRequest,
 	res: NextApiResponse<IRegEarlyUserResponse>,
@@ -14,17 +34,25 @@ const registerEarlyUser = async (
 		body: { formData, captcha },
 		method,
 	} = req;
+
 	if (method !== "POST")
 		return res.status(404).json({
 			message: "Invalid HTTP Method. Only POST method is Accepted.",
 		});
 
-	// do zod and neccesary validations here & email check via any free to use available apis too
+	const parsedFormData = formDataSchema.safeParse(formData);
+	const parsedCaptcha = captchaSchema.safeParse(captcha);
 
-	// if captcha is missing OR isAnyFieldEmpty check
-	if (!Object.values(formData).every(x => !!x))
+	if (!parsedCaptcha.success)
 		return res.status(422).json({
-			message: "Unproccesable request, Missing Fields",
+			message: "Unproccesable Request. Provide reCAPTCHA code",
+			errors: parsedCaptcha.error.issues,
+		});
+
+	if (!parsedFormData.success)
+		return res.status(422).json({
+			message: "Unproccesable Request",
+			errors: parsedFormData.error.issues,
 		});
 
 	if (!(await isReCaptchaValid(captcha)))

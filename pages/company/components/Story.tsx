@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { FC } from "react";
 import styles from "../company.module.scss";
@@ -16,12 +16,13 @@ export const Story: FC = () => {
 		<>
 			<div className={styles.story}>
 				<Box textAlign={{ xs: "center", lg: "left" }}>
-					<Typography variant="subtitle1" mb={2}>
+					<Typography variant="subtitle1" component="h2" mb={2}>
 						OUR STORY
 					</Typography>
 					<Typography
 						variant="h4"
-						sx={{ sm: { textAlign: "center" }, md: { textAlign: "left" } }}
+						component="h3"
+						textAlign={{ sm: "center", md: "left" }}
 						mb={2}
 					>
 						We’re going to become <br /> partners for long run.
@@ -49,12 +50,13 @@ export const Story: FC = () => {
 				</Box>
 			</div>
 			<Box display="flex" justifyContent="center">
-				<Box
-					bgcolor="#fafafa"
-					borderRadius={3}
-					overflow="hidden"
-					textAlign="center"
-					display={{ xs: "inline-grid", md: "inline-flex" }}
+				<Paper
+					sx={{
+						borderRadius: 3,
+						overflow: "hidden",
+						textAlign: "center",
+						display: { xs: "inline-grid", md: "inline-flex" },
+					}}
 				>
 					<Image
 						wrapstyle={{
@@ -69,14 +71,14 @@ export const Story: FC = () => {
 						alt=""
 					/>
 
-					<Typography maxWidth={400} padding="20px 40px" margin="auto">
+					<Typography maxWidth={400} p="20px 40px" m="auto">
 						We estimate that using WalkingPal can save our designers and
 						engineers 15,800 hours per year. That is equivalent to 263,200,000
 						won (220,000 USD) per year.
 						<br /> <br />
 						Fighting climate change one step at a time
 					</Typography>
-				</Box>
+				</Paper>
 			</Box>
 		</>
 	);

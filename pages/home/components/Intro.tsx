@@ -30,27 +30,46 @@ export const Intro: FC = ({}) => {
 	});
 	return (
 		<div className={ss.intro}>
-			<Image className={ss.mockup} src={mockup} alt="" ref={anim1.ref} />
-			<Image className={ss.credit} src={credit} alt="" ref={anim2.ref} />
-			<Image className={ss.screens2} src={screens2} alt="" ref={anim3.ref} />
+			<Image
+				className={ss.mockup}
+				src={mockup}
+				// alt="iPhone screen displaying WalkingPal app"
+				alt=""
+				ref={anim1.ref}
+			/>
+			<Image
+				className={ss.credit}
+				src={credit}
+				// alt="100% free to get a working buddy with WalkingPal"
+				alt=""
+				ref={anim2.ref}
+			/>
+			<Image
+				className={ss.screens2}
+				src={screens2}
+				// alt="WalkingPal app in mobile phones"
+				alt=""
+				ref={anim3.ref}
+			/>
 			<span className={ss.screens1} ref={anim4.ref}>
 				<Paper
+					elevation={3}
 					sx={{
-						background: "#F7F7F7",
-						borderRadius: "50px",
-						maxWidth: "327px",
+						borderRadius: 5,
+						maxWidth: 327,
 						overflow: "hidden",
 						display: "grid",
 					}}
 					className={ss.screens1}
 				>
-					<Typography variant="h6" p={5} textAlign="center">
+					<Typography variant="h6" component="span" p={5} textAlign="center">
 						This app will change the way you commute.
 					</Typography>
 					<Image
 						src={screens1}
 						style={{ width: "100%" }}
 						wrapstyle={{ display: "flex" }}
+						// alt="Different screens of WalkingPal app"
 						alt=""
 					/>
 				</Paper>
@@ -58,25 +77,33 @@ export const Intro: FC = ({}) => {
 			<Image
 				className={ss.walker}
 				src={walker}
+				// alt="A man with WalkingPal app walking beside a van"
 				alt=""
 				wrapstyle={{ maxWidth: 684 }}
 				ref={anim5.ref}
 			/>
 			<span className={ss.group} ref={anim6.ref}>
 				<Paper
+					elevation={3}
 					sx={{
-						background: "#F7F7F7",
-						borderRadius: "50px",
-						maxWidth: "327px",
+						borderRadius: 5,
+						maxWidth: 327,
 						overflow: "hidden",
 						alignItems: "center",
 						display: "grid",
 						height: "100%",
 					}}
 				>
-					<Image src={group} style={{ width: "100%" }} alt="" />
-					<Box sx={{ padding: 3, textAlign: "center" }}>
-						<Typography variant="h6">Create Groups</Typography>
+					<Image
+						src={group}
+						style={{ width: "100%" }}
+						// alt="Create walking buddy groups in WalkingPal app"
+						alt=""
+					/>
+					<Box p={3} textAlign="center">
+						<Typography variant="h6" component="span">
+							Create Groups
+						</Typography>
 						<Typography variant="body1">
 							Go solo or create a walking group on the go. Anytime, anywhere!
 						</Typography>

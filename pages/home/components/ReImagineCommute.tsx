@@ -2,13 +2,12 @@ import { Box, Paper, Stack, Typography } from "@mui/material";
 import { bagpack, footstep2, promotion, shopping } from "assets/png";
 import { Green, Vehicle, Walk } from "assets/svg";
 import { Accent } from "components/Accent";
-import { Image } from "components/Image";
 import { FC } from "react";
 
 const commuteCards = [
 	{
 		id: 0,
-		text: "For",
+		text: "For ",
 		highlight: "shopping",
 		img: shopping.src,
 		bgcolor: "#8DD8D7",
@@ -16,7 +15,7 @@ const commuteCards = [
 	},
 	{
 		id: 1,
-		text: "For",
+		text: "For ",
 		highlight: "work",
 		img: promotion.src,
 		bgcolor: "#FFE3E3",
@@ -24,7 +23,7 @@ const commuteCards = [
 	},
 	{
 		id: 2,
-		text: "For",
+		text: "For ",
 		highlight: "traveling",
 		img: bagpack.src,
 		bgcolor: "#F8CF7D",
@@ -32,7 +31,7 @@ const commuteCards = [
 	},
 	{
 		id: 3,
-		text: "Or just a",
+		text: "Or just a ",
 		highlight: "walk!",
 		img: footstep2.src,
 		bgcolor: "#FF8282",
@@ -44,7 +43,7 @@ export const ReImagineCommute: FC = () => {
 	const GAP = "60px";
 	return (
 		<Box pt={9} px="4vw">
-			<Typography variant="h3" textAlign="center" mb={5}>
+			<Typography variant="h3" component="h2" textAlign="center" mb={5}>
 				Reimagine your daily
 				<br /> <Accent>commute</Accent>
 			</Typography>
@@ -72,7 +71,9 @@ export const ReImagineCommute: FC = () => {
 					mx="auto"
 				>
 					<Box minWidth={300}>
-						<Typography variant="h4">#LetsWalk</Typography>
+						<Typography variant="h4" component="h3">
+							#LetsWalk
+						</Typography>
 						<Typography variant="body1">
 							Walking an extra 20 minutes a day will burn 7 pounds of body fat
 							per year.
@@ -80,7 +81,9 @@ export const ReImagineCommute: FC = () => {
 						<Walk width="100%" />
 					</Box>
 					<Box minWidth={300}>
-						<Typography variant="h4">#DitchVehicles</Typography>
+						<Typography variant="h4" component="h3">
+							#DitchVehicles
+						</Typography>
 						<Typography variant="body1">
 							The cost of operating a card for one year is approximately ₹
 							100,000. The cost of operating a bicycle for a year is only ₹
@@ -98,7 +101,9 @@ export const ReImagineCommute: FC = () => {
 				>
 					<Green width="100%" />
 					<Box>
-						<Typography variant="h4">#GreenMovement</Typography>
+						<Typography variant="h4" component="h3">
+							#GreenMovement
+						</Typography>
 						<Typography variant="body1">
 							Avoiding just 15 KM walk of driving every week would eliminate 500
 							pounds of carbon dioxide emissions a year. Which is equivalent to
@@ -117,24 +122,29 @@ export const CommuteCard: FC<{ cc: typeof commuteCards[0] }> = ({ cc }) => {
 			elevation={2}
 			sx={{ width: 256, borderRadius: 3, overflow: "hidden" }}
 		>
-			<Stack padding="14px" bgcolor={cc.bgcolor} width="100%">
+			<Stack p={1} bgcolor={cc.bgcolor} width="100%">
 				<Stack
-					sx={{ height: "112px", backgroundColor: "#FFFFFF" }}
+					height={112}
+					bgcolor="#FFF"
 					justifyContent="center"
 					alignItems="center"
 					borderRadius="20px 20px 0 0"
 					direction="row"
-					gap="4px"
+					gap={0.5}
 				>
-					<Typography fontWeight={500}>{cc.text}</Typography>
-					<Typography fontWeight={800}>{cc.highlight}</Typography>
+					<Typography fontWeight={500} variant="body1" component="h3">
+						{cc.text}
+						<Box fontWeight={800} component="span">
+							{cc.highlight}
+						</Box>
+					</Typography>
 				</Stack>
 				<Stack
-					height="180px"
+					height={180}
 					bgcolor={cc.bgcolor}
 					justifyContent="center"
 					alignItems="center"
-					padding={{ xs: "24px 0", md: "24px" }}
+					p={{ xs: "20px 0", md: 2 }}
 				>
 					<Box
 						component="img"

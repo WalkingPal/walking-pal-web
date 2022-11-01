@@ -20,6 +20,7 @@ export const Data: FC = () => {
 		<div className={styles.data}>
 			<Typography
 				variant="h5"
+				component="p"
 				textAlign={{ xs: "center", lg: "left" }}
 				maxWidth={500}
 			>
@@ -35,7 +36,7 @@ export const Data: FC = () => {
 				{data.map((feat, i) => {
 					return (
 						<Box key={`card${i + 1}`}>
-							<Typography variant="h4" textAlign="center">
+							<Typography variant="h4" component="span" textAlign="center">
 								{feat.title}
 							</Typography>
 							<Typography variant="body2" textAlign="center">

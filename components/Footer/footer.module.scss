@@ -1,0 +1,10 @@
+.main {
+	.discordIcon {
+		transform: rotate(0deg);
+		transition: 0.5s ease-out;
+		&:hover {
+			transition: 1s cubic-bezier(0.67, -1.22, 0.4, 2.05);
+			transform: rotate(360deg);
+		}
+	}
+}

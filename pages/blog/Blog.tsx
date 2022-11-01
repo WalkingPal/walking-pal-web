@@ -2,7 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Hero } from "pages/blog/components/Hero";
 import { BlogsList } from "pages/blog/components/BlogsList";
-import { ScrollToTop } from "components/ScrollToTop";
+import { GetStarted } from "components/GetStarted";
+import styles from "./blog.module.scss";
 
 export const Blog: NextPage = () => {
 	return (
@@ -19,11 +20,11 @@ export const Blog: NextPage = () => {
 				/>
 			</Head>
 
-			<main style={{ padding: "4vw", maxWidth: 1450, margin: "auto" }}>
+			<div className={styles.main}>
 				<Hero />
 				<BlogsList />
-				<ScrollToTop />
-			</main>
+				<GetStarted />
+			</div>
 		</>
 	);
 };

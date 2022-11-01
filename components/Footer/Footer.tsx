@@ -10,7 +10,8 @@ import {
 	Instagram,
 	Youtube,
 	Discord,
-} from "./Icons";
+} from "./components/Icons";
+import styles from "./footer.module.scss";
 
 const socials = [
 	{
@@ -54,40 +55,31 @@ export const Footer: FC = ({}) => {
 	return (
 		<Stack
 			gap={2}
-			padding="120px 24px 100px"
-			bgcolor="#000000"
+			p="120px 24px 100px"
+			bgcolor="#121212"
 			alignItems="center"
 			justifyContent="center"
+			className={styles.main}
 		>
 			{/* <Stack
-        gap={{
-          xs: 2,
-          sm: 5,
-          md: 7
-        }}
-        direction='row'
-        flexWrap='wrap'
-        justifyContent='space-between'
-        width='100%'
-        maxWidth={1030}
-      >
-        { footerLinks.map(link => (
-          <LinkContainer 
-            key={link.title}
-            footerLink={link}
-          />
-        )) }
-      </Stack>
-      <Divider 
-        flexItem
-        color="grey"
-      /> */}
+				gap={{ xs: 2, sm: 5, md: 7 }}
+				direction="row"
+				flexWrap="wrap"
+				justifyContent="space-between"
+				width="100%"
+				maxWidth={1030}
+			>
+				{footerLinks.map(link => (
+					<LinkContainer key={link.title} footerLink={link} />
+				))}
+			</Stack>
+			<Divider flexItem color="grey" /> */}
 			<Stack
 				direction={{ xs: "column", md: "row" }}
 				justifyContent="space-between"
 				alignItems="center"
 				width="100%"
-				padding={{ xs: 2, md: 9 }}
+				p={{ xs: 2, md: 9 }}
 				gap={3}
 			>
 				<Box display="grid" alignItems="center" justifyContent="center" gap={3}>
@@ -116,6 +108,7 @@ export const Footer: FC = ({}) => {
 				<Typography
 					color="white"
 					variant="h5"
+					component="p"
 					px={3}
 					textAlign={{ xs: "center", md: "right" }}
 					flexGrow={1}

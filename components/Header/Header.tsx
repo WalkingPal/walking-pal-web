@@ -1,4 +1,4 @@
-import { alpha, Paper, useMediaQuery } from "@mui/material";
+import { alpha, Box, Paper, useMediaQuery } from "@mui/material";
 import { FC, useEffect, useRef } from "react";
 import styles from "./header.module.scss";
 import { HeaderDesktop } from "components/Header/components/HeaderDesktop";
@@ -27,15 +27,15 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 			<header ref={headerRef} className={styles.header} style={{ marginTop }}>
 				<Paper
 					sx={t => ({
-						background: alpha(t.palette.background.paper, 0.8),
+						bgcolor: alpha(t.palette.background.paper, 0.8),
 						width: "100%",
 						webkitBackdropFilter: "blur(10px)",
 						backdropFilter: "blur(10px)",
-						borderRadius: "16px",
+						borderRadius: 1,
 						justifyContent: "center",
 						display: "flex",
 						alignItems: "center",
-						padding: "8px 20px",
+						p: "8px 20px",
 					})}
 					elevation={0}
 				>
@@ -46,11 +46,7 @@ export const Header: FC<IHeader> = ({ allowPadding }) => {
 					)}
 				</Paper>
 			</header>
-			<div
-				style={{
-					height: allowPadding ? "calc(var(--header-height) + 5px)" : 0,
-				}}
-			/>
+			<Box height={allowPadding ? "calc(var(--header-height) + 5px)" : 0} />
 		</>
 	);
 };
