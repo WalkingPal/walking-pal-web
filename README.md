@@ -40,6 +40,7 @@ Checkout our [contributing guidelines](.docs/CONTRIBUTING.md)!
 
 ---
 
+<!--
 ## WalkingPal is participating in Hacktoberfest'22 🎉〽🥳
 
 Contribute to any of our [repositories](https://github.com/WalkingPal) and get your Pull Requests accepted between October 1 and October 31 to count your Pull Request towards your hacktoberfest contributions! We strictly abide by Hacktoberfest Rules and Guidelines. [Checkout Participation Guidelines](https://hacktoberfest.com/participation/)
@@ -47,6 +48,7 @@ Contribute to any of our [repositories](https://github.com/WalkingPal) and get y
 <p align="center"><img width="500px" src="./.docs/assets/hacktober.jpeg"/></p>
 
 ---
+-->
 
 ## The geeks🤓 behind this initiative:
 
