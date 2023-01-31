@@ -7,7 +7,6 @@ import { Image } from "components/Image";
 import { FC } from "react";
 
 export const EasyStepsFooter: FC = ({}) => {
-	const isMd = useMediaQuery("(min-width:850px)");
 	return (
 		<>
 			<Box display="flex" flexWrap="wrap" justifyContent="space-between" mt={3}>
@@ -24,6 +23,7 @@ export const EasyStepsFooter: FC = ({}) => {
 					</Typography>
 					<Box display="flex" py={1} gap={1}>
 						<Image
+							priority
 							src={boy}
 							height="70"
 							width="70"
@@ -31,6 +31,7 @@ export const EasyStepsFooter: FC = ({}) => {
 							alt=""
 						/>
 						<Image
+							priority
 							src={legs}
 							height="70"
 							width="70"
@@ -38,6 +39,7 @@ export const EasyStepsFooter: FC = ({}) => {
 							alt=""
 						/>
 						<Image
+							priority
 							src={man}
 							height="70"
 							width="70"
@@ -49,12 +51,7 @@ export const EasyStepsFooter: FC = ({}) => {
 			</Box>
 			<Paper
 				elevation={2}
-				sx={{
-					bgcolor: "#181818",
-					borderRadius: 3,
-					mt: 6,
-					p: 3,
-				}}
+				sx={{ bgcolor: "#181818", borderRadius: 3, mt: 6, p: 3 }}
 			>
 				<Typography
 					variant="h3"
@@ -81,6 +78,7 @@ export const EasyStepsFooter: FC = ({}) => {
 						style={{ width: "70%", maxWidth: 450, minWidth: 290 }}
 					/>
 					<Image
+						priority
 						width="217"
 						src={foundersHub}
 						alt="Microsoft for Startups: Founders Hub"

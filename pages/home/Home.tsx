@@ -10,11 +10,12 @@ import { Intro } from "pages/home/components/Intro";
 import CommunityForm from "pages/home/components/JoinTheCommunityForm";
 import { ReImagineCommute } from "pages/home/components/ReImagineCommute";
 import { RibbonsSection } from "pages/home/components/RibbonsSection";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/lazy";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
 import { Play } from "assets/svg";
 import styles from "./home.module.scss";
+import DotWaveLoader from "components/DotWaveLoader";
 
 export const Home: NextPage = () => {
 	const { width } = useWindowSize();
@@ -43,7 +44,22 @@ export const Home: NextPage = () => {
 					overflow="hidden"
 				>
 					<InView as="div" onChange={inView => setYplay(inView)}>
-						<Box display="flex" justifyContent="center" mx="4vw" my={4}>
+						<Box
+							display="flex"
+							justifyContent="center"
+							mx="4vw"
+							my={4}
+							position="relative"
+						>
+							<Box
+								position="absolute"
+								top="0"
+								left="0"
+								height="100%"
+								width="100%"
+							>
+								<DotWaveLoader />
+							</Box>
 							{width && (
 								<ReactPlayer
 									width={width < 1200 ? width - 0.08 * width : 1200}
@@ -53,7 +69,6 @@ export const Home: NextPage = () => {
 									url="https://www.youtube.com/watch?v=L73A9fyyQqw"
 									light
 									loop
-									muted
 									playing={Yplay}
 									playsinline
 									controls
