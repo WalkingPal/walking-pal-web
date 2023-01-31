@@ -12,6 +12,7 @@ import { PageLoadProgress } from "components/PageLoadProgress";
 import { ScrollToTop } from "components/ScrollToTop";
 import { MDXProvider } from "@mdx-js/react";
 import { bodyColor } from "theme/theme";
+import { Analytics } from "@vercel/analytics/react";
 
 const components = {
 	// h1: Header,
@@ -51,6 +52,7 @@ function App({ Component, pageProps }: AppProps) {
 						)}
 						<PageTransition>
 							<Component {...pageProps} />
+							<Analytics />
 							{showFooterCompo.current && <ScrollToTop />}
 						</PageTransition>
 						{showFooterCompo.current && <Footer />}
