@@ -31,6 +31,7 @@ export const Intro: FC = ({}) => {
 	return (
 		<div className={ss.intro}>
 			<Image
+				priority
 				className={ss.mockup}
 				src={mockup}
 				// alt="iPhone screen displaying WalkingPal app"
@@ -38,6 +39,7 @@ export const Intro: FC = ({}) => {
 				ref={anim1.ref}
 			/>
 			<Image
+				priority
 				className={ss.credit}
 				src={credit}
 				// alt="100% free to get a walking buddy with WalkingPal"
@@ -75,6 +77,7 @@ export const Intro: FC = ({}) => {
 				</Paper>
 			</span>
 			<Image
+				priority
 				className={ss.walker}
 				src={walker}
 				alt=""

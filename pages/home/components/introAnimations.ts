@@ -15,13 +15,13 @@ export const animations: Record<string, Animation> = {
 	},
 	credit: {
 		default: {
-			opacity: [0, 1],
+			opacity: [0.1, 1],
 			translateX: ["-30%", "0"],
 			startScroll: 100,
 			endScroll: 450,
 		},
 		md: {
-			opacity: [0, 1],
+			opacity: [0.3, 1],
 			scale: [1.3, 1],
 			translateX: ["50%", "0"],
 			startScroll: 0,
@@ -36,14 +36,14 @@ export const animations: Record<string, Animation> = {
 	},
 	screens1: {
 		default: {
-			opacity: [0, 1],
+			opacity: [0.1, 1],
 			translateX: ["30%", "0"],
 			startScroll: 130,
 			endScroll: 530,
 		},
 		md: {
 			scale: [1.2, 1],
-			opacity: [0, 1],
+			opacity: [0.1, 1],
 			translateY: ["30%", "0"],
 			startScroll: 650,
 			endScroll: 950,
@@ -57,13 +57,13 @@ export const animations: Record<string, Animation> = {
 	},
 	screens2: {
 		default: {
-			opacity: [0, 1],
+			opacity: [0.1, 1],
 			translateX: ["-30%", "0"],
 			startScroll: 150,
 			endScroll: 600,
 		},
 		md: {
-			opacity: [0, 1],
+			opacity: [0.1, 1],
 			translateX: ["50%", "0"],
 			scale: [1.3, 1],
 			startScroll: 150,
@@ -74,16 +74,16 @@ export const animations: Record<string, Animation> = {
 	walker: {
 		default: {
 			scale: [1.1, 1],
-			opacity: [0, 1],
+			opacity: [0.2, 1],
 			translateY: ["30%", "0"],
 			startScroll: 800,
 			endScroll: 900,
 		},
 		md: {
 			scale: [1.1, 1],
-			opacity: [0, 1],
+			opacity: [0.2, 1],
 			translateY: ["30%", "0"],
-			startScroll: 400,
+			startScroll: 350,
 			endScroll: 650,
 		},
 		sm: {},
@@ -91,14 +91,14 @@ export const animations: Record<string, Animation> = {
 	group: {
 		default: {
 			scale: [1.1, 1],
-			opacity: [0, 1],
+			opacity: [0.1, 1],
 			translateY: ["30%", "0"],
-			startScroll: 700,
-			endScroll: 850,
+			startScroll: 800,
+			endScroll: 950,
 		},
 		md: {
 			scale: [1.2, 1],
-			opacity: [0, 1],
+			opacity: [0.1, 1],
 			translateY: ["30%", "0"],
 			startScroll: 650,
 			endScroll: 950,
