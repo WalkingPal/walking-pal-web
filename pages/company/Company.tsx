@@ -18,10 +18,10 @@ export const Company: NextPage = () => {
 
 			<div className={styles.main}>
 				<Hero />
-				<Data />
-				<Story />
+				{/* <Data /> */}
+				{/* <Story /> */}
 				<Team />
-				<Career />
+				{/* <Career /> */}
 			</div>
 		</>
 	);
