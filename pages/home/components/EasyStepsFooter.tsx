@@ -78,7 +78,7 @@ export const EasyStepsFooter: FC = ({}) => {
 						width="320px"
 						height="100%"
 						viewBox="0 0 260 82"
-						style={{ width: "70%", maxWidth: 450 }}
+						style={{ width: "70%", maxWidth: 450, minWidth: 290 }}
 					/>
 					<Image
 						width="217"
