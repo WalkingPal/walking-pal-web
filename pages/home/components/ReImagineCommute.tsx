@@ -116,7 +116,7 @@ export const ReImagineCommute: FC = () => {
 	);
 };
 
-export const CommuteCard: FC<{ cc: typeof commuteCards[0] }> = ({ cc }) => {
+export const CommuteCard: FC<{ cc: (typeof commuteCards)[0] }> = ({ cc }) => {
 	return (
 		<Paper
 			elevation={2}
@@ -153,6 +153,7 @@ export const CommuteCard: FC<{ cc: typeof commuteCards[0] }> = ({ cc }) => {
 							aspectRatio: 1,
 							width: { xs: "100%", md: "unset" },
 							height: { md: "100%" },
+							maxWidth: 140,
 						}}
 						alt={cc.description}
 					/>
