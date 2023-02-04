@@ -10,7 +10,15 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { PageTransition } from "components/PageTransition";
 import { PageLoadProgress } from "components/PageLoadProgress";
 import { ScrollToTop } from "components/ScrollToTop";
+import { MDXProvider } from "@mdx-js/react";
+import { bodyColor } from "theme/theme";
 
+const components = {
+	// h1: Header,
+	p: (props: any) => <p {...props} style={{ color: bodyColor }} />,
+	li: (props: any) => <li {...props} style={{ color: bodyColor }} />,
+	strong: (props: any) => <strong {...props} style={{ color: "#000" }} />,
+};
 function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	const showHeaderCompo = useRef(true);
@@ -34,20 +42,21 @@ function App({ Component, pageProps }: AppProps) {
 					content="minimum-scale=1, initial-scale=1, width=device-width"
 				/>
 			</Head>
-
-			<ParallaxProvider>
-				<WPThemeProvider>
-					<PageLoadProgress />
-					{showHeaderCompo.current && (
-						<Header allowPadding={allowPadding.current} />
-					)}
-					<PageTransition>
-						<Component {...pageProps} />
-						{showFooterCompo.current && <ScrollToTop />}
-					</PageTransition>
-					{showFooterCompo.current && <Footer />}
-				</WPThemeProvider>
-			</ParallaxProvider>
+			<MDXProvider components={components}>
+				<ParallaxProvider>
+					<WPThemeProvider>
+						<PageLoadProgress />
+						{showHeaderCompo.current && (
+							<Header allowPadding={allowPadding.current} />
+						)}
+						<PageTransition>
+							<Component {...pageProps} />
+							{showFooterCompo.current && <ScrollToTop />}
+						</PageTransition>
+						{showFooterCompo.current && <Footer />}
+					</WPThemeProvider>
+				</ParallaxProvider>
+			</MDXProvider>
 		</React.Fragment>
 	);
 }

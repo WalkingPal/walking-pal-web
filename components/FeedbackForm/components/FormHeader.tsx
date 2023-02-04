@@ -26,7 +26,7 @@ export const FormHeader: FC<IFormHeader> = ({}) => {
 				<Typography variant="h3">VSSUT, Burla</Typography>
 				<Box display="flex" flexWrap="wrap" gap={1}>
 					<Box display="grid">
-						<Typography variant="subtitle1" component="span">
+						<Typography variant="subtitle1" component="h4">
 							Address
 						</Typography>
 						<Typography variant="body2" maxWidth={170}>
@@ -34,7 +34,7 @@ export const FormHeader: FC<IFormHeader> = ({}) => {
 						</Typography>
 					</Box>
 					<Box display="grid">
-						<Typography variant="subtitle1" component="span">
+						<Typography variant="subtitle1" component="h4" id="contact">
 							Contact
 						</Typography>
 						<Typography variant="body2">hello.walkingpal@gmail.com</Typography>
@@ -50,7 +50,7 @@ export const FormHeader: FC<IFormHeader> = ({}) => {
 				alt=""
 			/>
 
-			<Typography variant="h2" textAlign="center">
+			<Typography variant="h2" textAlign="center" id="help">
 				Let us know who you are
 			</Typography>
 			<Typography variant="body1" mt={2} textAlign="center">

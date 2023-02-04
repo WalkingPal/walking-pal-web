@@ -84,10 +84,7 @@ export const FAQ: NextPage = () => {
 					name="description"
 					content="Frequently Asked Question - WalkingPal"
 				/>
-				<meta
-					name="keywords"
-					content="home, walking, pal, buddy, walk, faqs, faq"
-				/>
+				<meta name="keywords" content="walking, pal, faqs, faq, walkingpal" />
 			</Head>
 
 			<div className={styles.main}>

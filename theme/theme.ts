@@ -16,7 +16,7 @@ const systemFont = [
 
 export const OutfitFont = ["Outfit", ...systemFont].join(",");
 export const OpenSansFont = ["Open Sans", ...systemFont].join(",");
-
+export const bodyColor = "#484848";
 export const getDesignTokens = (mode: "light" | "dark") =>
 	({
 		palette: {
@@ -120,7 +120,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				fontFamily: OutfitFont,
 			},
 			body1: {
-				color: "#484848",
+				color: bodyColor,
 				fontSize: "1.125rem",
 				fontWeight: 400,
 				lineHeight: 1.5,
@@ -128,7 +128,7 @@ export const getDesignTokens = (mode: "light" | "dark") =>
 				scrollMarginTop: "calc(var(--header-height) + 32px)",
 			},
 			body2: {
-				color: "#484848",
+				color: bodyColor,
 				fontSize: "1rem",
 				fontWeight: 400,
 				lineHeight: 1.5,
@@ -199,7 +199,7 @@ export function getThemedComponents(theme: Theme): {
 			MuiOutlinedInput: {
 				styleOverrides: {
 					root: {
-						color: "#484848",
+						color: bodyColor,
 						borderRadius: 1,
 						"&:hover fieldset": {
 							border: "solid 3px #E7E7E7 !important",

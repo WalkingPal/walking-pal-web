@@ -1,6 +1,7 @@
 import { Box, Paper, Typography, useMediaQuery } from "@mui/material";
 import { boy, legs, man } from "assets/gif";
 import { foundersHub } from "assets/png";
+import { GoogleUEBA22 } from "assets/svg";
 import { Accent } from "components/Accent";
 import { Image } from "components/Image";
 import { FC } from "react";
@@ -8,75 +9,84 @@ import { FC } from "react";
 export const EasyStepsFooter: FC = ({}) => {
 	const isMd = useMediaQuery("(min-width:850px)");
 	return (
-		<Box display="flex" flexWrap="wrap" justifyContent="space-between" mt={3}>
-			<Box>
+		<>
+			<Box display="flex" flexWrap="wrap" justifyContent="space-between" mt={3}>
 				<Typography variant="h2" color="#fff" mt={4}>
 					It’s that
 					<br />
 					fast and simple
 				</Typography>
-				<Typography variant="body1" color="#BABABA" maxWidth={480}>
-					Either go with the best match, or browse and select from the available
-					profiles. Send foot request and viola! start walking together.
-				</Typography>
-				<Box display="flex" py={1} gap={1}>
-					<Image
-						src={boy}
-						height="70"
-						width="70"
-						style={{ borderRadius: 10 }}
-						// alt="a walking boy"
-						alt=""
-					/>
-					<Image
-						src={legs}
-						height="70"
-						width="70"
-						style={{ borderRadius: 10 }}
-						// alt="walking legs"
-						alt=""
-					/>
-					<Image
-						src={man}
-						height="70"
-						width="70"
-						style={{ borderRadius: 10 }}
-						// alt="a walking man"
-						alt=""
-					/>
+				<Box mt={4}>
+					<Typography variant="body1" color="#BABABA" maxWidth={480}>
+						Either go with the best match, or browse and select from the
+						available profiles. Send foot request and viola! start walking
+						together.
+					</Typography>
+					<Box display="flex" py={1} gap={1}>
+						<Image
+							src={boy}
+							height="70"
+							width="70"
+							style={{ borderRadius: 10 }}
+							alt=""
+						/>
+						<Image
+							src={legs}
+							height="70"
+							width="70"
+							style={{ borderRadius: 10 }}
+							alt=""
+						/>
+						<Image
+							src={man}
+							height="70"
+							width="70"
+							style={{ borderRadius: 10 }}
+							alt=""
+						/>
+					</Box>
 				</Box>
 			</Box>
-
 			<Paper
 				elevation={2}
 				sx={{
-					p: 1,
 					bgcolor: "#181818",
 					borderRadius: 3,
-					display: (isMd && "grid") || { xs: "flex" },
-					mt: 3,
+					mt: 6,
+					p: 3,
 				}}
 			>
-				<Box
-					bgcolor="#000"
-					borderRadius={2}
-					height={(isMd && 173) || { xs: "100%" }}
-					alignItems="center"
-					justifyContent="center"
-					display="inherit"
+				<Typography
+					variant="h3"
+					color="#fff"
+					mb={4}
+					align="center"
+					maxWidth={800}
+					sx={{ mx: "auto" }}
 				>
-					<Typography textAlign="center" m={1} color="white">
-						A proud<Accent>partner</Accent>
-					</Typography>
+					We are <Accent>proud to be part</Accent> of the following programs
+				</Typography>
+				<Box
+					display="flex"
+					flexWrap="wrap"
+					justifyContent="space-around"
+					alignItems="center"
+					gap={3}
+				>
+					<Image
+						width="217"
+						src={foundersHub}
+						alt="Microsoft for Startups: Founders Hub"
+					/>
+					<GoogleUEBA22
+						alt="Google for Startups: University Edition 2022 Alumni"
+						width="320px"
+						height="100%"
+						viewBox="0 0 260 82"
+					/>
 				</Box>
-				<Image
-					wrapstyle={{ p: 2, py: isMd ? 2 : 4, display: "block" }}
-					width="217"
-					height="149"
-					src={foundersHub}
-					alt="Microsoft for Startups: Founders Hub"
-				/>
 			</Paper>
-		</Box>
+		</>
 	);
 };
+GoogleUEBA22;

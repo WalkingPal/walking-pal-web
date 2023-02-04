@@ -10,13 +10,10 @@ export const About: NextPage = () => {
 		<>
 			<Head>
 				<title>About us</title>
-				<meta
-					name="description"
-					content="The world's first walking buddy app of its kind. Get yourself a walking buddy anytime and anywhere in just a few clicks!"
-				/>
+				<meta name="description" content="About us - WalkingPal" />
 				<meta
 					name="keywords"
-					content="home, walking, pal, buddy, walk, about"
+					content="walking, pal, walkingpal, about us, about"
 				/>
 			</Head>
 

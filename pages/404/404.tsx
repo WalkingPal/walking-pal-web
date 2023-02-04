@@ -16,7 +16,7 @@ export const Error404: NextPage = () => {
 				/>
 				<meta
 					name="keywords"
-					content="404, not, found, walking, pal, buddy, walk"
+					content="404, not, found, walking, pal, walkingpal"
 				/>
 			</Head>
 
