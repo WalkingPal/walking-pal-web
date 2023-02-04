@@ -73,16 +73,17 @@ export const EasyStepsFooter: FC = ({}) => {
 					alignItems="center"
 					gap={3}
 				>
-					<Image
-						width="217"
-						src={foundersHub}
-						alt="Microsoft for Startups: Founders Hub"
-					/>
 					<GoogleUEBA22
 						alt="Google for Startups: University Edition 2022 Alumni"
 						width="320px"
 						height="100%"
 						viewBox="0 0 260 82"
+						style={{ width: "70%", maxWidth: 450 }}
+					/>
+					<Image
+						width="217"
+						src={foundersHub}
+						alt="Microsoft for Startups: Founders Hub"
 					/>
 				</Box>
 			</Paper>
