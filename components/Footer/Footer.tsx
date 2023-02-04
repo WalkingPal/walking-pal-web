@@ -1,5 +1,6 @@
-import { Box, Link, Stack, Typography } from "@mui/material";
+import { Box, Divider, Link, Stack, Typography } from "@mui/material";
 import { Accent } from "components/Accent";
+import { FooterLinks } from "components/Footer/components/FooterLinks";
 import { LogoWordmark } from "components/LogoWordmark";
 import { FC } from "react";
 import {
@@ -12,6 +13,68 @@ import {
 	Discord,
 } from "./components/Icons";
 import styles from "./footer.module.scss";
+
+export const Footer: FC = ({}) => {
+	return (
+		<Stack
+			gap={2}
+			p="80px 24px"
+			bgcolor="#121212"
+			alignItems="center"
+			justifyContent="center"
+			className={styles.main}
+		>
+			<FooterLinks />
+			<Divider flexItem color="grey" sx={{ mx: { md: 9 }, my: 4 }} />
+			<Stack
+				direction={{ xs: "column", md: "row" }}
+				justifyContent="space-between"
+				alignItems="center"
+				width="100%"
+				px={{ xs: 2, md: 9 }}
+				gap={3}
+			>
+				<Box display="grid" alignItems="center" justifyContent="center" gap={3}>
+					<LogoWordmark size={100} />
+					<Box
+						display="flex"
+						gap={1}
+						alignItems="center"
+						justifyContent="space-around"
+						sx={{ "& svg": { transform: "scale(1.3)" } }}
+					>
+						{socials.map((social, i) => {
+							return (
+								<Link
+									href={social.link}
+									target="_blank"
+									key={"socail-" + i}
+									aria-label={social.name}
+								>
+									{social.icon}
+								</Link>
+							);
+						})}
+					</Box>
+				</Box>
+				<Typography
+					color="white"
+					variant="h5"
+					component="p"
+					ml={{ xs: 1, md: 6 }}
+					mr={{ xs: 1, md: 0 }}
+					textAlign={{ xs: "center", md: "right" }}
+					flexGrow={1}
+					maxWidth={650}
+				>
+					Our<Accent>mission</Accent>is to change the way people cover their
+					<Accent>last-mile</Accent>by making walking more fun and the
+					<Accent>preferred</Accent>way to commute.
+				</Typography>
+			</Stack>
+		</Stack>
+	);
+};
 
 const socials = [
 	{
@@ -51,74 +114,3 @@ const socials = [
 		name: "Facebook",
 	},
 ];
-export const Footer: FC = ({}) => {
-	return (
-		<Stack
-			gap={2}
-			p="120px 24px 100px"
-			bgcolor="#121212"
-			alignItems="center"
-			justifyContent="center"
-			className={styles.main}
-		>
-			{/* <Stack
-				gap={{ xs: 2, sm: 5, md: 7 }}
-				direction="row"
-				flexWrap="wrap"
-				justifyContent="space-between"
-				width="100%"
-				maxWidth={1030}
-			>
-				{footerLinks.map(link => (
-					<LinkContainer key={link.title} footerLink={link} />
-				))}
-			</Stack>
-			<Divider flexItem color="grey" /> */}
-			<Stack
-				direction={{ xs: "column", md: "row" }}
-				justifyContent="space-between"
-				alignItems="center"
-				width="100%"
-				p={{ xs: 2, md: 9 }}
-				gap={3}
-			>
-				<Box display="grid" alignItems="center" justifyContent="center" gap={3}>
-					<LogoWordmark size={100} />
-					<Box
-						display="flex"
-						gap={1}
-						alignItems="center"
-						justifyContent="space-around"
-						sx={{ "& svg": { transform: "scale(1.3)" } }}
-					>
-						{socials.map((social, i) => {
-							return (
-								<Link
-									href={social.link}
-									target="_blank"
-									key={"socail-" + i}
-									aria-label={social.name}
-								>
-									{social.icon}
-								</Link>
-							);
-						})}
-					</Box>
-				</Box>
-				<Typography
-					color="white"
-					variant="h5"
-					component="p"
-					px={3}
-					textAlign={{ xs: "center", md: "right" }}
-					flexGrow={1}
-					maxWidth={650}
-				>
-					Our<Accent>mission</Accent>is to change the way people cover their
-					<Accent>last-mile</Accent>by making walking more fun and the
-					<Accent>preferred</Accent>way to commute.
-				</Typography>
-			</Stack>
-		</Stack>
-	);
-};
