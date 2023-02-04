@@ -26,7 +26,7 @@
 		"deep-email-validator": "^0.1.21",
 		"firebase": "^9.9.2",
 		"firebase-admin": "^11.0.1",
-		"framer-motion": "^7.5.3",
+		"framer-motion": "^4",
 		"lodash": "^4.17.21",
 		"next": "^12.2.4",
 		"nextjs-progressbar": "^0.0.16",
