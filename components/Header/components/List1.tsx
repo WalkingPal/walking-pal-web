@@ -83,7 +83,7 @@ export const L1Item: FC<IL1Item> = ({ name, pageroute, subroutes }) => {
 	};
 
 	return (
-		<div onMouseEnter={handleMouseEnter}>
+		<div onMouseEnter={handleMouseEnter} style={{ width: "100%" }}>
 			<ListItemButton
 				onClick={handleClick}
 				sx={{ borderRadius: 1 }}
@@ -99,6 +99,7 @@ export const L1Item: FC<IL1Item> = ({ name, pageroute, subroutes }) => {
 							textTransform: "capitalize",
 							px: 2,
 						}}
+						align="center"
 					>
 						{name}
 					</Typography>

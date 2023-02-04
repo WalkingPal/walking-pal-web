@@ -10,3 +10,4 @@ export { default as Discord } from "./discord.svg";
 export { default as Green } from "./green.svg";
 export { default as Vehicle } from "./vehicle.svg";
 export { default as Walk } from "./walk.svg";
+export { default as GoogleUEBA22 } from "./UE_Bootcamp_Alumni2022_Badge.svg";

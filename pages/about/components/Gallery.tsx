@@ -12,7 +12,7 @@ export const Gallery: FC = ({}) => {
 				<Image
 					className={styles.about2}
 					src={about2}
-					alt="Using WalkingPal helps reduce global CO2 emission"
+					alt="WalkingPal helps reduce global CO2 emission"
 				/>
 				<Image className={styles.about3} src={about3} alt="" />
 				<Image

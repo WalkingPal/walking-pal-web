@@ -40,7 +40,7 @@ export const Intro: FC = ({}) => {
 			<Image
 				className={ss.credit}
 				src={credit}
-				// alt="100% free to get a working buddy with WalkingPal"
+				// alt="100% free to get a walking buddy with WalkingPal"
 				alt=""
 				ref={anim2.ref}
 			/>
@@ -77,7 +77,6 @@ export const Intro: FC = ({}) => {
 			<Image
 				className={ss.walker}
 				src={walker}
-				// alt="A man with WalkingPal app walking beside a van"
 				alt=""
 				wrapstyle={{ maxWidth: 684 }}
 				ref={anim5.ref}
