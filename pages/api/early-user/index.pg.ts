@@ -3,6 +3,7 @@ import isReCaptchaValid from "pages/api/utils/reCaptcha";
 import db from "utils/db";
 import admin from "firebase-admin";
 import { z, ZodIssue } from "zod";
+import { validate } from "deep-email-validator";
 
 interface IRegEarlyUserResponse {
 	message: string;
@@ -61,14 +62,21 @@ const registerEarlyUser = async (
 		});
 
 	try {
-		await db.doc("forms/early-users").update({
-			"early-users": admin.firestore.FieldValue.arrayUnion({
-				...formData,
-				created: new Date().toISOString(),
-			}),
-		});
+		let { valid, reason } = await validate(parsedFormData.data.email);
 
-		res.status(200).json({ message: "ACK👍" });
+		if (valid) {
+			await db.doc("forms/early-users").update({
+				"early-users": admin.firestore.FieldValue.arrayUnion({
+					...formData,
+					created: new Date().toISOString(),
+				}),
+			});
+
+			return res.status(200).json({ message: "ACK👍" });
+		} else
+			return res.status(422).json({
+				message: "Email Invalid, reason: ".concat(reason ?? ""),
+			});
 	} catch (e) {
 		console.error(e);
 		res.status(400).end();

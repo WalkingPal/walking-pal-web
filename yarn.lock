@@ -2358,6 +2358,7 @@
   dependencies:
     "@types/node" "*"
 
+<<<<<<< HEAD
 "@types/debug@^4.0.0":
   version "4.1.7"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
@@ -2376,6 +2377,12 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.0.tgz#5fb2e536c1ae9bf35366eed879e827fa59ca41c2"
   integrity sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==
+=======
+"@types/disposable-email-domains@^1.0.1":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@types/disposable-email-domains/-/disposable-email-domains-1.0.2.tgz#0280f6b38fa7f14e54b056a434135ecd254483b1"
+  integrity sha512-SDKwyYTjk3y5aZBxxc38yRecpJPjsqn57STz1bNxYYlv4k11bBe7QB8w4llXDTmQXKT1mFvgGmJv+8Zdu3YmJw==
+>>>>>>> efa42638546ff367d1576d80d2e7dd86eb211789
 
 "@types/express-serve-static-core@^4.17.18":
   version "4.17.31"
@@ -2842,6 +2849,13 @@ axe-core@^4.4.3:
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.4.3.tgz#11c74d23d5013c0fa5d183796729bc3482bd2f6f"
   integrity sha512-32+ub6kkdhhWick/UjvEwRchgoetXqTK14INLqbGm5U2TzBkBNF3nQtLYm8ovxSkQWArjEQvftCKryjZaATu3w==
+
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
 
 axios@^0.27.2:
   version "0.27.2"
@@ -3377,12 +3391,24 @@ decamelize@^1.1.0:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==
 
+<<<<<<< HEAD
 decode-named-character-reference@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/decode-named-character-reference/-/decode-named-character-reference-1.0.2.tgz#daabac9690874c394c81e4162a0304b35d824f0e"
   integrity sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==
   dependencies:
     character-entities "^2.0.0"
+=======
+deep-email-validator@^0.1.21:
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/deep-email-validator/-/deep-email-validator-0.1.21.tgz#5d0120fe1aeae83ab7cb39378a40a381b681219f"
+  integrity sha512-DBAmMzbr+MAubXQ+TS9tZuPwLcdKscb8YzKZiwoLqF3NmaeEgXvSSHhZ0EXOFeKFE2FNWC4mNXCyiQ/JdFXUwg==
+  dependencies:
+    "@types/disposable-email-domains" "^1.0.1"
+    axios "^0.24.0"
+    disposable-email-domains "^1.0.59"
+    mailcheck "^1.1.1"
+>>>>>>> efa42638546ff367d1576d80d2e7dd86eb211789
 
 deep-is@^0.1.3, deep-is@~0.1.3:
   version "0.1.4"
@@ -3428,6 +3454,11 @@ dir-glob@^3.0.1:
   integrity sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==
   dependencies:
     path-type "^4.0.0"
+
+disposable-email-domains@^1.0.59:
+  version "1.0.62"
+  resolved "https://registry.yarnpkg.com/disposable-email-domains/-/disposable-email-domains-1.0.62.tgz#bb66d3c387397dd8938aaf63a90505984f729265"
+  integrity sha512-LBQvhRw7mznQTPoyZbsmYeNOZt1pN5aCsx4BAU/3siVFuiM9f2oyKzUaB8v1jbxFjE3aYqYiMo63kAL4pHgfWQ==
 
 doctrine@^2.1.0:
   version "2.1.0"
@@ -4087,7 +4118,7 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
-follow-redirects@^1.14.9:
+follow-redirects@^1.14.4, follow-redirects@^1.14.9:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -5239,6 +5270,11 @@ lru-memoizer@^2.1.4:
   dependencies:
     lodash.clonedeep "^4.5.0"
     lru-cache "~4.0.0"
+
+mailcheck@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/mailcheck/-/mailcheck-1.1.1.tgz#d87cf6ba0b64ba512199dbf93f1489f479591e34"
+  integrity sha512-3WjL8+ZDouZwKlyJBMp/4LeziLFXgleOdsYu87piGcMLqhBzCsy2QFdbtAwv757TFC/rtqd738fgJw1tFQCSgA==
 
 make-error@^1.1.1:
   version "1.3.6"
