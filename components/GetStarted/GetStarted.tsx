@@ -9,6 +9,7 @@ import {
 	ring,
 } from "assets/png";
 import { Image } from "components/Image";
+import { bodyColor } from "theme/theme";
 
 export const GetStarted: FC = () => {
 	return (
@@ -32,7 +33,7 @@ export const GetStarted: FC = () => {
 					/>
 					<Button
 						variant="contained"
-						sx={{ bgcolor: "#fff", color: "#484848", mx: "auto" }}
+						sx={{ bgcolor: "#fff", color: bodyColor, mx: "auto" }}
 						role="link"
 						href="#"
 					>

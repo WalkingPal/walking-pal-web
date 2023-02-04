@@ -18,7 +18,10 @@ export const Register: NextPage = () => {
 					name="description"
 					content="Register for WalkingPal App's Early User Access"
 				/>
-				<meta name="keywords" content="early, user, register, WalkingPal" />
+				<meta
+					name="keywords"
+					content="early, user, register, registeration, WalkingPal, walking, pal"
+				/>
 			</Head>
 			<Box className={styles.main} bgcolor="primary.main" gap={8} color="#fff">
 				<Typography variant="h3" align="center" component="h1">

@@ -12,11 +12,8 @@ export const Company: NextPage = () => {
 		<>
 			<Head>
 				<title>Company</title>
-				<meta
-					name="description"
-					content="The world-s first walking buddy app of its kind. Get yourself a walking buddy anytime and anywhere in just a few clicks!"
-				/>
-				<meta name="keywords" content="company, walking, pal, buddy, walk" />
+				<meta name="description" content="Company - WalkingPal" />
+				<meta name="keywords" content="company, walking, pal, walkingpal" />
 			</Head>
 
 			<div className={styles.main}>
