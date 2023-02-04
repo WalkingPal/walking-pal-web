@@ -1,0 +1,10 @@
+.main {
+	min-width: 320px;
+	padding: 4vw 20vw;
+}
+
+@media screen and (max-width: 768px) {
+	.main {
+		padding: 4vw 10vw;
+	}
+}
