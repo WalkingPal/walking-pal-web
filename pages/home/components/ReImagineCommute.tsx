@@ -1,6 +1,6 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
-import { bagpack, footstep2, promotion, shopping } from "assets/png";
-import { Green, Vehicle, Walk } from "assets/svg";
+import { bagpack, promotion, shopping } from "assets/png";
+import { footstep, Green, Vehicle, Walk } from "assets/svg";
 import { Accent } from "components/Accent";
 import { FC } from "react";
 
@@ -33,7 +33,8 @@ const commuteCards = [
 		id: 3,
 		text: "Or just a ",
 		highlight: "walk!",
-		img: footstep2.src,
+		img: footstep,
+		type: "svg",
 		bgcolor: "#FF8282",
 		description: "Go for walks anywhere with WalkingPal",
 	},
@@ -146,17 +147,21 @@ export const CommuteCard: FC<{ cc: (typeof commuteCards)[0] }> = ({ cc }) => {
 					alignItems="center"
 					p={{ xs: "20px 0", md: 2 }}
 				>
-					<Box
-						component="img"
-						src={cc.img}
-						sx={{
-							aspectRatio: 1,
-							width: { xs: "100%", md: "unset" },
-							height: { md: "100%" },
-							maxWidth: 140,
-						}}
-						alt={cc.description}
-					/>
+					{cc.type === "svg" ? (
+						cc.img && <cc.img style={{ maxWidth: 196, width: "100%" }} />
+					) : (
+						<Box
+							component="img"
+							src={cc.img}
+							sx={{
+								aspectRatio: 1,
+								width: { xs: "100%", md: "unset" },
+								height: { md: "100%" },
+								maxWidth: 140,
+							}}
+							alt={cc.description}
+						/>
+					)}
 				</Stack>
 			</Stack>
 		</Paper>
