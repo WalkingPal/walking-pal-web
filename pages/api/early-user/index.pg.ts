@@ -71,27 +71,27 @@ const registerEarlyUser = async (
 	}
 	console.log("exec6");
 	try {
-		let { valid, reason } = await validate(parsedFormData.data.email);
+		// let { valid, reason } = await validate(parsedFormData.data.email);
 		console.log("exec7");
-		if (valid) {
-			const data = { ...parsedFormData.data, created: new Date() };
-			const docId = parsedFormData.data.email;
-			// await db.doc("forms/early-users").update({
-			// 	"early-users": admin.firestore.FieldValue.arrayUnion({
-			// 		...formData,
-			// 		created: new Date().toISOString(),
-			// 	}),
-			// });
-			console.log("exec8");
-			await db.collection("forms_early-users").doc(docId).set(data);
+		// if (valid) {
+		const data = { ...parsedFormData.data, created: new Date() };
+		const docId = parsedFormData.data.email;
+		// await db.doc("forms/early-users").update({
+		// 	"early-users": admin.firestore.FieldValue.arrayUnion({
+		// 		...formData,
+		// 		created: new Date().toISOString(),
+		// 	}),
+		// });
+		console.log("exec8");
+		await db.collection("forms_early-users").doc(docId).set(data);
 
-			return res.status(200).json({ message: "ACK👍" });
-		} else {
-			console.error("Email Invalid, reason: ", reason);
-			return res.status(422).json({
-				message: "Email Invalid, reason: ".concat(reason ?? ""),
-			});
-		}
+		return res.status(200).json({ message: "ACK👍" });
+		// } else {
+		// 	console.error("Email Invalid, reason: ", reason);
+		// 	return res.status(422).json({
+		// 		message: "Email Invalid, reason: ".concat(reason ?? ""),
+		// 	});
+		// }
 	} catch (e) {
 		console.error(e);
 		res.status(400).end();
