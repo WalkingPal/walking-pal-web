@@ -59,7 +59,7 @@ export const FormActions: FC<IFormActions> = ({
 				{stepsCompleted === totalSteps ? (
 					<LoadingButton
 						loading={loading}
-						loadingPosition="end"
+						loadingPosition="start"
 						endIcon={
 							<Send sx={{ display: loading ? "none" : "inline-block" }} />
 						}
