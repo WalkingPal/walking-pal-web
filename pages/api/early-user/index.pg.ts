@@ -36,17 +36,17 @@ const registerEarlyUser = async (
 ) => {
 	const { formData, captcha } = req.body as TReqBody;
 	const { method } = req;
-
+	console.log("exec1");
 	if (method !== "POST") {
 		console.error("Invalid HTTP Method. Only POST method is Accepted.");
 		return res.status(404).json({
 			message: "Invalid HTTP Method. Only POST method is Accepted.",
 		});
 	}
-
+	console.log("exec2");
 	const parsedFormData = formDataSchema.safeParse(formData);
 	const parsedCaptcha = captchaSchema.safeParse(captcha);
-
+	console.log("exec3");
 	if (!parsedCaptcha.success) {
 		console.error("!parsedCaptcha.success", parsedCaptcha.error.issues);
 		return res.status(422).json({
@@ -54,7 +54,7 @@ const registerEarlyUser = async (
 			errors: parsedCaptcha.error.issues,
 		});
 	}
-
+	console.log("exec4");
 	if (!parsedFormData.success) {
 		console.error("!parsedFormData.success", parsedFormData.error.issues);
 		return res.status(422).json({
@@ -62,17 +62,17 @@ const registerEarlyUser = async (
 			errors: parsedFormData.error.issues,
 		});
 	}
-
+	console.log("exec5");
 	if (!(await isReCaptchaValid(captcha))) {
 		console.error("Unproccesable request, Invalid captcha code");
 		return res.status(422).json({
 			message: "Unproccesable request, Invalid captcha code",
 		});
 	}
-
+	console.log("exec6");
 	try {
 		let { valid, reason } = await validate(parsedFormData.data.email);
-
+		console.log("exec7");
 		if (valid) {
 			const data = { ...parsedFormData.data, created: new Date() };
 			const docId = parsedFormData.data.email;
@@ -82,7 +82,7 @@ const registerEarlyUser = async (
 			// 		created: new Date().toISOString(),
 			// 	}),
 			// });
-
+			console.log("exec8");
 			await db.collection("forms_early-users").doc(docId).set(data);
 
 			return res.status(200).json({ message: "ACK👍" });
