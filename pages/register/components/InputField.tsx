@@ -109,7 +109,7 @@ export const InputField: FCC<IInputField> = ({
 			{inputProps.children}
 
 			<Dialog open={dialogActive} sx={{ backdropFilter: "blur(5px)" }}>
-				<Stack gap={1} sx={{ width: 600, p: 3, bgcolor: "white" }}>
+				<Stack gap={1} sx={{ p: 3, bgcolor: "white" }}>
 					<InputLabel sx={{ color: "#000" }} htmlFor="other-univ">
 						<Typography variant="h6" component="span" fontWeight="medium">
 							Enter your University name

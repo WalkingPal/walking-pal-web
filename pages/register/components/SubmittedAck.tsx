@@ -20,7 +20,7 @@ export const SubmittedAck: FC = () => {
 				borderRadius={2}
 				overflow="hidden"
 			>
-				<Stack p={3} pt={4} alignItems="center">
+				<Stack p={3} pt={4} alignItems="center" color="text.primary">
 					<Typography variant="h5" fontWeight="medium" align="center">
 						Congratulations!🥳
 					</Typography>
