@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import db from "utils/db";
-import admin from "firebase-admin";
+import { db } from "utils/db";
 import isReCaptchaValid from "pages/api/utils/reCaptcha";
 import { z, ZodIssue } from "zod";
 
@@ -22,47 +21,58 @@ const formDataSchema = z.object({
 
 const captchaSchema = z.string().trim().min(1);
 
+type TReqBody = {
+	formData: z.infer<typeof formDataSchema>;
+	captcha: z.infer<typeof captchaSchema>;
+};
+
 const registerFeedback = async (
 	req: NextApiRequest,
 	res: NextApiResponse<ResponseData>,
 ) => {
-	let {
-		body: { formData, captcha },
-		method,
-	} = req;
+	const { formData, captcha } = req.body as TReqBody;
+	const { method } = req;
 
-	if (method !== "POST")
+	if (method !== "POST") {
+		console.error("Invalid HTTP Method. Only POST method is Accepted.");
 		return res.status(404).json({
 			message: "Invalid HTTP Method. Only POST method is Accepted.",
 		});
+	}
 
+	// Validate received Request data
 	const parsedFormData = formDataSchema.safeParse(formData);
 	const parsedCaptcha = captchaSchema.safeParse(captcha);
 
-	if (!parsedCaptcha.success)
+	if (!parsedCaptcha.success) {
+		console.error("!parsedCaptcha.success", parsedCaptcha.error.issues);
 		return res.status(422).json({
 			message: "Unproccesable Request. Provide reCAPTCHA code",
 			errors: parsedCaptcha.error.issues,
 		});
+	}
 
-	if (!parsedFormData.success)
+	if (!parsedFormData.success) {
+		console.error("!parsedFormData.success", parsedFormData.error.issues);
 		return res.status(422).json({
 			message: "Unproccesable Request",
 			errors: parsedFormData.error.issues,
 		});
+	}
 
-	if (!(await isReCaptchaValid(captcha)))
+	// Verify the received captcha code
+	if (!(await isReCaptchaValid(captcha))) {
+		console.error("Invalid captcha code");
 		return res.status(422).send({
 			message: "Unproccesable request, Invalid captcha code",
 		});
+	}
 
+	// Save the feedback to the database
 	try {
-		await db.doc("forms/feedbacks").update({
-			feedbacks: admin.firestore.FieldValue.arrayUnion({
-				...formData,
-				created: new Date().toISOString(),
-			}),
-		});
+		const data = { ...parsedFormData.data, createdAt: new Date() };
+		const docId = parsedFormData.data.email;
+		await db.collection("forms_feedbacks").doc(docId).set(data);
 
 		res.status(200).json({ message: "ACK👍" });
 	} catch (e) {
