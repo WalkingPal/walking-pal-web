@@ -11,4 +11,5 @@ export { default as Green } from "./green.svg";
 export { default as Vehicle } from "./vehicle.svg";
 export { default as Walk } from "./walk.svg";
 export { default as GoogleUEBA22 } from "./UE_Bootcamp_Alumni2022_Badge.svg";
-export { default as footstep } from "./footstep.svg";
+export { default as Footstep } from "./footstep.svg";
+export { default as Backpack } from "./backpack.svg";

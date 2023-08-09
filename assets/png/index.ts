@@ -18,7 +18,6 @@ export { default as footstep } from "./footstep.png";
 export { default as pin } from "./pin.png";
 export { default as footstep2 } from "./footstep2.png";
 export { default as community } from "./community.png";
-export { default as bagpack } from "./bagpack.png";
 export { default as promotion } from "./promotion.png";
 export { default as shopping } from "./shopping.png";
 export { default as step1 } from "./step1.png";

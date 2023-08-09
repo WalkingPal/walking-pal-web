@@ -3,7 +3,7 @@ export const teamData = {
 	vp: [
 		{
 			name: "Junaid Ahmed",
-			desg: "Founter and CEO",
+			desg: "Founder and CEO",
 			src: junaid,
 			bgcolor: "#FF5959",
 		},
