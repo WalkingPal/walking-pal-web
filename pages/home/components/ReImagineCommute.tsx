@@ -86,7 +86,7 @@ export const ReImagineCommute: FC = () => {
 							#DitchVehicles
 						</Typography>
 						<Typography variant="body1">
-							The cost of operating a card for one year is approximately ₹
+							The cost of operating a car for one year is approximately ₹
 							100,000. The cost of operating a bicycle for a year is only ₹
 							1000. Walking is free!
 						</Typography>
