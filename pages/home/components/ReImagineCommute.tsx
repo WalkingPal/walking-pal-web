@@ -1,6 +1,6 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
-import { bagpack, promotion, shopping } from "assets/png";
-import { footstep, Green, Vehicle, Walk } from "assets/svg";
+import { promotion, shopping } from "assets/png";
+import { Backpack, Footstep, Green, Vehicle, Walk } from "assets/svg";
 import { Accent } from "components/Accent";
 import { FC } from "react";
 
@@ -25,7 +25,8 @@ const commuteCards = [
 		id: 2,
 		text: "For ",
 		highlight: "traveling",
-		img: bagpack.src,
+		img: Backpack,
+		type: "svg",
 		bgcolor: "#F8CF7D",
 		description: "Travel everywhere with WalkingPal",
 	},
@@ -33,7 +34,7 @@ const commuteCards = [
 		id: 3,
 		text: "Or just a ",
 		highlight: "walk!",
-		img: footstep,
+		img: Footstep,
 		type: "svg",
 		bgcolor: "#FF8282",
 		description: "Go for walks anywhere with WalkingPal",
