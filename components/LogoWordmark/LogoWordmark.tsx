@@ -23,7 +23,7 @@ export const LogoWordmark: FC<ILogoWordmark> = ({ size, dark, ...props }) => {
 					alignItems: "flex-end",
 				}}
 			>
-				<Logo style={{ width: 50, marginRight: 10 }} />
+				<Logo style={{ width: 63, marginRight: 5 }} />
 				<Wordmark color={textColor} />
 			</span>
 		</Box>

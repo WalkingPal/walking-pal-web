@@ -11,11 +11,8 @@ const steps = [
 		imgSrc: step1,
 		txt: (
 			<>
-				Open the
-				<br />
-				WalkingPal
-				<br />
-				app
+				Schedule your <br /> walk for the
+				<br /> day
 			</>
 		),
 		altText: "WalkingPal app home screen",
@@ -41,7 +38,7 @@ const steps = [
 			<>
 				Click on the
 				<br />
-				magic<Accent>red</Accent>
+				<Accent>walking buddy</Accent>
 				<br />
 				button
 			</>
