@@ -110,7 +110,7 @@ export const FeedbackForm: FC = ({}) => {
 	}
 
 	return (
-		<div className={styles.main}>
+		<div id="contact" className={styles.main}>
 			<FormHeader />
 			<Box
 				component="form"

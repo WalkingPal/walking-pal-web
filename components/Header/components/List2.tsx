@@ -15,7 +15,7 @@ export const List2: FC<IList2> = ({}) => {
 				component="a"
 				sx={{
 					mx: 2,
-					color: currentRoute === "/faq" ? "primary.main" : "text.secondary",
+					color: currentRoute === "/blog" ? "primary.main" : "text.secondary",
 					"&:hover": { backgroundColor: "#0000000a" },
 				}}
 				href="/blog"
