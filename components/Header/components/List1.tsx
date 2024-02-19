@@ -13,6 +13,7 @@ import { FC, MouseEvent, useState } from "react";
 export const links = [
 	{ name: "home", pageroute: "/" },
 	{ name: "about", pageroute: "/about" },
+	{ name: "company", pageroute: "/company" },
 	// {
 	// 	name: "company",
 	// 	pageroute: "/company",

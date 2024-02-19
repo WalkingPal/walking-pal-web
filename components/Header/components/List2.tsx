@@ -18,11 +18,23 @@ export const List2: FC<IList2> = ({}) => {
 					color: currentRoute === "/faq" ? "primary.main" : "text.secondary",
 					"&:hover": { backgroundColor: "#0000000a" },
 				}}
-				href="/faq"
+				href="/blog"
 			>
-				FAQs
+				Blog
 			</Button>
 			<Button
+				role="link"
+				component="a"
+				sx={{
+					mx: 2,
+					color: currentRoute === "/faq" ? "primary.main" : "text.secondary",
+					"&:hover": { backgroundColor: "#0000000a" },
+				}}
+				href="/faq#contact"
+			>
+				Support
+			</Button>
+			{/* <Button
 				role="link"
 				component="a"
 				variant="contained"
@@ -30,7 +42,7 @@ export const List2: FC<IList2> = ({}) => {
 				href="/register"
 			>
 				Register
-			</Button>
+			</Button> */}
 		</>
 	);
 };
