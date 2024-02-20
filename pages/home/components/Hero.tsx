@@ -2,7 +2,7 @@ import { Box, Button, Slide, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import applestore from "assets/png/applestore.png";
+import applestore from "assets/png/apple.png";
 import play from "assets/png/play.png";
 
 interface IHero {}
