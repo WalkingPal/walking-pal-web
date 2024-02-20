@@ -24,15 +24,15 @@ export const Hero: FC<IHero> = ({}) => {
 				</Typography>
 				<Stack
 					direction="row"
-					spacing={2}
+					// spacing={2}
 					style={{ alignItems: "center", justifyContent: "center" }}
 					my={2}
 				>
 					<Link href="https://play.google.com/store/apps/details?id=com.walkingpal.app">
 						<Image
 							style={{ cursor: "pointer" }}
-							width={150}
-							height={65}
+							width={190}
+							height={75}
 							objectFit="contain"
 							src={play}
 							alt="play-store-badge"
@@ -41,8 +41,8 @@ export const Hero: FC<IHero> = ({}) => {
 					<Link href="https://apps.apple.com/in/app/walkingpal-get-walking-buddy/id6470935291">
 						<Image
 							style={{ cursor: "pointer" }}
-							width={150}
-							height={40}
+							width={190}
+							height={50}
 							objectFit="contain"
 							src={applestore}
 							alt="apple-store-badge"

@@ -10,7 +10,7 @@ export const List2: FC<IList2> = ({}) => {
 	const currentRoute = useRouter().route;
 	return (
 		<>
-			<Button
+			{/* <Button
 				role="link"
 				component="a"
 				sx={{
@@ -21,7 +21,7 @@ export const List2: FC<IList2> = ({}) => {
 				href="/blog"
 			>
 				Blog
-			</Button>
+			</Button> */}
 			<Button
 				role="link"
 				component="a"

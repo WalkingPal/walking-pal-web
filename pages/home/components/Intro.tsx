@@ -104,10 +104,12 @@ export const Intro: FC = ({}) => {
 					/>
 					<Box p={3} textAlign="center">
 						<Typography variant="h6" component="span">
-							Create Groups
+							Create new friendships
+							<br />
 						</Typography>
-						<Typography variant="body1">
-							Go solo or create a walking group on the go. Anytime, anywhere!
+						<Typography variant="body2">
+							meet new people on the go, whether you’re in Holland or Hyderabad.
+							Get your walking buddy anytime, anywhere
 						</Typography>
 					</Box>
 				</Paper>
